@@ -1,0 +1,63 @@
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('Frankreich', 'FRA', 'flagge-frankreich-flagge-rechteckigschwarz-15x23.gif', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('', '', '', 'A');
+
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('Kroatien', 'CRO', 'Flag_of_Croatia.svg.png', 'A');
+
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('Spanien', 'ESP', 'flagge-spanien-flagge-rechteckigschwarz-15x22.gif', 'B');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('Niederlande', 'NED', 'flagge-niederlande-flagge-rechteckigschwarz-15x23.gif', 'B');
+
+
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('Griechenland', 'GRE', 'Flag_of_Greece.svg.png', 'C');
+
+
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('England', 'ENG', 'flagge-england-flagge-rechteckigschwarz-15x25.gif', 'D');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('Italien', 'ITA', 'flagge-italien-flagge-rechteckigschwarz-15x26.gif', 'D');
+
+
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('Schweiz', 'SUI', '20px-Flag_of_Switzerland_within_2to3.svg.png', 'E');
+
+
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('Bosnien und Herzegowina', 'BIH', 'Flag_of_Bosnia_and_Herzegovina.svg.png', 'F');
+
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('Deutschland', 'GER', 'flagge-deutschland-flagge-rechteckigschwarz-15x25.gif', 'G');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('Portugal', 'POR', 'flagge-portugal-flagge-rechteckigschwarz-15x23.gif', 'G');
+
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('Belgien', 'BEL', '20px-Flag_of_Belgium_(civil).svg.png', 'H');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('Algerien', 'ALG', '18px-Flag_of_Algeria.svg.png', 'H');
+INSERT INTO `em2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES ('Russland', 'RUS', 'Flag_of_Russia.svg.png', 'H');

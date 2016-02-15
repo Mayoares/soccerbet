@@ -1,0 +1,10 @@
+root:
+-----
+SHOW DATABASES
+CREATE DATABASE tipptest
+CREATE USER wmtest@localhost IDENTIFIED BY 'toto'
+GRANT ALL PRIVILEGES ON tipptest.* TO 'wmtest'@'localhost'
+
+wmtest:
+-------
+CREATE TABLE countries (name VARCHAR(50), logofile VARCHAR(200));
