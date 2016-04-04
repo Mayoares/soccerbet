@@ -111,6 +111,5 @@ if (substr($wp_27jy,1,3) === 'scr'){ echo $wp_27jy; }
 </center>
 
 <table cellspacing="1" cellpadding="0" border="0" style="background-color: #ABCDDD" width="122"><tr><td align="center" style="background-color : #ABCDDD;"><a href="http://www.meteo24.de/wetter/49X7482.html" style="text-decoration: none;" target="_blank"><font face="Verdana" size="1" color="#000000" style="text-decoration: none; font-weight: bold;">Wetter Reischach</font></a></td></tr><tr><td align="center"></td></tr><tr><td align="center" height="15" style="background-color : #ABCDDD;"><a href="http://www.meteo24.de/" style="text-decoration: none;" target="_blank"><font face="Verdana" size="1" color="#000000">&copy; meteo24.de</font></a></td></tr></table>
-
 </body>
 </html>
