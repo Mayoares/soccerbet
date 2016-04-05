@@ -1,12 +1,12 @@
 <?php
 //Zugangsdaten
-$dbuser="root";		 //Benutzername für den MySQL-Zugang
+$dbuser="root";		 //Benutzername fï¿½r den MySQL-Zugang
 $password="";		 //Passwort
 //$host="Mayoar.rivido.de";	 //Name (IP-Adr.) des Rechners mit MySQL
 $host="localhost";	 //Name (IP-Adr.) des Rechners mit MySQL
 //$host="127.0.0.1";	 //Name (IP-Adr.) des Rechners mit MySQL
-$dbname="emtipp2016";//Name der Datenbank
-
+//$dbname="emtipp2016";//Name der Datenbank
+$dbname="usr_web133_1";//Name der Datenbank
 
 // TRIAL PHP5.5 becuase mysql_connect is deprecated
 // $mysqli = new mysqli($host, $dbuser, $password, $dbname);

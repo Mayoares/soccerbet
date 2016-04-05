@@ -2,7 +2,8 @@
 $userId=$_GET["userId"];
 include_once("../../general/log/log.php5");
 include_once("../../general/log/logsitecall.php5");
-include_once("../../connection/dbaccess.php5");
+//include_once("../../connection/dbaccess.php5");
+include_once("../../connection/dbaccess-local.php5");
 include_once("../util/dbschema.php5");
 if(!isset($_POST["login"]))
 {
@@ -38,7 +39,7 @@ else
 		$password=$array1["password"];
 		$userId=$array1["userid"];
 		
-		// Passwort überprüfen
+		// Passwort ï¿½berprï¿½fen
 		if($_POST["password"] != $password)
 		{
 			echo "<br>Falsches Passwort. Bitte Eingabe korrigieren.";
@@ -59,7 +60,7 @@ else
 		}
 	}
 	
-	//Datenbankconnection schließen
+	//Datenbankconnection schlieï¿½en
 	mysql_close();
 }
 

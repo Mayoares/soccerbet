@@ -38,7 +38,7 @@ else
 		$password=$array1["password"];
 		$userId=$array1["userid"];
 		
-		// Passwort überprüfen
+		// Passwort ï¿½berprï¿½fen
 		if($_POST["password"] != $password)
 		{
 			echo "<br>Falsches Passwort. Bitte Eingabe korrigieren.";
@@ -59,7 +59,7 @@ else
 		}
 	}
 	
-	//Datenbankconnection schließen
+	//Datenbankconnection schlieï¿½en
 	mysql_close();
 }
 
@@ -78,7 +78,7 @@ function promptLogin($username){
 
 <?php 
 	echo "<table>";
-	echo "<form method='POST' action='loginBefore.php5'>";
+	echo "<form method='POST' action='loginBefore-Test.php5'>";
 	echo "<tr>";
 	echo "<td>User-Name:</td><td>	<input type='text' size='50' name='username' value='$username'></td>";
 	echo "</tr>";
