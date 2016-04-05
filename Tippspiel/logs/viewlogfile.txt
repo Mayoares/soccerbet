@@ -1,2 +1,0 @@
-15.02.2016, 11:16:54, INFO , Clicked showUserList
-15.02.2016, 11:20:37, INFO , Clicked showUserList
