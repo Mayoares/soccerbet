@@ -1,0 +1,15 @@
+IF NOT EXISTS 
+(SELECT * FROM tipps t WHERE t.user='Gogo' AND t.matchnr=1)
+THEN
+    
+      INSERT tipps 
+      VALUES ('Gogo',1,3,1) 
+    
+ELSE
+    
+      UPDATE tipps SET
+        goalsX = 3, goalsY = 1
+      WHERE matchnr=1 AND user = 'Gogo'
+    
+END IF
+

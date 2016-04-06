@@ -1,0 +1,55 @@
+@charset "ISO-8859-1";
+
+body {
+	background-color: #FFFFCC;
+	margin-left: 25px;
+	font-family: Calibri;
+}
+
+a:link {
+	color: #3964C3;
+}
+
+td {
+	background-color: #F0F000;
+}
+
+h3 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+ol {
+	color: #3964C3;
+	list-style: none;
+	padding: 0;
+	padding-left: 125px;
+	margin: 0;
+}
+
+.menuline ul li {
+	color: #fff;
+	border-left: 1px solid #69baee;
+	border-top: 1px solid #69baee;
+	border-right: 1px solid #69baee;
+	border-bottom: 1px solid #69baee;
+	height: 34px;
+	line-height: 35px;
+	float: left;
+	margin: 0 1px 0 1px;
+	padding: 0;
+	white-space: nowrap;
+	width: 120px;
+}
+
+input {
+	align : right;
+	top: 100px;
+	right: 100px;
+}
+
+<!-- Buttonfarbe ändern
+input.button {
+	background-color: #FFCC99
+}
+-->
