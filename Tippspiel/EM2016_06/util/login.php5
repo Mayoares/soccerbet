@@ -1,7 +1,7 @@
 <?php 
 //$userId=$_GET["userId"];
-include_once("../../general/log/log.php5");
-include_once("../../general/log/logsitecall.php5");
+// include_once("../../general/log/log.php5");
+// include_once("../../general/log/logsitecall.php5");
 include_once("../../connection/dbaccess-local.php5");
 include_once("../util/dbschema.php5");
 if(!isset($_POST["login"]))
@@ -43,9 +43,9 @@ else
 		{
 			echo "<br>Falsches Passwort. Bitte Eingabe korrigieren.";
 			$postPW=$_POST["password"];
-			$mylog = new logger;
-			$mylog->error("Post-Passwort=$postPW, DB-Passwort=$password");
-			$mylog->error("SQL-Query: $sql1");
+// 			$mylog = new logger;
+// 			$mylog->error("Post-Passwort=$postPW, DB-Passwort=$password");
+// 			$mylog->error("SQL-Query: $sql1");
 			promptLogin($username);
 		}
 		else if ($username==="admin")

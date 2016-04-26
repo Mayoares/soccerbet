@@ -60,10 +60,11 @@ if(isset($_POST["resetEvaluationDone"]))
 	
 	<p><a href='../anybody/showUserRanks.php5?userId=$userId'>User Rangliste ansehen</a></p>
 	<hr>
-	<p><form method='POST' action='addUser.php5?userId=$userId'>
+	<?php echo "add $userId";
+	echo "<form method=\"POST\" action=\"addUser.php5?userId=$userId\">";?>
 	<input type='submit' name='addUser' value='User anlegen'></form></p>
 	<hr>
-	<p><form method='POST' action='resetUserPassword.php5?userId=$userId'>User 
+	<p><form method='POST' action='resetUserPassword.php5?userId=$userId?'>User 
 	<td bgcolor=slategray><select name='SelectedUsername'>
 	<?php allUsersAsOption('User');?>
 	<input type='submit' name='resetUser' value='Passwort zurücksetzen'></form></p>
@@ -94,7 +95,8 @@ if(isset($_POST["resetEvaluationDone"]))
 	<h1>Auswertung</h1>
 	<h2>Gruppen</h2>
 	<hr>
-	<p><form method='POST' action='evaluationGroupMatch.php5?adminuserId=$userId'>Spiel <td bgcolor=slategray><select name='SelectedMatchnr'>
+	<?php echo "<form method=\"POST\" action=\"evaluationGroupMatch.php5?adminuserId=$userId\">";?>Spiel 
+	<td bgcolor=slategray><select name='SelectedMatchnr'>
 	<?php allGroupMatchesAsOption('SelectedMatchnr', $dbutil);?></td>
 	<input type='submit' name='evaluationGroupMatch' value='auswerten'></form></p>
 

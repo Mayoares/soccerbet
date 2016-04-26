@@ -2,6 +2,7 @@
 include_once("../../connection/dbaccess-local.php5");
 include_once("../../general/log/log.php5");
 $adminuserId=$_GET["userId"];
+echo "id $adminuserId";
 if(isset($_POST["Cancel"]))
 {
 	$target="../admin/overviewAdmin.php5?userId=$adminuserId";
@@ -10,6 +11,7 @@ if(isset($_POST["Cancel"]))
 }
 else if(strlen($adminuserId)==0)
 {
+	echo "else if";
 	$log=new adminlogger();
 	$log->warn("AdminuserId was empty");
 	header("Location: ../util/login.php5");
@@ -17,6 +19,7 @@ else if(strlen($adminuserId)==0)
 }
 else
 {
+	echo "else";
 	if(!isAdmin($adminuserId))
 	{
 		header("Location: ../util/login.php5");
@@ -34,6 +37,7 @@ function isAdmin($adminuserId){
 	$adminuserName=$dbutil->getUserName($adminuserId);
 	if($adminuserName==="admin")
 	{
+		echo "ja, admin";
 		return true;
 	}
 	else
