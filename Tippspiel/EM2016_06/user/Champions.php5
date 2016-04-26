@@ -14,8 +14,8 @@ else
 	$userId=$_GET["userId"];
 	echo "<html>";
 	echo "<head>";
-	echo "<link rel='stylesheet' type='text/css' href='../../style/style-WM2014.css' />";
-	echo "<title>WM-Tipp</title>";
+	echo "<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />";
+	echo "<title>Werke's Tippspiel - Stockerl-Tipps und TorschÃ¼tzenkÃ¶nig</title>";
 	echo "</head>";
 	echo "<body>";
 	
@@ -47,15 +47,16 @@ function run($userId){
 		
 		storeNewRank($username, $dbutil->getShortName($_POST['rank2']), 2);
 	}
-	
+	/*
 	if(isset($_POST['rank3'])){
 		
 		storeNewRank($username, $dbutil->getShortName($_POST['rank3']), 3);
 	}
-		
-    if(isset($_POST['rank1']) && isset($_POST['rank2']) && isset($_POST['rank3'])){
+	*/	
+    //if(isset($_POST['rank1']) && isset($_POST['rank2']) && isset($_POST['rank3'])){
+    if(isset($_POST['rank1']) && isset($_POST['rank2'])){
     	
-		echo "<font color=\"yellow\">Stockerl-Tipps gespeichert.</font>";
+		echo "<font color=\"green\">Stockerl-Tipps erfolgreich gespeichert :)</font>";
 		echo "<br>";
     }
 	
@@ -77,21 +78,23 @@ function run($userId){
 	echo "	</td>";
 	echo "</tr>";	
 	echo "<tr>";	
-	echo "	<td> Vizeweltmeister ";
+	echo "	<td> <b>Vizeweltmeister</b> ";
 	echo "	<td bgcolor=slategray>";
 	echo "    <select name='rank2'>";
 	allTeamsAsOptionForRank($sqlTeams, $vice);
 	echo "    </select>";
 	echo "	</td>";
 	echo "</tr>";	
+	/*
 	echo "<tr>";	
-	echo "	<td> Platz 3 ";
+	echo "	<td> <b>Platz 3</b> ";
 	echo "	<td bgcolor=slategray>";
 	echo "    <select name='rank3'>";
 	allTeamsAsOptionForRank($sqlTeams, $third);
 	echo "    </select>";
 	echo "	</td>";
 	echo "</tr>";	
+	*/
 	echo "</table>";
 		
 	echo "<br>";
@@ -101,7 +104,7 @@ function run($userId){
 	echo "<br>";
 	echo "<br>";
 	echo "<br>";
-	echo "<h2>Torschützenkönig</h2>";
+	echo "<h2>TorschÃ¼tzenkÃ¶nig</h2>";
 	$citation->printCitation("Tor");
 	echo "<br>";
 	
@@ -112,7 +115,7 @@ function run($userId){
 		$updated = updateTopScorerTipp($username, $topscorer, $shortTeamName);
 		if($updated)
 		{
-			echo "<font color=\"yellow\">Torschützenkönig gespeichert.</font>";
+			echo "<font color=\"green\">TorschÃ¼tzenkÃ¶nig erfolgreich gespeichert :)</font>";
 			echo "<br>";
 		}
 	}
@@ -207,7 +210,7 @@ function getTippedTopScorerTeam($username){
 function allTeamsAsOptionForRank($sqlTeams, $tippedTeam) {
 	$numTeams=mysql_num_rows($sqlTeams);
 	if ($numTeams==0)
-		echo "keine passenden Datensätze gefunden";
+		echo "keine passenden DatensÃ¤tze gefunden";
 	else
 	{
 		for ($i=0; $i<$numTeams; $i++)
@@ -232,7 +235,7 @@ function allTeamsAsOptionForRank($sqlTeams, $tippedTeam) {
 function allTeamsAsOption($sqlTeams, $tippedTeam) {
 	$numTeams=mysql_num_rows($sqlTeams);
 	if ($numTeams==0)
-		echo "keine passenden Datensätze gefunden";
+		echo "keine passenden Datensï¿½tze gefunden";
 	else
 	{
 		echo "<td bgcolor=slategray><select name='team'>";
@@ -278,7 +281,7 @@ function updateTopScorerTipp($username, $topscorer, $shortTeamName){
 		if (!$sqlupdateMatchResult) {
 			$sqlerror=mysql_error();
 			$log->error($sqlerror);
-			echo "<br><font color='#EE0000'> Ungültiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>"; 
+			echo "<br><font color='#EE0000'> UngÃ¼ltiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>"; 
 			return false;
 		}
 		else

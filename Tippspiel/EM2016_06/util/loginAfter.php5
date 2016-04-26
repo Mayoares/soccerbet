@@ -1,11 +1,12 @@
-<html>
+<!DOCTYPE HTML>
 <head>
-<link rel='stylesheet' type='text/css' href='../../style/style.css' />
-<title>WM-Tipp Login </title>
+<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />
+<title>Werke's Tippspiel - Punktestand</title>
 </head>
 <body>
 <center>
-<p><img src="../pics/WerkesWM_WebTipp_2014_Klein.png" alt="WM2014-Logo"></p>
+<h1>Werke's Tippspiel zur Europameisterschaft 2016 in Frankreich</h1>
+<p><img src="../pics/Logo_EM_2016.png" class="image" width="400" alt="Logo_EM_2016">
 <h2>
 <a href='../anybody/showUserRanks.php5'>Punktestand</a>
 </h2>
@@ -15,7 +16,7 @@
 <br>
 <br>
 <br>
-<a href='../docs/Spielregeln_WM.pdf'>WM-Tipp-Regeln</a>
+<a href='../docs/Spielregeln_WM.pdf'>Werke's Tippspiel-Regeln</a>
 <br>
 <br>
 <br>
@@ -70,8 +71,8 @@ function allUsersAsOption($optionName) {
 	$numUsers=mysql_num_rows($sqlUsersResult);
 	if ($numUsers==0)
 	{
-		$log->info("keine passenden Datens‰tze gefunden");
-		echo "keine passenden Datens‰tze gefunden";
+		$log->info("keine passenden Datens√§tze gefunden");
+		echo "keine passenden Datens√§tze gefunden";
 	}
 	else
 	{

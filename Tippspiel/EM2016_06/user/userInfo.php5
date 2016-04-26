@@ -14,8 +14,8 @@ $userName=$dbutil->getUserName($userId);
 ?>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="../../style/style-WM2014.css" />
-<title>WM-Tipp</title>
+<link rel="stylesheet" type="text/css" href="../../style/style-EM2016.css" />
+<title>Werke's Tippspiel - Home</title>
 </head>
 <body>
 
@@ -29,12 +29,50 @@ function printUserInfo($userName){
 	$array=mysql_fetch_array($resultUser);
 	$firstname=$array["firstname"];
 	$lastname=$array["lastname"];
-	echo "Benutzer <h2>$firstname $lastname</h2>";
+	echo "</br>";
+	echo "<h1>Hallo $firstname $lastname,</h1>";
+	//echo "<br>herzlich Willkommen bei Werke's Tippspiel zur Europameisterschaft 2016!";
+	//echo "<br>Viel Erfolg beim Tippen!";
+	?>
+	herzlich Willkommen bei Werke's Tippspiel zur Europameisterschaft 2016 in Frankreich!</br>
+	</br>
+	Viel Erfolg beim Tippen,</br>
+	wünscht dir Werke, Moose und Robl!
+	<br>
+	<br>
+	<a href='../pdf/Spielplan_EM_2016.pdf'>Download Spielplan als PDF</a>
+	<br>
+	<br>
+	<?php
+	//echo "<p class=\"info\"><font color=\"red\"><u>Hinweis</u>: Die Spielergebnistipps muessen alle <i><u><b>einzeln</b></u></i> abgespeichert werden!</font></p>";
+	echo "<p class=\"info\">Obacht!:</br>Die Paarungen und Ergebnisse in der <u><b>Endrunde</b></u> (ab dem Achtelfinale) müssen alle <i><u><b>einzeln</b></u></i> abgespeichert werden!
+		Das heißt: Erst die beiden Mannschaften eines Endrundenspiels auswählen, das Ergebnis eingeben und abspeichern, danach die nächsten Begegnungen tippen! </p>";
+	//
+	// Kontakt
+	//
 	echo "<br>";
+	echo "<h2>Kontakt</h2>";
+	//
+	echo "<h3>Organisatoren</h3>";
+	echo "<table> <colgroup> <col width='200'> <col width='300'></colgroup>";
+	echo "<tr>";
+	echo "<td>Thomas Werkstetter</td><td><a href='mailto:atomkraftwerke@web.de' target='_top'>atomkraftwerke@web.de</a></td>";
+	echo "</tr>";
+	echo "<tr>";
+	echo "<td>Richard Mooshammer</td><td>???</td>";
+	echo "</tr>";
+	echo "</table>";
+	//
 	echo "<br>";
-	//echo "<p class=\"info\"><font color=\"red\"><u>Hinweis</u>: Die Spielergebnistipps m�ssen alle <i><u><b>einzeln</b></u></i> abgespeichert werden!</font></p>";
-	echo "<p class=\"info\">Hinweis: Die Paarungen und Ergebnisse in der <u><b>Endrunde</b></u> (ab dem Achtelfinale) m�ssen alle <i><u><b>einzeln</b></u></i> abgespeichert werden!</p>";
-	echo "<br>";
+	echo "<h3>Administrator</h3>";
+	echo "<table> <colgroup> <col width='200'> <col width='300'></colgroup>";
+	echo "<tr>";
+	echo "<td>Robert Kalusok</td><td><a href='mailto:robert.werkestippspiel@gmail.com' target='_top'>robert.werkestippspiel@gmail.com</a></td>";
+	echo "</tr>";
+	//echo "<tr>";
+	//echo "<td>Andreas Grotemeyer</td><td><a href='mailto:robert.werkestippspiel@gmail.com' target='_top'>mayoar.werkestippspiel@gmail.com</a></td>";
+	//echo "</tr>";
+	echo "</table>";
 }
 ?>
 <?php

@@ -10,8 +10,8 @@ echo "<html>";
 echo "<head>";
 echo "<link rel='stylesheet' type='text/css' href='../../style/style.css' />";
 echo "<br>";
-echo "<a href='../util/login.php5'>zurück</a>";
-echo "<title>WM-Tipp - User Tipps</title>";
+echo "<a href='../util/login.php5'>zurÃ¼ck</a>";
+echo "<title>Werke's Tippspiel - Tipps gesamt</title>";
 echo "</head>";
 echo "<body>";
 include_once("../../connection/dbaccess-local.php5");
@@ -118,7 +118,7 @@ function printGroupRanks($group, $userName){
 		echo "</tr>";
 		//&nbsp;&nbsp;
 	}
-	// zusätzliche Zeilen, damit Ranktipps genauso groß in der Tabelle erscheinen wie die Matchtipps
+	// zusaetzliche Zeilen, damit Ranktipps genauso gross in der Tabelle erscheinen wie die Matchtipps
 	for($r=0; $r<12; $r++)
 	{
 		echo "<tr>";
@@ -446,7 +446,7 @@ function printTopscorer($username){
 	echo "<br>";
 	echo "<table>";
 	echo "<tr>";
-	echo "<td>Torschützenkönig &nbsp; &nbsp; &nbsp; </td><td> $topscorer </b> &nbsp; </td><td> ($topScorerTeam)</td>";
+	echo "<td>TorschÃ¼tzenkÃ¶nig &nbsp; &nbsp; &nbsp; </td><td> $topscorer </b> &nbsp; </td><td> ($topScorerTeam)</td>";
 	printCorrectTopscorer($TopscorerReal, $realTeam);
 	$score=getScoreTopscorer($username);
 	printScore($score);
@@ -487,7 +487,7 @@ function printEvaluationFinalParticipants($user, $matchtype, $silent)
 	$matches=getMatches($matchtype);
 	$realTeams=getRealTeams($matchtype);
 	$score=checkTeamsIncluded($user, "team", $realTeams, $matches, $matchtype, $silent);
-	//echo "<br>Score User $user für $matchtype: $score";
+	//echo "<br>Score User $user fuer $matchtype: $score";
 	return $score;
 }
 function getMatches($matchtype) {

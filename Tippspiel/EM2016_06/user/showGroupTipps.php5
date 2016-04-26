@@ -5,8 +5,8 @@ $userId=$_GET["userId"];
 $groups=$_GET["groups"];
 echo "<html>";
 echo "<head>";
-echo "<link rel='stylesheet' type='text/css' href='../../style/style-WM2014.css' />";
-echo "<title>WM-Tipp - User Tipps</title>";
+echo "<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />";
+echo "<title>Werke's Tippspiel - Meine Gruppen-Tipps</title>";
 echo "</head>";
 
 // Verbindung zur Datenbank aufbauen
@@ -23,13 +23,16 @@ if(strlen($userName)>0)
 		printGroup('A', $userName);
 		printGroup('B', $userName);
 		printGroup('C', $userName);
-		printGroup('D', $userName);
+		//printGroup('D', $userName);
+		//printGroup('E', $userName);
+		//printGroup('F', $userName);
 	}
 	else if($groups === 'Part2'){
+		printGroup('D', $userName);
 		printGroup('E', $userName);
 		printGroup('F', $userName);
-		printGroup('G', $userName);
-		printGroup('H', $userName);
+		//printGroup('G', $userName);
+		//printGroup('H', $userName);
 	}
 }
 else
@@ -38,7 +41,7 @@ else
 }
 
 function printGroup($group, $userName){
-	echo "<h3 style=\"margin-top: 0px;margin-bottom: 0px;\">Gruppe $group</h3>";
+	echo "<h1 style=\"margin-top: 0px;margin-bottom: 0px;\">Gruppe $group</h1>";
 	echo "<table CELLSPACING=20>";
 	echo "<td>";
 	printGroupRanks($group, $userName);
@@ -79,7 +82,7 @@ function printGroupRanks($group, $userName){
 		echo "<td> $rank. </td><td><b> $teamName </b></td><td> </td>";
 		echo "</tr>";
 	}
-	// zus‰tzliche Zeilen, damit Ranktipps genauso groﬂ in der Tabelle erscheinen wie die Matchtipps
+	// zus√ºtzliche Zeilen, damit Ranktipps genauso gro√ü in der Tabelle erscheinen wie die Matchtipps
 	for($r=0; $r<12; $r++)
 	{
 		echo "<tr>";

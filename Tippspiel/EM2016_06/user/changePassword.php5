@@ -17,8 +17,8 @@ else
 {
 	echo "<html>";
 	echo "<head>";
-	echo "<link rel='stylesheet' type='text/css' href='../../style/style-WM2014.css' />";
-	echo "<title>WM-Tipp - Passwort ändern</title>";
+	echo "<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />";
+	echo "<title>Werke's Tippspiel - Passwort ï¿½ndern</title>";
 	echo "</head>";
 	echo "<body>";
 	if((!isset($_POST["changePassword"])) or
@@ -43,7 +43,7 @@ else
 		}
 		else
 		{
-			echo "<br>Eingegebene neue Passwörter waren unterschiedlich. Bitte Eingabe wiederholen.";
+			echo "<br>Eingegebene neue Passwï¿½rter waren unterschiedlich. Bitte Eingabe wiederholen.";
 			promptChangePassword($userId);
 		}
 	}
@@ -68,7 +68,7 @@ function promptChangePassword($userid)
 	echo "<tr>";
 	echo "</tr>";
 	echo "<tr>";
-	echo "<td><input type='submit' name='changePassword' value='Passwort ändern'> &nbsp</td>";
+	echo "<td><input type='submit' name='changePassword' value='Passwort ï¿½ndern'> &nbsp</td>";
 	echo "</tr>";
 	}
 
@@ -83,8 +83,8 @@ function changePasswordInDB($userid, $passwordnew)
 	$result=mysql_query($sqlupdatePassword);
 	if($result==1)
 	{
-		$log->info("Passwort geändert für User=$username mit UserId=$userid");
-		echo "<br>Passwort geändert.";
+		$log->info("Passwort geï¿½ndert fï¿½r User=$username mit UserId=$userid");
+		echo "<br>Passwort geï¿½ndert.";
 		echo "<br>";
 	}
 	else

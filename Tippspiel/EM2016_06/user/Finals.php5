@@ -14,8 +14,8 @@ else
 	$userId=$_GET["userId"];
 	echo "<html>";
 	echo "<head>";
-	echo "<link rel='stylesheet' type='text/css' href='../../style/style-WM2014.css' />";
-	echo "<title>WM-Tipp - Finalspiele</title>";
+	echo "<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />";
+	echo "<title>Werke's Tippspiel - Endrunde</title>";
 	echo "</head>";
 	echo "<body>";
 	
@@ -41,10 +41,10 @@ else
 	$citation->printCitation("Halbfinale");
 	echo "<br>";
 	run($userId, "Halbfinale", $matchnrPost, $dbutil, $saveMatchErrorText);
-	echo "<h2>Spiel um Platz 3</h2>";
-	$citation->printCitation("Platz3");
-	echo "<br>";
-	run($userId, "Platz3", $matchnrPost, $dbutil, $saveMatchErrorText);
+	//echo "<h2>Spiel um Platz 3</h2>";
+	//$citation->printCitation("Platz3");
+	//echo "<br>";
+	//run($userId, "Platz3", $matchnrPost, $dbutil, $saveMatchErrorText);
 	echo "<h2>Finale</h2>";
 	$citation->printCitation("Finale");
 	echo "<br>";
@@ -81,10 +81,10 @@ function run($userId, $finaltype, $matchnrPost, $dbutil, $saveMatchErrorText){
 			$sqlTeams1 = getTeamsOfGroup($matchnr, 1);
 			$sqlTeams2 = getTeamsOfGroup($matchnr, 2);
 		}
-		if($finaltype=="Viertelfinale"){
+		/*if($finaltype=="Viertelfinale"){
 			$sqlTeams1 = getTeamsOfGroup($matchnr, 1);
 			$sqlTeams2 = getTeamsOfGroup($matchnr, 2);
-		}
+		}*/
 		
 		echo "</tr>";
 		echo "<tr>";
@@ -107,7 +107,7 @@ function run($userId, $finaltype, $matchnrPost, $dbutil, $saveMatchErrorText){
 			if(strlen($saveMatchErrorText)>0){
 				echo "<td>$saveMatchErrorText <font color=\"red\"> --> <b>nicht</b> gespeichert! <font></td>";
 			} else {
-				echo "<td> gespeichert! </td>";
+				echo "<td> <font color=\"green\"> Ergebnis erfolgreich gespeichert :) <font> </td>";
 			}
 		}
 		echo "</tr>";
@@ -124,22 +124,25 @@ function run($userId, $finaltype, $matchnrPost, $dbutil, $saveMatchErrorText){
 function printDescription($matchnr){
 	switch($matchnr)
 	{
-		case 49 : echo "<td></td><td></td><td>Sieger Gruppe A</td><td> -</td><td>Zweiter Gruppe B</td><td></td><td></td>";break;
-		case 50 : echo "<td></td><td></td><td>Sieger Gruppe C</td><td> -</td><td>Zweiter Gruppe D</td><td></td><td></td>";break;
-		case 51 : echo "<td></td><td></td><td>Sieger Gruppe B</td><td> -</td><td>Zweiter Gruppe A</td><td></td><td></td>";break;
-		case 52 : echo "<td></td><td></td><td>Sieger Gruppe D</td><td> -</td><td>Zweiter Gruppe C</td><td></td><td></td>";break;
-		case 53 : echo "<td></td><td></td><td>Sieger Gruppe E</td><td> -</td><td>Zweiter Gruppe F</td><td></td><td></td>";break;
-		case 54 : echo "<td></td><td></td><td>Sieger Gruppe G</td><td> -</td><td>Zweiter Gruppe H</td><td></td><td></td>";break;
-		case 55 : echo "<td></td><td></td><td>Sieger Gruppe F</td><td> -</td><td>Zweiter Gruppe E</td><td></td><td></td>";break;
-		case 56 : echo "<td></td><td></td><td>Sieger Gruppe H</td><td> -</td><td>Zweiter Gruppe G</td><td></td><td></td>";break;
-		case 57 : echo "<td></td><td></td><td>Sieger Spiel 49</td><td> -</td><td>Sieger Spiel 50</td><td></td><td></td>";break;
-		case 58 : echo "<td></td><td></td><td>Sieger Spiel 53</td><td> -</td><td>Sieger Spiel 54</td><td></td><td></td>";break;
-		case 59 : echo "<td></td><td></td><td>Sieger Spiel 51</td><td> -</td><td>Sieger Spiel 52</td><td></td><td></td>";break;
-		case 60 : echo "<td></td><td></td><td>Sieger Spiel 55</td><td> -</td><td>Sieger Spiel 56</td><td></td><td></td>";break;
-		case 61 : echo "<td></td><td></td><td>Sieger Spiel 57</td><td> -</td><td>Sieger Spiel 58</td><td></td><td></td>";break;
-		case 62 : echo "<td></td><td></td><td>Sieger Spiel 59</td><td> -</td><td>Sieger Spiel 60</td><td></td><td></td>";break;
-		case 63 : echo "<td></td><td></td><td>Verlierer Spiel 61</td><td> -</td><td>Verlierer Spiel 62</td><td></td><td></td>";break;
-		case 64 : echo "<td></td><td></td><td>Sieger Spiel 61</td><td> -</td><td>Sieger Spiel 62</td><td></td><td></td>";break;
+		case 37 : echo "<td>Achtelfinale 1</td><td></td><td>Zweiter Gruppe A</td><td> -</td><td>Zweiter Gruppe C</td><td></td><td></td>";break;
+		case 38 : echo "<td>Achtelfinale 2</td><td></td><td>Sieger Gruppe B</td><td> -</td><td>Dritter Gruppe A/C/D</td><td></td><td></td>";break;
+		case 39 : echo "<td>Achtelfinale 3</td><td></td><td>Sieger Gruppe D</td><td> -</td><td>Dritter Gruppe B/E/F</td><td></td><td></td>";break;
+		case 40 : echo "<td>Achtelfinale 4</td><td></td><td>Sieger Gruppe A</td><td> -</td><td>Dritter Gruppe C/D/E</td><td></td><td></td>";break;
+		case 41 : echo "<td>Achtelfinale 5</td><td></td><td>Sieger Gruppe C</td><td> -</td><td>Dritter Gruppe ABF</td><td></td><td></td>";break;
+		case 42 : echo "<td>Achtelfinale 6</td><td></td><td>Sieger Gruppe F</td><td> -</td><td>Zweiter Gruppe E</td><td></td><td></td>";break;
+		case 43 : echo "<td>Achtelfinale 7</td><td></td><td>Sieger Gruppe E</td><td> -</td><td>Dritter Gruppe A/B/F</td><td></td><td></td>";break;
+		case 44 : echo "<td>Achtelfinale 8</td><td></td><td>Zweiter Gruppe B</td><td> -</td><td>Zweiter Gruppe F</td><td></td><td></td>";break;
+		//
+		case 45 : echo "<td>Viertelfinale 1</td><td></td><td>Sieger Achtelfinale 1</td><td> -</td><td>Sieger Achtelfinale 3</td><td></td><td></td>";break;
+		case 46 : echo "<td>Viertelfinale 2</td><td></td><td>Sieger Achtelfinale 2</td><td> -</td><td>Sieger Achtelfinale 6</td><td></td><td></td>";break;
+		case 47 : echo "<td>Viertelfinale 3</td><td></td><td>Sieger Achtelfinale 5</td><td> -</td><td>Sieger Achtelfinale 7</td><td></td><td></td>";break;
+		case 48 : echo "<td>Viertelfinale 4</td><td></td><td>Sieger Achtelfinale 4</td><td> -</td><td>Sieger Achtelfinale 8</td><td></td><td></td>";break;
+		//
+		case 49 : echo "<td>Halbfinale 1</td><td></td><td>Sieger Viertelfinale 1</td><td> -</td><td>Sieger Viertelfinale 2</td><td></td><td></td>";break;
+		case 50 : echo "<td>Halbfinale 2</td><td></td><td>Sieger Viertelfinale 3</td><td> -</td><td>Sieger Viertelfinale 4</td><td></td><td></td>";break;
+		//
+		//case 63 : echo "<td></td><td></td><td>Verlierer Halbfinale 1</td><td> -</td><td>Verlierer Spiel 62</td><td></td><td></td>";break;
+		case 51 : echo "<td></td><td></td><td>Sieger Halbfinale 1</td><td> -</td><td>Halbfinale 2</td><td></td><td></td>";break;
 	}
 }
 
@@ -147,55 +150,47 @@ function getTeamsOfGroup($matchnr, $named){
 	//echo "<br>getTeamsOfGroup($matchnr, $named)";
 	switch($matchnr)
 	{
-		case 49 :
+		case 37 :
 			if($named==1) {
 				return getTeams('A');
 			}
 			else
 			{
-				return getTeams('B');
-			}
-		case 50 :
-			if($named==1) {
 				return getTeams('C');
 			}
-			else
-			{
-				return getTeams('D');
-			}
-		case 51 :
+		case 38 :
 			if($named==1) {
 				return getTeams('B');
 			}
 			else
 			{
+				return getTeamsOfthreeGroups('A','C','D');
+			}
+		case 39 :
+			if($named==1) {
+				return getTeams('D');
+			}
+			else
+			{
+				return getTeamsOfthreeGroups('B','E','F');
+			}
+		case 40 :
+			if($named==1) {
 				return getTeams('A');
 			}
-		case 52 :
-			if($named==1) {
-				return getTeams('D');
-			}
 			else
 			{
+				return getTeamsOfthreeGroups('C','D','E');
+			}
+		case 41 :
+			if($named==1) {
 				return getTeams('C');
 			}
-		case 53 :
-			if($named==1) {
-				return getTeams('E');
-			}
 			else
 			{
-				return getTeams('F');
+				return getTeamsOfthreeGroups('A','B','F');
 			}
-		case 54 :
-			if($named==1) {
-				return getTeams('G');
-			}
-			else
-			{
-				return getTeams('H');
-			}
-		case 55 :
+		case 42 :
 			if($named==1) {
 				return getTeams('F');
 			}
@@ -203,15 +198,23 @@ function getTeamsOfGroup($matchnr, $named){
 			{
 				return getTeams('E');
 			}
-		case 56 :
+		case 43 :
 			if($named==1) {
-				return getTeams('H');
+				return getTeams('E');
 			}
 			else
 			{
-				return getTeams('G');
+				return getTeams('D');
 			}
-		case 57 : 
+		case 44 :
+			if($named==1) {
+				return getTeams('B');
+			}
+			else
+			{
+				return getTeams('F');
+			}
+		/*case 45 : 
 			if($named==1) {
 				return getTeamsOfGroups('A','B');
 			}
@@ -219,7 +222,7 @@ function getTeamsOfGroup($matchnr, $named){
 			{
 				return getTeamsOfGroups('C','D');
 			}
-		case 58 : 
+		case 46 : 
 			if($named==1) { // Winner 53
 				return getTeamsOfGroups('E','F');
 			}
@@ -227,7 +230,7 @@ function getTeamsOfGroup($matchnr, $named){
 			{	// Winner 54
 				return getTeamsOfGroups('G','H');
 			}
-		case 59 : 
+		case 47 : 
 			if($named==1) { // Winner 51
 				return getTeamsOfGroups('A','B');
 			}
@@ -235,21 +238,21 @@ function getTeamsOfGroup($matchnr, $named){
 			{	// Winner 52
 				return getTeamsOfGroups('C','D');
 			}
-		case 60 : 
+		case 48 : 
 			if($named==1) { // Winner 55
 				return getTeamsOfGroups('E','F');
 			}
 			else
 			{	// Winner 56
 				return getTeamsOfGroups('G','H');
-			}
+			}*/
 	}
 }
 
 function allTeamsAsOption($sqlTeams, $tippedTeam, $optionName) {
 	$numTeams=mysql_num_rows($sqlTeams);
 	if ($numTeams==0)
-	echo "keine passenden Datensätze gefunden";
+	echo "keine passenden DatensÃ¤tze gefunden";
 	else
 	{
 		if($tippedTeam!="")
@@ -291,6 +294,13 @@ function getTeams($group){
 function getTeamsOfGroups($group1, $group2){
 	$table_teams=dbschema::teams;
 	$sqlQuery="SELECT t.name FROM $table_teams t WHERE t.group='$group1' UNION SELECT t.name FROM $table_teams t WHERE t.group='$group2'";
+	$sqlQueryResult=mysql_query($sqlQuery);
+	return $sqlQueryResult;
+}
+
+function getTeamsOfthreeGroups($group1, $group2, $group3){
+	$table_teams=dbschema::teams;
+	$sqlQuery="SELECT t.name FROM $table_teams t WHERE t.group='$group1' UNION SELECT t.name FROM $table_teams t WHERE t.group='$group2' UNION SELECT t.name FROM $table_teams t WHERE t.group='$group3'";
 	$sqlQueryResult=mysql_query($sqlQuery);
 	return $sqlQueryResult;
 }
@@ -409,7 +419,7 @@ function insertUpdateInTipps($userName, $matchnr, $teamShort1, $teamShort2, $Goa
 		if (!$sqlupdateMatchResult) {
 			$sqlerror=mysql_error();
 			$log->error($sqlerror);
-			echo "<br><font color='#EE0000'> Ungültiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>";
+			echo "<br><font color='#EE0000'> UngÃ¼ltiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>";
 		    echo "<br><font color='#EE0000'> vorher: <b>$sqlinsert</b> <br>Error:$sqlerrorInsert</font>";
 		}
 	}
@@ -433,9 +443,9 @@ function removeFinalMatchInTipps($userName, $matchnr){
 	if ($sqlInsertResult=!1) {
 		$sqlerror=mysql_error();
 		$log->error($sqlerror);
-		echo "<br><font color='#EE0000'> Ungültiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>";
+		echo "<br><font color='#EE0000'> UngÃ¼ltiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>";
 	}
-	echo "<br> Tipp für Spiel <b>$matchnr</b> gelöscht";
+	echo "<br> Tipp fÃ¼r Spiel <b>$matchnr</b> gelÃ¶scht";
 }
 
 function updateInMatches($matchnr, $teamShort1, $teamShort2){
@@ -452,7 +462,7 @@ function updateInMatches($matchnr, $teamShort1, $teamShort2){
 		echo "<br>sqlupdateMatchResult:$sqlupdateMatchResult";
 		$sqlerror=mysql_error();
 		$log->error($sqlerror);
-		echo "<br><font color='#EE0000'> Ungültiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>";
+		echo "<br><font color='#EE0000'> UngÃ¼ltiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>";
 	}
 }
 

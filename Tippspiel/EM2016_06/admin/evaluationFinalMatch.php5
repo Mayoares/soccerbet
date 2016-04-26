@@ -23,7 +23,7 @@ else
 	}
 	else if(isset($_POST["evaluationFinalMatch"]))
 	{
-		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
+		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurÃ¼ck zur Ãœbersicht</a>";
 		echo "<br>";
 		echo "<br>";
 		$SelectedMatchnr=$_POST['SelectedMatchnr'];
@@ -31,7 +31,7 @@ else
 		evaluateFinalMatch($SelectedMatchnr, $dbutil);
 		setMatchEvaluated($SelectedMatchnr);
 		echo "<br>";
-		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
+		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurÃ¼ck zur Ãœbersicht</a>";
 	}
 	else
 	{
@@ -64,12 +64,12 @@ function setMatchEvaluated($matchnr){
 	$sqlUpdateResult=mysql_query($sql);
 	if(!$sqlUpdateResult)
 	{
-		echo "evaluationDone='T' konnte nicht gesetzt werden für matchnr='$matchnr'<br>";
+		echo "evaluationDone='T' konnte nicht gesetzt werden fÃ¼r matchnr='$matchnr'<br>";
 		echo mysql_error();
 	}
 	else
 	{
-		echo "<br> evaluationDone='T' für matchnr='$matchnr' OK <br>";
+		echo "<br> evaluationDone='T' fÃ¼r matchnr='$matchnr' OK <br>";
 	}
 }
 
@@ -82,7 +82,7 @@ function evaluateFinalMatch($matchnr, $dbutil){
 	echo "<body>";
 
 	$matchtype = getMatchType($matchnr);
-	echo "Spiel <$matchnr> ($matchtype) für alle User auswerten ...<br>";
+	echo "Spiel <$matchnr> ($matchtype) fÃ¼r alle User auswerten ...<br>";
 	echo "<br>";
 	
 	$arrayReal=getRealResult($matchnr);
@@ -97,7 +97,7 @@ function evaluateFinalMatch($matchnr, $dbutil){
 	echo "Ergebnis: <b>$team1Real - $team2Real  $GoalsTeam1Real : $GoalsTeam2Real</b><br>";
 	echo "<br>";
 	
-	// für jeden User ...
+	// fï¿½r jeden User ...
 	$table_users = dbschema::users;
 	$sqluser="SELECT t.username FROM $table_users t WHERE NOT t.username='real' AND NOT t.username='admin' ORDER BY (t.username)";
 	$sqlResultUsers=mysql_query($sqluser);
@@ -126,7 +126,7 @@ function evaluateFinalMatch($matchnr, $dbutil){
 			$WinnerUser=$arrayUserTipps["winner"];
 			$GoalDiffUser=$arrayUserTipps["goaldiff"];
 			
-			// ... und überprüfe, ob diese Paarung dabei ist
+			// ... und ueberpruefe, ob diese Paarung dabei ist
 			if($team1UserShort==$team1RealShort && $team2UserShort==$team2RealShort)
 			{
 				$userHasFinalMatchPair=true;
@@ -276,8 +276,8 @@ function updateScoreInDB($user, $userMatchnr, $score){
 	}
 	else
 	{
-		echo "<br>Update in DB wurde ausgeführt (Spiel $userMatchnr)<br>";
-		$log->info("Update in DB wurde ausgeführt.");
+		echo "<br>Update in DB wurde ausgefÃ¼hrt (Spiel $userMatchnr)<br>";
+		$log->info("Update in DB wurde ausgefÃ¼hrt.");
 	}	
 }
 ?>

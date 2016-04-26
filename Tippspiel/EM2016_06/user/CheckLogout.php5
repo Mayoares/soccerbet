@@ -17,18 +17,20 @@ else
 {
 	echo "<html>";
 	echo "<head>";
-	echo "<link rel='stylesheet' type='text/css' href='../../style/style-WM2014.css' />";
+	echo "<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />";
+	echo "<title> Werke's Tippspiel - Logout</title>";
+	echo "</head>";
 	echo "<br>";
-	// echo "<font color=\"red\"><b>Hast du alle Tipps vollständig ausgefüllt und nichts vergessen?</b></font>";
-	echo "<p class=\"info\">Hast du alle Tipps vollständig ausgefüllt und nichts vergessen?</p>";
+	// echo "<font color=\"red\"><b>Hast du alle Tipps vollstï¿½ndig ausgefï¿½llt und nichts vergessen?</b></font>";
+	echo "<p class=\"info\">Hast du alle Tipps vollstÃ¤ndig ausgefÃ¼llt und nichts vergessen?</p>";
 	echo "<br>";
 	echo "<br>";
 	echo "Hm, nochmal ";
-	echo "<a href='./showAllTipps.php5?userId=$userId&framepart=group' target='Daten'>Meine Gruppentipps</a> und ";
-	echo "<a href='./showAllTipps.php5?userId=$userId&framepart=rest' target='Daten'>Meine Finaltipps</a> kontrollieren.";
+	echo "<a href='./showAllTipps.php5?userId=$userId&framepart=group' target='Daten'>Meine Gruppen-Tipps</a> und ";
+	echo "<a href='./showAllTipps.php5?userId=$userId&framepart=rest' target='Daten'>Meine Endrunden-Tipps</a> kontrollieren?";
 	echo "<br>";
 	echo "<br>";
-	echo "<a href='../util/login.php5' target='Daten' onclick='FrameAendern()'/><FONT SIZE=5><b>OK, logout.</b></FONT>";
+	echo "<a href='../util/login.php5' target='Daten' onclick='FrameAendern()'/><FONT SIZE=5><b>Logout</b></FONT>";
     echo "<br>";
 }
 

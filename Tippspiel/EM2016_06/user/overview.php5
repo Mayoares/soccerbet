@@ -14,8 +14,8 @@ $userName=$dbutil->getUserName($userId);
 ?>
 <html>
 <head>
-<link rel='stylesheet' type='text/css' href='../../style/style-WM2014.css' />
-<title>WM-Tipp</title>
+<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />
+<title>Werke's Tippspiel - Navigation</title>
 </head>
 <body>
 <script type="text/javascript">
@@ -28,7 +28,7 @@ function FrameAendern () {
 echo "Eingelogged als <b>$userName</b>";
 echo "&nbsp;&nbsp;";
 echo "<br>";
-echo "<a href='CheckLogout.php5?userId=$userId' target='Daten'/><FONT SIZE=5><b>Ausloggen</b></FONT>";
+echo "<a href='CheckLogout.php5?userId=$userId' target='Daten'/><FONT SIZE=5><b>Logout</b></FONT>";
 echo "<br>";
 
 // POPUP trial :
@@ -40,11 +40,9 @@ echo "<br><a href='./userInfo.php5?userId=$userId' target='Daten'>Home</a>";
 echo "<br>";
 if($userName != "test")
 {
-	echo "<a href='./changePassword.php5?userId=$userId' target='Daten'>Passwort ändern</a>";
+	echo "<a href='./changePassword.php5?userId=$userId' target='Daten'>Passwort Ã¤ndern</a>";
 }
 
-echo "<br>";
-echo "<br>";
 echo "<br>";
 echo "<FONT SIZE=5><b>Tippen:</b></FONT>";
 echo "<br>";
@@ -54,22 +52,22 @@ echo "<br><a href='Group.php5?userId=$userId&group=C' target='Daten'>Gruppe C</a
 echo "<br><a href='Group.php5?userId=$userId&group=D' target='Daten'>Gruppe D</a>";
 echo "<br><a href='Group.php5?userId=$userId&group=E' target='Daten'>Gruppe E</a>";
 echo "<br><a href='Group.php5?userId=$userId&group=F' target='Daten'>Gruppe F</a>";
-echo "<br><a href='Group.php5?userId=$userId&group=G' target='Daten'>Gruppe G</a>";
-echo "<br><a href='Group.php5?userId=$userId&group=H' target='Daten'>Gruppe H</a>";
+//echo "<br><a href='Group.php5?userId=$userId&group=G' target='Daten'>Gruppe G</a>";
+//echo "<br><a href='Group.php5?userId=$userId&group=H' target='Daten'>Gruppe H</a>";
 echo "<br>";
 echo "<br><a href='Finals.php5?userId=$userId' target='Daten'>Endrunde</a>";
 echo "<br>";
-echo "<br><a href='Champions.php5?userId=$userId' target='Daten'>Weltmeister & Torschützenkönig</a>";
+echo "<br><a href='Champions.php5?userId=$userId' target='Daten'>Stockerl-Tipps & TorschÃ¼tzenkÃ¶nig</a>";
 echo "<br>";
 echo "<br>";
 echo "<br>";
 echo "<FONT SIZE=5><b>Tipps kontrollieren:</b></FONT>";
 echo "<br>";
 echo "<br><a href='./showAllTipps.php5?userId=$userId&framepart=group' target='Daten'>";
-echo "<b>Meine Gruppen-Tipps</b>";
+echo "Meine Gruppen-Tipps";
 echo "<br>";
 echo "<br><a href='./showAllTipps.php5?userId=$userId&framepart=rest' target='Daten'>";
-echo "<b>Meine Final-Tipps</b>";
+echo "Meine Endrunden-Tipps";
 echo "</a>";
 
 echo "</body>";

@@ -4,7 +4,7 @@ session_start();
 echo "<html>";
 echo "<head>";
 echo "<link rel='stylesheet' type='text/css' href='../../style/style.css' />";
-echo "<title>WM-Tipp - Punktestand</title>";
+echo "<title>Werke's Tippspiel - Punktestand</title>";
 echo "</head>";
 echo "<body>";
 // Verbindung zur Datenbank aufbauen
@@ -16,7 +16,7 @@ $log=new viewlogger();
 $log->info("Clicked showUserRank");
 
 echo "<br>";
-echo "<a href='../util/login.php5'>zurück</a>";
+echo "<a href='../util/login.php5'>zurÃ¼ck</a>";
 echo "<br>";
 printLastUpdate();
 printDescription();
@@ -26,6 +26,7 @@ function printDescription(){
 	
 	echo "<b><u>Punktestand</u></b>";
 }
+
 function printLastUpdate(){
 	echo "<br>";
 	include_once("../util/dbutil.php5");
@@ -52,7 +53,7 @@ function printLastUpdate(){
 	$sqlResult = getEvaluatedGroups();
 	$rowcnt = mysql_num_rows($sqlResult);
 	if($rowcnt>0){
-		echo "Berücksichtigt sind auch Punkte für Tabellenplätze der Gruppen <b>";
+		echo "BerÃ¼cksichtigt sind auch Punkte fÃ¼r TabellenplÃ¤tze der Gruppen <b>";
 		while($array=mysql_fetch_array($sqlResult))
 		{
 			$group=$array["group"];
@@ -63,7 +64,7 @@ function printLastUpdate(){
 		$rowcnt = mysql_num_rows($sqlResult);
 		if($rowcnt>0){
 			echo "<br>";
-			echo "und die Punkte für Teilnahme an den Finalspielen <b>";
+			echo "und die Punkte fÃ¼r Teilnahme an den Finalspielen <b>";
 			while($array=mysql_fetch_array($sqlResult))
 			{
 				$finalmatchnr=$array["matchnr"];

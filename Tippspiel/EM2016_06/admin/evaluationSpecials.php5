@@ -68,7 +68,7 @@ echo "</table>";
 echo "<br>";
 echo "<br>";
 echo "<br>";
-echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
+echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurÃ¼ck zur Ãœbersicht</a>";
 
 function getRealTeam($rank){
 	$table_championtipps=dbschema::championtipps;
@@ -95,6 +95,6 @@ function getScore($rank){
 	}
 }
 
-//Datenbankconnection schließen
+//Datenbankconnection schliessen
 mysql_close();
 ?>

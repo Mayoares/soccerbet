@@ -106,7 +106,7 @@ function addUser($username, $firstname, $lastname, $email, $adminuserId)
 		echo mysql_error();
 		echo "<br>";
 		echo "<br>";
-		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
+		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurÃ¼ck zur Ãœbersicht</a>";
 	}
 	else
 	{
@@ -114,8 +114,8 @@ function addUser($username, $firstname, $lastname, $email, $adminuserId)
 		$userInfo = "<br>UserID=$newuserId<br>Username=$username<br>Vorname=$firstname<br>Nachname=$lastname<br>email=$email";
 		
 		$id = md5(uniqid(time()));
-		$betreff = "WERKEs WM-Tippspiel Login-Info";
-		$content = "From: WERKEs-WM-Tipp\n";
+		$betreff = "WERKEs Werke's Tippspielspiel Login-Info";
+		$content = "From: WERKEs-Werke's Tippspiel\n";
 		$content .= "MIME-Version: 1.0\n";
 		$content .= "Content-Type: multipart/mixed; boundary=$id\n\n";
 		$content .= "This is a multi-part message in MIME format\n";
@@ -127,17 +127,17 @@ function addUser($username, $firstname, $lastname, $email, $adminuserId)
 		$content .= "\n\ndeine Logindaten lauten";
 		$content .= "\n\nBenutzername: $username "; 
 		$content .= "\nPasswort    : $password ";
-		$content .= "\n\nDas Passwort wurde automatisch generiert und sollte nach dem ersten Login geändert werden."; 
-		$content .= "\n\nDirektlink zum Tippspiel: http://mayoar.rivido.de/WM2014/util/login.php5";
+		$content .= "\n\nDas Passwort wurde automatisch generiert und sollte nach dem ersten Login geÃ¤ndert werden."; 
+		$content .= "\n\nDirektlink zum Tippspiel: http://mayoar.rivido.de/EM2016_06/util/login.php5";
 		$content .= "\n--$id";
 		// Body Ende
 		mail($email, $betreff, "", $content); // E-Mail versenden
-		$printOut = "eMail mit initialem Passwort für $firstname $lastname (Benutzername:$username) an '$email' gesendet.";
+		$printOut = "eMail mit initialem Passwort fÃ¼r $firstname $lastname (Benutzername:$username) an '$email' gesendet.";
 		echo $printOut;
 		$log->info("Sent email with initial password for $firstname $lastname (Benutzername:$username) to '$email'");
 		
 		$adminEMail = "andreas.grotemeyer@gmail.com";
-		$adminContent = "From: WERKEs-WM-Tipp\n";
+		$adminContent = "From: WERKEs-Werke's Tippspiel\n";
 		$adminContent .= "MIME-Version: 1.0\n";
 		$adminContent .= "Content-Type: multipart/mixed; boundary=$id\n\n";
 		$adminContent .= "This is a multi-part message in MIME format\n";
@@ -190,7 +190,7 @@ function promptAddUser($adminuserId)
 	echo "<tr>";
 	echo "</tr>";
 	echo "<tr>";
-	echo "<td><input type='submit' name='addUser' value='Hinzufügen'></td>";
+	echo "<td><input type='submit' name='addUser' value='HinzufÃ¼gen'></td>";
 	echo "<td><input type='submit' name='Cancel' value='Abbrechen'></td>";
 	echo "</tr>";
 	echo "</table>";

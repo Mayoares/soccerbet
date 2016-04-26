@@ -2,10 +2,10 @@
 <head>
 <link rel='stylesheet' type='text/css' href='../../style/style.css' />
 <br>
-<a href='../util/login.php5'>zurück</a>
+<a href='../util/login.php5'>zurÃ¼ck</a>
 <br>
 <br>
-<title>WM-Tipp - Tipps ALL USERS (Germany)</title>
+<title>Werke's Tippspiel - Tipps ALL USERS (Germany)</title>
 </head>
 <script type="text/javascript">
 <!--

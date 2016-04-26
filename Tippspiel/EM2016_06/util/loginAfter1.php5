@@ -1,7 +1,7 @@
 <html>
 <head>
 <link rel='stylesheet' type='text/css' href='../../style/style.css' />
-<title>WM-Tipp Login </title>
+<title>Werke's Tippspiel Login </title>
 </head>
 <body>
 <center>
@@ -35,7 +35,7 @@
 <a href='../news/WM-Newsletter-2014-07-18.docx'>WM-Newsletter #8</a>
 </td>
 <td>
-<a href='../docs/Spielregeln_WM.pdf'>WM-Tipp-Regeln</a>
+<a href='../docs/Spielregeln_WM.pdf'>Werke's Tippspiel-Regeln</a>
 </td>
 <td>
 <a href='../anybody/showAllUsersGroupTipps.php5?userId=$userId'>Gruppenspieltipps</a>
@@ -88,8 +88,8 @@ function allUsersAsOption($optionName) {
 	$numUsers=mysql_num_rows($sqlUsersResult);
 	if ($numUsers==0)
 	{
-		$log->info("keine passenden Datensätze gefunden");
-		echo "keine passenden Datensätze gefunden";
+		$log->info("keine passenden Datensï¿½tze gefunden");
+		echo "keine passenden Datensï¿½tze gefunden";
 	}
 	else
 	{

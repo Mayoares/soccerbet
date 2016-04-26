@@ -4,8 +4,8 @@ session_start();
 $userId=$_GET["userId"];
 echo "<html>";
 echo "<head>";
-echo "<link rel='stylesheet' type='text/css' href='../../style/style-WM2014.css' />";
-echo "<title>WM-Tipp - User Tipps</title>";
+echo "<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />";
+echo "<title>Werke's Tippspiel - Meine Endrunden- und Spezial-Tipps</title>";
 echo "</head>";
 
 // Verbindung zur Datenbank aufbauen
@@ -22,7 +22,7 @@ if(strlen($userName)>0)
 	printFinal($userName, 'Achtelfinale');
 	printFinal($userName, 'Viertelfinale');
 	printFinal($userName, 'Halbfinale');
-	printFinal($userName, 'Platz3');
+	//printFinal($userName, 'Platz3');
 	printFinal($userName, 'Finale');
 	
 	printChampions($userName);
@@ -47,7 +47,7 @@ function getTeamName($shortname) {
 function printFinal($userName, $matchtype){
 	
 	echo "<br>";
-	echo "<h3>$matchtype</h3>";
+	echo "<h2>$matchtype</h2>";
 	echo "<br>";
 	
 	$table_finalmatchtipps=dbschema::finalmatchtipps;
@@ -90,16 +90,17 @@ function printChampions($userName){
 	
 	echo "<br>";
 	echo "<br>";
-	echo "<h3>Spezial</h3>";
+	echo "<h2>Spezial</h2>";
 	echo "<br>";
 	
 	$champion=getTippedTeamRostrum($userName, 1);  if(!isset($champion)){$champion = "<font color=\"red\"><b> FEHLT! </b></font>";}
 	$vice=getTippedTeamRostrum($userName, 2); if(!isset($vice)){$vice = "<font color=\"red\"><b> FEHLT! </b></font>";}
 	$third=getTippedTeamRostrum($userName, 3); if(!isset($third)){$third = "<font color=\"red\"><b> FEHLT! </b></font>";}
-	echo "<table style='font-size:20px'>";
+	//echo "<table style='font-size:14px'>";
+	echo "<table>";
 	echo "<tr><td>Weltmeister &nbsp; &nbsp; &nbsp;</td><td><b>$champion</b></td></tr>";
 	echo "<tr><td>Vizeweltmeister &nbsp; &nbsp; &nbsp;</td><td><b>$vice</b></td></tr>";
-	echo "<tr><td>Platz 3 &nbsp; &nbsp; &nbsp;</td><td><b>$third</b></td></tr>";
+	//echo "<tr><td>Platz 3 &nbsp; &nbsp; &nbsp;</td><td><b>$third</b></td></tr>";
 	echo "</table>";
 }
 
@@ -109,8 +110,9 @@ function printTopscorer($username){
 	$tippedTeamShort=getTippedTopScorerTeam($username);
 	$topScorerTeam=getTeamName($tippedTeamShort); if(strlen($topScorerTeam)==0){$topScorerTeam = "<font color=\"red\"><b> FEHLT! </b></font>";}
 	
-	echo "<table style='font-size:18px'>";
-	echo "<tr><td>Torschützenkönig &nbsp; &nbsp; &nbsp;</td><td><b>$topscorer</b></td> &nbsp; <td>($topScorerTeam)</td> </tr>";
+	//echo "<table style='font-size:18px'>";
+	echo "<table>";
+	echo "<tr><td>TorschÃ¼tzenkÃ¶nig &nbsp; &nbsp; &nbsp;</td><td><b>$topscorer</b></td> &nbsp; <td>($topScorerTeam)</td> </tr>";
 	echo "</table>";
 }
 

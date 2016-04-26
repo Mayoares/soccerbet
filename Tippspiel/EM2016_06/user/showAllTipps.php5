@@ -5,7 +5,7 @@ $userId=$_GET["userId"];
 $framepart=$_GET["framepart"];
 echo "<html>";
 echo "<head>";
-echo "<title>WM-Tipp - User Tipps</title>";
+echo "<title>Werke's Tippspiel - User Tipps</title>";
 echo "</head>";
 
 if(strlen($userId)>0)

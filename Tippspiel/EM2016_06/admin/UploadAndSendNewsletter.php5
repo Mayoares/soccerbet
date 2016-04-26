@@ -25,7 +25,7 @@ else
 	$filename = basename( $_FILES['uploadedfile']['name']);
 	
 	echo "<br>";
-	echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
+	echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurÃ¼ck zur Ãœbersicht</a>";
 	echo "<br>";
 	echo "<br>";
 	echo "Datei wird hochgeladen ...<br>";
@@ -36,7 +36,7 @@ else
 	    sendFileToAll($filename, $target_path);
 	    echo "<br>Verschicken fertig.<br>";
 	    echo "<br>";
-		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
+		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurÃ¼ck zur Ãœbersicht</a>";
 	    echo "<br>";
 	} else{
 	    echo "There was an error uploading the file, please try again!";
@@ -77,7 +77,7 @@ function sendFile($filename, $target_path, $empfaenger){
 	$dateiinhalt = fread(fopen($dateiname, "r"), filesize($dateiname));
 
 	// Absender Name und E-Mail Adresse
-	$kopf = "From: WERKEs-WM-Tipp\n";
+	$kopf = "From: WERKEs-Werke's Tippspiel\n";
 	$kopf .= "MIME-Version: 1.0\n";
 	$kopf .= "Content-Type: multipart/mixed; boundary=$id\n\n";
 	$kopf .= "This is a multi-part message in MIME format\n";
@@ -86,7 +86,7 @@ function sendFile($filename, $target_path, $empfaenger){
 	$kopf .= "Content-Transfer-Encoding: 8bit\n\n";
 	$kopf .= "Liebe Tippspiel-Teilnehmer, anbei WERKEs WM-Newsletter."; // Inhalt der E-Mail (Body)
 	$kopf .= "\n--$id";
-	// Content-Type: image/gif, image/jpeg, image/png » MIME-Typen - selfHtml.org
+	// Content-Type: image/gif, image/jpeg, image/png ï¿½ MIME-Typen - selfHtml.org
 	$kopf .= "\nContent-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document; name=$dateiname_mail\n";
 	$kopf .= "Content-Transfer-Encoding: base64\n";
 	$kopf .= "Content-Disposition: attachment; filename=$dateiname_mail\n\n";
@@ -96,7 +96,7 @@ function sendFile($filename, $target_path, $empfaenger){
 	
 	echo "Mail gesendet an '$empfaenger' mit Betreff '$betreff'.<br>";
 	
-	//mail($email, "WM-Tipp Passwort", $message, "From: WERKEs-WM-Tipp\n" . "Content-Type: text/html; charset=iso-8859-1\n");
+	//mail($email, "Werke's Tippspiel Passwort", $message, "From: WERKEs-Werke's Tippspiel\n" . "Content-Type: text/html; charset=iso-8859-1\n");
 	
 }
 

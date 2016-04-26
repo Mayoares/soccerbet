@@ -11,8 +11,8 @@ echo "<html>";
 echo "<head>";
 echo "<link rel='stylesheet' type='text/css' href='../../style/style.css' />";
 echo "<br>";
-echo "<a href='../util/login.php5'>zurück</a>";
-echo "<title>WM-Tipp - Teilnehmer</title>";
+echo "<a href='../util/login.php5'>zurÃ¼ck</a>";
+echo "<title>Werke's Tippspiel - Teilnehmer</title>";
 echo "</head>";
 echo "<body>";
 // Verbindung zur Datenbank aufbauen

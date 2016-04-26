@@ -11,8 +11,8 @@ include_once("../../general/log/log.php5");
 $userName=$dbutil->getUserName($userId);
 echo "<html>";
 echo "<head>";
-echo "<link rel='stylesheet' type='text/css' href='../../style/style-WM2014.css' />";
-echo "<title>WM-Tipp - Gruppe $group - mit Eingabefeld</title>";
+echo "<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />";
+echo "<title>Werke's Tippspiel - Gruppe $group - mit Eingabefeld</title>";
 echo "</head>";
 echo "<body>";
 echo "<h2>Gruppe $group</h2>";
@@ -75,7 +75,7 @@ if(isset($_POST["saveMatches"])){
 		// echo "save match $matchnr";
 		saveMatch($matchnr, $userName, $dbutil);
 	}
-	echo "<font color=\"yellow\">Gruppenspiele gespeichert.</font> <br><br>";
+	echo "<font color=\"green\">Ergebnisse der Gruppenspiele erfolgreich gespeichert :)</font> <br><br>";
 }
 
 
@@ -128,7 +128,7 @@ echo "</form>";
 echo "</body>";
 echo "</html>";
 
-//Datenbankconnection schließen
+//Datenbankconnection schliessen
 mysql_close();
 
 function getGoals1($userName, $matchnr){
@@ -159,7 +159,7 @@ function getTeams($group){
 function allTeamsAsOption($sqlTeams, $tippedTeam, $optionName) {
 	$numTeams=mysql_num_rows($sqlTeams);
 	if ($numTeams==0)
-	echo "keine passenden Datensätze gefunden";
+	echo "keine passenden DatensÃ¤tze gefunden";
 	else
 	{
 		for ($i=0; $i<$numTeams; $i++)
@@ -241,7 +241,7 @@ function insertUpdateMatchPrediction($matchprediction)
 	if (!$sqlInsertResult) {
 		$log->error(mysql_error());
 		//		$sqlerror=mysql_error();
-		//		echo "<br><font color='#EE0000'> Ungültige Abfrage: <b>$sqlinsert</b> <br>Error:$sqlerror</font>"; 
+		//		echo "<br><font color='#EE0000'> UngÃ¼ltige Abfrage: <b>$sqlinsert</b> <br>Error:$sqlerror</font>"; 
 		$sqlupdateMatch="UPDATE $table_groupmatchtipps SET " .
 			"goalsX = '$matchprediction->GoalsTeam1', " .
 			"goalsY = '$matchprediction->GoalsTeam2', " .
@@ -253,7 +253,7 @@ function insertUpdateMatchPrediction($matchprediction)
 		if (!$sqlupdateMatchResult) {
 			$sqlerror=mysql_error();
 			$log->error($sqlerror);
-			echo "<br><font color='#EE0000'> Ungültiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>"; 
+			echo "<br><font color='#EE0000'> UngÃ¼ltiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>"; 
 		}
 		else
 		{
@@ -282,12 +282,12 @@ function saveRanks($userName, $userId, $group, $dbutil){
 			$shortTeamName=$dbutil->getShortName($teamName);
 			insertUpdateRankTipp($userName, $teamName, $shortTeamName, $rankCnt);
 		}
-		echo "<font color=\"yellow\">Platzierungen gespeichert.</font>";
+		echo "<font color=\"green\">Platzierungen erfolgreich gespeichert :)</font>";
 		echo "<br>";
 	}
 	else
 	{	
-		echo "<font color=\"red\">Platzierungen wurden <b> NICHT </b> gespeichert.</font>";
+		echo "<font color=\"red\">Platzierungen wurden <b> NICHT </b> gespeichert :(.</font>";
 		echo "<br>";
 	}
 }
@@ -337,7 +337,7 @@ function areTeamsDifferent($team1,$team2,$rank1,$rank2)
 {
 	if($team1==$team2)
 	{
-		echo "<font color=\"red\">Platzierungen müssen eindeutig sein. <b>$team1</b> wurden Platz <b>$rank1</b> und <b>$rank2</b> zugeordnet.</font>";
+		echo "<font color=\"red\">Platzierungen mÃ¼ssen eindeutig sein. <b>$team1</b> wurden Platz <b>$rank1</b> und <b>$rank2</b> zugeordnet.</font>";
 		echo "<br>";
 		return false;
 	}	
