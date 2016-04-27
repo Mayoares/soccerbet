@@ -128,9 +128,9 @@ function printDescription($matchnr){
 		case 38 : echo "<td>Achtelfinale 2</td><td></td><td>Sieger Gruppe B</td><td> -</td><td>Dritter Gruppe A/C/D</td><td></td><td></td>";break;
 		case 39 : echo "<td>Achtelfinale 3</td><td></td><td>Sieger Gruppe D</td><td> -</td><td>Dritter Gruppe B/E/F</td><td></td><td></td>";break;
 		case 40 : echo "<td>Achtelfinale 4</td><td></td><td>Sieger Gruppe A</td><td> -</td><td>Dritter Gruppe C/D/E</td><td></td><td></td>";break;
-		case 41 : echo "<td>Achtelfinale 5</td><td></td><td>Sieger Gruppe C</td><td> -</td><td>Dritter Gruppe ABF</td><td></td><td></td>";break;
+		case 41 : echo "<td>Achtelfinale 5</td><td></td><td>Sieger Gruppe C</td><td> -</td><td>Dritter Gruppe A/B/F</td><td></td><td></td>";break;
 		case 42 : echo "<td>Achtelfinale 6</td><td></td><td>Sieger Gruppe F</td><td> -</td><td>Zweiter Gruppe E</td><td></td><td></td>";break;
-		case 43 : echo "<td>Achtelfinale 7</td><td></td><td>Sieger Gruppe E</td><td> -</td><td>Dritter Gruppe A/B/F</td><td></td><td></td>";break;
+		case 43 : echo "<td>Achtelfinale 7</td><td></td><td>Sieger Gruppe E</td><td> -</td><td>Zweiter Gruppe D</td><td></td><td></td>";break;
 		case 44 : echo "<td>Achtelfinale 8</td><td></td><td>Zweiter Gruppe B</td><td> -</td><td>Zweiter Gruppe F</td><td></td><td></td>";break;
 		//
 		case 45 : echo "<td>Viertelfinale 1</td><td></td><td>Sieger Achtelfinale 1</td><td> -</td><td>Sieger Achtelfinale 3</td><td></td><td></td>";break;
