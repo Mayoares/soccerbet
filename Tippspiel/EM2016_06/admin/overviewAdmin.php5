@@ -37,56 +37,73 @@ if(isset($_POST["resetEvaluationDone"]))
 
 <h1><font color="red">Adminbereich</font></h1>
 
-<form method=\"POST\" action=\"../util/login.php5\">
-	<input type='submit' name='logout' value='Logout'>
-</form>
+<?php 
+	echo "<form method=\"POST\" action=\"../util/login.php5\">";
+	echo "<input type='submit' name='logout' value='Logout'>";
+	echo "</form>";
+?>
 
 <br>
 
 <div class="block">
 	<h1>Newsletter upload</h1>
 	<hr>
-	<form enctype="multipart/form-data" action="./UploadAndSendNewsletter.php5?userId=$userId" method="POST">
-	<input type="hidden" name="MAX_FILE_SIZE" value="100000"/>
-	<p>Folgende Datei hochladen: <input name="uploadedfile" type="file" />
-	<input type="submit" name='uploadNews' value="Newsletter hochladen und verschicken" /></p>
-	</form>
+	<?php 
+	echo "<p><form enctype=\"multipart/form-data\" action=\"./UploadAndSendNewsletter.php5?userId=$userId\" method=\"POST\">";
+	echo "<input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"100000\" />";
+	echo "Folgende Datei hochladen: <input name=\"uploadedfile\" type=\"file\" /> &nbsp";
+	echo "<input type=\"submit\" name='uploadNews' value=\"Newsletter hochladen und verschicken\" />";
+	echo "</form></p>";
+	?>
 </div>
 
 <div class="block">
 	<h1>User administrieren</h1>
 	<hr>
-	<p><a href='../anybody/showUserList.php5?userId=$userId'>User Liste ansehen</a></p>
+	<?php 
+	echo "<p><a href='../anybody/showUserList.php5?userId=$userId'>User Liste ansehen</a></p>";
+	echo "<p><a href='../anybody/showUserRanks.php5?userId=$userId'>User Rangliste ansehen</a></p>";
 	
-	<p><a href='../anybody/showUserRanks.php5?userId=$userId'>User Rangliste ansehen</a></p>
-	<hr>
-	<?php echo "add $userId";
-	echo "<form method=\"POST\" action=\"addUser.php5?userId=$userId\">";?>
-	<input type='submit' name='addUser' value='User anlegen'></form></p>
-	<hr>
-	<p><form method='POST' action='resetUserPassword.php5?userId=$userId?'>User 
-	<td bgcolor=slategray><select name='SelectedUsername'>
-	<?php allUsersAsOption('User');?>
-	<input type='submit' name='resetUser' value='Passwort zurücksetzen'></form></p>
-	<hr>
-	<p><form method='POST' action='removeUser.php5?userId=$userId'>User 
-	<td bgcolor=slategray><select name='SelectedUsername'>
-	<?php allUsersAsOption('User');?>
-	<input type='submit' name='removeUser' value='User löschen'>
-	</form></p>
-	<hr>
-	<p><form method='POST' action='sendTestMail.php5?userId=$userId'>
-	<input type='Text' size='35' name='email' value=''>
-	<input type='submit' name='sendTestMail' value='Send Test Mail'></form></p>
+	echo "<hr>";
+	
+	echo "<p><form method=\"POST\" action=\"addUser.php5?userId=$userId\">";
+	echo "<input type='submit' name='addUser' value='User anlegen'>";
+	echo "</form></p>";
+	
+	echo "<hr>";
+	
+	echo "<p><form method=\"POST\" action=\"resetUserPassword.php5?userId=$userId\">User ";
+	echo "<td bgcolor=slategray><select name='SelectedUsername'>";
+	allUsersAsOption("User");
+	echo "<input type='submit' name='resetUser' value='Passwort zurücksetzen'>";
+	echo "</form></p>";
+	
+	echo "<hr>";
+	
+	echo "<p><form method=\"POST\" action=\"removeUser.php5?userId=$userId\">User ";
+	echo "<td bgcolor=slategray><select name='SelectedUsername'>";
+	allUsersAsOption("User");
+	echo "<input type='submit' name='removeUser' value='User löschen'>";
+	echo "</form></p>";
+	
+	echo "<hr>";
+	
+	echo "<p><form method=\"POST\" action=\"sendTestMail.php5?userId=$userId\">";
+	echo "<input type=\"Text\" size=\"30\" name=\"email\" value=\"\">";
+	echo "<input type='submit' name='sendTestMail' value='Send Test Mail'>";
+	echo "</form></p>";
+	?>
 </div>
 
 <div class="block">
 	<h1>Tipps ansehen</h1>
 	<hr>
-	<p><a href='../anybody/showAllUsersGroupTipps.php5?userId=$userId'>Gruppenspieltipps</a></p>
-	<p><a href='../anybody/showAllUsersGroupRankTipps.php5?userId=$userId'>Platzierungstipps</a></p>
-	<p><a href='../anybody/showAllUsersFinalmatchTipps.php5?userId=$userId'>Finalspieltipps</a></p>
-	<p><a href='../anybody/showAllUsersSpecialTipps.php5?userId=$userId'>Spezialtipps</a></p>
+	<?php 
+	echo "<p><a href='../anybody/showAllUsersGroupTipps.php5?userId=$userId'>Gruppenspieltipps</a></p>";
+	echo "<p><a href='../anybody/showAllUsersGroupRankTipps.php5?userId=$userId'>Platzierungstipps</a></p>";
+	echo "<p><a href='../anybody/showAllUsersFinalmatchTipps.php5?userId=$userId'>Finalspieltipps</a></p>";
+	echo "<p><a href='../anybody/showAllUsersSpecialTipps.php5?userId=$userId'>Spezialtipps</a></p>";
+	?>
 </div>
 
 <p class='info'>Bitte hier nichts klicken, bevor es wirklich soweit ist!</p>
@@ -94,39 +111,55 @@ if(isset($_POST["resetEvaluationDone"]))
 <div class="block">
 	<h1>Auswertung</h1>
 	<h2>Gruppen</h2>
-	<hr>
-	<?php echo "<form method=\"POST\" action=\"evaluationGroupMatch.php5?adminuserId=$userId\">";?>Spiel 
-	<td bgcolor=slategray><select name='SelectedMatchnr'>
-	<?php allGroupMatchesAsOption('SelectedMatchnr', $dbutil);?></td>
-	<input type='submit' name='evaluationGroupMatch' value='auswerten'></form></p>
-
-	<p><form method='POST' action='evaluationGroupRank.php5?adminuserId=$userId'>Platzierungstipps von Gruppe <td bgcolor=slategray><select name='SelectedGroup'>";
-	<option name=SelectedGroup >A</option>
-	<option name=SelectedGroup >B</option>
-	<option name=SelectedGroup >C</option>
-	<option name=SelectedGroup >D</option>
-	<option name=SelectedGroup >E</option>
-	<option name=SelectedGroup >F</option>
-	</td>
-	<input type='submit' name='evaluationGroupRank' value='auswerten'></form></p>
-	<hr>
+	<?php 
+	echo "<p><form method=\"POST\" action=\"evaluationGroupMatch.php5?adminuserId=$userId\">";
+	echo "Spiel Nr.: ";
+	echo "<td bgcolor=slategray><select name='SelectedMatchnr'>";
+	allGroupMatchesAsOption("SelectedMatchnr", $dbutil);
+	echo "</td>";
+	echo "<input type='submit' name='evaluationGroupMatch' value='auswerten'>";
+	echo "</form></p>";
+	
+	echo "<p><form method=\"POST\" action=\"evaluationGroupRank.php5?adminuserId=$userId\">";
+	echo "Platzierungstipps von Gruppe ";
+	echo "<td bgcolor=slategray><select name='SelectedGroup'>";
+	echo"<option name=SelectedGroup >A</option>";
+	echo"<option name=SelectedGroup >B</option>";
+	echo"<option name=SelectedGroup >C</option>";
+	echo"<option name=SelectedGroup >D</option>";
+	echo"<option name=SelectedGroup >E</option>";
+	echo"<option name=SelectedGroup >F</option>";
+	//echo"<option name=SelectedGroup >G</option>";
+	//echo"<option name=SelectedGroup >H</option>";
+	echo "</td>";
+	echo "<input type='submit' name='evaluationGroupRank' value='auswerten'>";
+	echo "</form></p>";
+	?>
 	<h2>Endrunde</h2>
-
-	<p><form method='POST' action='evaluationParticipants.php5?adminuserId=$userId'>
-	<input type='submit' name='eval3' value='Auswertung Finalspiel-Teilnahme'>
-	</form></p>
-
-	<p><form method='POST' action='evaluationFinalMatch.php5?adminuserId=$userId'>Spiel <td bgcolor=slategray><select name='SelectedMatchnr'>
-	<?php allFinalMatchesAsOption("SelectedMatchnr", $dbutil);?>
-	</td><input type='submit' name='evaluationFinalMatch' value='auswerten'></form></p>
-
-	<p><form method='POST' action='evaluationSpecials.php5?adminuserId=$userId'>
-	<input type='submit' name='eval' value='Auswertung Weltmeister & Co'></form></p>
-	<hr>
+	<?php
+	
+	echo "<p><form method=\"POST\" action=\"evaluationParticipants.php5?adminuserId=$userId\">";
+	echo "<input type=\"submit\" name=\"eval3\" value=\"Auswertung Finalspiel-Teilnahme\">";
+	echo "</form></p>";
+	
+	echo "<p><form method=\"POST\" action=\"evaluationFinalMatch.php5?adminuserId=$userId\">";
+	echo "Spiel Nr.: ";
+	echo "<td bgcolor=slategray><select name='SelectedMatchnr'>";
+	allFinalMatchesAsOption("SelectedMatchnr", $dbutil);
+	echo "</td>";
+	echo "<input type='submit' name='evaluationFinalMatch' value='auswerten'>";
+	echo "</form></p>";
+	
+	echo "<p><form method=\"POST\" action=\"evaluationSpecials.php5?adminuserId=$userId\">";
+	echo "<input type=\"submit\" name=\"eval\" value=\"Auswertung Weltmeister & Co\">";
+	echo "</form></p>";
+	?>
 	<h2>Korrektur</h2>
-	<p><form method='POST' action='overviewAdmin.php5?userId=$userId'> Spiel 
-	<input type='Text' size='1' name='resetMatchNr' value=''>
-	<input type='submit' name='resetEvaluationDone' value='Auswertung rückgängig machen'></form></p>
+	<?php
+	echo "<form method=\"POST\" action=\"overviewAdmin.php5?userId=$userId\">Spiel Nr.: ";
+	echo "<input type=\"Text\" size=\"1\" name=\"resetMatchNr\" value=\"\"> <input type=\"submit\" name=\"resetEvaluationDone\" value=\"Spiel-Auswertung rückgängig machen\">";
+	echo "</form>";
+	?>
 </div>
 
 <p><font color="#cacaca">&copy; 2016. All rights reserved.</font></p>
@@ -135,66 +168,6 @@ if(isset($_POST["resetEvaluationDone"]))
 <p><font color="#cacaca">Designed by R&oslash;bl.</font></p>
 
 <?php
-
-/*
-echo "<h2>Newsletter</h2>";
-echo "<form enctype=\"multipart/form-data\" action=\"./UploadAndSendNewsletter.php5?userId=$userId\" method=\"POST\">";
-echo "<input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"100000\" />";
-echo "Folgende Datei hochladen: <input name=\"uploadedfile\" type=\"file\" /> &nbsp";
-echo "<input type=\"submit\" name='uploadNews' value=\"Newsletter hochladen und verschicken\" />";
-echo "</form>";
-*/
-
-/*
-echo "<h2>User administrieren</h2>";
-echo "<a href='../anybody/showUserList.php5?userId=$userId'>User Liste ansehen</a>";
-echo "<br>";
-echo "<a href='../anybody/showUserRanks.php5?userId=$userId'>User Rangliste ansehen</a>";
-echo "<br>";
-echo "<br>";
-*/
-
-/*
-echo "<form method=\"POST\" action=\"addUser.php5?userId=$userId\">";
-echo "<input type='submit' name='addUser' value='User anlegen'>";
-echo "</form>";
-*/
-
-/*
-echo "<form method=\"POST\" action=\"resetUserPassword.php5?userId=$userId\">";
-echo "<td bgcolor=slategray><select name='SelectedUsername'>";
-allUsersAsOption("User");
-echo "<input type='submit' name='resetUser' value='Passwort zurücksetzen'>";
-echo "</form>";
-*/
-
-/*
-echo "<form method=\"POST\" action=\"removeUser.php5?userId=$userId\">";
-echo "<td bgcolor=slategray><select name='SelectedUsername'>";
-allUsersAsOption("User");
-echo "<input type='submit' name='removeUser' value='User löschen'>";
-echo "</form>";
-*/
-
-/*
-echo "<form method=\"POST\" action=\"sendTestMail.php5?userId=$userId\">";
-echo "<input type=\"Text\" size=\"80\" name=\"email\" value=\"\">";
-echo "<input type='submit' name='sendTestMail' value='Send Test Mail'>";
-echo "</form>";
-*/
-
-/*
-echo "	<h2>Tipps ansehen</h2>";
-echo "<a href='../anybody/showAllUsersGroupTipps.php5?userId=$userId'>Gruppenspieltipps</a>";
-echo "<br>";
-echo "<a href='../anybody/showAllUsersGroupRankTipps.php5?userId=$userId'>Platzierungstipps</a>";
-echo "<br>";
-echo "<a href='../anybody/showAllUsersFinalmatchTipps.php5?userId=$userId'>Finalspieltipps</a>";
-echo "<br>";
-echo "<a href='../anybody/showAllUsersSpecialTipps.php5?userId=$userId'>Spezialtipps</a>";
-echo "<br>";
-echo "<br>";
-*/
 
 /*
 echo "	<h2>Auswertung</h2>";
