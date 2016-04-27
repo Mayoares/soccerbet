@@ -89,10 +89,10 @@ function getScore($rank){
 	{
 		return 10;
 	}
-	else if($rank==3)
-	{
-		return 8;
-	}
+// 	else if($rank==3)
+// 	{
+// 		return 8;
+// 	}
 }
 
 //Datenbankconnection schliessen

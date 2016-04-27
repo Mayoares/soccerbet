@@ -39,13 +39,13 @@ if(strlen($userName)>0)
 	printGroup('D', $userName);
 	printGroup('E', $userName);
 	printGroup('F', $userName);
-	printGroup('G', $userName);
-	printGroup('H', $userName);
+// 	printGroup('G', $userName);
+// 	printGroup('H', $userName);
 	
 	printFinal($userName, 'Achtelfinale');
 	printFinal($userName, 'Viertelfinale');
 	printFinal($userName, 'Halbfinale');
-	printFinal($userName, 'Platz3');
+// 	printFinal($userName, 'Platz3');
 	printFinal($userName, 'Finale');
 	
 }	
@@ -425,10 +425,10 @@ function printChampions($userName){
 	printCorrectTeam(getCorrectChampion(2));
 	printScore(getScoreChampions(2, $userName));
 	echo "</tr>";
-	echo "<tr><td>Drittplatzierter &nbsp; &nbsp; &nbsp;</td><td><b>$third</b></td>";
-	printCorrectTeam(getCorrectChampion(3));
-	printScore(getScoreChampions(3, $userName));
-	echo "</tr>";
+// 	echo "<tr><td>Drittplatzierter &nbsp; &nbsp; &nbsp;</td><td><b>$third</b></td>";
+// 	printCorrectTeam(getCorrectChampion(3));
+// 	printScore(getScoreChampions(3, $userName));
+// 	echo "</tr>";
 	echo "</table>";
 }
 
