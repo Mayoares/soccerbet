@@ -87,13 +87,13 @@ function promptLogin($username){
 	echo "<td>Benutzername</td>";
 	echo "</tr>";
 	echo "<tr>";
-	echo "<td> <input type='text' size='35' name='username' value='$username'></td>";
+	echo "<td> <input type='text' size='30' name='username' value='$username'></td>";
 	echo "</tr>";
 	echo "<tr>";
 	echo "<td>Passwort </td>";
 	echo "</tr>";
 	echo "<tr>";
-	echo "<td><input type='password' size='35' name='password' value=''></td>";
+	echo "<td><input type='password' size='30' name='password' value=''></td>";
 	echo "</tr>";
 	echo "<tr>";
 	echo "<td><input type='submit' name='login' value='Anmelden'></td>";
