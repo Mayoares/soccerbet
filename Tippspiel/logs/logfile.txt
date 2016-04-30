@@ -41,3 +41,168 @@
 29.04.2016, 18:25:24, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='B' AND rt.rank='4'
 29.04.2016, 18:26:45, ::1, POST, /soccerbet/Tippspiel/EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
 29.04.2016, 18:26:49, ::1, GET, /soccerbet/Tippspiel/EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+29.04.2016, 18:30:17, ::1, GET, /soccerbet/Tippspiel/EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+29.04.2016, 18:30:21, ::1, POST, /soccerbet/Tippspiel/EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+29.04.2016, 18:30:24, INFO , SELECT t.name FROM emtipp2016_teams t WHERE t.group='A'
+29.04.2016, 18:30:24, INFO , 
+29.04.2016, 18:30:24, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='A' AND rt.rank='1'
+29.04.2016, 18:30:24, INFO , 
+29.04.2016, 18:30:24, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='A' AND rt.rank='2'
+29.04.2016, 18:30:24, INFO , 
+29.04.2016, 18:30:24, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='A' AND rt.rank='3'
+29.04.2016, 18:30:24, INFO , 
+29.04.2016, 18:30:24, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='A' AND rt.rank='4'
+29.04.2016, 18:30:26, INFO , SELECT t.name FROM emtipp2016_teams t WHERE t.group='B'
+29.04.2016, 18:30:26, INFO , 
+29.04.2016, 18:30:26, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='B' AND rt.rank='1'
+29.04.2016, 18:30:26, INFO , 
+29.04.2016, 18:30:26, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='B' AND rt.rank='2'
+29.04.2016, 18:30:26, INFO , 
+29.04.2016, 18:30:26, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='B' AND rt.rank='3'
+29.04.2016, 18:30:26, INFO , 
+29.04.2016, 18:30:26, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='B' AND rt.rank='4'
+29.04.2016, 18:30:27, INFO , SELECT t.name FROM emtipp2016_teams t WHERE t.group='C'
+29.04.2016, 18:30:27, INFO , 
+29.04.2016, 18:30:27, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='C' AND rt.rank='1'
+29.04.2016, 18:30:27, INFO , 
+29.04.2016, 18:30:27, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='C' AND rt.rank='2'
+29.04.2016, 18:30:27, INFO , 
+29.04.2016, 18:30:27, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='C' AND rt.rank='3'
+29.04.2016, 18:30:27, INFO , 
+29.04.2016, 18:30:27, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='C' AND rt.rank='4'
+29.04.2016, 18:30:28, INFO , SELECT t.name FROM emtipp2016_teams t WHERE t.group='D'
+29.04.2016, 18:30:28, INFO , 
+29.04.2016, 18:30:28, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='D' AND rt.rank='1'
+29.04.2016, 18:30:28, INFO , 
+29.04.2016, 18:30:28, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='D' AND rt.rank='2'
+29.04.2016, 18:30:28, INFO , 
+29.04.2016, 18:30:28, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='D' AND rt.rank='3'
+29.04.2016, 18:30:28, INFO , 
+29.04.2016, 18:30:28, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='D' AND rt.rank='4'
+29.04.2016, 18:30:29, INFO , SELECT t.name FROM emtipp2016_teams t WHERE t.group='E'
+29.04.2016, 18:30:29, INFO , 
+29.04.2016, 18:30:29, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='E' AND rt.rank='1'
+29.04.2016, 18:30:29, INFO , 
+29.04.2016, 18:30:29, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='E' AND rt.rank='2'
+29.04.2016, 18:30:29, INFO , 
+29.04.2016, 18:30:29, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='E' AND rt.rank='3'
+29.04.2016, 18:30:29, INFO , 
+29.04.2016, 18:30:29, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='E' AND rt.rank='4'
+29.04.2016, 18:30:30, INFO , SELECT t.name FROM emtipp2016_teams t WHERE t.group='D'
+29.04.2016, 18:30:30, INFO , 
+29.04.2016, 18:30:30, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='D' AND rt.rank='1'
+29.04.2016, 18:30:30, INFO , 
+29.04.2016, 18:30:30, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='D' AND rt.rank='2'
+29.04.2016, 18:30:30, INFO , 
+29.04.2016, 18:30:30, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='D' AND rt.rank='3'
+29.04.2016, 18:30:30, INFO , 
+29.04.2016, 18:30:30, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='D' AND rt.rank='4'
+29.04.2016, 18:36:51, ::1, GET, /soccerbet/Tippspiel/EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+29.04.2016, 18:36:55, ::1, POST, /soccerbet/Tippspiel/EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+29.04.2016, 18:36:57, INFO , SELECT t.name FROM emtipp2016_teams t WHERE t.group='A'
+29.04.2016, 18:36:57, INFO , 
+29.04.2016, 18:36:57, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='A' AND rt.rank='1'
+29.04.2016, 18:36:57, INFO , 
+29.04.2016, 18:36:57, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='A' AND rt.rank='2'
+29.04.2016, 18:36:57, INFO , 
+29.04.2016, 18:36:57, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='A' AND rt.rank='3'
+29.04.2016, 18:36:57, INFO , 
+29.04.2016, 18:36:57, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='A' AND rt.rank='4'
+30.04.2016, 12:35:45, ::1, GET, /soccerbet/Tippspiel/EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+30.04.2016, 12:35:46, ::1, GET, /soccerbet/Tippspiel/EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+30.04.2016, 12:36:07, ::1, POST, /soccerbet/Tippspiel/EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+30.04.2016, 12:36:34, INFO , SELECT t.name FROM emtipp2016_teams t WHERE t.group='A'
+30.04.2016, 12:36:34, INFO , 
+30.04.2016, 12:36:34, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='A' AND rt.rank='1'
+30.04.2016, 12:36:34, INFO , 
+30.04.2016, 12:36:34, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='A' AND rt.rank='2'
+30.04.2016, 12:36:34, INFO , 
+30.04.2016, 12:36:34, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='A' AND rt.rank='3'
+30.04.2016, 12:36:34, INFO , 
+30.04.2016, 12:36:34, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='A' AND rt.rank='4'
+30.04.2016, 12:36:42, INFO , SELECT t.name FROM emtipp2016_teams t WHERE t.group='A'
+30.04.2016, 12:36:42, INFO , 
+30.04.2016, 12:36:42, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='A' AND rt.rank='1'
+30.04.2016, 12:36:42, INFO , 
+30.04.2016, 12:36:42, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='A' AND rt.rank='2'
+30.04.2016, 12:36:42, INFO , 
+30.04.2016, 12:36:42, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='A' AND rt.rank='3'
+30.04.2016, 12:36:42, INFO , 
+30.04.2016, 12:36:42, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='A' AND rt.rank='4'
+30.04.2016, 12:41:08, ::1, GET, /soccerbet/Tippspiel/EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+30.04.2016, 12:41:18, ::1, GET, /soccerbet/Tippspiel/EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+30.04.2016, 12:41:19, ::1, GET, /soccerbet/Tippspiel/EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+30.04.2016, 12:41:23, ::1, GET, /soccerbet/Tippspiel/EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+30.04.2016, 12:42:30, ::1, GET, /soccerbet/Tippspiel/EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+30.04.2016, 12:43:36, ::1, GET, /soccerbet/Tippspiel/EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+30.04.2016, 12:45:01, ::1, GET, /soccerbet/Tippspiel/EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+30.04.2016, 12:45:06, ::1, POST, /soccerbet/Tippspiel/EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+30.04.2016, 12:47:31, INFO , SELECT t.name FROM emtipp2016_teams t WHERE t.group='F'
+30.04.2016, 12:47:31, INFO , 
+30.04.2016, 12:47:31, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='F' AND rt.rank='1'
+30.04.2016, 12:47:31, INFO , 
+30.04.2016, 12:47:31, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='F' AND rt.rank='2'
+30.04.2016, 12:47:31, INFO , 
+30.04.2016, 12:47:31, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='F' AND rt.rank='3'
+30.04.2016, 12:47:31, INFO , 
+30.04.2016, 12:47:31, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='F' AND rt.rank='4'
+30.04.2016, 12:48:20, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='A' AND r.rank='1'
+30.04.2016, 12:48:20, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='A' AND r.rank='2'
+30.04.2016, 12:48:20, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='A' AND r.rank='3'
+30.04.2016, 12:48:20, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='A' AND r.rank='4'
+30.04.2016, 12:48:20, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='B' AND r.rank='1'
+30.04.2016, 12:48:20, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='B' AND r.rank='2'
+30.04.2016, 12:48:20, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='B' AND r.rank='3'
+30.04.2016, 12:48:20, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='B' AND r.rank='4'
+30.04.2016, 12:48:20, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='C' AND r.rank='1'
+30.04.2016, 12:48:20, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='C' AND r.rank='2'
+30.04.2016, 12:48:20, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='C' AND r.rank='3'
+30.04.2016, 12:48:20, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='C' AND r.rank='4'
+30.04.2016, 12:48:20, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='D' AND r.rank='1'
+30.04.2016, 12:48:20, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='D' AND r.rank='2'
+30.04.2016, 12:48:20, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='D' AND r.rank='3'
+30.04.2016, 12:48:20, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='D' AND r.rank='4'
+30.04.2016, 12:48:20, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='E' AND r.rank='1'
+30.04.2016, 12:48:20, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='E' AND r.rank='2'
+30.04.2016, 12:48:20, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='E' AND r.rank='3'
+30.04.2016, 12:48:20, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='E' AND r.rank='4'
+30.04.2016, 12:48:20, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='F' AND r.rank='1'
+30.04.2016, 12:48:20, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='F' AND r.rank='2'
+30.04.2016, 12:48:20, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='F' AND r.rank='3'
+30.04.2016, 12:48:20, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='F' AND r.rank='4'
+30.04.2016, 12:48:22, INFO , SELECT matchnr FROM emtipp2016_matches m WHERE matchtype = 'Achtelfinale'
+30.04.2016, 12:48:22, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '37'
+30.04.2016, 12:48:22, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '38'
+30.04.2016, 12:48:22, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '39'
+30.04.2016, 12:48:22, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '40'
+30.04.2016, 12:48:22, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '41'
+30.04.2016, 12:48:22, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '42'
+30.04.2016, 12:48:22, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '43'
+30.04.2016, 12:48:22, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '44'
+30.04.2016, 12:48:22, INFO , SELECT matchnr FROM emtipp2016_matches m WHERE matchtype = 'Viertelfinale'
+30.04.2016, 12:48:22, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '45'
+30.04.2016, 12:48:22, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '46'
+30.04.2016, 12:48:22, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '47'
+30.04.2016, 12:48:22, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '48'
+30.04.2016, 12:48:22, INFO , SELECT matchnr FROM emtipp2016_matches m WHERE matchtype = 'Halbfinale'
+30.04.2016, 12:48:22, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '49'
+30.04.2016, 12:48:22, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '50'
+30.04.2016, 12:48:22, INFO , SELECT matchnr FROM emtipp2016_matches m WHERE matchtype = 'Finale'
+30.04.2016, 12:48:22, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '51'
+30.04.2016, 12:48:42, INFO , Viewed login page
+30.04.2016, 12:48:45, ::1, GET, /soccerbet/Tippspiel/EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+30.04.2016, 12:48:55, ::1, POST, /soccerbet/Tippspiel/EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+30.04.2016, 12:48:59, INFO , Viewed login page
+30.04.2016, 12:50:37, ::1, GET, /soccerbet/Tippspiel/EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+30.04.2016, 12:51:01, INFO , Viewed login page
+30.04.2016, 12:51:30, INFO , Viewed login page
+30.04.2016, 12:51:33, ::1, GET, /soccerbet/Tippspiel/EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+30.04.2016, 12:52:27, INFO , Viewed login page
+30.04.2016, 12:52:31, INFO , Viewed login page
+30.04.2016, 12:52:33, INFO , Viewed login page
+30.04.2016, 12:52:37, INFO , Viewed login page
+30.04.2016, 12:52:42, INFO , Viewed login page
+30.04.2016, 12:52:55, INFO , Viewed login page
+30.04.2016, 12:55:07, INFO , Viewed login page
+30.04.2016, 12:55:15, INFO , Viewed login page
+30.04.2016, 12:55:19, INFO , Viewed login page

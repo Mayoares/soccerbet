@@ -16,7 +16,7 @@ $log=new viewlogger();
 $log->info("Clicked showUserRank");
 
 echo "<br>";
-echo "<a href='../util/login.php5'>zurück</a>";
+echo "<a href='../util/loginPunktestand.php5'>zurück</a>";
 echo "<br>";
 printLastUpdate();
 printDescription();
