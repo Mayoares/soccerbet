@@ -45,8 +45,8 @@ function printUserInfo($userName){
 	<br>
 	<?php
 	//echo "<p class=\"info\"><font color=\"red\"><u>Hinweis</u>: Die Spielergebnistipps muessen alle <i><u><b>einzeln</b></u></i> abgespeichert werden!</font></p>";
-	echo "<p class=\"info\">Obacht!:</br>Die Paarungen und Ergebnisse in der <u><b>Endrunde</b></u> (ab dem Achtelfinale) mÃ¼ssen alle <i><u><b>einzeln</b></u></i> abgespeichert werden!
-		Das heiÃŸt: Erst die beiden Mannschaften eines Endrundenspiels auswÃ¤hlen, das Ergebnis eingeben und abspeichern, danach die nÃ¤chsten Begegnungen tippen! </p>";
+	echo "<p class=\"info\">Obacht!:</br>Die Paarungen und Ergebnisse in der <u><b>Endrunde</b></u> (ab dem Achtelfinale) müssen alle <i><u><b>einzeln</b></u></i> abgespeichert werden!
+		Das heißt: Erst die beiden Mannschaften eines Endrundenspiels auswählen, das Ergebnis eingeben und abspeichern, danach die nächsten Begegnungen tippen! </p>";
 	//
 	// Kontakt
 	//
