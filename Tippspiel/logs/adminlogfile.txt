@@ -61,3 +61,31 @@
 15.02.2016, 18:49:23, INFO , Anzahl User=3
 15.02.2016, 18:49:23, WARN , keine passenden Datensätze gefunden
 15.02.2016, 18:49:23, WARN , keine passenden Datensätze gefunden
+29.04.2016, 18:16:23, INFO , Anzahl User=2
+29.04.2016, 18:16:23, INFO , Anzahl User=2
+29.04.2016, 18:16:23, INFO , Anzahl noch auszuwertende Gruppenspiele=36
+29.04.2016, 18:16:23, INFO , Anzahl noch auszuwertende Finalspiele=15
+29.04.2016, 18:17:02, INFO , run(4572478)
+29.04.2016, 18:22:40, INFO , run(4572478)
+29.04.2016, 18:22:50, INFO , run(4572478)
+29.04.2016, 18:23:02, INFO , run(4572478)
+29.04.2016, 18:23:27, INFO , run(4572478)
+29.04.2016, 18:23:27, INFO , run addUser(Robert Kalusok,Robert,Kalusok,robert.werkestippspiel@gmail.com)
+29.04.2016, 18:23:27, INFO , INSERT INTO emtipp2016_users (    `userid`,  `username`,  `password`,  `lastname`,  `firstname`,  `email`, `finalparticipantscore`) VALUES ('a24bea0bc5a2ae100694003792d31541', 'Robert Kalusok', 'b6zgm6', 'Kalusok', 'Robert', 'robert.werkestippspiel@gmail.com', b'0')
+29.04.2016, 18:23:27, INFO , Sent email with initial password for Robert Kalusok (Benutzername:Robert Kalusok) to 'robert.werkestippspiel@gmail.com'
+29.04.2016, 18:23:31, INFO , Anzahl User=3
+29.04.2016, 18:23:31, INFO , Anzahl User=3
+29.04.2016, 18:23:31, INFO , Anzahl noch auszuwertende Gruppenspiele=36
+29.04.2016, 18:23:31, INFO , Anzahl noch auszuwertende Finalspiele=15
+29.04.2016, 18:26:46, INFO , Anzahl User=3
+29.04.2016, 18:26:46, INFO , Anzahl User=3
+29.04.2016, 18:26:46, INFO , Anzahl noch auszuwertende Gruppenspiele=36
+29.04.2016, 18:26:46, INFO , Anzahl noch auszuwertende Finalspiele=15
+29.04.2016, 18:26:52, INFO , Anzahl User=3
+29.04.2016, 18:26:52, INFO , Anzahl User=3
+29.04.2016, 18:26:52, INFO , Anzahl noch auszuwertende Gruppenspiele=36
+29.04.2016, 18:26:52, INFO , Anzahl noch auszuwertende Finalspiele=15
+29.04.2016, 18:26:55, INFO , Anzahl User=3
+29.04.2016, 18:26:55, INFO , Anzahl User=3
+29.04.2016, 18:26:55, INFO , Anzahl noch auszuwertende Gruppenspiele=36
+29.04.2016, 18:26:55, INFO , Anzahl noch auszuwertende Finalspiele=15
