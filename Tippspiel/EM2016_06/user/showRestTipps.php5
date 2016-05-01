@@ -112,7 +112,7 @@ function printTopscorer($username){
 	
 	//echo "<table style='font-size:18px'>";
 	echo "<table>";
-	echo "<tr><td>TorschÃ¼tzenkÃ¶nig &nbsp; &nbsp; &nbsp;</td><td><b>$topscorer</b></td> &nbsp; <td>($topScorerTeam)</td> </tr>";
+	echo "<tr><td>Torschützenkönig &nbsp; &nbsp; &nbsp;</td><td><b>$topscorer</b></td> &nbsp; <td>($topScorerTeam)</td> </tr>";
 	echo "</table>";
 }
 

@@ -10,7 +10,7 @@ echo "<html>";
 echo "<head>";
 echo "<link rel='stylesheet' type='text/css' href='../../style/style.css' />";
 echo "<br>";
-echo "<a href='../util/loginPunktestand.php5'>zurÃ¼ck</a>";
+echo "<a href='../util/loginPunktestand.php5'>zurück</a>";
 echo "<title>Werke's Tippspiel - Tipps gesamt</title>";
 echo "</head>";
 echo "<body>";
@@ -446,7 +446,7 @@ function printTopscorer($username){
 	echo "<br>";
 	echo "<table>";
 	echo "<tr>";
-	echo "<td>TorschÃ¼tzenkÃ¶nig &nbsp; &nbsp; &nbsp; </td><td> $topscorer </b> &nbsp; </td><td> ($topScorerTeam)</td>";
+	echo "<td>Torschützenkönig &nbsp; &nbsp; &nbsp; </td><td> $topscorer </b> &nbsp; </td><td> ($topScorerTeam)</td>";
 	printCorrectTopscorer($TopscorerReal, $realTeam);
 	$score=getScoreTopscorer($username);
 	printScore($score);

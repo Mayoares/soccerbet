@@ -2,7 +2,7 @@
 <head>
 <link rel='stylesheet' type='text/css' href='../../style/style.css' />
 <br>
-<a href='../util/loginPunktestand.php5'>zurÃ¼ck</a>
+<a href='../util/loginPunktestand.php5'>zurück</a>
 <br>
 <br>
 <title>Werke's Tippspiel - Tipps ALL USERS (Germany)</title>

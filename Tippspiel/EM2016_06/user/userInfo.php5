@@ -37,7 +37,7 @@ function printUserInfo($userName){
 	herzlich Willkommen bei Werke's Tippspiel zur Europameisterschaft 2016 in Frankreich!</br>
 	</br>
 	Viel Erfolg beim Tippen,</br>
-	wÃ¼nscht dir Werke, Moose und Robl!
+	wünscht dir Werke, Moose und Robl!
 	<br>
 	<br>
 	<a href='../pdf/Spielplan_EM_2016.pdf'>Download Spielplan als PDF</a>

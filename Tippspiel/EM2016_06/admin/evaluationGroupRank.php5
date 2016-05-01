@@ -41,12 +41,12 @@ else
 	}
 	else if(isset($_POST["evaluationGroupRank"]))
 	{
-		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurÃ¼ck zur Ãœbersicht</a>";
+		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
 		echo "<br>";
 		echo "<br>";
 		evaluateGroupRanks($SelectedGroup,$dbutil);
 		echo "<br>";
-		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurÃ¼ck zur Ãœbersicht</a>";
+		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
 	}
 	else
 	{

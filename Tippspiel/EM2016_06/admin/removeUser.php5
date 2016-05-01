@@ -68,10 +68,10 @@ function removeUser($removeUsername, $adminuserId)
 	if(countTipps($removeUsername) > 0)
 	{
 		echo "User hat schon was getippt.<br>";
-		echo "Es mÃ¼ssen vorher noch alle seine Tipps gelÃ¶scht werden.<br>";
+		echo "Es müssen vorher noch alle seine Tipps gelöscht werden.<br>";
 		echo "Bitte an Mayoar wenden!<br>";
 		echo "<br>";
-		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurÃ¼ck zur Ãœbersicht</a>";
+		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
 	}
 	else
 	{
@@ -87,11 +87,11 @@ function removeUser($removeUsername, $adminuserId)
 			echo mysql_error();
 			echo "<br>";
 			echo "<br>";
-			echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurÃ¼ck zur Ãœbersicht</a>";
+			echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
 		}
 		else
 		{
-			echo "<br>User $username wurde gelÃ¶scht.<br>";
+			echo "<br>User $username wurde gelöscht.<br>";
 			echo "<form method=\"POST\" action=\"overviewAdmin.php5?userId=$adminuserId\">";
 			echo "<br>";
 			echo "<input type=\"submit\" name=\"ok\" value=\"OK\">";
@@ -102,10 +102,10 @@ function removeUser($removeUsername, $adminuserId)
 
 function promptRemoveUser($username, $adminuserId)
 {
-	echo "Diese Funktion ist bisher nur mÃ¶glich, wenn der User noch <b>nichts</b> getippt hat. Wenn doch, bitte an den Administrator wenden.";
+	echo "Diese Funktion ist bisher nur möglich, wenn der User noch <b>nichts</b> getippt hat. Wenn doch, bitte an den Administrator wenden.";
 	echo "<br>";
 	echo "<br>";
-	echo "User '<b>$username</b>' wirklich lÃ¶schen?";
+	echo "User '<b>$username</b>' wirklich löschen?";
 	echo "<br>";
 	echo "<br>";
 	echo "<form method='POST' action='removeUser.php5?userId=$adminuserId&RemoveUsername=$username'>";

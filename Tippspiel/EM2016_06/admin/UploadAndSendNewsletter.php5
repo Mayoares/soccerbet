@@ -25,7 +25,7 @@ else
 	$filename = basename( $_FILES['uploadedfile']['name']);
 	
 	echo "<br>";
-	echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurÃ¼ck zur Ãœbersicht</a>";
+	echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
 	echo "<br>";
 	echo "<br>";
 	echo "Datei wird hochgeladen ...<br>";
@@ -36,7 +36,7 @@ else
 	    sendFileToAll($filename, $target_path);
 	    echo "<br>Verschicken fertig.<br>";
 	    echo "<br>";
-		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurÃ¼ck zur Ãœbersicht</a>";
+		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
 	    echo "<br>";
 	} else{
 	    echo "There was an error uploading the file, please try again!";

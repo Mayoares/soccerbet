@@ -107,7 +107,7 @@ function addUser($username, $firstname, $lastname, $email, $adminuserId)
 		echo mysql_error();
 		echo "<br>";
 		echo "<br>";
-		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurÃ¼ck zur Ãœbersicht</a>";
+		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
 	}
 	else
 	{
@@ -128,12 +128,12 @@ function addUser($username, $firstname, $lastname, $email, $adminuserId)
 		$content .= "\n\ndeine Logindaten lauten";
 		$content .= "\n\nBenutzername: $username "; 
 		$content .= "\nPasswort    : $password ";
-		$content .= "\n\nDas Passwort wurde automatisch generiert und sollte nach dem ersten Login geÃ¤ndert werden."; 
+		$content .= "\n\nDas Passwort wurde automatisch generiert und sollte nach dem ersten Login geändert werden."; 
 		$content .= "\n\nDirektlink zum Tippspiel: http://mayoar.rivido.de/EM2016_06/util/login.php5";
 		$content .= "\n--$id";
 		// Body Ende
 		mail($email, $betreff, "", $content); // E-Mail versenden
-		$printOut = "eMail mit initialem Passwort fÃ¼r $firstname $lastname (Benutzername:$username) an '$email' gesendet.";
+		$printOut = "eMail mit initialem Passwort für $firstname $lastname (Benutzername:$username) an '$email' gesendet.";
 		echo $printOut;
 		$log->info("Sent email with initial password for $firstname $lastname (Benutzername:$username) to '$email'");
 		
@@ -191,7 +191,7 @@ function promptAddUser($adminuserId)
 	echo "<tr>";
 	echo "</tr>";
 	echo "<tr>";
-	echo "<td><input type='submit' name='addUser' value='HinzufÃ¼gen'></td>";
+	echo "<td><input type='submit' name='addUser' value='Hinzufügen'></td>";
 	echo "<td><input type='submit' name='Cancel' value='Abbrechen'></td>";
 	echo "</tr>";
 	echo "</table>";
