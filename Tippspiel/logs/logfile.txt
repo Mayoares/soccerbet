@@ -365,3 +365,69 @@
 01.05.2016, 09:00:28, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '50'
 01.05.2016, 09:00:28, INFO , SELECT matchnr FROM emtipp2016_matches m WHERE matchtype = 'Finale'
 01.05.2016, 09:00:28, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '51'
+01.05.2016, 09:13:05, ::1, GET, /EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0
+01.05.2016, 09:13:05, ::1, GET, /EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0
+01.05.2016, 09:13:09, ::1, POST, /EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0
+01.05.2016, 09:13:15, INFO , SELECT t.name FROM emtipp2016_teams t WHERE t.group='A'
+01.05.2016, 09:13:15, INFO , 
+01.05.2016, 09:13:15, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='A' AND rt.rank='1'
+01.05.2016, 09:13:15, INFO , 
+01.05.2016, 09:13:15, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='A' AND rt.rank='2'
+01.05.2016, 09:13:15, INFO , 
+01.05.2016, 09:13:15, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='A' AND rt.rank='3'
+01.05.2016, 09:13:15, INFO , 
+01.05.2016, 09:13:15, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='A' AND rt.rank='4'
+01.05.2016, 09:13:18, INFO , SELECT t.name FROM emtipp2016_teams t WHERE t.group='F'
+01.05.2016, 09:13:18, INFO , 
+01.05.2016, 09:13:18, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='F' AND rt.rank='1'
+01.05.2016, 09:13:18, INFO , 
+01.05.2016, 09:13:18, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='F' AND rt.rank='2'
+01.05.2016, 09:13:18, INFO , 
+01.05.2016, 09:13:18, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='F' AND rt.rank='3'
+01.05.2016, 09:13:18, INFO , 
+01.05.2016, 09:13:18, INFO , SELECT t.name FROM emtipp2016_teams t,emtipp2016_groupranktipps rt WHERE rt.user='test' AND t.shortname = rt.team AND t.group='F' AND rt.rank='4'
+01.05.2016, 09:13:21, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='A' AND r.rank='1'
+01.05.2016, 09:13:21, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='A' AND r.rank='2'
+01.05.2016, 09:13:21, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='A' AND r.rank='3'
+01.05.2016, 09:13:21, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='A' AND r.rank='4'
+01.05.2016, 09:13:21, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='B' AND r.rank='1'
+01.05.2016, 09:13:21, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='B' AND r.rank='2'
+01.05.2016, 09:13:21, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='B' AND r.rank='3'
+01.05.2016, 09:13:21, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='B' AND r.rank='4'
+01.05.2016, 09:13:21, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='C' AND r.rank='1'
+01.05.2016, 09:13:21, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='C' AND r.rank='2'
+01.05.2016, 09:13:21, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='C' AND r.rank='3'
+01.05.2016, 09:13:21, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='C' AND r.rank='4'
+01.05.2016, 09:13:22, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='D' AND r.rank='1'
+01.05.2016, 09:13:22, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='D' AND r.rank='2'
+01.05.2016, 09:13:22, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='D' AND r.rank='3'
+01.05.2016, 09:13:22, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='D' AND r.rank='4'
+01.05.2016, 09:13:22, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='E' AND r.rank='1'
+01.05.2016, 09:13:22, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='E' AND r.rank='2'
+01.05.2016, 09:13:22, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='E' AND r.rank='3'
+01.05.2016, 09:13:22, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='E' AND r.rank='4'
+01.05.2016, 09:13:22, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='F' AND r.rank='1'
+01.05.2016, 09:13:22, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='F' AND r.rank='2'
+01.05.2016, 09:13:22, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='F' AND r.rank='3'
+01.05.2016, 09:13:22, INFO , SELECT t.name, t.group FROM emtipp2016_groupranktipps r, emtipp2016_teams t WHERE r.team = t.shortname AND r.user = 'test' AND t.group='F' AND r.rank='4'
+01.05.2016, 09:13:31, INFO , SELECT matchnr FROM emtipp2016_matches m WHERE matchtype = 'Achtelfinale'
+01.05.2016, 09:13:31, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '37'
+01.05.2016, 09:13:31, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '38'
+01.05.2016, 09:13:31, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '39'
+01.05.2016, 09:13:31, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '40'
+01.05.2016, 09:13:31, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '41'
+01.05.2016, 09:13:31, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '42'
+01.05.2016, 09:13:31, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '43'
+01.05.2016, 09:13:31, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '44'
+01.05.2016, 09:13:31, INFO , SELECT matchnr FROM emtipp2016_matches m WHERE matchtype = 'Viertelfinale'
+01.05.2016, 09:13:31, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '45'
+01.05.2016, 09:13:31, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '46'
+01.05.2016, 09:13:31, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '47'
+01.05.2016, 09:13:31, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '48'
+01.05.2016, 09:13:31, INFO , SELECT matchnr FROM emtipp2016_matches m WHERE matchtype = 'Halbfinale'
+01.05.2016, 09:13:31, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '49'
+01.05.2016, 09:13:31, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '50'
+01.05.2016, 09:13:31, INFO , SELECT matchnr FROM emtipp2016_matches m WHERE matchtype = 'Finale'
+01.05.2016, 09:13:31, INFO , SELECT * FROM emtipp2016_finalmatchtipps ft WHERE ft.user = 'test' AND ft.matchnr = '51'
+01.05.2016, 09:13:40, ::1, GET, /EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0
+01.05.2016, 09:13:40, ::1, GET, /EM2016_06/util/login.php5, Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0
