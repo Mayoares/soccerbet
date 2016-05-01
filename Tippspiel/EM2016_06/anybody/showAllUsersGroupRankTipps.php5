@@ -10,7 +10,7 @@ echo "<html>";
 echo "<head>";
 echo "<link rel='stylesheet' type='text/css' href='../../style/style.css' />";
 echo "<br>";
-echo "<a href='../util/login.php5'>zurück</a>";
+echo "<a href='../util/loginPunktestand.php5'>zurück</a>";
 echo "<br>";
 echo "<br>";
 echo "<title>Werke's Tippspiel - Tipps ALL USERS (Germany)</title>";

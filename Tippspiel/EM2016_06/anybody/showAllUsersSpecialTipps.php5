@@ -10,7 +10,7 @@ echo "<html>";
 echo "<head>";
 echo "<link rel='stylesheet' type='text/css' href='../../style/style.css' />";
 echo "<br>";
-echo "<a href='../util/login.php5'>zurück</a>";
+echo "<a href='../util/loginPunktestand.php5'>zurück</a>";
 echo "<br>";
 echo "<br>";
 echo "<title>Werke's Tippspiel - Tipps ALL USERS (Germany)</title>";
@@ -36,7 +36,7 @@ function printSpecials(){
 	echo "<th>User</th> ";
 	echo "<th>Weltmeister</th> ";
 	echo "<th>Vizeweltmeister</th> ";
-	echo "<th>Platz 3</th> ";
+//  	echo "<th>Platz 3</th> ";
 	echo "<th>Torschützenkönig</th> ";
 	echo "</tr>";
 	
@@ -64,7 +64,7 @@ function printSpecialsForUser($username){
 	echo "<td>" . getUserInfo($username) . "</td>";
 	echo "<td>" . $worldChampion . "</td>";
 	echo "<td>" . $vice . "</td>";
-	echo "<td>" . $third . "</td>";
+// 	echo "<td>" . $third . "</td>";
 	echo "<td>" . $tippTopscorer . "($tippedTeam)" . "</td>";
 	echo "</tr>";
 }
