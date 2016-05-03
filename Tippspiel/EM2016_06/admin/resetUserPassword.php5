@@ -90,7 +90,7 @@ function resetUserPassword($resetUsername, $adminuserId)
 		$message = "F�r dich wurde ein neues Passwort generiert.<br>" .
 	     "Dein neues Passwort lautet: <b>$password</b>.<br>" .
 		 "Bitte bald einloggen und �ndern.<br>";
-		mail($email, "Werke's Tippspiel Passwort", $message, "From: WERKEs-Werke's Tippspiel\n" . "Content-Type: text/html; charset=iso-8859-1\n");
+		mail($email, "Werke's Tippspiel - Passwort zurückgesetzt", $message, "From: werkestippspiel\n" . "Content-Type: text/html; charset=iso-8859-1\n");
 		echo "<br>User $username hat ein neues Passwort erhalten.<br>";
 		echo "<br>Das Passwort wurde an seine eMail-Adresse '$email' geschickt.<br>";
 		echo "<form method=\"POST\" action=\"overviewAdmin.php5?userId=$adminuserId\">";

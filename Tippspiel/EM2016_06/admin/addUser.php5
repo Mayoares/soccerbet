@@ -56,7 +56,7 @@ function run($adminuserId){
 	{
 		if(empty($_POST["username"]))
 		{
-			echo "<br>Username fehlt. Bitte Eingabe korrigieren.";
+// 			echo "<br>Username fehlt. Bitte Eingabe korrigieren.";
 			promptAddUser($adminuserId);
 		}
 		else if(empty($_POST["firstname"]))
@@ -115,8 +115,8 @@ function addUser($username, $firstname, $lastname, $email, $adminuserId)
 		$userInfo = "<br>UserID=$newuserId<br>Username=$username<br>Vorname=$firstname<br>Nachname=$lastname<br>email=$email";
 		
 		$id = md5(uniqid(time()));
-		$betreff = "WERKEs Werke's Tippspielspiel Login-Info";
-		$content = "From: WERKEs-Werke's Tippspiel\n";
+		$betreff = "Werke's Tippspiel - Login-Info";
+		$content = "From: werkestippspiel\n";
 		$content .= "MIME-Version: 1.0\n";
 		$content .= "Content-Type: multipart/mixed; boundary=$id\n\n";
 		$content .= "This is a multi-part message in MIME format\n";
@@ -129,7 +129,7 @@ function addUser($username, $firstname, $lastname, $email, $adminuserId)
 		$content .= "\n\nBenutzername: $username "; 
 		$content .= "\nPasswort    : $password ";
 		$content .= "\n\nDas Passwort wurde automatisch generiert und sollte nach dem ersten Login ge�ndert werden."; 
-		$content .= "\n\nDirektlink zum Tippspiel: http://mayoar.rivido.de/EM2016_06/util/login.php5";
+		$content .= "\n\nDirektlink zum Tippspiel: http://mayoar.rivido.de";
 		$content .= "\n--$id";
 		// Body Ende
 		mail($email, $betreff, "", $content); // E-Mail versenden
@@ -137,8 +137,9 @@ function addUser($username, $firstname, $lastname, $email, $adminuserId)
 		echo $printOut;
 		$log->info("Sent email with initial password for $firstname $lastname (Benutzername:$username) to '$email'");
 		
-		$adminEMail = "andreas.grotemeyer@gmail.com";
-		$adminContent = "From: WERKEs-Werke's Tippspiel\n";
+// 		$adminEMail = "andreas.grotemeyer@gmail.com";
+		$adminEMail = "robert.werkestippspiel@gmail.com";
+		$adminContent = "From: werkestippspiel\n";
 		$adminContent .= "MIME-Version: 1.0\n";
 		$adminContent .= "Content-Type: multipart/mixed; boundary=$id\n\n";
 		$adminContent .= "This is a multi-part message in MIME format\n";
