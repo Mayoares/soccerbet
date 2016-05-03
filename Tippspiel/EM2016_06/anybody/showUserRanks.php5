@@ -1,12 +1,35 @@
 <?php
 // we must never forget to start the session
 session_start();
-echo "<html>";
-echo "<head>";
-echo "<link rel='stylesheet' type='text/css' href='../../style/style.css' />";
-echo "<title>Werke's Tippspiel - Punktestand</title>";
-echo "</head>";
-echo "<body>";
+?>
+<!-- echo "<html>"; -->
+<!-- echo "<head>"; -->
+<!-- echo "<link rel='stylesheet' type='text/css' href='../../style/style.css' />"; -->
+<!-- echo "<title>Werke's Tippspiel - Punktestand</title>"; -->
+<!-- echo "</head>"; -->
+<!-- echo "<body>"; -->
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<!-- Mobile viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<!-- Facivon 
+<link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon"> -->
+
+<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />
+
+<title>Werke's Tippspiel - Punktestand</title>
+
+</head>
+
+<body>
+<?php
 // Verbindung zur Datenbank aufbauen
 include_once("../../connection/dbaccess.php5");
 include_once("../util/calc.php5");
@@ -14,10 +37,13 @@ include_once("../../general/log/log.php5");
 include_once("../util/dbschema.php5");
 $log=new viewlogger();
 $log->info("Clicked showUserRank");
-
-echo "<br>";
-echo "<a href='../util/loginPunktestand.php5'>zur�ck</a>";
-echo "<br>";
+?>
+<center>
+<div class="block">
+	<p><a href="../util/loginPunktestand.php5"> <h2>zurück</h2> </a> </p>
+</div>
+</center>
+<?php
 printLastUpdate();
 printDescription();
 printUserScores();

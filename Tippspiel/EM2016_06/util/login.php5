@@ -68,6 +68,16 @@ function promptLogin($username){
 <!DOCTYPE html>
 <html>
 <head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<!-- Mobile viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<!-- Facivon 
+<link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon"> -->
+
 <link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />
 <title>Werke's Tippspiel - Login</title>
 </head>
@@ -75,8 +85,7 @@ function promptLogin($username){
 
 <center>
 
-<h1>Werke's Tippspiel zur Europameisterschaft 2016 in Frankreich</h1>
-<p><img src="../pics/Logo_EM_2016.png" class="image" width="400" alt="Logo_EM_2016">
+<p><img src="../pics/Logo_EM_2016.png" class="image" width="250" alt="Logo_EM_2016">
 
 <div class="block">
 	<p><a href="../../index.html"> <h2>Home</h2> </a> </p>
@@ -84,6 +93,7 @@ function promptLogin($username){
 
 <div class="block">
   	<h1><font color="#ffffff">Login</font></h1>
+  	<hr>
 <?php 
 	echo "<table>";
 	echo "<form method='POST' action='login.php5'>";
