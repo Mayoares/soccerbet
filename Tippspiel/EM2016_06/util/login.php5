@@ -79,6 +79,10 @@ function promptLogin($username){
 <p><img src="../pics/Logo_EM_2016.png" class="image" width="400" alt="Logo_EM_2016">
 
 <div class="block">
+	<p><a href="../../index.html"> <h2>Home</h2> </a> </p>
+</div>
+
+<div class="block">
   	<h1><font color="#ffffff">Login</font></h1>
 <?php 
 	echo "<table>";
@@ -100,6 +104,7 @@ function promptLogin($username){
 	echo "</tr>";
 	echo "</table>";
 	}
+	
 ?>
 </p>
 </div>

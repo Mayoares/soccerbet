@@ -14,6 +14,10 @@
 <p><img src="../pics/Logo_EM_2016.png" class="image" width="400" alt="Logo_EM_2016">
 
 <div class="block">
+	<p><a href="../../index.html"> <h2>Home</h2> </a> </p>
+</div>
+
+<div class="block">
 	<h2><a href='../anybody/showUserRanks.php5'>Punktestand</a></h2>
 </div>
 
@@ -57,8 +61,8 @@ function allUsersAsOption($optionName) {
 	$numUsers=mysql_num_rows($sqlUsersResult);
 	if ($numUsers==0)
 	{
-		$log->info("keine passenden Datensätze gefunden");
-		echo "keine passenden Datensätze gefunden";
+		$log->info("keine passenden Datensï¿½tze gefunden");
+		echo "keine passenden Datensï¿½tze gefunden";
 	}
 	else
 	{
