@@ -88,7 +88,7 @@ if(isset($_POST["resetEvaluationDone"]))
 	
 	echo "<hr>";
 	
-	echo "<p><form method=\"POST\" action=\"sendTestMail.php5?userId=$userId\">";
+	echo "<p><form method=\"POST\" action=\"sendTestMail.php5?userId=$userId\">Testmail an folgende mail-Adresse: ";
 	echo "<input type=\"Text\" size=\"30\" name=\"email\" value=\"\">";
 	echo "<input type='submit' name='sendTestMail' value='Send Test Mail'>";
 	echo "</form></p>";
