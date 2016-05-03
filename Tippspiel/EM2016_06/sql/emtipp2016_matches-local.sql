@@ -4,7 +4,7 @@
 -- Daten für Tabelle `emtipp2016_matches`
 --
 
-INSERT INTO `usr_web133_1`.`emtipp2016_matches` (`matchnr`, `group`, `team1`, `team2`, `matchdate`, `matchtime`, `matchtype`, `evaluationDone`) VALUES
+INSERT INTO `emtipp2016`.`emtipp2016_matches` (`matchnr`, `group`, `team1`, `team2`, `matchdate`, `matchtime`, `matchtype`, `evaluationDone`) VALUES
 -- --------------------------------------------------------
 -- SPIELTAG 1 GRUPPENSPIEL
 -- --------------------------------------------------------
@@ -74,7 +74,7 @@ INSERT INTO `usr_web133_1`.`emtipp2016_matches` (`matchnr`, `group`, `team1`, `t
 -- (47, 'H', 'KOR', 'BEL', '26.6.', '22:00:00', 'Gruppenspiel', 'F'),
 -- (48, 'H', 'ALG', 'RUS', '26.6.', '22:00:00', 'Gruppenspiel', 'F');
 
-INSERT INTO `usr_web133_1`.`emtipp2016_matches` (`matchnr`, `group`, `team1`, `team2`, `matchdate`, `matchtime`, `matchtype`, `evaluationDone`) VALUES
+INSERT INTO `emtipp2016`.`emtipp2016_matches` (`matchnr`, `group`, `team1`, `team2`, `matchdate`, `matchtime`, `matchtype`, `evaluationDone`) VALUES
 (37, '', '', '', '25.6.', '15:00:00', 'Achtelfinale', 'F'),
 (38, '', '', '', '25.6.', '18:00:00', 'Achtelfinale', 'F'),
 (39, '', '', '', '25.6.', '21:00:00', 'Achtelfinale', 'F'),
