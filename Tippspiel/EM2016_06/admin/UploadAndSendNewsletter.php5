@@ -68,7 +68,7 @@ function sendFileToAll($filename, $target_path){
 
 function sendFile($filename, $target_path, $empfaenger){
 	
-	$betreff = "WM-Newsletter"; // Betreff
+	$betreff = "Werke's Tippspiel - Newsletter"; // Betreff
 
 	$dateiname = $target_path;
 	$dateiname_mail = $filename;
@@ -77,14 +77,14 @@ function sendFile($filename, $target_path, $empfaenger){
 	$dateiinhalt = fread(fopen($dateiname, "r"), filesize($dateiname));
 
 	// Absender Name und E-Mail Adresse
-	$kopf = "From: WERKEs-Werke's Tippspiel\n";
+	$kopf = "From: werkestippspiel\n";
 	$kopf .= "MIME-Version: 1.0\n";
 	$kopf .= "Content-Type: multipart/mixed; boundary=$id\n\n";
 	$kopf .= "This is a multi-part message in MIME format\n";
 	$kopf .= "--$id\n";
 	$kopf .= "Content-Type: text/plain\n";
 	$kopf .= "Content-Transfer-Encoding: 8bit\n\n";
-	$kopf .= "Liebe Tippspiel-Teilnehmer, anbei WERKEs WM-Newsletter."; // Inhalt der E-Mail (Body)
+	$kopf .= "Liebe Tippspiel-Teilnehmer, anbei Werke's Tippspiel - Newsletter ."; // Inhalt der E-Mail (Body)
 	$kopf .= "\n--$id";
 	// Content-Type: image/gif, image/jpeg, image/png � MIME-Typen - selfHtml.org
 	$kopf .= "\nContent-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document; name=$dateiname_mail\n";
