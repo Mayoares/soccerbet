@@ -37,7 +37,7 @@ function printUserInfo($userName){
 	herzlich Willkommen bei Werke's Tippspiel zur Europameisterschaft 2016 in Frankreich!</br>
 	</br>
 	Viel Erfolg beim Tippen,</br>
-	w�nscht dir Werke, Moose und Robl!
+	w&uuml;nscht dir Werke, Moose und Robl!
 	<br>
 	<br>
 	<a href='../pdf/Spielplan_EM_2016.pdf'>Download Spielplan als PDF</a>
@@ -45,8 +45,8 @@ function printUserInfo($userName){
 	<br>
 	<?php
 	//echo "<p class=\"info\"><font color=\"red\"><u>Hinweis</u>: Die Spielergebnistipps muessen alle <i><u><b>einzeln</b></u></i> abgespeichert werden!</font></p>";
-	echo "<p class=\"info\">Obacht!:</br>Die Paarungen und Ergebnisse in der <u><b>Endrunde</b></u> (ab dem Achtelfinale) m�ssen alle <i><u><b>einzeln</b></u></i> abgespeichert werden!
-		Das hei�t: Erst die beiden Mannschaften eines Endrundenspiels ausw�hlen, das Ergebnis eingeben und abspeichern, danach die n�chsten Begegnungen tippen! </p>";
+	echo "<p class=\"info\">Obacht!:</br>Die Paarungen und Ergebnisse in der <u><b>Endrunde</b></u> (ab dem Achtelfinale) m&uuml;ssen alle <i><u><b>einzeln</b></u></i> abgespeichert werden!
+		Das hei&szlig;t: Erst die beiden Mannschaften eines Endrundenspiels ausw&auml;hlen, das Ergebnis eingeben und abspeichern, danach die n&auml;chsten Begegnungen tippen! </p>";
 	//
 	// Kontakt
 	//

@@ -21,7 +21,7 @@ include_once("../util/dbschema.php5");
 
 if(strlen($userName)>0)
 {
-	echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zur�ck zur �bersicht</a>";
+	echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zur&uuml;ck zur &Uuml;bersicht</a>";
 	echo "<br>";
 	echo "<br><b>$userName</b><br>";
 	calcScore($userName, false);
@@ -39,7 +39,7 @@ else
 }
 mysql_close();
 echo "<br>";
-echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zur�ck zur �bersicht</a>";
+echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zur&uuml;ck zur &Uuml;bersicht</a>";
 
 function getAllUsers()
 {
@@ -56,7 +56,7 @@ $score=$score+getEvaluation($user, 'Viertelfinale', $silent);
 $score=$score+getEvaluation($user, 'Halbfinale', $silent);
 $score=$score+getEvaluation($user, 'Platz3', $silent);
 $score=$score+getEvaluation($user, 'Finale', $silent);
-echo "<br>Gesamtscore f�r Finalspielteilnahmen-Tipps von User $user : $score";
+echo "<br>Gesamtscore f&uuml;r Finalspielteilnahmen-Tipps von User $user : $score";
 updateScoreInDB($user, $score);
 }
 
@@ -76,8 +76,8 @@ function updateScoreInDB($user, $score){
 	}
 	else
 	{
-		echo '<br>Update in DB wurde ausgef�hrt<br>';
-		$log->info("Update in DB wurde ausgef�hrt");
+		echo '<br>Update in DB wurde ausgef&uuml;hrt<br>';
+		$log->info("Update in DB wurde ausgef&uuml;hrt");
 	}	
 }
 
@@ -91,7 +91,7 @@ function getEvaluation($user, $matchtype, $silent)
 	$realTeams2=getRealTeams($team2, $matchtype);
 	$score2=checkTeamsIncluded($user, $team2, $realTeams2, $matchtype, $silent);
 	$score=$score1+$score2;
-	echo "<br>Score User $user f�r $matchtype: $score";
+	echo "<br>Score User $user f&uuml;r $matchtype: $score";
 	return $score;
 }
 function getRealTeams($column, $matchtype) {
@@ -137,14 +137,14 @@ function checkTeamsIncluded($user, $column, $realTeams, $matchtype, $silent)
 				$userScore = $userScore+$addScore;
 				if(!$silent)
 				{
-					echo "<br>User hat '$team' im '$matchtype' getippt und erh�lt '$addScore' Punkte.";
+					echo "<br>User hat '$team' im '$matchtype' getippt und erh&ouml;lt '$addScore' Punkte.";
 				}
 			}
 			else
 			{
 				if(!$silent)
 				{
-					echo "<br>User hat '$team' NICHT im '$matchtype' getippt und erh�lt keine Punkte.";
+					echo "<br>User hat '$team' NICHT im '$matchtype' getippt und erh&auml;lt keine Punkte.";
 				}
 			}
 		}

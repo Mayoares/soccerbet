@@ -83,13 +83,13 @@ function resetUserPassword($resetUsername, $adminuserId)
 		echo mysql_error();
 		echo "<br>";
 		echo "<br>";
-		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
+		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zur&uuml;ck zur &Uuml;bersicht</a>";
 	}
 	else
 	{
-		$message = "Für dich wurde ein neues Passwort generiert.<br>" .
+		$message = "F&uuml;r dich wurde ein neues Passwort generiert.<br>" .
 	     "Dein neues Passwort lautet: <b>$password</b>.<br>" .
-		 "Bitte bald einloggen und ändern.<br>";
+		 "Bitte bald einloggen und &auml;ndern.<br>";
 		mail($email, "EM-Tipp Passwort", $message, "From: WERKEs-EM-Tipp\n" . "Content-Type: text/html; charset=iso-8859-1\n");
 		echo "<br>User $username hat ein neues Passwort erhalten.<br>";
 		echo "<br>Das Passwort wurde an seine eMail-Adresse '$email' geschickt.<br>";
@@ -112,7 +112,7 @@ function promptResetUserPassword($username, $adminuserId)
 {
 	echo "<br>";
 	echo "<br>";
-	echo "Passwort von User '<b>$username</b>' wirklich zurücksetzen?";
+	echo "Passwort von User '<b>$username</b>' wirklich zur&uuml;cksetzen?";
 	echo "<br>";
 	echo "<br>";
 	echo "<form method='POST' action='resetUserPassword.php5?userId=$adminuserId&ResetUsername=$username'>";

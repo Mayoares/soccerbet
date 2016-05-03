@@ -1,6 +1,6 @@
 <?php
 //Zugangsdaten
-$dbuser="web133";		 //Benutzername für den MySQL-Zugang
+$dbuser="web133";		 //Benutzername fuer den MySQL-Zugang
 //$password="RGTsHGi3";		 //Passwort
 $password="wm2010";		 //Passwort
 //$host="Mayoar.rivido.de";	 //Name (IP-Adr.) des Rechners mit MySQL

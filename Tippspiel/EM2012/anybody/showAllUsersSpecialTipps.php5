@@ -23,14 +23,14 @@ printSpecials();
 
 function printSpecials(){
 	
-	echo "<h3>Stockerl-Tipps und Torschützenkönige</h3>";
+	echo "<h3>Stockerl-Tipps und Torsch&uuml;tzenk&ouml;nige</h3>";
 	
 	echo "<table border='1' rules='all'>";
 	echo "<tr>";
 	echo "<th>User</th> ";
 	echo "<th>Europameister</th> ";
 	echo "<th>Vizeeuropameister</th> ";
-	echo "<th>Torschützenkönig</th> ";
+	echo "<th>Torsch&uuml;tzenk&ouml;nig</th> ";
 	echo "</tr>";
 	
 	$table_users=dbschema::users;

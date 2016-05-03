@@ -23,7 +23,7 @@ else
 	}
 	else if(isset($_POST["evaluationFinalMatch"]))
 	{
-		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zur�ck zur �bersicht</a>";
+		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zur&uuml;ck zur &Uuml;bersicht</a>";
 		echo "<br>";
 		echo "<br>";
 		$SelectedMatchnr=$_POST['SelectedMatchnr'];
@@ -31,7 +31,7 @@ else
 		evaluateFinalMatch($SelectedMatchnr, $dbutil);
 		setMatchEvaluated($SelectedMatchnr);
 		echo "<br>";
-		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zur�ck zur �bersicht</a>";
+		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zur&uuml;ck zur &Uuml;bersicht</a>";
 	}
 	else
 	{
@@ -64,12 +64,12 @@ function setMatchEvaluated($matchnr){
 	$sqlUpdateResult=mysql_query($sql);
 	if(!$sqlUpdateResult)
 	{
-		echo "evaluationDone='T' konnte nicht gesetzt werden f�r matchnr='$matchnr'<br>";
+		echo "evaluationDone='T' konnte nicht gesetzt werden f&uuml;r matchnr='$matchnr'<br>";
 		echo mysql_error();
 	}
 	else
 	{
-		echo "<br> evaluationDone='T' f�r matchnr='$matchnr' OK <br>";
+		echo "<br> evaluationDone='T' f&uuml;r matchnr='$matchnr' OK <br>";
 	}
 }
 
@@ -82,7 +82,7 @@ function evaluateFinalMatch($matchnr, $dbutil){
 	echo "<body>";
 
 	$matchtype = getMatchType($matchnr);
-	echo "Spiel <$matchnr> ($matchtype) f�r alle User auswerten ...<br>";
+	echo "Spiel <$matchnr> ($matchtype) f&uuml;r alle User auswerten ...<br>";
 	echo "<br>";
 	
 	$arrayReal=getRealResult($matchnr);
@@ -97,7 +97,7 @@ function evaluateFinalMatch($matchnr, $dbutil){
 	echo "Ergebnis: <b>$team1Real - $team2Real  $GoalsTeam1Real : $GoalsTeam2Real</b><br>";
 	echo "<br>";
 	
-	// f�r jeden User ...
+	// fuer jeden User ...
 	$table_users = dbschema::users;
 	$sqluser="SELECT t.username FROM $table_users t WHERE NOT t.username='real' AND NOT t.username='admin' ORDER BY (t.username)";
 	$sqlResultUsers=mysql_query($sqluser);
@@ -276,8 +276,8 @@ function updateScoreInDB($user, $userMatchnr, $score){
 	}
 	else
 	{
-		echo "<br>Update in DB wurde ausgef�hrt (Spiel $userMatchnr)<br>";
-		$log->info("Update in DB wurde ausgef�hrt.");
+		echo "<br>Update in DB wurde ausgef&uuml;hrt (Spiel $userMatchnr)<br>";
+		$log->info("Update in DB wurde ausgef&uuml;hrt.");
 	}	
 }
 ?>

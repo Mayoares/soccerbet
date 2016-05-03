@@ -106,7 +106,7 @@ function addUser($username, $firstname, $lastname, $email, $adminuserId)
 		echo mysql_error();
 		echo "<br>";
 		echo "<br>";
-		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
+		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zur&uuml;ck zur &Uuml;bersicht</a>";
 	}
 	else
 	{
@@ -145,7 +145,7 @@ function promptAddUser($adminuserId)
 	echo "<tr>";
 	echo "</tr>";
 	echo "<tr>";
-	echo "<td><input type='submit' name='addUser' value='Hinzufügen'></td>";
+	echo "<td><input type='submit' name='addUser' value='Hinzuf&uuml;gen'></td>";
 	echo "<td><input type='submit' name='Cancel' value='Abbrechen'></td>";
 	echo "</tr>";
 	echo "</table>";

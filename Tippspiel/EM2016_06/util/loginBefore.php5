@@ -38,7 +38,7 @@ else
 		$password=$array1["password"];
 		$userId=$array1["userid"];
 		
-		// Passwort �berpr�fen
+		// Passwort ueberpruefen
 		if($_POST["password"] != $password)
 		{
 			echo "<br>Falsches Passwort. Bitte Eingabe korrigieren.";

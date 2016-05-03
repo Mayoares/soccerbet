@@ -159,7 +159,7 @@ function getTeams($group){
 function allTeamsAsOption($sqlTeams, $tippedTeam, $optionName) {
 	$numTeams=mysql_num_rows($sqlTeams);
 	if ($numTeams==0)
-	echo "keine passenden Datens�tze gefunden";
+	echo "keine passenden Datens&auml;tze gefunden";
 	else
 	{
 		for ($i=0; $i<$numTeams; $i++)
@@ -241,7 +241,7 @@ function insertUpdateMatchPrediction($matchprediction)
 	if (!$sqlInsertResult) {
 		$log->error(mysql_error());
 		//		$sqlerror=mysql_error();
-		//		echo "<br><font color='#EE0000'> Ung�ltige Abfrage: <b>$sqlinsert</b> <br>Error:$sqlerror</font>"; 
+		//		echo "<br><font color='#EE0000'> Ung&uuml;ltige Abfrage: <b>$sqlinsert</b> <br>Error:$sqlerror</font>"; 
 		$sqlupdateMatch="UPDATE $table_groupmatchtipps SET " .
 			"goalsX = '$matchprediction->GoalsTeam1', " .
 			"goalsY = '$matchprediction->GoalsTeam2', " .
@@ -253,7 +253,7 @@ function insertUpdateMatchPrediction($matchprediction)
 		if (!$sqlupdateMatchResult) {
 			$sqlerror=mysql_error();
 			$log->error($sqlerror);
-			echo "<br><font color='#EE0000'> Ung�ltiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>"; 
+			echo "<br><font color='#EE0000'> Ung&uuml;ltiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>"; 
 		}
 		else
 		{
@@ -337,7 +337,7 @@ function areTeamsDifferent($team1,$team2,$rank1,$rank2)
 {
 	if($team1==$team2)
 	{
-		echo "<font color=\"red\">Platzierungen m�ssen eindeutig sein. <b>$team1</b> wurden Platz <b>$rank1</b> und <b>$rank2</b> zugeordnet.</font>";
+		echo "<font color=\"red\">Platzierungen m&uuml;ssen eindeutig sein. <b>$team1</b> wurden Platz <b>$rank1</b> und <b>$rank2</b> zugeordnet.</font>";
 		echo "<br>";
 		return false;
 	}	

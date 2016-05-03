@@ -252,7 +252,7 @@ function getTeamsOfGroup($matchnr, $named){
 function allTeamsAsOption($sqlTeams, $tippedTeam, $optionName) {
 	$numTeams=mysql_num_rows($sqlTeams);
 	if ($numTeams==0)
-	echo "keine passenden Datens�tze gefunden";
+	echo "keine passenden Datens&auml;tze gefunden";
 	else
 	{
 		if($tippedTeam!="")
@@ -419,7 +419,7 @@ function insertUpdateInTipps($userName, $matchnr, $teamShort1, $teamShort2, $Goa
 		if (!$sqlupdateMatchResult) {
 			$sqlerror=mysql_error();
 			$log->error($sqlerror);
-			echo "<br><font color='#EE0000'> Ung�ltiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>";
+			echo "<br><font color='#EE0000'> Ung&uuml;ltiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>";
 		    echo "<br><font color='#EE0000'> vorher: <b>$sqlinsert</b> <br>Error:$sqlerrorInsert</font>";
 		}
 	}
@@ -443,9 +443,9 @@ function removeFinalMatchInTipps($userName, $matchnr){
 	if ($sqlInsertResult=!1) {
 		$sqlerror=mysql_error();
 		$log->error($sqlerror);
-		echo "<br><font color='#EE0000'> Ung�ltiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>";
+		echo "<br><font color='#EE0000'> Ung&uuml;ltiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>";
 	}
-	echo "<br> Tipp f�r Spiel <b>$matchnr</b> gel�scht";
+	echo "<br> Tipp f&uuml;r Spiel <b>$matchnr</b> gel&ouml;scht";
 }
 
 function updateInMatches($matchnr, $teamShort1, $teamShort2){
@@ -462,7 +462,7 @@ function updateInMatches($matchnr, $teamShort1, $teamShort2){
 		echo "<br>sqlupdateMatchResult:$sqlupdateMatchResult";
 		$sqlerror=mysql_error();
 		$log->error($sqlerror);
-		echo "<br><font color='#EE0000'> Ung�ltiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>";
+		echo "<br><font color='#EE0000'> Ung&uuml;ltiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>";
 	}
 }
 

@@ -86,7 +86,7 @@ if(isset($_POST["resetEvaluationDone"]))
 	echo "<p><form method=\"POST\" action=\"resetUserPassword.php5?userId=$userId\">User ";
 	echo "<td bgcolor=slategray><select name='SelectedUsername'>";
 	allUsersAsOption("User");
-	echo "<input type='submit' name='resetUser' value='Passwort zur�cksetzen'>";
+	echo "<input type='submit' name='resetUser' value='Passwort zur&uuml;cksetzen'>";
 	echo "</form></p>";
 	
 	echo "<hr>";
@@ -94,7 +94,7 @@ if(isset($_POST["resetEvaluationDone"]))
 	echo "<p><form method=\"POST\" action=\"removeUser.php5?userId=$userId\">User ";
 	echo "<td bgcolor=slategray><select name='SelectedUsername'>";
 	allUsersAsOption("User");
-	echo "<input type='submit' name='removeUser' value='User l�schen'>";
+	echo "<input type='submit' name='removeUser' value='User l&ouml;schen'>";
 	echo "</form></p>";
 	
 	echo "<hr>";
@@ -169,7 +169,7 @@ if(isset($_POST["resetEvaluationDone"]))
 	<h2>Korrektur</h2>
 	<?php
 	echo "<form method=\"POST\" action=\"overviewAdmin.php5?userId=$userId\">Spiel Nr.: ";
-	echo "<input type=\"Text\" size=\"1\" name=\"resetMatchNr\" value=\"\"> <input type=\"submit\" name=\"resetEvaluationDone\" value=\"Spiel-Auswertung r�ckg�ngig machen\">";
+	echo "<input type=\"Text\" size=\"1\" name=\"resetMatchNr\" value=\"\"> <input type=\"submit\" name=\"resetEvaluationDone\" value=\"Spiel-Auswertung r&uuml;ckg&auml;ngig machen\">";
 	echo "</form>";
 	?>
 </div>
@@ -225,7 +225,7 @@ echo "</form>";
 
 echo "	<h2>Korrektur</h2>";
 echo "<form method=\"POST\" action=\"overviewAdmin.php5?userId=$userId\">";
-echo "<input type=\"Text\" size=\"1\" name=\"resetMatchNr\" value=\"\"> <input type=\"submit\" name=\"resetEvaluationDone\" value=\"Spiel-Auswertung r�ckg�ngig machen\">";
+echo "<input type=\"Text\" size=\"1\" name=\"resetMatchNr\" value=\"\"> <input type=\"submit\" name=\"resetEvaluationDone\" value=\"Spiel-Auswertung r&uuml;ckg&auml;ngig machen\">";
 echo "</form>";
 */
 
@@ -241,8 +241,8 @@ function allGroupMatchesAsOption($optionName, $dbutil) {
 	$nummatches=mysql_num_rows($sqlmatchesResult);
 	if ($nummatches==0)
 	{
-		$log->warn("keine passenden Datens�tze gefunden");
-		echo "keine passenden Datens�tze gefunden";
+		$log->warn("keine passenden Datens&auml;tze gefunden");
+		echo "keine passenden Datens&auml;tze gefunden";
 	}
 	else
 	{
@@ -271,8 +271,8 @@ function allFinalMatchesAsOption($optionName, $dbutil) {
 	$nummatches=mysql_num_rows($sqlmatchesResult);
 	if ($nummatches==0)
 	{
-		$log->warn("keine passenden Datens�tze gefunden");
-		echo "keine passenden Datens�tze gefunden";
+		$log->warn("keine passenden Datens&auml;tze gefunden");
+		echo "keine passenden Datens&auml;tze gefunden";
 	}
 	else
 	{
@@ -310,8 +310,8 @@ function allUsersAsOption($optionName) {
 	$numUsers=mysql_num_rows($sqlUsersResult);
 	if ($numUsers==0)
 	{
-		$log->warn("keine passenden Datens�tze gefunden");
-		echo "keine passenden Datens�tze gefunden";
+		$log->warn("keine passenden Datens&auml;tze gefunden");
+		echo "keine passenden Datens&auml;tze gefunden";
 	}
 	else
 	{
@@ -341,12 +341,12 @@ function resetMatch($matchnr, $dbutil){
 	$sqlUpdateResult=mysql_query($sql);
 	if($sqlUpdateResult)
 	{
-		echo "<p class='info'>Spiel $matchnr wurde zur�ckgesetzt ... es muss jetzt nochmal ausgewertet werden.</p>";
-		//echo "Spiel '$matchnr' wurde zur�ckgesetzt ... es muss jetzt nochmal ausgewertet werden.<br>";
+		echo "<p class='info'>Spiel $matchnr wurde zur&uuml;ckgesetzt ... es muss jetzt nochmal ausgewertet werden.</p>";
+		//echo "Spiel '$matchnr' wurde zur&uuml;ckgesetzt ... es muss jetzt nochmal ausgewertet werden.<br>";
 	} 
 	else
 	{
-		$errorMessage = "evaluationDone='F' konnte nicht gesetzt werden f�r matchnr='$matchnr'";
+		$errorMessage = "evaluationDone='F' konnte nicht gesetzt werden f&uuml;r matchnr='$matchnr'";
 		echo $errorMessage;
 		$log->error($errorMessage);
 	}

@@ -21,8 +21,8 @@ else
 	echo "<title> Werke's Tippspiel - Logout</title>";
 	echo "</head>";
 	echo "<br>";
-	// echo "<font color=\"red\"><b>Hast du alle Tipps vollst�ndig ausgef�llt und nichts vergessen?</b></font>";
-	echo "<p class=\"info\">Hast du alle Tipps vollst�ndig ausgef�llt und nichts vergessen?</p>";
+	// echo "<font color=\"red\"><b>Hast du alle Tipps vollst&auml;ndig ausgef&uuml;llt und nichts vergessen?</b></font>";
+	echo "<p class=\"info\">Hast du alle Tipps vollst&auml;ndig ausgef&uuml;llt und nichts vergessen?</p>";
 	echo "<br>";
 	echo "<br>";
 	echo "Hm, nochmal ";

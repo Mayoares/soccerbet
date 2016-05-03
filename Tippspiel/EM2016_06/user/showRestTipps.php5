@@ -90,7 +90,7 @@ function printChampions($userName){
 	
 	echo "<br>";
 	echo "<br>";
-	echo "<h2>Spezial</h2>";
+	echo "<h2>Spezialtipps</h2>";
 	echo "<br>";
 	
 	$champion=getTippedTeamRostrum($userName, 1);  if(!isset($champion)){$champion = "<font color=\"red\"><b> FEHLT! </b></font>";}
@@ -112,7 +112,7 @@ function printTopscorer($username){
 	
 	//echo "<table style='font-size:18px'>";
 	echo "<table>";
-	echo "<tr><td>Torsch�tzenk�nig &nbsp; &nbsp; &nbsp;</td><td><b>$topscorer</b></td> &nbsp; <td>($topScorerTeam)</td> </tr>";
+	echo "<tr><td>Torsch&uuml;tzenk&ouml;nig &nbsp; &nbsp; &nbsp;</td><td><b>$topscorer</b></td> &nbsp; <td>($topScorerTeam)</td> </tr>";
 	echo "</table>";
 }
 

@@ -60,7 +60,7 @@ function sendFile($filename, $target_path, $empfaenger){
 	$kopf .= "Content-Transfer-Encoding: 8bit\n\n";
 	$kopf .= "Liebe Tippspiel-Teilnehmer, anbei WERKE's EM-Newsletter."; // Inhalt der E-Mail (Body)
 	$kopf .= "\n--$id";
-	// Content-Type: image/gif, image/jpeg, image/png » MIME-Typen - selfHtml.org
+	// Content-Type: image/gif, image/jpeg, image/png in MIME-Typen - selfHtml.org
 	$kopf .= "\nContent-Type: image/gif; name=$dateiname_mail\n";
 	$kopf .= "Content-Transfer-Encoding: base64\n";
 	$kopf .= "Content-Disposition: attachment; filename=$dateiname_mail\n\n";

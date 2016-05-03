@@ -15,7 +15,7 @@ $log=new viewlogger();
 $log->info("Clicked showUserRank");
 
 echo "<br>";
-echo "<a href='../util/login.php5'>zurück</a>";
+echo "<a href='../util/login.php5'>zur&uuml;ck</a>";
 echo "<br>";
 printLastUpdate();
 printDescription();
@@ -51,7 +51,7 @@ function printLastUpdate(){
 	$sqlResult = getEvaluatedGroups();
 	$rowcnt = mysql_num_rows($sqlResult);
 	if($rowcnt>0){
-		echo "Berücksichtigt sind auch Punkte für Tabellenplätze der Gruppen <b>";
+		echo "Ber&uuml;cksichtigt sind auch Punkte f&uuml;r Tabellenpl&auml;tze der Gruppen <b>";
 		while($array=mysql_fetch_array($sqlResult))
 		{
 			$group=$array["group"];
@@ -62,7 +62,7 @@ function printLastUpdate(){
 		$rowcnt = mysql_num_rows($sqlResult);
 		if($rowcnt>0){
 			echo "<br>";
-			echo "und die Punkte für Teilnahme an den Finalspielen <b>";
+			echo "und die Punkte f&uuml;r Teilnahme an den Finalspielen <b>";
 			while($array=mysql_fetch_array($sqlResult))
 			{
 				$finalmatchnr=$array["matchnr"];

@@ -37,7 +37,7 @@ $log->info("Clicked showUserRank");
 <img src="../pics/Logo_EM_2016.png" class="image" width="250" alt="Logo_EM_2016">
 
 <div class="block">
-	<p><a href="../util/loginPunktestand.php5"> <h2>zurück</h2> </a> </p>
+	<p><a href="../util/loginPunktestand.php5"> <h2>zur&uuml;ck</h2> </a> </p>
 </div>
 
 </center>
@@ -77,7 +77,7 @@ function printLastUpdate(){
 	$sqlResult = getEvaluatedGroups();
 	$rowcnt = mysql_num_rows($sqlResult);
 	if($rowcnt>0){
-		echo "Ber�cksichtigt sind auch Punkte f�r Tabellenpl�tze der Gruppen <b>";
+		echo "Ber&uuml;cksichtigt sind auch Punkte f&uuml;r Tabellenpl&auml;tze der Gruppen <b>";
 		while($array=mysql_fetch_array($sqlResult))
 		{
 			$group=$array["group"];
@@ -88,7 +88,7 @@ function printLastUpdate(){
 		$rowcnt = mysql_num_rows($sqlResult);
 		if($rowcnt>0){
 			echo "<br>";
-			echo "und die Punkte f�r Teilnahme an den Finalspielen <b>";
+			echo "und die Punkte f&uuml;r Teilnahme an den Finalspielen <b>";
 			while($array=mysql_fetch_array($sqlResult))
 			{
 				$finalmatchnr=$array["matchnr"];

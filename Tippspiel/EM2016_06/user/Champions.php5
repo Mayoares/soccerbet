@@ -15,7 +15,7 @@ else
 	echo "<html>";
 	echo "<head>";
 	echo "<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />";
-	echo "<title>Werke's Tippspiel - Stockerl-Tipps und Torsch�tzenk�nig</title>";
+	echo "<title>Werke's Tippspiel - Spezialtipps</title>";
 	echo "</head>";
 	echo "<body>";
 	
@@ -104,7 +104,7 @@ function run($userId){
 	echo "<br>";
 	echo "<br>";
 	echo "<br>";
-	echo "<h2>Torsch�tzenk�nig</h2>";
+	echo "<h2>Torsch&uuml;tzenk&ouml;nig</h2>";
 	$citation->printCitation("Tor");
 	echo "<br>";
 	
@@ -115,7 +115,7 @@ function run($userId){
 		$updated = updateTopScorerTipp($username, $topscorer, $shortTeamName);
 		if($updated)
 		{
-			echo "<font color=\"green\">Torsch�tzenk�nig erfolgreich gespeichert :)</font>";
+			echo "<font color=\"green\">Torsch&uuml;tzenk&ouml;nig erfolgreich gespeichert :)</font>";
 			echo "<br>";
 		}
 	}
@@ -210,7 +210,7 @@ function getTippedTopScorerTeam($username){
 function allTeamsAsOptionForRank($sqlTeams, $tippedTeam) {
 	$numTeams=mysql_num_rows($sqlTeams);
 	if ($numTeams==0)
-		echo "keine passenden Datens�tze gefunden";
+		echo "keine passenden Datens&auml;tze gefunden";
 	else
 	{
 		for ($i=0; $i<$numTeams; $i++)
@@ -235,7 +235,7 @@ function allTeamsAsOptionForRank($sqlTeams, $tippedTeam) {
 function allTeamsAsOption($sqlTeams, $tippedTeam) {
 	$numTeams=mysql_num_rows($sqlTeams);
 	if ($numTeams==0)
-		echo "keine passenden Datens�tze gefunden";
+		echo "keine passenden Datens&auml;tze gefunden";
 	else
 	{
 		echo "<td bgcolor=slategray><select name='team'>";
@@ -281,7 +281,7 @@ function updateTopScorerTipp($username, $topscorer, $shortTeamName){
 		if (!$sqlupdateMatchResult) {
 			$sqlerror=mysql_error();
 			$log->error($sqlerror);
-			echo "<br><font color='#EE0000'> Ung�ltiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>"; 
+			echo "<br><font color='#EE0000'> Ung&uuml;ltiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>"; 
 			return false;
 		}
 		else

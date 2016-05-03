@@ -40,9 +40,10 @@ echo "<br><a href='./userInfo.php5?userId=$userId' target='Daten'>Home</a>";
 echo "<br>";
 if($userName != "test")
 {
-	echo "<a href='./changePassword.php5?userId=$userId' target='Daten'>Passwort �ndern</a>";
+	echo "<a href='./changePassword.php5?userId=$userId' target='Daten'>Passwort &auml;ndern</a>";
 }
 
+echo "<br>";
 echo "<br>";
 echo "<FONT SIZE=5><b>Tippen:</b></FONT>";
 echo "<br>";
@@ -57,7 +58,7 @@ echo "<br><a href='Group.php5?userId=$userId&group=F' target='Daten'>Gruppe F</a
 echo "<br>";
 echo "<br><a href='Finals.php5?userId=$userId' target='Daten'>Endrunde</a>";
 echo "<br>";
-echo "<br><a href='Champions.php5?userId=$userId' target='Daten'>Stockerl-Tipps & Torsch�tzenk�nig</a>";
+echo "<br><a href='Champions.php5?userId=$userId' target='Daten'>Spezialtipps</a>";
 echo "<br>";
 echo "<br>";
 echo "<br>";

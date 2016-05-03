@@ -68,7 +68,7 @@ echo "</table>";
 echo "<br>";
 echo "<br>";
 echo "<br>";
-echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zur�ck zur �bersicht</a>";
+echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zur&uuml;ck zur &Uuml;bersicht</a>";
 
 function getRealTeam($rank){
 	$table_championtipps=dbschema::championtipps;

@@ -24,14 +24,14 @@ else
 	}
 	else if(isset($_POST["evaluationGroupMatch"]))
 	{
-		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zur�ck zur �bersicht</a>";
+		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zur&uuml;ck zur &Uuml;bersicht</a>";
 		echo "<br>";
 		echo "<br>";
 		$SelectedMatchnr=$_POST['SelectedMatchnr'];
 		//echo "<br>adminid=$adminuserId, SelectedMatchnr=$SelectedMatchnr<br>";
 		evaluateGroupMatch($SelectedMatchnr, $dbutil);
 		echo "<br>";
-		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zur�ck zur �bersicht</a>";
+		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zur&uuml;ck zur &Uuml;bersicht</a>";
 	}
 	else
 	{
@@ -63,7 +63,7 @@ function evaluateGroupMatch($matchnr, $dbutil){
 	echo "</head>";
 	echo "<body>";
 
-	echo "Spiel <$matchnr> f�r alle User auswerten ...<br>";
+	echo "Spiel <$matchnr> f&uuml;r alle User auswerten ...<br>";
 	$arrayReal=getRealResult($matchnr);
 	$team1Short = getTeamShort($matchnr, "team1");
 	$team1=$dbutil->getTeamName($team1Short);
@@ -115,7 +115,7 @@ function evaluateGroupMatch($matchnr, $dbutil){
 			$sqlUpdateResult=mysql_query($sql);
 			if(!$sqlUpdateResult)
 			{
-				echo "evaluationDone='T' konnte nicht gesetzt werden f�r matchnr='$matchnr'";
+				echo "evaluationDone='T' konnte nicht gesetzt werden f&uuml;r matchnr='$matchnr'";
 			}
 			
 		}

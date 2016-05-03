@@ -34,7 +34,7 @@ if(strlen($userName)==0)
 <img src="../pics/Logo_EM_2016.png" class="image" width="250" alt="Logo_EM_2016">
 
 <div class="block">
-	<p><a href="../util/loginPunktestand.php5"> <h2>zurück</h2> </a> </p>
+	<p><a href="../util/loginPunktestand.php5"> <h2>zur&uuml;ck</h2> </a> </p>
 </div>
 
 </center>
@@ -472,7 +472,7 @@ function printTopscorer($username){
 	echo "<br>";
 	echo "<table>";
 	echo "<tr>";
-	echo "<td>Torsch�tzenk�nig &nbsp; &nbsp; &nbsp; </td><td> $topscorer </b> &nbsp; </td><td> ($topScorerTeam)</td>";
+	echo "<td>Torsch&uuml;tzenk&ouml;nig &nbsp; &nbsp; &nbsp; </td><td> $topscorer </b> &nbsp; </td><td> ($topScorerTeam)</td>";
 	printCorrectTopscorer($TopscorerReal, $realTeam);
 	$score=getScoreTopscorer($username);
 	printScore($score);

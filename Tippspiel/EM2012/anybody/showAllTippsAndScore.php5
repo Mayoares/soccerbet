@@ -110,7 +110,7 @@ function printGroupRanks($group, $userName){
 		echo "</tr>";
 		//&nbsp;&nbsp;
 	}
-	// zusätzliche Zeilen, damit Ranktipps genauso groß in der Tabelle erscheinen wie die Matchtipps
+	// zusaetzliche Zeilen, damit Ranktipps genauso gross in der Tabelle erscheinen wie die Matchtipps
 	for($r=0; $r<12; $r++)
 	{
 		echo "<tr>";
@@ -431,7 +431,7 @@ function printTopscorer($username){
 	$realTeamShort=getTippedTopScorerTeam("real");
 	$realTeam=getTeamName($realTeamShort);
 	
-	echo "<br>Torschützenkönig &nbsp; &nbsp; &nbsp; <b> $topscorer </b> &nbsp; ($topScorerTeam)";
+	echo "<br>Torsch&uuml;tzenk&ouml;nig &nbsp; &nbsp; &nbsp; <b> $topscorer </b> &nbsp; ($topScorerTeam)";
 	printCorrectTopscorer($TopscorerReal, $realTeam);
 	$score=getScoreTopscorer($username);
 	printScore($score);
@@ -469,7 +469,7 @@ function printEvaluationFinalParticipants($user, $matchtype, $silent)
 	$matches=getMatches($matchtype);
 	$realTeams=getRealTeams($matchtype);
 	$score=checkTeamsIncluded($user, "team", $realTeams, $matches, $matchtype, $silent);
-	//echo "<br>Score User $user für $matchtype: $score";
+	//echo "<br>Score User $user fuer $matchtype: $score";
 	return $score;
 }
 function getMatches($matchtype) {

@@ -74,8 +74,8 @@ function allUsersAsOption($optionName) {
 	$numUsers=mysql_num_rows($sqlUsersResult);
 	if ($numUsers==0)
 	{
-		$log->info("keine passenden Datens�tze gefunden");
-		echo "keine passenden Datens�tze gefunden";
+		$log->info("keine passenden Datens&auml;tze gefunden");
+		echo "keine passenden Datens&auml;tze gefunden";
 	}
 	else
 	{

@@ -82,7 +82,7 @@ function printGroupRanks($group, $userName){
 		echo "<td> $rank. </td><td><b> $teamName </b></td><td> </td>";
 		echo "</tr>";
 	}
-	// zus�tzliche Zeilen, damit Ranktipps genauso gro� in der Tabelle erscheinen wie die Matchtipps
+	// zusaetzliche Zeilen, damit Ranktipps genauso gross in der Tabelle erscheinen wie die Matchtipps
 	for($r=0; $r<12; $r++)
 	{
 		echo "<tr>";

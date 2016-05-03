@@ -30,7 +30,7 @@ else
 		echo "<br>";
 		echo "<br>";
 		echo "<br>";
-		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
+		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zur&uuml;ck zur &Uuml;bersicht</a>";
 	}
 	else
 	{
@@ -62,7 +62,7 @@ function evaluateGroupMatch($matchnr, $dbutil){
 	echo "</head>";
 	echo "<body>";
 
-	echo "Spiel <$matchnr> für alle User auswerten ...<br>";
+	echo "Spiel <$matchnr> f&uuml;r alle User auswerten ...<br>";
 	$arrayReal=getRealResult($matchnr);
 	$team1Short = getTeamShort($matchnr, "team1");
 	$team1=$dbutil->getTeamName($team1Short);
@@ -108,13 +108,13 @@ function evaluateGroupMatch($matchnr, $dbutil){
 		{
 			$log->info('Update OK.');
 			$table_matches=dbschema::matches;
-			//Eintragen welche Spiele bereits ausgewertet wurden (für Punktestand-Anzeige)
+			//Eintragen welche Spiele bereits ausgewertet wurden (fuer Punktestand-Anzeige)
 			$sql = "UPDATE $table_matches SET evaluationDone='T' WHERE matchnr='$matchnr'";
 			$log->info($sql);
 			$sqlUpdateResult=mysql_query($sql);
 			if(!$sqlUpdateResult)
 			{
-				echo "evaluationDone='T' konnte nicht gesetzt werden für matchnr='$matchnr'";
+				echo "evaluationDone='T' konnte nicht gesetzt werden f&uuml;r matchnr='$matchnr'";
 			}
 			
 		}
@@ -153,6 +153,6 @@ function getEvaluationGroup($GoalsTeam1User, $GoalsTeam2User, $WinnerUser, $Goal
 	return $Score;
 }
 
-//Datenbankconnection schließen
+//Datenbankconnection schliessen
 mysql_close();
 ?>

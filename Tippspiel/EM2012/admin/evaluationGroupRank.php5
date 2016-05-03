@@ -45,7 +45,7 @@ else
 		echo "<br>";
 		echo "<br>";
 		echo "<br>";
-		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
+		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zur&uuml;ck zur &Uuml;bersicht</a>";
 	}
 	else
 	{
@@ -136,6 +136,6 @@ function getRealRank($team){
 	return $rank;
 }
 
-//Datenbankconnection schließen
+//Datenbankconnection schliessen
 mysql_close();
 ?>

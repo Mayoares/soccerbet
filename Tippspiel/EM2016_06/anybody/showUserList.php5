@@ -11,7 +11,7 @@ echo "<html>";
 echo "<head>";
 echo "<link rel='stylesheet' type='text/css' href='../../style/style.css' />";
 echo "<br>";
-echo "<a href='../admin/overviewAdmin.php5?userId=$userID.php5'>zur�ck</a>";
+echo "<a href='../admin/overviewAdmin.php5?userId=$userID.php5'>zur&uuml;ck</a>";
 echo "<title>Werke's Tippspiel - Teilnehmer</title>";
 echo "</head>";
 echo "<body>";

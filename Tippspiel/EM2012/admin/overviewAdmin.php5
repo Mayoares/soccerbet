@@ -14,7 +14,7 @@ echo "<html>";
 echo "<head><title>EM-Tipp Admin</title></head>";
 
 echo "<body>";
-echo "<h1>Admin Überblick</h1>";
+echo "<h1>Admin &Uuml;berblick</h1>";
 echo "<form method=\"POST\" action=\"../util/login.php5\">";
 echo "<input type='submit' name='logout' value='Logout'>";
 echo "</form>";
@@ -41,13 +41,13 @@ echo "<br>";
 echo "<form method=\"POST\" action=\"resetUserPassword.php5?userId=$userId\">";
 echo "<td bgcolor=slategray><select name='SelectedUsername'>";
 allUsersAsOption("User");
-echo "<input type='submit' name='resetUser' value='Passwort zurücksetzen'>";
+echo "<input type='submit' name='resetUser' value='Passwort zur&uuml;cksetzen'>";
 echo "</form>";
 echo "<br>";
 echo "<form method=\"POST\" action=\"removeUser.php5?userId=$userId\">";
 echo "<td bgcolor=slategray><select name='SelectedUsername'>";
 allUsersAsOption("User");
-echo "<input type='submit' name='removeUser' value='User löschen'>";
+echo "<input type='submit' name='removeUser' value='User l&ouml;schen'>";
 echo "</form>";
 echo "<br>";
 
@@ -119,8 +119,8 @@ function allGroupMatchesAsOption($optionName, $dbutil) {
 	$nummatches=mysql_num_rows($sqlmatchesResult);
 	if ($nummatches==0)
 	{
-		$log->warn("keine passenden Datensätze gefunden");
-		echo "keine passenden Datensätze gefunden";
+		$log->warn("keine passenden Datens&auml;tze gefunden");
+		echo "keine passenden Datens&auml;tze gefunden";
 	}
 	else
 	{
@@ -149,8 +149,8 @@ function allFinalMatchesAsOption($optionName, $dbutil) {
 	$nummatches=mysql_num_rows($sqlmatchesResult);
 	if ($nummatches==0)
 	{
-		$log->warn("keine passenden Datensätze gefunden");
-		echo "keine passenden Datensätze gefunden";
+		$log->warn("keine passenden Datens&auml;tze gefunden");
+		echo "keine passenden Datens&auml;tze gefunden";
 	}
 	else
 	{
@@ -191,8 +191,8 @@ function allUsersAsOption($optionName) {
 	$numUsers=mysql_num_rows($sqlUsersResult);
 	if ($numUsers==0)
 	{
-		$log->warn("keine passenden Datensätze gefunden");
-		echo "keine passenden Datensätze gefunden";
+		$log->warn("keine passenden Datens&auml;tze gefunden");
+		echo "keine passenden Datens&auml;tze gefunden";
 	}
 	else
 	{

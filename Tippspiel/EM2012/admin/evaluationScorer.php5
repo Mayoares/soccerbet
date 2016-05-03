@@ -11,7 +11,7 @@ $userId=$_GET["userId"];
 </head>
 <body>
 	
-	Torschützenkönig aller User auswerten ...<br>
+	Torsch&uuml;tzenk&ouml;nig aller User auswerten ...<br>
 <br>
 	
 <?php
@@ -64,7 +64,7 @@ echo "</table>";
 echo "<br>";
 echo "<br>";
 echo "<br>";
-echo "<a href='./overviewAdmin.php5?userId=$userId'>zurück zur Übersicht</a>";
+echo "<a href='./overviewAdmin.php5?userId=$userId'>zur&uuml;ck zur &Uuml;bersicht</a>";
 
 function getCorrectTopscorer(){
 	$table_topscorertipps=dbschema::topscorertipps;
@@ -77,6 +77,6 @@ function getCorrectTopscorer(){
 	return $name;
 }
 
-//Datenbankconnection schließen
+//Datenbankconnection schliessen
 mysql_close();
 ?>

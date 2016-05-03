@@ -34,7 +34,7 @@ if(strlen($userId)==0)
 <img src="../pics/Logo_EM_2016.png" class="image" width="250" alt="Logo_EM_2016">
 
 <div class="block">
-	<p><a href="../util/loginPunktestand.php5"> <h2>zurück</h2> </a> </p>
+	<p><a href="../util/loginPunktestand.php5"> <h2>zur&uuml;ck</h2> </a> </p>
 </div>
 
 </center>
@@ -61,7 +61,7 @@ function printSpecials(){
 	echo "<th>Weltmeister</th> ";
 	echo "<th>Vizeweltmeister</th> ";
 //  	echo "<th>Platz 3</th> ";
-	echo "<th>Torsch�tzenk�nig</th> ";
+	echo "<th>Torsch&uuml;tzenk&ouml;nig</th> ";
 	echo "</tr>";
 	
 	$table_users=dbschema::users;
