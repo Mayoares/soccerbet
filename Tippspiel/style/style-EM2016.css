@@ -3,6 +3,10 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
+	/*background-image: url(../EM2016_06/pics/background.jpg);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;*/ 	
  	background-color: #ffffff;
 	margin-left: 10px;
 	margin-right: 10px;
