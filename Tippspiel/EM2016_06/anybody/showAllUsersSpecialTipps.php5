@@ -10,13 +10,13 @@ echo "<html>";
 echo "<head>";
 echo "<link rel='stylesheet' type='text/css' href='../../style/style.css' />";
 echo "<br>";
-echo "<a href='../util/loginPunktestand.php5'>zurück</a>";
+echo "<a href='../util/loginPunktestand.php5'>zurï¿½ck</a>";
 echo "<br>";
 echo "<br>";
 echo "<title>Werke's Tippspiel - Tipps ALL USERS (Germany)</title>";
 echo "</head>";
 echo "<body>";
-include_once("../../connection/dbaccess-local.php5");
+include_once("../../connection/dbaccess.php5");
 include_once("../../general/log/log.php5");
 include_once("../util/dbschema.php5");
 
@@ -28,7 +28,7 @@ printSpecials();
 
 function printSpecials(){
 	
-	echo "<h3>Stockerl-Tipps und Torschötzenkönige</h3>";
+	echo "<h3>Stockerl-Tipps und Torschï¿½tzenkï¿½nige</h3>";
 	echo "<br>";
 	
 	echo "<table border='1' rules='all'>";
@@ -37,7 +37,7 @@ function printSpecials(){
 	echo "<th>Weltmeister</th> ";
 	echo "<th>Vizeweltmeister</th> ";
 //  	echo "<th>Platz 3</th> ";
-	echo "<th>Torschützenkönig</th> ";
+	echo "<th>Torschï¿½tzenkï¿½nig</th> ";
 	echo "</tr>";
 	
 	$table_users=dbschema::users;

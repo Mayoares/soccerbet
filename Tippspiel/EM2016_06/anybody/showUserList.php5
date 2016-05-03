@@ -11,12 +11,12 @@ echo "<html>";
 echo "<head>";
 echo "<link rel='stylesheet' type='text/css' href='../../style/style.css' />";
 echo "<br>";
-echo "<a href='../util/loginPunktestand.php5'>zurück</a>";
+echo "<a href='../util/loginPunktestand.php5'>zurï¿½ck</a>";
 echo "<title>Werke's Tippspiel - Teilnehmer</title>";
 echo "</head>";
 echo "<body>";
 // Verbindung zur Datenbank aufbauen
-include_once("../../connection/dbaccess-local.php5");
+include_once("../../connection/dbaccess.php5");
 include_once("../util/calc.php5");
 include_once("../../general/log/log.php5");
 include_once("../util/dbschema.php5");

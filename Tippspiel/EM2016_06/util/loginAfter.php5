@@ -49,7 +49,7 @@ allUsersAsOption("User");
 <?php
 
 function allUsersAsOption($optionName) {
-	include_once("../../connection/dbaccess-local.php5");
+	include_once("../../connection/dbaccess.php5");
 	include_once("../../general/log/log.php5");
 	include_once("../util/dbschema.php5");
 	$log=new logger();	
@@ -61,8 +61,8 @@ function allUsersAsOption($optionName) {
 	$numUsers=mysql_num_rows($sqlUsersResult);
 	if ($numUsers==0)
 	{
-		$log->info("keine passenden Datensätze gefunden");
-		echo "keine passenden Datensätze gefunden";
+		$log->info("keine passenden Datensï¿½tze gefunden");
+		echo "keine passenden Datensï¿½tze gefunden";
 	}
 	else
 	{

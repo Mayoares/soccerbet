@@ -49,7 +49,7 @@
 <?php
 
 function allUsersAsOption($optionName) {
-	include_once("../../connection/dbaccess-local.php5");
+	include_once("../../connection/dbaccess.php5");
 	include_once("../../general/log/log.php5");
 	include_once("../util/dbschema.php5");
 	$log=new logger();	

@@ -18,7 +18,7 @@ $userId=$_GET["userId"];
 <?php
 
 // Verbindung zur Datenbank aufbauen
-include_once("../../connection/dbaccess-local.php5");
+include_once("../../connection/dbaccess.php5");
 include_once("../util/dbschema.php5");
 include_once("../../general/log/log.php5");
 $table_championtipps=dbschema::championtipps;
@@ -68,7 +68,7 @@ echo "</table>";
 echo "<br>";
 echo "<br>";
 echo "<br>";
-echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
+echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurï¿½ck zur ï¿½bersicht</a>";
 
 function getRealTeam($rank){
 	$table_championtipps=dbschema::championtipps;

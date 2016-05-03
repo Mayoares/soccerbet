@@ -1,5 +1,5 @@
 <?php
-include_once("../../connection/dbaccess-local.php5");
+include_once("../../connection/dbaccess.php5");
 include_once("../util/dbschema.php5");
 class dbutil
 {

@@ -15,7 +15,7 @@ else
 	echo "<html>";
 	echo "<head>";
 	echo "<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />";
-	echo "<title>Werke's Tippspiel - Stockerl-Tipps und Torschützenkönig</title>";
+	echo "<title>Werke's Tippspiel - Stockerl-Tipps und Torschï¿½tzenkï¿½nig</title>";
 	echo "</head>";
 	echo "<body>";
 	
@@ -25,7 +25,7 @@ else
 function run($userId){
 	
 	// Verbindung zur Datenbank aufbauen
-	include_once("../../connection/dbaccess-local.php5");
+	include_once("../../connection/dbaccess.php5");
 	include_once("../util/dbutil.php5");
 	include_once("../util/dbschema.php5");
 	include_once("../../general/log/log.php5");
@@ -104,7 +104,7 @@ function run($userId){
 	echo "<br>";
 	echo "<br>";
 	echo "<br>";
-	echo "<h2>Torschützenkönig</h2>";
+	echo "<h2>Torschï¿½tzenkï¿½nig</h2>";
 	$citation->printCitation("Tor");
 	echo "<br>";
 	
@@ -115,7 +115,7 @@ function run($userId){
 		$updated = updateTopScorerTipp($username, $topscorer, $shortTeamName);
 		if($updated)
 		{
-			echo "<font color=\"green\">Torschützenkönig erfolgreich gespeichert :)</font>";
+			echo "<font color=\"green\">Torschï¿½tzenkï¿½nig erfolgreich gespeichert :)</font>";
 			echo "<br>";
 		}
 	}
@@ -210,7 +210,7 @@ function getTippedTopScorerTeam($username){
 function allTeamsAsOptionForRank($sqlTeams, $tippedTeam) {
 	$numTeams=mysql_num_rows($sqlTeams);
 	if ($numTeams==0)
-		echo "keine passenden Datensätze gefunden";
+		echo "keine passenden Datensï¿½tze gefunden";
 	else
 	{
 		for ($i=0; $i<$numTeams; $i++)
@@ -281,7 +281,7 @@ function updateTopScorerTipp($username, $topscorer, $shortTeamName){
 		if (!$sqlupdateMatchResult) {
 			$sqlerror=mysql_error();
 			$log->error($sqlerror);
-			echo "<br><font color='#EE0000'> Ungültiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>"; 
+			echo "<br><font color='#EE0000'> Ungï¿½ltiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>"; 
 			return false;
 		}
 		else

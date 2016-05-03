@@ -1,5 +1,5 @@
 <?php
-include_once("../../connection/dbaccess-local.php5");
+include_once("../../connection/dbaccess.php5");
 include_once("../../general/log/log.php5");
 $adminuserId=$_GET["userId"];
 if(isset($_POST["Cancel"]))

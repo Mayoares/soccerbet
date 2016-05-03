@@ -1,7 +1,7 @@
 <?php
 
 // Verbindung zur Datenbank aufbauen
-include_once("../../connection/dbaccess-local.php5");
+include_once("../../connection/dbaccess.php5");
 include_once("../util/dbschema.php5");
 include_once("../../general/log/log.php5");
 include_once("../util/dbutil.php5");
@@ -23,7 +23,7 @@ else
 	}
 	else if(isset($_POST["evaluationFinalMatch"]))
 	{
-		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
+		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurï¿½ck zur ï¿½bersicht</a>";
 		echo "<br>";
 		echo "<br>";
 		$SelectedMatchnr=$_POST['SelectedMatchnr'];
@@ -31,7 +31,7 @@ else
 		evaluateFinalMatch($SelectedMatchnr, $dbutil);
 		setMatchEvaluated($SelectedMatchnr);
 		echo "<br>";
-		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
+		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurï¿½ck zur ï¿½bersicht</a>";
 	}
 	else
 	{
@@ -64,12 +64,12 @@ function setMatchEvaluated($matchnr){
 	$sqlUpdateResult=mysql_query($sql);
 	if(!$sqlUpdateResult)
 	{
-		echo "evaluationDone='T' konnte nicht gesetzt werden für matchnr='$matchnr'<br>";
+		echo "evaluationDone='T' konnte nicht gesetzt werden fï¿½r matchnr='$matchnr'<br>";
 		echo mysql_error();
 	}
 	else
 	{
-		echo "<br> evaluationDone='T' für matchnr='$matchnr' OK <br>";
+		echo "<br> evaluationDone='T' fï¿½r matchnr='$matchnr' OK <br>";
 	}
 }
 
@@ -82,7 +82,7 @@ function evaluateFinalMatch($matchnr, $dbutil){
 	echo "<body>";
 
 	$matchtype = getMatchType($matchnr);
-	echo "Spiel <$matchnr> ($matchtype) für alle User auswerten ...<br>";
+	echo "Spiel <$matchnr> ($matchtype) fï¿½r alle User auswerten ...<br>";
 	echo "<br>";
 	
 	$arrayReal=getRealResult($matchnr);
@@ -276,8 +276,8 @@ function updateScoreInDB($user, $userMatchnr, $score){
 	}
 	else
 	{
-		echo "<br>Update in DB wurde ausgeführt (Spiel $userMatchnr)<br>";
-		$log->info("Update in DB wurde ausgeführt.");
+		echo "<br>Update in DB wurde ausgefï¿½hrt (Spiel $userMatchnr)<br>";
+		$log->info("Update in DB wurde ausgefï¿½hrt.");
 	}	
 }
 ?>

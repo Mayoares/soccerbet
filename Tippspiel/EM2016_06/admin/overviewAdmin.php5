@@ -75,7 +75,7 @@ if(isset($_POST["resetEvaluationDone"]))
 	echo "<p><form method=\"POST\" action=\"resetUserPassword.php5?userId=$userId\">User ";
 	echo "<td bgcolor=slategray><select name='SelectedUsername'>";
 	allUsersAsOption("User");
-	echo "<input type='submit' name='resetUser' value='Passwort zurücksetzen'>";
+	echo "<input type='submit' name='resetUser' value='Passwort zurï¿½cksetzen'>";
 	echo "</form></p>";
 	
 	echo "<hr>";
@@ -83,7 +83,7 @@ if(isset($_POST["resetEvaluationDone"]))
 	echo "<p><form method=\"POST\" action=\"removeUser.php5?userId=$userId\">User ";
 	echo "<td bgcolor=slategray><select name='SelectedUsername'>";
 	allUsersAsOption("User");
-	echo "<input type='submit' name='removeUser' value='User löschen'>";
+	echo "<input type='submit' name='removeUser' value='User lï¿½schen'>";
 	echo "</form></p>";
 	
 	echo "<hr>";
@@ -157,7 +157,7 @@ if(isset($_POST["resetEvaluationDone"]))
 	<h2>Korrektur</h2>
 	<?php
 	echo "<form method=\"POST\" action=\"overviewAdmin.php5?userId=$userId\">Spiel Nr.: ";
-	echo "<input type=\"Text\" size=\"1\" name=\"resetMatchNr\" value=\"\"> <input type=\"submit\" name=\"resetEvaluationDone\" value=\"Spiel-Auswertung rückgängig machen\">";
+	echo "<input type=\"Text\" size=\"1\" name=\"resetMatchNr\" value=\"\"> <input type=\"submit\" name=\"resetEvaluationDone\" value=\"Spiel-Auswertung rï¿½ckgï¿½ngig machen\">";
 	echo "</form>";
 	?>
 </div>
@@ -218,12 +218,12 @@ echo "</form>";
 
 echo "	<h2>Korrektur</h2>";
 echo "<form method=\"POST\" action=\"overviewAdmin.php5?userId=$userId\">";
-echo "<input type=\"Text\" size=\"1\" name=\"resetMatchNr\" value=\"\"> <input type=\"submit\" name=\"resetEvaluationDone\" value=\"Spiel-Auswertung rückgängig machen\">";
+echo "<input type=\"Text\" size=\"1\" name=\"resetMatchNr\" value=\"\"> <input type=\"submit\" name=\"resetEvaluationDone\" value=\"Spiel-Auswertung rï¿½ckgï¿½ngig machen\">";
 echo "</form>";
 */
 
 function allGroupMatchesAsOption($optionName, $dbutil) {
-	include_once("../../connection/dbaccess-local.php5");
+	include_once("../../connection/dbaccess.php5");
 	include_once("../util/dbschema.php5");
 	include_once("../../general/log/log.php5");
 	$log=new adminlogger();	
@@ -234,8 +234,8 @@ function allGroupMatchesAsOption($optionName, $dbutil) {
 	$nummatches=mysql_num_rows($sqlmatchesResult);
 	if ($nummatches==0)
 	{
-		$log->warn("keine passenden Datensätze gefunden");
-		echo "keine passenden Datensätze gefunden";
+		$log->warn("keine passenden Datensï¿½tze gefunden");
+		echo "keine passenden Datensï¿½tze gefunden";
 	}
 	else
 	{
@@ -252,7 +252,7 @@ function allGroupMatchesAsOption($optionName, $dbutil) {
 }
 
 function allFinalMatchesAsOption($optionName, $dbutil) {
-	include_once("../../connection/dbaccess-local.php5");
+	include_once("../../connection/dbaccess.php5");
 	include_once("../util/dbschema.php5");
 	include_once("../util/dbutil.php5");
 	include_once("../../general/log/log.php5");
@@ -264,8 +264,8 @@ function allFinalMatchesAsOption($optionName, $dbutil) {
 	$nummatches=mysql_num_rows($sqlmatchesResult);
 	if ($nummatches==0)
 	{
-		$log->warn("keine passenden Datensätze gefunden");
-		echo "keine passenden Datensätze gefunden";
+		$log->warn("keine passenden Datensï¿½tze gefunden");
+		echo "keine passenden Datensï¿½tze gefunden";
 	}
 	else
 	{
@@ -292,7 +292,7 @@ function allFinalMatchesAsOption($optionName, $dbutil) {
 }
 
 function allUsersAsOption($optionName) {
-	include_once("../../connection/dbaccess-local.php5");
+	include_once("../../connection/dbaccess.php5");
 	include_once("../util/dbschema.php5");
 	include_once("../../general/log/log.php5");
 	$log=new adminlogger();	
@@ -303,8 +303,8 @@ function allUsersAsOption($optionName) {
 	$numUsers=mysql_num_rows($sqlUsersResult);
 	if ($numUsers==0)
 	{
-		$log->warn("keine passenden Datensätze gefunden");
-		echo "keine passenden Datensätze gefunden";
+		$log->warn("keine passenden Datensï¿½tze gefunden");
+		echo "keine passenden Datensï¿½tze gefunden";
 	}
 	else
 	{
@@ -322,7 +322,7 @@ function allUsersAsOption($optionName) {
 
 function resetMatch($matchnr, $dbutil){
 	
-	include_once("../../connection/dbaccess-local.php5");
+	include_once("../../connection/dbaccess.php5");
 	include_once("../util/dbschema.php5");
 	include_once("../../general/log/log.php5");
 
@@ -334,12 +334,12 @@ function resetMatch($matchnr, $dbutil){
 	$sqlUpdateResult=mysql_query($sql);
 	if($sqlUpdateResult)
 	{
-		echo "<p class='info'>Spiel $matchnr wurde zurückgesetzt ... es muss jetzt nochmal ausgewertet werden.</p>";
-		//echo "Spiel '$matchnr' wurde zurückgesetzt ... es muss jetzt nochmal ausgewertet werden.<br>";
+		echo "<p class='info'>Spiel $matchnr wurde zurï¿½ckgesetzt ... es muss jetzt nochmal ausgewertet werden.</p>";
+		//echo "Spiel '$matchnr' wurde zurï¿½ckgesetzt ... es muss jetzt nochmal ausgewertet werden.<br>";
 	} 
 	else
 	{
-		$errorMessage = "evaluationDone='F' konnte nicht gesetzt werden für matchnr='$matchnr'";
+		$errorMessage = "evaluationDone='F' konnte nicht gesetzt werden fï¿½r matchnr='$matchnr'";
 		echo $errorMessage;
 		$log->error($errorMessage);
 	}

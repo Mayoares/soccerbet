@@ -1,7 +1,7 @@
 <?php
 session_start();
 $userId=$_GET["userId"];
-include_once("../../connection/dbaccess-local.php5");
+include_once("../../connection/dbaccess.php5");
 include_once("../util/dbschema.php5");
 if(isset($_POST["Cancel"]))
 {
@@ -21,8 +21,8 @@ else
 	echo "<title> Werke's Tippspiel - Logout</title>";
 	echo "</head>";
 	echo "<br>";
-	// echo "<font color=\"red\"><b>Hast du alle Tipps vollständig ausgefüllt und nichts vergessen?</b></font>";
-	echo "<p class=\"info\">Hast du alle Tipps vollständig ausgefüllt und nichts vergessen?</p>";
+	// echo "<font color=\"red\"><b>Hast du alle Tipps vollstï¿½ndig ausgefï¿½llt und nichts vergessen?</b></font>";
+	echo "<p class=\"info\">Hast du alle Tipps vollstï¿½ndig ausgefï¿½llt und nichts vergessen?</p>";
 	echo "<br>";
 	echo "<br>";
 	echo "Hm, nochmal ";

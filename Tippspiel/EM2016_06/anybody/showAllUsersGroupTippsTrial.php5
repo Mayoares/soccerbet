@@ -2,7 +2,7 @@
 <head>
 <link rel='stylesheet' type='text/css' href='../../style/style.css' />
 <br>
-<a href='../util/loginPunktestand.php5'>zurück</a>
+<a href='../util/loginPunktestand.php5'>zurï¿½ck</a>
 <br>
 <br>
 <title>Werke's Tippspiel - Tipps ALL USERS (Germany)</title>
@@ -49,7 +49,7 @@ window.onload = function() { stripedTable(); }
 </script>
 <?php
 echo "<body>";
-include_once("../../connection/dbaccess-local.php5");
+include_once("../../connection/dbaccess.php5");
 include_once("../../general/log/log.php5");
 include_once("../util/calc.php5");
 include_once("../util/dbutil.php5");

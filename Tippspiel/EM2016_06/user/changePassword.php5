@@ -1,7 +1,7 @@
 <?php
 session_start();
 $userId=$_GET["userId"];
-include_once("../../connection/dbaccess-local.php5");
+include_once("../../connection/dbaccess.php5");
 include_once("../util/dbschema.php5");
 if(isset($_POST["Cancel"]))
 {

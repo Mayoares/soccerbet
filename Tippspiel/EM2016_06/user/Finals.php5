@@ -53,7 +53,7 @@ else
 
 function run($userId, $finaltype, $matchnrPost, $dbutil, $saveMatchErrorText){
 	// Verbindung zur Datenbank aufbauen
-	include_once("../../connection/dbaccess-local.php5");
+	include_once("../../connection/dbaccess.php5");
 	$username=$dbutil->getUserName($userId);
 	$table_teams=dbschema::teams;
 	$sqlTeams1=mysql_query("SELECT * FROM $table_teams ORDER BY name");
@@ -252,7 +252,7 @@ function getTeamsOfGroup($matchnr, $named){
 function allTeamsAsOption($sqlTeams, $tippedTeam, $optionName) {
 	$numTeams=mysql_num_rows($sqlTeams);
 	if ($numTeams==0)
-	echo "keine passenden Datensätze gefunden";
+	echo "keine passenden Datensï¿½tze gefunden";
 	else
 	{
 		if($tippedTeam!="")
@@ -315,7 +315,7 @@ function getTippedGoals($username, $matchnr, $dbColumnGoals){
 
 function saveMatch($matchnr, $userId, $team1, $team2, $dbutil){
 	// echo "saveMatch($matchnr) userId=$userId team1=$team1,team2=$team2<br>";
-	include_once("../../connection/dbaccess-local.php5");
+	include_once("../../connection/dbaccess.php5");
 	include_once("../util/calc.php5");
 	include_once("../util/dbschema.php5");
 	include_once("../../general/log/log.php5");
@@ -419,7 +419,7 @@ function insertUpdateInTipps($userName, $matchnr, $teamShort1, $teamShort2, $Goa
 		if (!$sqlupdateMatchResult) {
 			$sqlerror=mysql_error();
 			$log->error($sqlerror);
-			echo "<br><font color='#EE0000'> Ungültiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>";
+			echo "<br><font color='#EE0000'> Ungï¿½ltiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>";
 		    echo "<br><font color='#EE0000'> vorher: <b>$sqlinsert</b> <br>Error:$sqlerrorInsert</font>";
 		}
 	}
@@ -443,9 +443,9 @@ function removeFinalMatchInTipps($userName, $matchnr){
 	if ($sqlInsertResult=!1) {
 		$sqlerror=mysql_error();
 		$log->error($sqlerror);
-		echo "<br><font color='#EE0000'> Ungültiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>";
+		echo "<br><font color='#EE0000'> Ungï¿½ltiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>";
 	}
-	echo "<br> Tipp für Spiel <b>$matchnr</b> gelöscht";
+	echo "<br> Tipp fï¿½r Spiel <b>$matchnr</b> gelï¿½scht";
 }
 
 function updateInMatches($matchnr, $teamShort1, $teamShort2){
@@ -462,7 +462,7 @@ function updateInMatches($matchnr, $teamShort1, $teamShort2){
 		echo "<br>sqlupdateMatchResult:$sqlupdateMatchResult";
 		$sqlerror=mysql_error();
 		$log->error($sqlerror);
-		echo "<br><font color='#EE0000'> Ungültiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>";
+		echo "<br><font color='#EE0000'> Ungï¿½ltiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>";
 	}
 }
 

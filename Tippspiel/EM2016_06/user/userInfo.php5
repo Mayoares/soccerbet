@@ -8,7 +8,7 @@ if(strlen($userId)==0)
 	header("Location: ../util/login.php5");
 	exit;
 }
-include_once("../../connection/dbaccess-local.php5");
+include_once("../../connection/dbaccess.php5");
 include_once("../util/dbutil.php5");
 $userName=$dbutil->getUserName($userId);
 ?>
@@ -37,7 +37,7 @@ function printUserInfo($userName){
 	herzlich Willkommen bei Werke's Tippspiel zur Europameisterschaft 2016 in Frankreich!</br>
 	</br>
 	Viel Erfolg beim Tippen,</br>
-	wünscht dir Werke, Moose und Robl!
+	wï¿½nscht dir Werke, Moose und Robl!
 	<br>
 	<br>
 	<a href='../pdf/Spielplan_EM_2016.pdf'>Download Spielplan als PDF</a>
@@ -45,8 +45,8 @@ function printUserInfo($userName){
 	<br>
 	<?php
 	//echo "<p class=\"info\"><font color=\"red\"><u>Hinweis</u>: Die Spielergebnistipps muessen alle <i><u><b>einzeln</b></u></i> abgespeichert werden!</font></p>";
-	echo "<p class=\"info\">Obacht!:</br>Die Paarungen und Ergebnisse in der <u><b>Endrunde</b></u> (ab dem Achtelfinale) müssen alle <i><u><b>einzeln</b></u></i> abgespeichert werden!
-		Das heißt: Erst die beiden Mannschaften eines Endrundenspiels auswählen, das Ergebnis eingeben und abspeichern, danach die nächsten Begegnungen tippen! </p>";
+	echo "<p class=\"info\">Obacht!:</br>Die Paarungen und Ergebnisse in der <u><b>Endrunde</b></u> (ab dem Achtelfinale) mï¿½ssen alle <i><u><b>einzeln</b></u></i> abgespeichert werden!
+		Das heiï¿½t: Erst die beiden Mannschaften eines Endrundenspiels auswï¿½hlen, das Ergebnis eingeben und abspeichern, danach die nï¿½chsten Begegnungen tippen! </p>";
 	//
 	// Kontakt
 	//

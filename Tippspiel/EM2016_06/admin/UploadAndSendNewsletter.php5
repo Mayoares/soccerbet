@@ -25,7 +25,7 @@ else
 	$filename = basename( $_FILES['uploadedfile']['name']);
 	
 	echo "<br>";
-	echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
+	echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurï¿½ck zur ï¿½bersicht</a>";
 	echo "<br>";
 	echo "<br>";
 	echo "Datei wird hochgeladen ...<br>";
@@ -36,7 +36,7 @@ else
 	    sendFileToAll($filename, $target_path);
 	    echo "<br>Verschicken fertig.<br>";
 	    echo "<br>";
-		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
+		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurï¿½ck zur ï¿½bersicht</a>";
 	    echo "<br>";
 	} else{
 	    echo "There was an error uploading the file, please try again!";
@@ -45,7 +45,7 @@ else
 
 function sendFileToAll($filename, $target_path){
 	
-	include_once("../../connection/dbaccess-local.php5");
+	include_once("../../connection/dbaccess.php5");
 	include_once("../../general/log/log.php5");
 	include_once("../util/dbschema.php5");
 	$table_users = dbschema::users;

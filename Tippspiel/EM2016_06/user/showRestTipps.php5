@@ -9,7 +9,7 @@ echo "<title>Werke's Tippspiel - Meine Endrunden- und Spezial-Tipps</title>";
 echo "</head>";
 
 // Verbindung zur Datenbank aufbauen
-include_once("../../connection/dbaccess-local.php5");
+include_once("../../connection/dbaccess.php5");
 include_once("../util/calc.php5");
 include_once("../../general/log/log.php5");
 include_once("../util/dbutil.php5");
@@ -112,7 +112,7 @@ function printTopscorer($username){
 	
 	//echo "<table style='font-size:18px'>";
 	echo "<table>";
-	echo "<tr><td>Torschützenkönig &nbsp; &nbsp; &nbsp;</td><td><b>$topscorer</b></td> &nbsp; <td>($topScorerTeam)</td> </tr>";
+	echo "<tr><td>Torschï¿½tzenkï¿½nig &nbsp; &nbsp; &nbsp;</td><td><b>$topscorer</b></td> &nbsp; <td>($topScorerTeam)</td> </tr>";
 	echo "</table>";
 }
 

@@ -1,7 +1,7 @@
 <?php
 
 // Verbindung zur Datenbank aufbauen
-include_once("../../connection/dbaccess-local.php5");
+include_once("../../connection/dbaccess.php5");
 include_once("../util/dbschema.php5");
 include_once("../../general/log/log.php5");
 
@@ -24,14 +24,14 @@ else
 	}
 	else if(isset($_POST["evaluationGroupMatch"]))
 	{
-		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
+		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurï¿½ck zur ï¿½bersicht</a>";
 		echo "<br>";
 		echo "<br>";
 		$SelectedMatchnr=$_POST['SelectedMatchnr'];
 		//echo "<br>adminid=$adminuserId, SelectedMatchnr=$SelectedMatchnr<br>";
 		evaluateGroupMatch($SelectedMatchnr, $dbutil);
 		echo "<br>";
-		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
+		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurï¿½ck zur ï¿½bersicht</a>";
 	}
 	else
 	{
@@ -63,7 +63,7 @@ function evaluateGroupMatch($matchnr, $dbutil){
 	echo "</head>";
 	echo "<body>";
 
-	echo "Spiel <$matchnr> für alle User auswerten ...<br>";
+	echo "Spiel <$matchnr> fï¿½r alle User auswerten ...<br>";
 	$arrayReal=getRealResult($matchnr);
 	$team1Short = getTeamShort($matchnr, "team1");
 	$team1=$dbutil->getTeamName($team1Short);
@@ -115,7 +115,7 @@ function evaluateGroupMatch($matchnr, $dbutil){
 			$sqlUpdateResult=mysql_query($sql);
 			if(!$sqlUpdateResult)
 			{
-				echo "evaluationDone='T' konnte nicht gesetzt werden für matchnr='$matchnr'";
+				echo "evaluationDone='T' konnte nicht gesetzt werden fï¿½r matchnr='$matchnr'";
 			}
 			
 		}

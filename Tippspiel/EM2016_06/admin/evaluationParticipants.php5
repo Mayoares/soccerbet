@@ -12,7 +12,7 @@ echo "<body>";
 //echo "Alle Tipps der Finalspielteilnahmen von einem User auswerten ...<br>";
 
 // Verbindung zur Datenbank aufbauen
-include_once("../../connection/dbaccess-local.php5");
+include_once("../../connection/dbaccess.php5");
 include_once("../util/calc.php5");
 include_once("../util/dbutil.php5");
 include_once("../util/dbschema.php5");
@@ -21,7 +21,7 @@ include_once("../util/dbschema.php5");
 
 if(strlen($userName)>0)
 {
-	echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
+	echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurï¿½ck zur ï¿½bersicht</a>";
 	echo "<br>";
 	echo "<br><b>$userName</b><br>";
 	calcScore($userName, false);
@@ -39,7 +39,7 @@ else
 }
 mysql_close();
 echo "<br>";
-echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
+echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurï¿½ck zur ï¿½bersicht</a>";
 
 function getAllUsers()
 {
@@ -56,7 +56,7 @@ $score=$score+getEvaluation($user, 'Viertelfinale', $silent);
 $score=$score+getEvaluation($user, 'Halbfinale', $silent);
 $score=$score+getEvaluation($user, 'Platz3', $silent);
 $score=$score+getEvaluation($user, 'Finale', $silent);
-echo "<br>Gesamtscore für Finalspielteilnahmen-Tipps von User $user : $score";
+echo "<br>Gesamtscore fï¿½r Finalspielteilnahmen-Tipps von User $user : $score";
 updateScoreInDB($user, $score);
 }
 
@@ -76,8 +76,8 @@ function updateScoreInDB($user, $score){
 	}
 	else
 	{
-		echo '<br>Update in DB wurde ausgeführt<br>';
-		$log->info("Update in DB wurde ausgeführt");
+		echo '<br>Update in DB wurde ausgefï¿½hrt<br>';
+		$log->info("Update in DB wurde ausgefï¿½hrt");
 	}	
 }
 
@@ -91,7 +91,7 @@ function getEvaluation($user, $matchtype, $silent)
 	$realTeams2=getRealTeams($team2, $matchtype);
 	$score2=checkTeamsIncluded($user, $team2, $realTeams2, $matchtype, $silent);
 	$score=$score1+$score2;
-	echo "<br>Score User $user für $matchtype: $score";
+	echo "<br>Score User $user fï¿½r $matchtype: $score";
 	return $score;
 }
 function getRealTeams($column, $matchtype) {
@@ -137,14 +137,14 @@ function checkTeamsIncluded($user, $column, $realTeams, $matchtype, $silent)
 				$userScore = $userScore+$addScore;
 				if(!$silent)
 				{
-					echo "<br>User hat '$team' im '$matchtype' getippt und erhält '$addScore' Punkte.";
+					echo "<br>User hat '$team' im '$matchtype' getippt und erhï¿½lt '$addScore' Punkte.";
 				}
 			}
 			else
 			{
 				if(!$silent)
 				{
-					echo "<br>User hat '$team' NICHT im '$matchtype' getippt und erhält keine Punkte.";
+					echo "<br>User hat '$team' NICHT im '$matchtype' getippt und erhï¿½lt keine Punkte.";
 				}
 			}
 		}

@@ -18,7 +18,7 @@ echo "<br>";
 	
 
 // Verbindung zur Datenbank aufbauen
-include_once("../../connection/dbaccess-local.php5");
+include_once("../../connection/dbaccess.php5");
 include_once("../util/dbschema.php5");
 include_once("../../general/log/log.php5");
 include_once("../util/dbutil.php5");
@@ -41,12 +41,12 @@ else
 	}
 	else if(isset($_POST["evaluationGroupRank"]))
 	{
-		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
+		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurï¿½ck zur ï¿½bersicht</a>";
 		echo "<br>";
 		echo "<br>";
 		evaluateGroupRanks($SelectedGroup,$dbutil);
 		echo "<br>";
-		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurück zur Übersicht</a>";
+		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zurï¿½ck zur ï¿½bersicht</a>";
 	}
 	else
 	{

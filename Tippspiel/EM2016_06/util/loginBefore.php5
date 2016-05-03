@@ -2,7 +2,7 @@
 $userId=$_GET["userId"];
 include_once("../../general/log/log.php5");
 include_once("../../general/log/logsitecall.php5");
-include_once("../../connection/dbaccess-local.php5");
+include_once("../../connection/dbaccess.php5");
 include_once("../util/dbschema.php5");
 if(!isset($_POST["login"]))
 {

@@ -10,7 +10,7 @@ echo "<title>Werke's Tippspiel - Meine Gruppen-Tipps</title>";
 echo "</head>";
 
 // Verbindung zur Datenbank aufbauen
-include_once("../../connection/dbaccess-local.php5");
+include_once("../../connection/dbaccess.php5");
 include_once("../util/calc.php5");
 include_once("../../general/log/log.php5");
 include_once("../util/dbutil.php5");
@@ -82,7 +82,7 @@ function printGroupRanks($group, $userName){
 		echo "<td> $rank. </td><td><b> $teamName </b></td><td> </td>";
 		echo "</tr>";
 	}
-	// zusützliche Zeilen, damit Ranktipps genauso groß in der Tabelle erscheinen wie die Matchtipps
+	// zusï¿½tzliche Zeilen, damit Ranktipps genauso groï¿½ in der Tabelle erscheinen wie die Matchtipps
 	for($r=0; $r<12; $r++)
 	{
 		echo "<tr>";

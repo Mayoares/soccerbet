@@ -8,7 +8,7 @@ if(strlen($userId)==0)
 	header("Location: ../util/login.php5");
 	exit;
 }
-include_once("../../connection/dbaccess-local.php5");
+include_once("../../connection/dbaccess.php5");
 include_once("../util/dbutil.php5");
 $userName=$dbutil->getUserName($userId);
 ?>
@@ -40,7 +40,7 @@ echo "<br><a href='./userInfo.php5?userId=$userId' target='Daten'>Home</a>";
 echo "<br>";
 if($userName != "test")
 {
-	echo "<a href='./changePassword.php5?userId=$userId' target='Daten'>Passwort ändern</a>";
+	echo "<a href='./changePassword.php5?userId=$userId' target='Daten'>Passwort ï¿½ndern</a>";
 }
 
 echo "<br>";
@@ -57,7 +57,7 @@ echo "<br><a href='Group.php5?userId=$userId&group=F' target='Daten'>Gruppe F</a
 echo "<br>";
 echo "<br><a href='Finals.php5?userId=$userId' target='Daten'>Endrunde</a>";
 echo "<br>";
-echo "<br><a href='Champions.php5?userId=$userId' target='Daten'>Stockerl-Tipps & Torschützenkönig</a>";
+echo "<br><a href='Champions.php5?userId=$userId' target='Daten'>Stockerl-Tipps & Torschï¿½tzenkï¿½nig</a>";
 echo "<br>";
 echo "<br>";
 echo "<br>";
