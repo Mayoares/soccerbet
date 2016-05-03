@@ -95,16 +95,17 @@ if(isset($_POST["resetEvaluationDone"]))
 	?>
 </div>
 
-<div class="block">
-	<h1>Tipps ansehen</h1>
-	<hr>
+
+<!-- <div class="block"> -->
+<!-- 	<h1>Tipps ansehen</h1> -->
+<!-- 	<hr> -->
 	<?php 
-	echo "<p><a href='../anybody/showAllUsersGroupTipps.php5?userId=$userId'>Gruppenspieltipps</a></p>";
-	echo "<p><a href='../anybody/showAllUsersGroupRankTipps.php5?userId=$userId'>Platzierungstipps</a></p>";
-	echo "<p><a href='../anybody/showAllUsersFinalmatchTipps.php5?userId=$userId'>Finalspieltipps</a></p>";
-	echo "<p><a href='../anybody/showAllUsersSpecialTipps.php5?userId=$userId'>Spezialtipps</a></p>";
-	?>
-</div>
+// 	echo "<p><a href='../anybody/showAllUsersGroupTipps.php5?userId=$userId'>Gruppenspieltipps</a></p>";
+// 	echo "<p><a href='../anybody/showAllUsersGroupRankTipps.php5?userId=$userId'>Platzierungstipps</a></p>";
+// 	echo "<p><a href='../anybody/showAllUsersFinalmatchTipps.php5?userId=$userId'>Finalspieltipps</a></p>";
+// 	echo "<p><a href='../anybody/showAllUsersSpecialTipps.php5?userId=$userId'>Spezialtipps</a></p>";
+// 	?>
+<!-- </div> -->
 
 <p class='info'>Bitte hier nichts klicken, bevor es wirklich soweit ist!</p>
 
@@ -161,11 +162,6 @@ if(isset($_POST["resetEvaluationDone"]))
 	echo "</form>";
 	?>
 </div>
-
-<p><font color="#cacaca">&copy; 2016. All rights reserved.</font></p>
-<p><font color="#cacaca">Idea by Werke.</font></p>
-<p><font color="#cacaca">Developed by Mayoar.</font></p>
-<p><font color="#cacaca">Designed by R&oslash;bl.</font></p>
 
 <?php
 
