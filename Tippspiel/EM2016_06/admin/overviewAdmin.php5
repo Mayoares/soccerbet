@@ -61,10 +61,10 @@ if(isset($_POST["resetEvaluationDone"]))
 	<h1>User administrieren</h1>
 	<hr>
 	<?php 
-	echo "<p><a href='../anybody/showUserList.php5?userId=$userId'>User Liste ansehen</a></p>";
-	echo "<p><a href='../anybody/showUserRanks.php5?userId=$userId'>User Rangliste ansehen</a></p>";
+// 	echo "<p><a href='../anybody/showUserList.php5?userId=$userId'>User Liste ansehen</a></p>";
+// 	echo "<p><a href='../anybody/showUserRanks.php5?userId=$userId'>User Rangliste ansehen</a></p>";
 	
-	echo "<hr>";
+// 	echo "<hr>";
 	
 	echo "<p><form method=\"POST\" action=\"addUser.php5?userId=$userId\">";
 	echo "<input type='submit' name='addUser' value='User anlegen'>";
