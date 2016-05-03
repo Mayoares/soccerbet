@@ -12,7 +12,7 @@ $userName=$dbutil->getUserName($userId);
 echo "<html>";
 echo "<head>";
 echo "<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />";
-echo "<title>Werke's Tippspiel - Gruppe $group - mit Eingabefeld</title>";
+echo "<title>Werke's Tippspiel - Gruppe $group tippen</title>";
 echo "</head>";
 echo "<body>";
 echo "<h2>Gruppe $group</h2>";
