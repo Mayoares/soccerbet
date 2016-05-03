@@ -2,12 +2,6 @@
 // we must never forget to start the session
 session_start();
 ?>
-<!-- echo "<html>"; -->
-<!-- echo "<head>"; -->
-<!-- echo "<link rel='stylesheet' type='text/css' href='../../style/style.css' />"; -->
-<!-- echo "<title>Werke's Tippspiel - Punktestand</title>"; -->
-<!-- echo "</head>"; -->
-<!-- echo "<body>"; -->
 <!DOCTYPE html>
 <html>
 
@@ -39,9 +33,13 @@ $log=new viewlogger();
 $log->info("Clicked showUserRank");
 ?>
 <center>
+
+<img src="../pics/Logo_EM_2016.png" class="image" width="250" alt="Logo_EM_2016">
+
 <div class="block">
 	<p><a href="../util/loginPunktestand.php5"> <h2>zurück</h2> </a> </p>
 </div>
+
 </center>
 <?php
 printLastUpdate();
@@ -50,7 +48,7 @@ printUserScores();
 	
 function printDescription(){
 	
-	echo "<b><u>Punktestand</u></b>";
+	echo "<h1>Punktestand</h1>";
 }
 
 function printLastUpdate(){
@@ -176,8 +174,8 @@ function printUserScores(){
 	array_multisort($score, SORT_DESC, $lastn, SORT_ASC, $firstn, SORT_ASC, $arrayUserScore);
 	//sort($arrayUserScore, SORT_DESC);
 	
-	echo "<br>";
-	echo "<br>";
+// 	echo "<br>";
+// 	echo "<br>";
 	echo "<table border=\"3\" frame=\"box\">";
 	echo "<thead>";
 	echo "<tr>";

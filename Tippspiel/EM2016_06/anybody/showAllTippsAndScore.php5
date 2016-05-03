@@ -6,14 +6,40 @@ if(strlen($userName)==0)
 {
 	$userName=$_GET["userId"];
 }
-echo "<html>";
-echo "<head>";
-echo "<link rel='stylesheet' type='text/css' href='../../style/style.css' />";
-echo "<br>";
-echo "<a href='../util/loginPunktestand.php5'>zur�ck</a>";
-echo "<title>Werke's Tippspiel - Tipps gesamt</title>";
-echo "</head>";
-echo "<body>";
+?>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<!-- Mobile viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<!-- Facivon 
+<link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon"> -->
+
+<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />
+
+<title>Werke's Tippspiel - Alle Tipps</title>
+
+</head>
+
+<body>
+
+<center>
+
+<img src="../pics/Logo_EM_2016.png" class="image" width="250" alt="Logo_EM_2016">
+
+<div class="block">
+	<p><a href="../util/loginPunktestand.php5"> <h2>zurück</h2> </a> </p>
+</div>
+
+</center>
+
+<?php
 include_once("../../connection/dbaccess.php5");
 include_once("../../general/log/log.php5");
 include_once("../util/calc.php5");
@@ -61,14 +87,14 @@ function printUserInfo($userName){
 	$array=mysql_fetch_array($resultUser);
 	$firstname=$array["firstname"];
 	$lastname=$array["lastname"];
-	echo "<h2>Tipps $firstname $lastname</h2>";
+	echo "<h2>Alle Tipps von $firstname $lastname</h2>";
 }
 function printTotalScore($userName){
 	
 	include_once("../util/UserScores.php5");
 	$userScores = new UserScores();
 	$totalscore=$userScores->getScoreSumUser($userName);
-	echo "<h3> Gesamt <font color=\"red\">$totalscore</font> Punkte</h3>";
+	echo "<h3> Gesamt: <font color=\"red\">$totalscore</font> Punkte</h3>";
 }
 
 function printGroup($group, $userName){

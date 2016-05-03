@@ -6,16 +6,40 @@ if(strlen($userId)==0)
 	header("Location: ../util/login.php5");
 	exit;
 }
-echo "<html>";
-echo "<head>";
-echo "<link rel='stylesheet' type='text/css' href='../../style/style.css' />";
-echo "<br>";
-echo "<a href='../util/loginPunktestand.php5'>zur�ck</a>";
-echo "<br>";
-echo "<br>";
-echo "<title>Werke's Tippspiel - Tipps ALL USERS (Germany)</title>";
-echo "</head>";
-echo "<body>";
+?>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<!-- Mobile viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<!-- Facivon 
+<link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon"> -->
+
+<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />
+
+<title>Werke's Tippspiel - Gruppenspieltipps</title>
+
+</head>
+
+<body>
+
+<center>
+
+<img src="../pics/Logo_EM_2016.png" class="image" width="250" alt="Logo_EM_2016">
+
+<div class="block">
+	<p><a href="../util/loginPunktestand.php5"> <h2>zurück</h2> </a> </p>
+</div>
+
+</center>
+
+<?php
 include_once("../../connection/dbaccess.php5");
 include_once("../../general/log/log.php5");
 include_once("../util/calc.php5");
@@ -41,7 +65,7 @@ function getUserInfo($username){
 
 function printGroupMatches(){
 	
-	echo "<h3>Gruppenspiele</h3>";
+	echo "<h1>Gruppenspieltipps</h1>";
 	echo "<br>";
 	$table_matches=dbschema::matches;
 	$sql="SELECT * FROM $table_matches m WHERE m.matchtype='Gruppenspiel'";
