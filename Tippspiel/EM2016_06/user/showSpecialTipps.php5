@@ -5,7 +5,7 @@ $userId=$_GET["userId"];
 echo "<html>";
 echo "<head>";
 echo "<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />";
-echo "<title>Werke's Tippspiel - Meine Endrunden-Tipps</title>";
+echo "<title>Werke's Tippspiel - Meine Spezial-Tipps</title>";
 echo "</head>";
 
 // Verbindung zur Datenbank aufbauen
@@ -19,14 +19,14 @@ $userName=$dbutil->getUserName($userId);
 
 if(strlen($userName)>0)
 {
-	printFinal($userName, 'Achtelfinale');
-	printFinal($userName, 'Viertelfinale');
-	printFinal($userName, 'Halbfinale');
-	//printFinal($userName, 'Platz3');
-	printFinal($userName, 'Finale');
+// 	printFinal($userName, 'Achtelfinale');
+// 	printFinal($userName, 'Viertelfinale');
+// 	printFinal($userName, 'Halbfinale');
+// 	printFinal($userName, 'Platz3');
+// 	printFinal($userName, 'Finale');
 	
-// 	printChampions($userName);
-// 	printTopscorer($userName);
+	printChampions($userName);
+	printTopscorer($userName);
 }
 else
 {
@@ -88,9 +88,9 @@ function printFinal($userName, $matchtype){
 
 function printChampions($userName){
 	
+//  echo "<br>";
 	echo "<br>";
-	echo "<br>";
-	echo "<h2>Spezial-Tipps</h2>";
+	echo "<h2>Spezialtipps</h2>";
 	echo "<br>";
 	
 	$champion=getTippedTeamRostrum($userName, 1);  if(!isset($champion)){$champion = "<font color=\"red\"><b> FEHLT! </b></font>";}

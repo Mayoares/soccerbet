@@ -26,8 +26,9 @@ else
 	echo "<br>";
 	echo "<br>";
 	echo "Hm, nochmal ";
-	echo "<a href='./showAllTipps.php5?userId=$userId&framepart=group' target='Daten'>Meine Gruppen-Tipps</a> und ";
-	echo "<a href='./showAllTipps.php5?userId=$userId&framepart=rest' target='Daten'>Meine Endrunden-Tipps</a> kontrollieren?";
+	echo "<a href='./showAllTipps.php5?userId=$userId&framepart=group' target='Daten'>Meine Gruppen-Tipps</a>, ";
+	echo "<a href='./showAllTipps.php5?userId=$userId&framepart=finals' target='Daten'>Meine Endrunden-Tipps</a> oder ";
+	echo "<a href='./showAllTipps.php5?userId=$userId&framepart=specials' target='Daten'>Meine Spezial-Tipps</a> kontrollieren?";
 	echo "<br>";
 	echo "<br>";
 	echo "<a href='../util/login.php5' target='Daten' onclick='FrameAendern()'/><FONT SIZE=5><b>Logout</b></FONT>";

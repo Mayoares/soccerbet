@@ -58,7 +58,7 @@ echo "<br><a href='Group.php5?userId=$userId&group=F' target='Daten'>Gruppe F</a
 echo "<br>";
 echo "<br><a href='Finals.php5?userId=$userId' target='Daten'>Endrunde</a>";
 echo "<br>";
-echo "<br><a href='Champions.php5?userId=$userId' target='Daten'>Spezialtipps</a>";
+echo "<br><a href='Champions.php5?userId=$userId' target='Daten'>Spezial-Tipps</a>";
 echo "<br>";
 echo "<br>";
 echo "<br>";
@@ -67,8 +67,11 @@ echo "<br>";
 echo "<br><a href='./showAllTipps.php5?userId=$userId&framepart=group' target='Daten'>";
 echo "Meine Gruppen-Tipps";
 echo "<br>";
-echo "<br><a href='./showAllTipps.php5?userId=$userId&framepart=rest' target='Daten'>";
+echo "<br><a href='./showAllTipps.php5?userId=$userId&framepart=finals' target='Daten'>";
 echo "Meine Endrunden-Tipps";
+echo "<br>";
+echo "<br><a href='./showAllTipps.php5?userId=$userId&framepart=specials' target='Daten'>";
+echo "Meine Spezial-Tipps";
 echo "</a>";
 
 echo "</body>";

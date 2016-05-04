@@ -5,7 +5,7 @@ $userId=$_GET["userId"];
 $framepart=$_GET["framepart"];
 echo "<html>";
 echo "<head>";
-echo "<title>Werke's Tippspiel - User Tipps</title>";
+echo "<title>Werke's Tippspiel - Tipps kontrollieren</title>";
 echo "</head>";
 
 if(strlen($userId)>0)
@@ -19,10 +19,15 @@ if(strlen($userId)>0)
 	    // echo "	<frame src='./showRestTipps.php5?userId=$userId' name='Rest'>";
 		echo "</frameset>";
 	}
-	else if($framepart=="rest")
+	else if($framepart=="finals")
 	{
 		echo "<frameset cols=\"100%\">";
-		echo "	<frame src='./showRestTipps.php5?userId=$userId' name='Rest'>";
+		echo "	<frame src='./showRestTipps.php5?userId=$userId' name='Enrunde'>";
+	}
+	else if($framepart=="specials")
+	{
+		echo "<frameset cols=\"100%\">";
+		echo "	<frame src='./showSpecialTipps.php5?userId=$userId' name='Spezial'>";
 	}
 	else
 	{

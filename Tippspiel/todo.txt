@@ -1,17 +1,27 @@
+Stand: 04.05.2016
+
 ----------------------------------------------------------------------------------------
 Offene Fragen:
 ----------------------------------------------------------------------------------------
 
--
+keine
 
 ----------------------------------------------------------------------------------------
-Fehler im Skript:
+Fehlende Informationen von Werke:
+----------------------------------------------------------------------------------------
+
+[ ]		Zitate
+[ ]		Wem kommen die Spenden zugute?
+[ ]		e-mail-Adresse von Moose
+
+----------------------------------------------------------------------------------------
+Fehler/Änderungen im Skript:
 ----------------------------------------------------------------------------------------
 
 [ ]		Newsletter versenden funktioniert nicht
 [ ]		Tipps ansehen im Adminbereich auskommentiert -> Pfad zurück ändern
 [ ]		User Liste ansehen im Adminbereich auskommentiert -> Pfad zurück ändern
-[ ]		bei Eingabe der Tipps für Endrundenspiele: nach speichern nach oben springen
-[ ]		Anleitung und Regelwerk hochladen
+[ ]		bei Eingabe der Tipps für Endrundenspiele: nach speichern nach oben springen ändern (store)
+[x]		Anleitung und Regelwerk hochladen
 [ ]		Logo für Werke's Tippspiel
-[ ]		'Meine Spezialtipps kontrollieren' einfügen
+[x]		'Meine Spezialtipps kontrollieren' einfügen
