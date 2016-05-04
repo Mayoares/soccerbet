@@ -1,0 +1,17 @@
+----------------------------------------------------------------------------------------
+Offene Fragen:
+----------------------------------------------------------------------------------------
+
+-
+
+----------------------------------------------------------------------------------------
+Fehler im Skript:
+----------------------------------------------------------------------------------------
+
+[ ]		Newsletter versenden funktioniert nicht
+[ ]		Tipps ansehen im Adminbereich auskommentiert -> Pfad zurück ändern
+[ ]		User Liste ansehen im Adminbereich auskommentiert -> Pfad zurück ändern
+[ ]		bei Eingabe der Tipps für Endrundenspiele: nach speichern nach oben springen
+[ ]		Anleitung und Regelwerk hochladen
+[ ]		Logo für Werke's Tippspiel
+[ ]		'Meine Spezialtipps kontrollieren' einfügen
