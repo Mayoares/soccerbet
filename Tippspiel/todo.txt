@@ -4,7 +4,8 @@ Stand: 04.05.2016
 Offene Fragen:
 ----------------------------------------------------------------------------------------
 
-keine
+[ ]		ist es notwendig die Tippübersicht (Tipps im Detail) auch im Adminbereich darzustellen?
+		(bei klick auf 'zurück' springt man in den Bereich 'Punktestand' (ausserhalb Adminbereich)
 
 ----------------------------------------------------------------------------------------
 Fehlende Informationen von Werke:
@@ -13,15 +14,20 @@ Fehlende Informationen von Werke:
 [ ]		Zitate
 [ ]		Wem kommen die Spenden zugute?
 [ ]		e-mail-Adresse von Moose
+[ ]		Spendeninformationen auf Homepage?
 
 ----------------------------------------------------------------------------------------
 Fehler/Änderungen im Skript:
 ----------------------------------------------------------------------------------------
 
 [ ]		Newsletter versenden funktioniert nicht
-[ ]		Tipps ansehen im Adminbereich auskommentiert -> Pfad zurück ändern
-[ ]		User Liste ansehen im Adminbereich auskommentiert -> Pfad zurück ändern
-[ ]		bei Eingabe der Tipps für Endrundenspiele: nach speichern nach oben springen ändern (store)
+[x]		User Liste ansehen im Adminbereich auskommentiert -> Pfad zurück ändern
 [x]		Anleitung und Regelwerk hochladen
 [ ]		Logo für Werke's Tippspiel
 [x]		'Meine Spezialtipps kontrollieren' einfügen
+
+----------------------------------------------------------------------------------------
+Nice to have:
+----------------------------------------------------------------------------------------
+
+[ ]		bei Eingabe der Tipps für Endrundenspiele: nach speichern nach oben springen ändern (store)

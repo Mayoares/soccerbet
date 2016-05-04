@@ -57,7 +57,7 @@ if(isset($_POST["resetEvaluationDone"]))
 <br>
 
 <div class="block">
-	<h1>Newsletter upload</h1>
+	<h1><font color="#ffffff">Newsletter upload</font></h1>
 	<hr>
 	<?php 
 	echo "<p><form enctype=\"multipart/form-data\" action=\"./UploadAndSendNewsletter.php5?userId=$userId\" method=\"POST\">";
@@ -69,13 +69,13 @@ if(isset($_POST["resetEvaluationDone"]))
 </div>
 
 <div class="block">
-	<h1>User administrieren</h1>
+	<h1><font color="#ffffff">User administrieren</font></h1>
 	<hr>
 	<?php 
-// 	echo "<p><a href='../anybody/showUserList.php5?userId=$userId'>User Liste ansehen</a></p>";
-// 	echo "<p><a href='../anybody/showUserRanks.php5?userId=$userId'>User Rangliste ansehen</a></p>";
+	echo "<p><a href='../anybody/showUserList.php5?userId=$userId'>User Liste ansehen</a></p>";
+ 	echo "<p><a href='../anybody/showUserRanks.php5?userId=$userId'>User Rangliste ansehen</a></p>";
 	
-// 	echo "<hr>";
+ 	echo "<hr>";
 	
 	echo "<p><form method=\"POST\" action=\"addUser.php5?userId=$userId\">";
 	echo "<input type='submit' name='addUser' value='User anlegen'>";
@@ -121,7 +121,8 @@ if(isset($_POST["resetEvaluationDone"]))
 <p class='info'>Bitte hier nichts klicken, bevor es wirklich soweit ist!</p>
 
 <div class="block">
-	<h1>Auswertung</h1>
+	<h1><font color="#ffffff">Auswertung</font></h1>
+	<hr>
 	<h2>Gruppen</h2>
 	<?php 
 	echo "<p><form method=\"POST\" action=\"evaluationGroupMatch.php5?adminuserId=$userId\">";
@@ -146,6 +147,7 @@ if(isset($_POST["resetEvaluationDone"]))
 	echo "</td>";
 	echo "<input type='submit' name='evaluationGroupRank' value='auswerten'>";
 	echo "</form></p>";
+	echo "<hr>";
 	?>
 	<h2>Endrunde</h2>
 	<?php
@@ -165,12 +167,13 @@ if(isset($_POST["resetEvaluationDone"]))
 	echo "<p><form method=\"POST\" action=\"evaluationSpecials.php5?adminuserId=$userId\">";
 	echo "<input type=\"submit\" name=\"eval\" value=\"Auswertung Weltmeister & Co\">";
 	echo "</form></p>";
+	echo "<hr>";
 	?>
 	<h2>Korrektur</h2>
 	<?php
-	echo "<form method=\"POST\" action=\"overviewAdmin.php5?userId=$userId\">Spiel Nr.: ";
+	echo "<p><form method=\"POST\" action=\"overviewAdmin.php5?userId=$userId\">Spiel Nr.: ";
 	echo "<input type=\"Text\" size=\"1\" name=\"resetMatchNr\" value=\"\"> <input type=\"submit\" name=\"resetEvaluationDone\" value=\"Spiel-Auswertung r&uuml;ckg&auml;ngig machen\">";
-	echo "</form>";
+	echo "</form></p>";
 	?>
 </div>
 
