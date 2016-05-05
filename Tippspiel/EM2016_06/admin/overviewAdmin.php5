@@ -244,8 +244,7 @@ function allGroupMatchesAsOption($optionName, $dbutil) {
 	$nummatches=mysql_num_rows($sqlmatchesResult);
 	if ($nummatches==0)
 	{
-		$log->warn("keine passenden Datens&auml;tze gefunden");
-		echo "keine passenden Datens&auml;tze gefunden";
+		$log->warn("Auswertung Gruppenspiele: keine passenden Datens&auml;tze gefunden");
 	}
 	else
 	{
@@ -274,8 +273,7 @@ function allFinalMatchesAsOption($optionName, $dbutil) {
 	$nummatches=mysql_num_rows($sqlmatchesResult);
 	if ($nummatches==0)
 	{
-		$log->warn("keine passenden Datens&auml;tze gefunden");
-		echo "keine passenden Datens&auml;tze gefunden";
+		$log->warn("Auswertung Finalspiele: keine passenden Datens&auml;tze gefunden");
 	}
 	else
 	{
@@ -313,8 +311,7 @@ function allUsersAsOption($optionName) {
 	$numUsers=mysql_num_rows($sqlUsersResult);
 	if ($numUsers==0)
 	{
-		$log->warn("keine passenden Datens&auml;tze gefunden");
-		echo "keine passenden Datens&auml;tze gefunden";
+		$log->warn("Auswahlliste User: keine passenden Datens&auml;tze gefunden");
 	}
 	else
 	{
