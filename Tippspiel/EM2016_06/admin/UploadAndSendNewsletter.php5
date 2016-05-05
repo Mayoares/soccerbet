@@ -16,13 +16,15 @@ else if(strlen($adminuserId)==0)
 }
 else
 {
-	// Where the file is going to be placed 
-	$target_path = "../news/";
+	$log=new adminlogger();
 	
 	/* Add the original filename to our target path.  
 	Result is "uploads/filename.extension" */
-	$target_path = $target_path . basename( $_FILES['uploadedfile']['name']); 
+	$log->info("target_path:" + $pdfdir);
+	$pdfdir= dirname(getcwd()) . "/pdf/";
+	$target_path = $pdfdir . basename( $_FILES['uploadedfile']['name']); 
 	$filename = basename( $_FILES['uploadedfile']['name']);
+	$log->info("filename:" + $filename);
 	
 	echo "<br>";
 	echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zur&uuml;ck zur &Uuml;bersicht</a>";
@@ -30,8 +32,32 @@ else
 	echo "<br>";
 	echo "Datei wird hochgeladen ...<br>";
 	
+	$inipath = php_ini_loaded_file();
+	if ($inipath) {
+		$log->info("Loaded php.ini: ' . $inipath");
+	} else {
+		$log->warn("A php.ini file is not loaded");
+	}
+	
+// 	if (is_uploaded_file($_FILES['uploadedfile']['tmp_name'])) {
+// 		echo "Datei ". $_FILES['uploadedfile']['name'] ." erfolgreich hochgeladen.\n";
+// // 		echo "Anzeige des Inhalts\n";
+// // 		readfile($_FILES['uploadedfile']['tmp_name']);
+// 	} else {
+// 		echo "Unzulässiger Dateiupload: ";
+// 		echo "Dateiname '". $_FILES['uploadedfile']['tmp_name'] . "'.";
+// 	}
+	
+// 	echo "<br>";
+// 	echo "<br>";
+// 	echo 'Weitere Debugging Informationen:';
+// 	print_r($_FILES);
+// 	echo "<br>";
+// 	echo "<br>";
+	
 	if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) {
 	    echo "Die Datei ".  basename( $_FILES['uploadedfile']['name']). " wurde hochgeladen.<br>";
+	    $log->info("Datei wurde hochgeladen.");
 	    echo "Starte verschicken ...<br><br>";
 	    sendFileToAll($filename, $target_path);
 	    echo "<br>Verschicken fertig.<br>";
@@ -39,7 +65,7 @@ else
 		echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zur&uuml;ck zur &Uuml;bersicht</a>";
 	    echo "<br>";
 	} else{
-	    echo "There was an error uploading the file, please try again!";
+	    echo "Fehler beim Hochladen der Datei, bitte nochmal versuchen!";
 	}
 }
 
@@ -56,7 +82,7 @@ function sendFileToAll($filename, $target_path){
 	while($sqlArray=mysql_fetch_array($sqlResult)){
 		$email = $sqlArray["email"];
 		if(strcontains($email, "@")){
-		//if($email == "andreas.grotemeyer@gmx.de"){
+// 		if($email == "andreas.grotemeyer@gmx.de"){
 			sendFile($filename, $target_path, $email);
 			$log->info("Sent file to " + $email + ".");
 		} else {
@@ -77,27 +103,21 @@ function sendFile($filename, $target_path, $empfaenger){
 	$dateiinhalt = fread(fopen($dateiname, "r"), filesize($dateiname));
 
 	// Absender Name und E-Mail Adresse
-	$kopf = "From: werkestippspiel\n";
-	$kopf .= "MIME-Version: 1.0\n";
-	$kopf .= "Content-Type: multipart/mixed; boundary=$id\n\n";
-	$kopf .= "This is a multi-part message in MIME format\n";
-	$kopf .= "--$id\n";
-	$kopf .= "Content-Type: text/plain\n";
-	$kopf .= "Content-Transfer-Encoding: 8bit\n\n";
-	$kopf .= "Liebe Tippspiel-Teilnehmer, anbei Werke's Tippspiel - Newsletter ."; // Inhalt der E-Mail (Body)
-	$kopf .= "\n--$id";
-	// Content-Type: image/gif, image/jpeg, image/png in MIME-Typen - selfHtml.org
-	$kopf .= "\nContent-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document; name=$dateiname_mail\n";
-	$kopf .= "Content-Transfer-Encoding: base64\n";
-	$kopf .= "Content-Disposition: attachment; filename=$dateiname_mail\n\n";
-	$kopf .= chunk_split(base64_encode($dateiinhalt));
-	$kopf .= "\n--$id--";
-	mail($empfaenger, $betreff, "", $kopf); // E-Mail versenden
+	$header = "From: werkestippspiel\n";
+	$header .= "Content-Type: multipart/mixed; boundary=$id\n\n";
+	$header .= "This is a multi-part message in MIME format\n";
+	$header .= "--$id\n";
+	$msg .= "Liebe Tippspiel-Teilnehmer, anbei Werke's Tippspiel - Newsletter ."; // Inhalt der E-Mail (Body)
+	$msg .= "\n--$id";
+// 	$kopf .= "\nContent-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document; name=$dateiname_mail\n";
+	$msg .= "\nContent-Type: application/pdf; name=\"{$dateiname_mail}\"\n";
+	$msg .= "Content-Transfer-Encoding: base64\n";
+	$msg .= "Content-Disposition: attachment; filename=\"{$dateiname_mail}\"\n\n";
+	$msg .= chunk_split(base64_encode($dateiinhalt));
+	$msg .= "\n--$id--";
+	mail($empfaenger, $betreff, $msg, $header); // E-Mail versenden
 	
 	echo "Mail gesendet an '$empfaenger' mit Betreff '$betreff'.<br>";
-	
-	//mail($email, "Werke's Tippspiel Passwort", $message, "From: WERKEs-Werke's Tippspiel\n" . "Content-Type: text/html; charset=iso-8859-1\n");
-	
 }
 
 function strcontains($haystack,$needle) {

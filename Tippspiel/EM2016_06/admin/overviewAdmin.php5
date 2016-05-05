@@ -61,7 +61,7 @@ if(isset($_POST["resetEvaluationDone"]))
 	<hr>
 	<?php 
 	echo "<p><form enctype=\"multipart/form-data\" action=\"./UploadAndSendNewsletter.php5?userId=$userId\" method=\"POST\">";
-	echo "<input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"100000\" />";
+	echo "<input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"1000000\" />"; // value in Bytes --> 10^6 = 1MB
 	echo "Folgende Datei hochladen: <input name=\"uploadedfile\" type=\"file\" /> &nbsp";
 	echo "<input type=\"submit\" name='uploadNews' value=\"Newsletter hochladen und verschicken\" />";
 	echo "</form></p>";
