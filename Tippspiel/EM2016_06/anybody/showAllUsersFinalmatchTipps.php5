@@ -82,7 +82,7 @@ function printFinalMatches(){
 	echo "</tr>";
 	
 	$table_users=dbschema::users;
-	$sql="SELECT * FROM $table_users t ORDER BY lastname,firstname";
+	$sql="SELECT * FROM $table_users t where username!='admin' ORDER BY lastname,firstname";
 	$sqlResult=mysql_query($sql);
 	while($array=mysql_fetch_array($sqlResult)){
 		

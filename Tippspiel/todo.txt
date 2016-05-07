@@ -30,8 +30,8 @@ Fehler/Ã„nderungen im Skript:
 [x]		Button 'Spielplan als PDF'
 [x]		Aenderung Beschriftung labels im Adminbereich (Auswertung)
 [x]		Einheitliche Beschriftung (Gruppenspiel-Tipps, Endrunden-Tipps, Spezial-Tipps)
-[ ]		'Admin Ich' aus 'Tipps im Detail' entfernen (taucht bei Punktestand auch nicht auf)
-[x]		e-Mail mit initialem Passwort mit Umlautefehler (erwartete Ausgabe: ä  ö  ü
+[x]		'Admin Ich' aus 'Tipps im Detail' entfernen (taucht bei Punktestand auch nicht auf)
+[x]		e-Mail mit initialem Passwort mit Umlautefehler (erwartete Ausgabe: ï¿½  ï¿½  ï¿½
 		wirkliche Ausgabe: Ã¤ Ã¶ Ã¼)
 
 ----------------------------------------------------------------------------------------
