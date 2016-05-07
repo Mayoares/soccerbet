@@ -22,7 +22,8 @@ ECLIPSE
 
 Select a workspace:
 
-XAMPP/xamppfiles/htdocs
+windows: C:\xampp\htdocs 
+mac: applications/XAMPP/xamppfiles/htdocs
 
 Import Github-Project:
 
@@ -39,9 +40,21 @@ Repository path: /Mayoares/soccerbet.git
 
 Local Destination:
 
+windows:
+
+Direcotry: C:\xampp\htdocs\soccerbet
+Initial branch: master
+Remote name: origin
+
+mac:
+
 Direcotry: /Applications/XAMPP/xamppfiles/htdocs/soccerbet
 Initial branch: master
 Remote name: origin
+
+-> Import existing Eclipse projects
+
+-> Finish
 
 ----------------------------------------------------------------------------------------
 GIT in ECLIPSE
