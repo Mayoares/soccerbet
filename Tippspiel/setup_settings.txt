@@ -1,0 +1,60 @@
+Stand: 07.05.2016
+Letzte Änderung: Robl
+
+----------------------------------------------------------------------------------------
+XAMPP
+----------------------------------------------------------------------------------------
+
+In der Datei:
+
+xampp/etc/httpd.conf
+
+folgende Zeilen hinzufügen
+
+# manual input
+AddHandler php5-script .php5 
+
+um php-Code im Browser darstellen zu koennen.
+
+----------------------------------------------------------------------------------------
+ECLIPSE
+----------------------------------------------------------------------------------------
+
+Select a workspace:
+
+XAMPP/xamppfiles/htdocs
+
+Import Github-Project:
+
+File -> Import -> Projects from Git -> Clone URI
+
+URI: https://github.com/Mayoares/soccerbet.git
+Host: github.com
+Repository path: /Mayoares/soccerbet.git
+
+-> Next
+
+[x] master
+[ ] robl_backup
+
+Local Destination:
+
+Direcotry: /Applications/XAMPP/xamppfiles/htdocs/soccerbet
+Initial branch: master
+Remote name: origin
+
+----------------------------------------------------------------------------------------
+GIT in ECLIPSE
+----------------------------------------------------------------------------------------
+
+Aktuelle Version von Github hohlen
+
+0. Pull
+
+Falls etwas im script geaendert wurde und committed werden moechte:
+
+1. Team -> Synchronize Workspace
+
+2. Commit (Beschreibung einfuegen)
+
+3. Push
