@@ -15,7 +15,7 @@ else
 	echo "<html>";
 	echo "<head>";
 	echo "<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />";
-	echo "<title>Werke's Tippspiel - Spezialtipps</title>";
+	echo "<title>Werke's Tippspiel - Spezial-Tipps</title>";
 	echo "</head>";
 	echo "<body>";
 	
@@ -70,7 +70,7 @@ function run($userId){
 	echo "<form action='Champions.php5?userId=$userId' method='POST'>";
 	echo "<table>";	
 	echo "<tr>";	
-	echo "  <td> <b>Weltmeister</b> </td>";
+	echo "  <td> <b>Europameister</b> </td>";
 	echo "	<td bgcolor=slategray>";
 	echo "    <select name='rank1'>";
 	allTeamsAsOptionForRank($sqlTeams, $worldChampion);
@@ -78,7 +78,7 @@ function run($userId){
 	echo "	</td>";
 	echo "</tr>";	
 	echo "<tr>";	
-	echo "	<td> <b>Vizeweltmeister</b> ";
+	echo "	<td> <b>Zweitplatzierter</b> ";
 	echo "	<td bgcolor=slategray>";
 	echo "    <select name='rank2'>";
 	allTeamsAsOptionForRank($sqlTeams, $vice);

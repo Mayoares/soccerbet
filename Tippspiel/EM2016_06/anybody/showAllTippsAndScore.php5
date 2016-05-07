@@ -443,11 +443,11 @@ function printChampions($userName){
 	$vice=getTippedTeamRostrum($userName, 2);
 	$third=getTippedTeamRostrum($userName, 3);
 	echo "<table>";
-	echo "<tr><td>Weltmeister &nbsp; &nbsp; &nbsp;</td><td><b>$worldchampion</b></td>";
+	echo "<tr><td>Europameister &nbsp; &nbsp; &nbsp;</td><td><b>$worldchampion</b></td>";
 	printCorrectTeam(getCorrectChampion(1));
 	printScore(getScoreChampions(1, $userName));
 	echo "</tr>";
-	echo "<tr><td>Vizeweltmeister &nbsp; &nbsp; &nbsp;</td><td><b>$vice</b></td>";
+	echo "<tr><td>Zweitplatzierter &nbsp; &nbsp; &nbsp;</td><td><b>$vice</b></td>";
 	printCorrectTeam(getCorrectChampion(2));
 	printScore(getScoreChampions(2, $userName));
 	echo "</tr>";

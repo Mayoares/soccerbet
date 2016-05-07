@@ -23,7 +23,7 @@ if(strlen($userId)==0)
 
 <link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />
 
-<title>Werke's Tippspiel - Gruppenspieltipps</title>
+<title>Werke's Tippspiel - Gruppenspiel-Tipps</title>
 
 </head>
 
@@ -65,7 +65,7 @@ function getUserInfo($username){
 
 function printGroupMatches(){
 	
-	echo "<h1>Gruppenspieltipps</h1>";
+	echo "<h1>Gruppenspiel-Tipps</h1>";
 	echo "<br>";
 	$table_matches=dbschema::matches;
 	$sql="SELECT * FROM $table_matches m WHERE m.matchtype='Gruppenspiel'";

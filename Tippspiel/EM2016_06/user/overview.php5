@@ -65,7 +65,7 @@ echo "<br>";
 echo "<FONT SIZE=5><b>Tipps kontrollieren:</b></FONT>";
 echo "<br>";
 echo "<br><a href='./showAllTipps.php5?userId=$userId&framepart=group' target='Daten'>";
-echo "Meine Gruppen-Tipps";
+echo "Meine Gruppenspiel-Tipps";
 echo "<br>";
 echo "<br><a href='./showAllTipps.php5?userId=$userId&framepart=finals' target='Daten'>";
 echo "Meine Endrunden-Tipps";

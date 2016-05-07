@@ -21,7 +21,7 @@ echo "<html>";
 echo "<head><title>Tippspiel Admin</title></head>";
 
 echo "<body>";
-echo "<h1>Admin Überblick</h1>";
+echo "<h1>Admin ï¿½berblick</h1>";
 echo "<form method=\"POST\" action=\"../util/login.php5\">";
 echo "<input type='submit' name='logout' value='Logout'>";
 echo "</form>";
@@ -45,12 +45,12 @@ echo "</form>";
 echo "<form method=\"POST\" action=\"resetUserPassword.php5?userId=$userId\">";
 echo "<td bgcolor=slategray><select name='SelectedUsername'>";
 allUsersAsOption("User");
-echo "<input type='submit' name='resetUser' value='Passwort zurücksetzen'>";
+echo "<input type='submit' name='resetUser' value='Passwort zurï¿½cksetzen'>";
 echo "</form>";
 echo "<form method=\"POST\" action=\"removeUser.php5?userId=$userId\">";
 echo "<td bgcolor=slategray><select name='SelectedUsername'>";
 allUsersAsOption("User");
-echo "<input type='submit' name='removeUser' value='User löschen'>";
+echo "<input type='submit' name='removeUser' value='User lï¿½schen'>";
 echo "</form>";
 
 echo "<form method=\"POST\" action=\"sendTestMail.php5?userId=$userId\">";
@@ -98,11 +98,11 @@ echo "</form>";
 echo "<h4>Finalspiele</h4>";
 
 echo "<form method=\"POST\" action=\"evaluationParticipants.php5?adminuserId=$userId\">";
-echo "<input type=\"submit\" name=\"eval3\" value=\"Auswertung Finalspiel-Teilnahme\">";
+echo "<input type=\"submit\" name=\"eval3\" value=\"Auswertung Teilnehmer Endrunde\">";
 echo "</form>";
 
 echo "<form method=\"POST\" action=\"evaluationFinalMatch.php5?adminuserId=$userId\">";
-echo "Spiel ";
+echo "Endrunden-Spiel ";
 echo "<td bgcolor=slategray><select name='SelectedMatchnr'>";
 allFinalMatchesAsOption("SelectedMatchnr");
 echo "</td>";
@@ -110,12 +110,15 @@ echo "<input type='submit' name='evaluationFinalMatch' value='auswerten'>";
 echo "</form>";
 
 echo "<form method=\"POST\" action=\"evaluationSpecials.php5?adminuserId=$userId\">";
-echo "<input type=\"submit\" name=\"eval\" value=\"Auswertung Weltmeister & Co\">";
+echo "<input type=\"submit\" name=\"eval\" value=\"Auswertung Europameister & Co\">";
 echo "</form>";
 
-echo "	<h2>Korrektur</h2>";
+echo "<h2>Torsch&uuml;tzenk&ouml;ig</h2>";
+echo "(Eingabe manuell in Datenbank)";
+
+echo "<h2>Korrektur</h2>";
 echo "<form method=\"POST\" action=\"overviewAdmin.php5?userId=$userId\">";
-echo "<input type=\"Text\" size=\"1\" name=\"resetMatchNr\" value=\"\"> <input type=\"submit\" name=\"resetEvaluationDone\" value=\"Spiel-Auswertung rückgängig machen\">";
+echo "<input type=\"Text\" size=\"1\" name=\"resetMatchNr\" value=\"\"> <input type=\"submit\" name=\"resetEvaluationDone\" value=\"Spiel-Auswertung rï¿½ckgï¿½ngig machen\">";
 echo "</form>";
 
 
@@ -131,8 +134,8 @@ function allGroupMatchesAsOption($optionName) {
 	$nummatches=mysql_num_rows($sqlmatchesResult);
 	if ($nummatches==0)
 	{
-		$log->warn("keine passenden Datensätze gefunden");
-		echo "keine passenden Datensätze gefunden";
+		$log->warn("keine passenden Datensï¿½tze gefunden");
+		echo "keine passenden Datensï¿½tze gefunden";
 	}
 	else
 	{
@@ -160,8 +163,8 @@ function allFinalMatchesAsOption($optionName) {
 	$nummatches=mysql_num_rows($sqlmatchesResult);
 	if ($nummatches==0)
 	{
-		$log->warn("keine passenden Datensätze gefunden");
-		echo "keine passenden Datensätze gefunden";
+		$log->warn("keine passenden Datensï¿½tze gefunden");
+		echo "keine passenden Datensï¿½tze gefunden";
 	}
 	else
 	{
@@ -202,8 +205,8 @@ function allUsersAsOption($optionName) {
 	$numUsers=mysql_num_rows($sqlUsersResult);
 	if ($numUsers==0)
 	{
-		$log->warn("keine passenden Datensätze gefunden");
-		echo "keine passenden Datensätze gefunden";
+		$log->warn("keine passenden Datensï¿½tze gefunden");
+		echo "keine passenden Datensï¿½tze gefunden";
 	}
 	else
 	{
@@ -226,18 +229,18 @@ function resetMatch($matchnr){
 	include_once("../../general/log/log.php5");
 
 	$table_matches=dbschema::matches;
-	//Spielauswertung rückgängig machen
+	//Spielauswertung rï¿½ckgï¿½ngig machen
 	$sql = "UPDATE $table_matches SET evaluationDone='F' WHERE matchnr='$matchnr'";
 	$log=new adminlogger();
 	$log->info($sql);
 	$sqlUpdateResult=mysql_query($sql);
 	if($sqlUpdateResult)
 	{
-		echo "Spiel '$matchnr' wurde zurückgesetzt ... es muss jetzt nochmal ausgewertet werden.<br>";
+		echo "Spiel '$matchnr' wurde zurï¿½ckgesetzt ... es muss jetzt nochmal ausgewertet werden.<br>";
 	} 
 	else
 	{
-		$errorMessage = "evaluationDone='F' konnte nicht gesetzt werden für matchnr='$matchnr'";
+		$errorMessage = "evaluationDone='F' konnte nicht gesetzt werden fï¿½r matchnr='$matchnr'";
 		echo $errorMessage;
 		$log->error($errorMessage);
 	}

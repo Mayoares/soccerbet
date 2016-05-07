@@ -98,8 +98,8 @@ function printChampions($userName){
 	$third=getTippedTeamRostrum($userName, 3); if(!isset($third)){$third = "<font color=\"red\"><b> FEHLT! </b></font>";}
 	//echo "<table style='font-size:14px'>";
 	echo "<table>";
-	echo "<tr><td>Weltmeister &nbsp; &nbsp; &nbsp;</td><td><b>$champion</b></td></tr>";
-	echo "<tr><td>Vizeweltmeister &nbsp; &nbsp; &nbsp;</td><td><b>$vice</b></td></tr>";
+	echo "<tr><td>Europameister &nbsp; &nbsp; &nbsp;</td><td><b>$champion</b></td></tr>";
+	echo "<tr><td>Zweitplatzierter &nbsp; &nbsp; &nbsp;</td><td><b>$vice</b></td></tr>";
 	//echo "<tr><td>Platz 3 &nbsp; &nbsp; &nbsp;</td><td><b>$third</b></td></tr>";
 	echo "</table>";
 }

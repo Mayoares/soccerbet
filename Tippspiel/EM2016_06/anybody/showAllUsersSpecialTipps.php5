@@ -23,7 +23,7 @@ if(strlen($userId)==0)
 
 <link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />
 
-<title>Werke's Tippspiel - Spezialtipps</title>
+<title>Werke's Tippspiel - Spezial-Tipps</title>
 
 </head>
 
@@ -52,14 +52,14 @@ printSpecials();
 
 function printSpecials(){
 	
-	echo "<h1>Spezialtipps</h1>";
+	echo "<h1>Spezial-Tipps</h1>";
 	echo "<br>";
 	
 	echo "<table border='1' rules='all'>";
 	echo "<tr>";
 	echo "<th>User</th> ";
-	echo "<th>Weltmeister</th> ";
-	echo "<th>Vizeweltmeister</th> ";
+	echo "<th>Europameister</th> ";
+	echo "<th>Zweitplatzierter</th> ";
 //  	echo "<th>Platz 3</th> ";
 	echo "<th>Torsch&uuml;tzenk&ouml;nig</th> ";
 	echo "</tr>";

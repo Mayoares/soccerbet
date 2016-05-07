@@ -99,9 +99,9 @@ if(isset($_POST["resetEvaluationDone"]))
 	
 	echo "<hr>";
 	
-	echo "<p><form method=\"POST\" action=\"sendTestMail.php5?userId=$userId\">Testmail an folgende mail-Adresse: ";
+	echo "<p><form method=\"POST\" action=\"sendTestMail.php5?userId=$userId\">Test-e-Mail an folgende Adresse: ";
 	echo "<input type=\"Text\" size=\"30\" name=\"email\" value=\"\">";
-	echo "<input type='submit' name='sendTestMail' value='Send Test Mail'>";
+	echo "<input type='submit' name='sendTestMail' value='Send Test-e-Mail'>";
 	echo "</form></p>";
 	?>
 </div>
@@ -123,18 +123,18 @@ if(isset($_POST["resetEvaluationDone"]))
 <div class="block">
 	<h1><font color="#ffffff">Auswertung</font></h1>
 	<hr>
-	<h2>Gruppen</h2>
+	<h2>Gruppenphase</h2>
 	<?php 
 	echo "<p><form method=\"POST\" action=\"evaluationGroupMatch.php5?adminuserId=$userId\">";
-	echo "Spiel Nr.: ";
+	echo "Gruppen-Spiel Nr.: ";
 	echo "<td bgcolor=slategray><select name='SelectedMatchnr'>";
 	allGroupMatchesAsOption("SelectedMatchnr", $dbutil);
 	echo "</td>";
-	echo "<input type='submit' name='evaluationGroupMatch' value='auswerten'>";
+	echo "<input type='submit' name='evaluationGroupMatch' value='Auswertung Ergebnis Gruppenspiel'>";
 	echo "</form></p>";
 	
 	echo "<p><form method=\"POST\" action=\"evaluationGroupRank.php5?adminuserId=$userId\">";
-	echo "Platzierungstipps von Gruppe ";
+	echo "Gruppe ";
 	echo "<td bgcolor=slategray><select name='SelectedGroup'>";
 	echo"<option name=SelectedGroup >A</option>";
 	echo"<option name=SelectedGroup >B</option>";
@@ -145,92 +145,44 @@ if(isset($_POST["resetEvaluationDone"]))
 	//echo"<option name=SelectedGroup >G</option>";
 	//echo"<option name=SelectedGroup >H</option>";
 	echo "</td>";
-	echo "<input type='submit' name='evaluationGroupRank' value='auswerten'>";
+	echo "<input type='submit' name='evaluationGroupRank' value='Auswertung Tabellenplatz Gruppenphase'>";
 	echo "</form></p>";
 	echo "<hr>";
 	?>
-	<h2>Endrunde</h2>
+	<h2>Endrunden-Tipps</h2>
 	<?php
 	
 	echo "<p><form method=\"POST\" action=\"evaluationParticipants.php5?adminuserId=$userId\">";
-	echo "<input type=\"submit\" name=\"eval3\" value=\"Auswertung Finalspiel-Teilnahme\">";
+	echo "<input type=\"submit\" name=\"eval3\" value=\"Auswertung Teilnehmer Endrunde\">";
 	echo "</form></p>";
 	
 	echo "<p><form method=\"POST\" action=\"evaluationFinalMatch.php5?adminuserId=$userId\">";
-	echo "Spiel Nr.: ";
+	echo "Endrunden-Spiel Nr.: ";
 	echo "<td bgcolor=slategray><select name='SelectedMatchnr'>";
 	allFinalMatchesAsOption("SelectedMatchnr", $dbutil);
 	echo "</td>";
-	echo "<input type='submit' name='evaluationFinalMatch' value='auswerten'>";
+	echo "<input type='submit' name='evaluationFinalMatch' value='Auswertung Ergebnis Endrunde'>";
 	echo "</form></p>";
+	echo "<hr>";
+	?>
+	<h2>Spezial-Tipps</h2>
+	<?php
 	
 	echo "<p><form method=\"POST\" action=\"evaluationSpecials.php5?adminuserId=$userId\">";
-	echo "<input type=\"submit\" name=\"eval\" value=\"Auswertung Weltmeister & Co\">";
+	echo "<input type=\"submit\" name=\"eval\" value=\"Auswertung Spezial-Tipps\">";
 	echo "</form></p>";
+	echo "<p>Torsch&uuml;tzenk&ouml;nig (Eingabe manuell in Datenbank)</p>";
 	echo "<hr>";
 	?>
 	<h2>Korrektur</h2>
 	<?php
 	echo "<p><form method=\"POST\" action=\"overviewAdmin.php5?userId=$userId\">Spiel Nr.: ";
-	echo "<input type=\"Text\" size=\"1\" name=\"resetMatchNr\" value=\"\"> <input type=\"submit\" name=\"resetEvaluationDone\" value=\"Spiel-Auswertung r&uuml;ckg&auml;ngig machen\">";
+	echo "<input type=\"Text\" size=\"1\" name=\"resetMatchNr\" value=\"\"> <input type=\"submit\" name=\"resetEvaluationDone\" value=\"Auswertung r&uuml;ckg&auml;ngig machen\">";
 	echo "</form></p>";
 	?>
 </div>
 
 <?php
-
-/*
-echo "	<h2>Auswertung</h2>";
-//echo "<h3><font color=\"red\">Bitte hier nichts klicken, bevor es wirklich soweit ist! </font></h3>";
-echo "<p class=\"info\">Bitte hier nichts klicken, bevor es wirklich soweit ist!";
-
-echo "	<h4>Gruppen</h4>";
-echo "<form method=\"POST\" action=\"evaluationGroupMatch.php5?adminuserId=$userId\">";
-echo "Spiel ";
-echo "<td bgcolor=slategray><select name='SelectedMatchnr'>";
-allGroupMatchesAsOption("SelectedMatchnr", $dbutil);
-echo "</td>";
-echo "<input type='submit' name='evaluationGroupMatch' value='auswerten'>";
-echo "</form>";
-
-echo "<form method=\"POST\" action=\"evaluationGroupRank.php5?adminuserId=$userId\">";
-echo "Platzierungstipps von Gruppe ";
-echo "<td bgcolor=slategray><select name='SelectedGroup'>";
-echo"<option name=SelectedGroup >A</option>";
-echo"<option name=SelectedGroup >B</option>";
-echo"<option name=SelectedGroup >C</option>";
-echo"<option name=SelectedGroup >D</option>";
-echo"<option name=SelectedGroup >E</option>";
-echo"<option name=SelectedGroup >F</option>";
-//echo"<option name=SelectedGroup >G</option>";
-//echo"<option name=SelectedGroup >H</option>";
-echo "</td>";
-echo "<input type='submit' name='evaluationGroupRank' value='auswerten'>";
-echo "</form>";
-
-echo "<h3>Endrunde</h3>";
-
-echo "<form method=\"POST\" action=\"evaluationParticipants.php5?adminuserId=$userId\">";
-echo "<input type=\"submit\" name=\"eval3\" value=\"Auswertung Finalspiel-Teilnahme\">";
-echo "</form>";
-
-echo "<form method=\"POST\" action=\"evaluationFinalMatch.php5?adminuserId=$userId\">";
-echo "Spiel ";
-echo "<td bgcolor=slategray><select name='SelectedMatchnr'>";
-allFinalMatchesAsOption("SelectedMatchnr", $dbutil);
-echo "</td>";
-echo "<input type='submit' name='evaluationFinalMatch' value='auswerten'>";
-echo "</form>";
-
-echo "<form method=\"POST\" action=\"evaluationSpecials.php5?adminuserId=$userId\">";
-echo "<input type=\"submit\" name=\"eval\" value=\"Auswertung Weltmeister & Co\">";
-echo "</form>";
-
-echo "	<h2>Korrektur</h2>";
-echo "<form method=\"POST\" action=\"overviewAdmin.php5?userId=$userId\">";
-echo "<input type=\"Text\" size=\"1\" name=\"resetMatchNr\" value=\"\"> <input type=\"submit\" name=\"resetEvaluationDone\" value=\"Spiel-Auswertung r&uuml;ckg&auml;ngig machen\">";
-echo "</form>";
-*/
 
 function allGroupMatchesAsOption($optionName, $dbutil) {
 	include_once("../../connection/dbaccess.php5");

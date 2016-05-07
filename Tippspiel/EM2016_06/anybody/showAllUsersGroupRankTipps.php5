@@ -23,7 +23,7 @@ if(strlen($userId)==0)
 
 <link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />
 
-<title>Werke's Tippspiel - Platzierungstipps</title>
+<title>Werke's Tippspiel - Platzierungs-Tipps</title>
 
 </head>
 
@@ -65,7 +65,7 @@ function getUserInfo($username){
 
 function printGroupRanks(){
 	
-	echo "<h1>Platzierungstipps</h1>";
+	echo "<h1>Platzierungs-Tipps</h1>";
 	$table_teams=dbschema::teams;
 	$sql="SELECT * FROM $table_teams t ORDER BY t.group, t.shortname";
 	$sqlResult=mysql_query($sql);

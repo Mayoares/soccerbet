@@ -1,4 +1,5 @@
-Stand: 04.05.2016
+Stand: 07.05.2016
+Letzte Änderung: Robl
 
 ----------------------------------------------------------------------------------------
 Offene Fragen:
@@ -20,14 +21,21 @@ Fehlende Informationen von Werke:
 Fehler/Änderungen im Skript:
 ----------------------------------------------------------------------------------------
 
-[ ]		Newsletter versenden funktioniert nicht
+[x]		Newsletter versenden funktioniert nicht
 [x]		User Liste ansehen im Adminbereich auskommentiert -> Pfad zurück ändern
 [x]		Anleitung und Regelwerk hochladen
 [ ]		Logo für Werke's Tippspiel
 [x]		'Meine Spezialtipps kontrollieren' einfügen
+[x]		Änderung Weltmeister in Europameister
+[x]		Button 'Spielplan als PDF'
+[x]		Änderung Beschriftung labels im Adminbereich (Auswertung)
+[x]		Einheitliche Beschriftung (Gruppenspiel-Tipps, Endrunden-Tipps, Spezial-Tipps)
+[ ]		'Admin Ich' aus 'Tipps im Detail' entfernen (taucht bei Punktestand auch nicht auf)
 
 ----------------------------------------------------------------------------------------
 Nice to have:
 ----------------------------------------------------------------------------------------
 
 [ ]		bei Eingabe der Tipps für Endrundenspiele: nach speichern nach oben springen ändern (store)
+[ ]		Automatische Auswertung des Torschützenkönigs (nicht mehr manuell)
+[ ]		Login: Coursor bereits im Feld Benutzername
