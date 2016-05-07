@@ -44,7 +44,7 @@ else
 // // 		echo "Anzeige des Inhalts\n";
 // // 		readfile($_FILES['uploadedfile']['tmp_name']);
 // 	} else {
-// 		echo "Unzulässiger Dateiupload: ";
+// 		echo "Unzulaessiger Dateiupload: ";
 // 		echo "Dateiname '". $_FILES['uploadedfile']['tmp_name'] . "'.";
 // 	}
 	

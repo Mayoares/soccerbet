@@ -1,12 +1,12 @@
 Stand: 07.05.2016
-Letzte Änderung: Robl
+Letzte Aenderung: Robl
 
 ----------------------------------------------------------------------------------------
 Offene Fragen:
 ----------------------------------------------------------------------------------------
 
-[ ]		ist es notwendig die Tippübersicht (Tipps im Detail) auch im Adminbereich darzustellen?
-		(bei klick auf 'zurück' springt man in den Bereich 'Punktestand' (ausserhalb Adminbereich)
+[ ]		ist es notwendig die Tippuebersicht (Tipps im Detail) auch im Adminbereich darzustellen?
+		(bei klick auf 'zurueck' springt man in den Bereich 'Punktestand' (ausserhalb Adminbereich)
 
 ----------------------------------------------------------------------------------------
 Fehlende Informationen von Werke:
@@ -22,21 +22,22 @@ Fehler/Änderungen im Skript:
 ----------------------------------------------------------------------------------------
 
 [x]		Newsletter versenden funktioniert nicht
-[x]		User Liste ansehen im Adminbereich auskommentiert -> Pfad zurück ändern
+[x]		User Liste ansehen im Adminbereich auskommentiert -> Pfad zurueck aendern
 [x]		Anleitung und Regelwerk hochladen
-[ ]		Logo für Werke's Tippspiel
-[x]		'Meine Spezialtipps kontrollieren' einfügen
-[x]		Änderung Weltmeister in Europameister
+[ ]		Logo fuer Werke's Tippspiel
+[x]		'Meine Spezialtipps kontrollieren' einfuegen
+[x]		Aenderung Weltmeister in Europameister
 [x]		Button 'Spielplan als PDF'
-[x]		Änderung Beschriftung labels im Adminbereich (Auswertung)
+[x]		Aenderung Beschriftung labels im Adminbereich (Auswertung)
 [x]		Einheitliche Beschriftung (Gruppenspiel-Tipps, Endrunden-Tipps, Spezial-Tipps)
 [ ]		'Admin Ich' aus 'Tipps im Detail' entfernen (taucht bei Punktestand auch nicht auf)
-[x]		e-Mail mit initialem Passwort mit Umlautefehler 
+[x]		e-Mail mit initialem Passwort mit Umlautefehler (erwartete Ausgabe: �  �  �
+		wirkliche Ausgabe: ä ö ü)
 
 ----------------------------------------------------------------------------------------
 Nice to have:
 ----------------------------------------------------------------------------------------
 
-[ ]		bei Eingabe der Tipps für Endrundenspiele: nach speichern nach oben springen ändern (store)
-[ ]		Automatische Auswertung des Torschützenkönigs (nicht mehr manuell)
+[ ]		bei Eingabe der Tipps fuer Endrundenspiele: nach speichern nach oben springen aendern (store)
+[ ]		Automatische Auswertung des Torschuetzenkoenigs (nicht mehr manuell)
 [ ]		Login: Coursor bereits im Feld Benutzername

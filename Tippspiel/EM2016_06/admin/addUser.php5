@@ -129,9 +129,9 @@ function addUser($username, $firstname, $lastname, $email, $adminuserId)
 		$content .= "\n\nDeine Logindaten lauten:";
 		$content .= "\n\nBenutzername: $username "; 
 		$content .= "\nPasswort    : $password ";
-		$content .= "\n\nDas Passwort wurde automatisch generiert und sollte nach dem ersten Login geÃ¤ndert werden."; 
+		$content .= "\n\nDas Passwort wurde automatisch generiert und sollte nach dem ersten Login geändert werden."; 
 		$content .= "\n\nDirektlink zum Tippspiel: http://mayoar.rivido.de";
-		$content .= "\n\nViel Spass beim Tippen wÃ¼nschen,";
+		$content .= "\n\nViel Spass beim Tippen wünschen,";
 		$content .= "\n\nWerke, Moose und Robl";
 		$content .= "\n--$id";
 		// Body Ende

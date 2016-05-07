@@ -1,7 +1,7 @@
 -- --------------------------------------------------------
 
 --
--- Daten für Tabelle `emtipp2016_teams`
+-- Daten fuer Tabelle `emtipp2016_teams`
 --
 
 INSERT INTO `emtipp2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES

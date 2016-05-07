@@ -1,5 +1,5 @@
 Stand: 07.05.2016
-Letzte Änderung: Robl
+Letzte Aenderung: Robl
 
 ----------------------------------------------------------------------------------------
 XAMPP
@@ -9,7 +9,7 @@ In der Datei:
 
 xampp/etc/httpd.conf
 
-folgende Zeilen hinzufügen
+folgende Zeilen hinzufuegen
 
 # manual input
 AddHandler php5-script .php5 
