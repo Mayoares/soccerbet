@@ -125,11 +125,14 @@ function addUser($username, $firstname, $lastname, $email, $adminuserId)
 		$content .= "Content-Transfer-Encoding: 8bit\n\n";
 		// Inhalt der E-Mail (Body)
 		$content .= "Lieber Tippspiel-Teilnehmer $firstname $lastname,";
-		$content .= "\n\ndeine Logindaten lauten";
+		$content .= "\n\nherzlich Willkommen zu Werke's Tippspiel zur Europameisterschaft 2016 in Frankreich.";
+		$content .= "\n\nDeine Logindaten lauten:";
 		$content .= "\n\nBenutzername: $username "; 
 		$content .= "\nPasswort    : $password ";
-		$content .= "\n\nDas Passwort wurde automatisch generiert und sollte nach dem ersten Login ge&auml;ndert werden."; 
+		$content .= "\n\nDas Passwort wurde automatisch generiert und sollte nach dem ersten Login geändert werden."; 
 		$content .= "\n\nDirektlink zum Tippspiel: http://mayoar.rivido.de";
+		$content .= "\n\nViel Spass beim Tippen wünschen,";
+		$content .= "\n\nWerke, Moose und Robl";
 		$content .= "\n--$id";
 		// Body Ende
 		mail($email, $betreff, "", $content); // E-Mail versenden

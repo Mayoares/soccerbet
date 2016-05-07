@@ -87,10 +87,23 @@ function resetUserPassword($resetUsername, $adminuserId)
 	}
 	else
 	{
-		$message = "F&uuml;r dich wurde ein neues Passwort generiert.<br>" .
-	     "Dein neues Passwort lautet: <b>$password</b>.<br>" .
-		 "Bitte bald einloggen und &uuml;ndern.<br>";
-		mail($email, "Werke's Tippspiel - Passwort zur&uuml;ckgesetzt", $message, "From: werkestippspiel\n" . "Content-Type: text/html; charset=iso-8859-1\n");
+		$betreff = "Werke's Tippspiel - Passwort zurückgesetzt";
+		$kopf = "From: werkestippspiel\n";
+		$kopf .= "MIME-Version: 1.0\n";
+		$kopf .= "Content-Type: multipart/mixed; boundary=$id\n\n";
+		$kopf .= "This is a multi-part message in MIME format\n";
+		$kopf .= "--$id\n";
+		$kopf .= "Content-Type: text/plain\n";
+		$kopf .= "Content-Transfer-Encoding: 8bit\n\n";
+		// Inhalt der E-Mail (Body)
+		$kopf .= "Für dich wurde ein neues Passwort generiert.";
+		$kopf .= "\n\nDein neues Passwort lautet: $password";
+		$kopf .= "\n\nBitte bald einloggen und ändern.";
+		$kopf .= "\n\nDirektlink zum Tippspiel: http://mayoar.rivido.de";
+		$kopf .= "\n--$id";
+		// Body Ende
+		mail($email, $betreff, "", $kopf); // E-Mail versenden
+		
 		echo "<br>User $username hat ein neues Passwort erhalten.<br>";
 		echo "<br>Das Passwort wurde an seine eMail-Adresse '$email' geschickt.<br>";
 		echo "<form method=\"POST\" action=\"overviewAdmin.php5?userId=$adminuserId\">";

@@ -107,7 +107,7 @@ function sendFile($filename, $target_path, $empfaenger){
 	$header .= "Content-Type: multipart/mixed; boundary=$id\n\n";
 	$header .= "This is a multi-part message in MIME format\n";
 	$header .= "--$id\n";
-	$msg .= "Liebe Tippspiel-Teilnehmer, anbei Werke's Tippspiel - Newsletter ."; // Inhalt der E-Mail (Body)
+	$msg .= "Lieber Tippspiel-Teilnehmer, \n\nim Anhang Werke's Tippspiel - Newsletter."; // Inhalt der E-Mail (Body)
 	$msg .= "\n--$id";
 // 	$kopf .= "\nContent-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document; name=$dateiname_mail\n";
 	$msg .= "\nContent-Type: application/pdf; name=\"{$dateiname_mail}\"\n";

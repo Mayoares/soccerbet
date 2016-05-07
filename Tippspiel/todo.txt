@@ -31,6 +31,7 @@ Fehler/Änderungen im Skript:
 [x]		Änderung Beschriftung labels im Adminbereich (Auswertung)
 [x]		Einheitliche Beschriftung (Gruppenspiel-Tipps, Endrunden-Tipps, Spezial-Tipps)
 [ ]		'Admin Ich' aus 'Tipps im Detail' entfernen (taucht bei Punktestand auch nicht auf)
+[x]		e-Mail mit initialem Passwort mit Umlautefehler 
 
 ----------------------------------------------------------------------------------------
 Nice to have:

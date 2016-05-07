@@ -66,7 +66,7 @@ function sendTestMail($email, $adminuserId)
 	$log->info("sendTestMail(". $email.")");
 		
 	$id = md5(uniqid(time()));
-	$betreff = "Werke's Tippspiel - Testmail";
+	$betreff = "Werke's Tippspiel - Test-e-Mail";
 	$kopf = "From: werkestippspiel\n";
 	$kopf .= "MIME-Version: 1.0\n";
 	$kopf .= "Content-Type: multipart/mixed; boundary=$id\n\n";
@@ -75,7 +75,7 @@ function sendTestMail($email, $adminuserId)
 	$kopf .= "Content-Type: text/plain\n";
 	$kopf .= "Content-Transfer-Encoding: 8bit\n\n";
 	// Inhalt der E-Mail (Body)
-	$kopf .= "Dies ist eine Testmail.";
+	$kopf .= "Dies ist eine Test-e-Mail.";
 	$kopf .= "\n\nDirektlink zum Tippspiel: http://mayoar.rivido.de";
 	$kopf .= "\n--$id";
 	// Body Ende
