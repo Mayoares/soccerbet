@@ -44,7 +44,7 @@ if(isset($_POST["resetEvaluationDone"]))
 
 <center>
 
-<img src="../pics/Logo_EM_2016.png" class="image" width="250" alt="Logo_EM_2016">
+<img src="../pics/EM 2016 Tippspiel Logo.png" class="image" width="300" alt="Logo_EM_2016">
 
 <h1><font color="red">Adminbereich</font></h1>
 

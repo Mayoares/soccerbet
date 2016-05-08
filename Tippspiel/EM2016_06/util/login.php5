@@ -85,7 +85,7 @@ function promptLogin($username){
 
 <center>
 
-<p><img src="../pics/Logo_EM_2016.png" class="image" width="250" alt="Logo_EM_2016">
+<p><img src="../pics/EM 2016 Tippspiel Logo.png" class="image" width="300" alt="Logo_EM_2016">
 
 <div class="block">
 	<p><a href="../../index.html"> <h2>Home</h2> </a> </p>
