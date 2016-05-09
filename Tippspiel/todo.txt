@@ -14,9 +14,10 @@ Fehlende Informationen von Werke:
 
 [ ]		Zitate
 [ ]		Spendeninformationen auf Homepage?
+[ ]		Zusaetzliche Informationen zum 3. Platz in der Gruppenphase in Anleitung?
 
 ----------------------------------------------------------------------------------------
-Fehler/Änderungen im Skript:
+Fehler/Aenderungen im Skript:
 ----------------------------------------------------------------------------------------
 
 [x]		Newsletter versenden funktioniert nicht
@@ -29,11 +30,11 @@ Fehler/Änderungen im Skript:
 [x]		Aenderung Beschriftung labels im Adminbereich (Auswertung)
 [x]		Einheitliche Beschriftung (Gruppenspiel-Tipps, Endrunden-Tipps, Spezial-Tipps)
 [x]		'Admin Ich' aus 'Tipps im Detail' entfernen (taucht bei Punktestand auch nicht auf)
-[x]		e-Mail mit initialem Passwort mit Umlautefehler (erwartete Ausgabe: �  �  �
-		wirkliche Ausgabe: ä ö ü)
+[x]		e-Mail mit initialem Passwort mit Umlautefehler (erwartete Ausgabe: ä ö ü wirkliche Ausgabe: �  �  �)
 [x]		e-mail-Adresse von Moose entfernen (Moose will nicht mehr als Organisator in Erscheinung treten)
 [x]		Wem kommen die Spenden zugute? -> Reischacher Sozialfond
 [ ]		beim Wechsel von Startseite auf z.B. Punktestand minimale Verschiebung (beachte Logo) warum?
+[ ]		Spieldaten der UEFA stimmen nicht mit dem Spielplan (PDF, Welt) ueberein
 [ ]		Fehlende UserID in http://mayoar.rivido.de/EM2016_06/admin/overviewAdmin.php5?userId=.php5
 [ ]		Testlauf
 [ ]		Vor Tippspielstart -> Upload aller Dateien unter Windows (Umlaute)

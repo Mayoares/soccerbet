@@ -34,10 +34,7 @@ function printUserInfo($userName){
 	//echo "<br>herzlich Willkommen bei Werke's Tippspiel zur Europameisterschaft 2016!";
 	//echo "<br>Viel Erfolg beim Tippen!";
 	?>
-	herzlich Willkommen bei Werke's Tippspiel zur Europameisterschaft 2016 in Frankreich!</br>
-	</br>
-	Viel Erfolg beim Tippen,</br>
-	w&uuml;nscht dir Werke, Moose und Robl!
+	herzlich Willkommen bei Werke's Tippspiel zur Europameisterschaft 2016 in Frankreich!
 	<br>
 	<br>
 	<a href='../pdf/Spielplan_EM_2016.pdf'>Download Spielplan als PDF</a>
