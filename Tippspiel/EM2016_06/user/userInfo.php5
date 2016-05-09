@@ -53,7 +53,7 @@ function printUserInfo($userName){
 	echo "<h3>Organisator</h3>";
 	echo "<table> <colgroup> <col width='200'> <col width='300'></colgroup>";
 	echo "<tr>";
-	echo "<td>Thomas Werkstetter</td><td><a href='mailto:atomkraftwerke@web.de' target='_top'>atomkraftwerke@web.de</a></td>";
+	echo "<td>Mail an Werke:</td><td><a href='mailto:atomkraftwerke@web.de' target='_top'>atomkraftwerke@web.de</a></td>";
 	echo "</tr>";
 // 	echo "<tr>";
 // 	echo "<td>Richard Mooshammer</td><td>???</td>";
@@ -64,7 +64,7 @@ function printUserInfo($userName){
 	echo "<h3>Administrator</h3>";
 	echo "<table> <colgroup> <col width='200'> <col width='300'></colgroup>";
 	echo "<tr>";
-	echo "<td>Robert Kalusok</td><td><a href='mailto:robert.werkestippspiel@gmail.com' target='_top'>robert.werkestippspiel@gmail.com</a></td>";
+	echo "<td>Mail and Robl:</td><td><a href='mailto:robert.werkestippspiel@gmail.com' target='_top'>robert.werkestippspiel@gmail.com</a></td>";
 	echo "</tr>";
 	//echo "<tr>";
 	//echo "<td>Andreas Grotemeyer</td><td><a href='mailto:robert.werkestippspiel@gmail.com' target='_top'>mayoar.werkestippspiel@gmail.com</a></td>";
