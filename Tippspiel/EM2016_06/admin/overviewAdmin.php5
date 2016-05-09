@@ -73,7 +73,7 @@ if(isset($_POST["resetEvaluationDone"]))
 	<hr>
 	<?php 
 	echo "<p><a href='../anybody/showUserList.php5?userId=$userId'>User Liste ansehen</a></p>";
- 	echo "<p><a href='../anybody/showUserRanks.php5?userId=$userId'>User Rangliste ansehen</a></p>";
+//  	echo "<p><a href='../anybody/showUserRanks.php5?userId=$userId'>User Rangliste ansehen</a></p>";
 	
  	echo "<hr>";
 	

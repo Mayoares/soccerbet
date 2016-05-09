@@ -23,15 +23,7 @@ session_start();
 </head>
 
 <body>
-<?php
-// Verbindung zur Datenbank aufbauen
-include_once("../../connection/dbaccess.php5");
-include_once("../util/calc.php5");
-include_once("../../general/log/log.php5");
-include_once("../util/dbschema.php5");
-$log=new viewlogger();
-$log->info("Clicked showUserRank");
-?>
+
 <center>
 
 <img src="../pics/EM 2016 Tippspiel Logo.png" class="image" width="300" alt="Logo_EM_2016">
@@ -40,8 +32,14 @@ $log->info("Clicked showUserRank");
 	<p><a href="../util/loginPunktestand.php5"> <h2>zur&uuml;ck</h2> </a> </p>
 </div>
 
-</center>
 <?php
+// Verbindung zur Datenbank aufbauen
+include_once("../../connection/dbaccess.php5");
+include_once("../util/calc.php5");
+include_once("../../general/log/log.php5");
+include_once("../util/dbschema.php5");
+$log=new viewlogger();
+$log->info("Clicked showUserRank");
 printLastUpdate();
 printDescription();
 printUserScores();

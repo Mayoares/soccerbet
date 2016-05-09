@@ -1,4 +1,4 @@
-Stand: 07.05.2016
+Stand: 09.05.2016
 Letzte Aenderung: Robl
 
 ----------------------------------------------------------------------------------------
@@ -33,6 +33,10 @@ Fehler/Änderungen im Skript:
 		wirkliche Ausgabe: ä ö ü)
 [x]		e-mail-Adresse von Moose entfernen (Moose will nicht mehr als Organisator in Erscheinung treten)
 [x]		Wem kommen die Spenden zugute? -> Reischacher Sozialfond
+[ ]		beim Wechsel von Startseite auf z.B. Punktestand minimale Verschiebung (beachte Logo) warum?
+[ ]		Fehlende UserID in http://mayoar.rivido.de/EM2016_06/admin/overviewAdmin.php5?userId=.php5
+[ ]		Testlauf
+[ ]		Vor Tippspielstart -> Upload aller Dateien unter Windows (Umlaute)
 
 ----------------------------------------------------------------------------------------
 Nice to have:

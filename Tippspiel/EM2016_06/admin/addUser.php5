@@ -129,9 +129,9 @@ function addUser($username, $firstname, $lastname, $email, $adminuserId)
 		$content .= "\n\nDeine Logindaten lauten:";
 		$content .= "\n\nBenutzername: $username "; 
 		$content .= "\nPasswort    : $password ";
-		$content .= "\n\nDas Passwort wurde automatisch generiert und sollte nach dem ersten Login geändert werden."; 
+		$content .= "\n\nDas Passwort wurde automatisch generiert und sollte nach dem ersten Login geï¿½ndert werden."; 
 		$content .= "\n\nDirektlink zum Tippspiel: http://mayoar.rivido.de";
-		$content .= "\n\nViel Spass beim Tippen wünschen,";
+		$content .= "\n\nViel Spass beim Tippen wï¿½nschen,";
 		$content .= "\n\nWerke, Moose und Robl";
 		$content .= "\n--$id";
 		// Body Ende
@@ -178,6 +178,40 @@ function generatePassword()
 
 function promptAddUser($adminuserId)
 {
+	?>
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<!-- Mobile viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<!-- Facivon 
+<link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon"> -->
+
+<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />
+
+<title>Werke's Tippspiel - User anlegen</title>
+
+</head>
+	
+<body>
+
+<center>
+
+<img src="../pics/EM 2016 Tippspiel Logo.png" class="image" width="300" alt="Logo_EM_2016">
+
+<div class="block">
+	<?php 
+	echo "<p><a href='./overviewAdmin.php5?userId=$adminuserId'> <h2>zur&uuml;ck</h2> </a> </p>";
+	?>
+</div>
+
+	<?php
 	echo "<form method='POST' action='addUser.php5?userId=$adminuserId'>";
 	echo "<table>";
 	echo "<tr>";
@@ -190,7 +224,7 @@ function promptAddUser($adminuserId)
 	echo "<td>Nachname :</td><td>	<input type='text' name='lastname' value='' size=30></td>";
 	echo "</tr>";
 	echo "<tr>";
-	echo "<td>email :</td><td>	<input type='text' name='email' value='' size=80></td>";
+	echo "<td>e-Mail :</td><td>	<input type='text' name='email' value='' size=30></td>";
 	echo "</tr>";
 	echo "<tr>";
 	echo "</tr>";
