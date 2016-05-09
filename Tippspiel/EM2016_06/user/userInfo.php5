@@ -53,14 +53,14 @@ function printUserInfo($userName){
 	echo "<br>";
 	echo "<h2>Kontakt</h2>";
 	//
-	echo "<h3>Organisatoren</h3>";
+	echo "<h3>Organisator</h3>";
 	echo "<table> <colgroup> <col width='200'> <col width='300'></colgroup>";
 	echo "<tr>";
 	echo "<td>Thomas Werkstetter</td><td><a href='mailto:atomkraftwerke@web.de' target='_top'>atomkraftwerke@web.de</a></td>";
 	echo "</tr>";
-	echo "<tr>";
-	echo "<td>Richard Mooshammer</td><td>???</td>";
-	echo "</tr>";
+// 	echo "<tr>";
+// 	echo "<td>Richard Mooshammer</td><td>???</td>";
+// 	echo "</tr>";
 	echo "</table>";
 	//
 	echo "<br>";

@@ -13,8 +13,6 @@ Fehlende Informationen von Werke:
 ----------------------------------------------------------------------------------------
 
 [ ]		Zitate
-[ ]		Wem kommen die Spenden zugute?
-[ ]		e-mail-Adresse von Moose
 [ ]		Spendeninformationen auf Homepage?
 
 ----------------------------------------------------------------------------------------
@@ -24,7 +22,7 @@ Fehler/Änderungen im Skript:
 [x]		Newsletter versenden funktioniert nicht
 [x]		User Liste ansehen im Adminbereich auskommentiert -> Pfad zurueck aendern
 [x]		Anleitung und Regelwerk hochladen
-[ ]		Logo fuer Werke's Tippspiel
+[x]		Logo fuer Werke's Tippspiel
 [x]		'Meine Spezialtipps kontrollieren' einfuegen
 [x]		Aenderung Weltmeister in Europameister
 [x]		Button 'Spielplan als PDF'
@@ -33,6 +31,8 @@ Fehler/Änderungen im Skript:
 [x]		'Admin Ich' aus 'Tipps im Detail' entfernen (taucht bei Punktestand auch nicht auf)
 [x]		e-Mail mit initialem Passwort mit Umlautefehler (erwartete Ausgabe: �  �  �
 		wirkliche Ausgabe: ä ö ü)
+[x]		e-mail-Adresse von Moose entfernen (Moose will nicht mehr als Organisator in Erscheinung treten)
+[x]		Wem kommen die Spenden zugute? -> Reischacher Sozialfond
 
 ----------------------------------------------------------------------------------------
 Nice to have:

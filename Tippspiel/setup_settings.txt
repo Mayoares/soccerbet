@@ -23,7 +23,7 @@ ECLIPSE
 Select a workspace:
 
 windows: C:\xampp\htdocs 
-mac: applications/XAMPP/xamppfiles/htdocs
+mac: /Applications/XAMPP/xamppfiles/htdocs
 
 Import Github-Project:
 
