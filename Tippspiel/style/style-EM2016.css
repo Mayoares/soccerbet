@@ -1,6 +1,7 @@
 /* @charset "ISO-8859-1"; */
 @charset "utf-8";
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
 
 body {
 	/*background-image: url(../EM2016_06/pics/background.jpg);
@@ -11,11 +12,11 @@ body {
 	margin-left: 10px;
 	margin-right: 10px;
 	font-size: 14px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 }
 
 h1 {
-	font-family: Open Sans;
+	font-family: Ubuntu;
 	font-size: 24px;
 	font-style: normal;
 	font-variant: normal;
@@ -24,7 +25,7 @@ h1 {
 }
 
 h3 {
-	font-family: Open Sans;
+	font-family: Ubuntu;
 	font-size: 18px;
 	font-style: normal;
 	font-variant: normal;
@@ -33,7 +34,7 @@ h3 {
 }
 
 p {
-	font-family: Open Sans;
+	font-family: Ubuntu;
 	font-size: 14px;
 	font-style: normal;
 	font-variant: normal;
@@ -42,7 +43,7 @@ p {
 }
 
 blockquote {
-	font-family: Open Sans;
+	font-family: Ubuntu;
 	font-size: 21px;
 	font-style: normal;
 	font-variant: normal;
@@ -51,7 +52,7 @@ blockquote {
 }
 
 pre {
-	font-family: Open Sans;
+	font-family: Ubuntu;
 	font-size: 13px;
 	font-style: normal;
 	font-variant: normal;
@@ -109,7 +110,7 @@ input.button {
 }
 
 p.info { 
-	font-family: Open Sans;
+	font-family: Ubuntu;
 	font-size: 14px;
 	color:white;
 	padding:4px;
