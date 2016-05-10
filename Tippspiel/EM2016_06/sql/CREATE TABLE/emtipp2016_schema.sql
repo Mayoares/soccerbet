@@ -1,30 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 3.2.4
--- http://www.phpmyadmin.net
---
--- Host: localhost
--- Erstellungszeit: 06. September 2014 um 04:26
--- Server Version: 5.1.41
--- PHP-Version: 5.3.1
-
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-
---
--- Datenbank: `emtipp2016`
---
-
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `emtipp2016_championtipps`
---
-
 CREATE TABLE IF NOT EXISTS `emtipp2016_championtipps` (
   `user` varchar(100) NOT NULL,
   `team` varchar(3) NOT NULL,
@@ -34,10 +7,6 @@ CREATE TABLE IF NOT EXISTS `emtipp2016_championtipps` (
   KEY `team` (`team`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `emtipp2016_finalmatchtipps`
 --
 
 CREATE TABLE IF NOT EXISTS `emtipp2016_finalmatchtipps` (
@@ -56,10 +25,6 @@ CREATE TABLE IF NOT EXISTS `emtipp2016_finalmatchtipps` (
   KEY `user` (`user`,`teamX`,`teamY`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `emtipp2016_groupcitations`
 --
 
 CREATE TABLE IF NOT EXISTS `emtipp2016_groupcitations` (
@@ -69,10 +34,6 @@ CREATE TABLE IF NOT EXISTS `emtipp2016_groupcitations` (
   KEY `citation` (`citation`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
 
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `emtipp2016_groupmatchtipps`
 --
 
 CREATE TABLE IF NOT EXISTS `emtipp2016_groupmatchtipps` (
@@ -88,10 +49,6 @@ CREATE TABLE IF NOT EXISTS `emtipp2016_groupmatchtipps` (
   KEY `user` (`user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `emtipp2016_groupranktipps`
 --
 
 CREATE TABLE IF NOT EXISTS `emtipp2016_groupranktipps` (
@@ -103,10 +60,6 @@ CREATE TABLE IF NOT EXISTS `emtipp2016_groupranktipps` (
   KEY `team` (`team`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `emtipp2016_matches`
 --
 
 CREATE TABLE IF NOT EXISTS `emtipp2016_matches` (
@@ -127,10 +80,6 @@ CREATE TABLE IF NOT EXISTS `emtipp2016_matches` (
   KEY `matchdate` (`matchdate`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=65 ;
 
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `emtipp2016_teams`
 --
 
 CREATE TABLE IF NOT EXISTS `emtipp2016_teams` (
@@ -143,10 +92,6 @@ CREATE TABLE IF NOT EXISTS `emtipp2016_teams` (
   KEY `shortname` (`shortname`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `emtipp2016_topscorertipps`
 --
 
 CREATE TABLE IF NOT EXISTS `emtipp2016_topscorertipps` (
@@ -158,10 +103,6 @@ CREATE TABLE IF NOT EXISTS `emtipp2016_topscorertipps` (
   KEY `team` (`team`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `emtipp2016_users`
 --
 
 CREATE TABLE IF NOT EXISTS `emtipp2016_users` (
@@ -175,12 +116,3 @@ CREATE TABLE IF NOT EXISTS `emtipp2016_users` (
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `userid` (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-/* INSERT INTO `usr_web133_1`.`emtipp2016_users` (`userid`, `username`, `password`, `lastname`, `firstname`, `email`, `finalparticipantscore`) VALUES ('4572478', 'admin', 'Masterplan', 'Ich', 'Admin', 'nomail', '0'); */
-INSERT INTO `emtipp2016_users` (`userid`, `username`, `password`, `lastname`, `firstname`, `email`, `finalparticipantscore`) VALUES 
-('4572478', 'admin', 'Masterplan', 'Ich', 'Admin', 'nomail', '0'),
-('0000000', 'test', 'test', 'test', 'test', 'nomail', '0');

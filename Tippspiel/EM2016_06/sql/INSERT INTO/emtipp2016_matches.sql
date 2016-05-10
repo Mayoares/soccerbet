@@ -1,13 +1,4 @@
--- --------------------------------------------------------
-
---
--- Daten für Tabelle `emtipp2016_matches`
---
-
-INSERT INTO `emtipp2016`.`emtipp2016_matches` (`matchnr`, `group`, `team1`, `team2`, `matchdate`, `matchtime`, `matchtype`, `evaluationDone`) VALUES
--- --------------------------------------------------------
--- SPIELTAG 1 GRUPPENSPIEL
--- --------------------------------------------------------
+INSERT INTO `usr_web133_1`.`emtipp2016_matches` (`matchnr`, `group`, `team1`, `team2`, `matchdate`, `matchtime`, `matchtype`, `evaluationDone`) VALUES
 (1, 'A', 'FRA', 'ROM', '10.6.', '21:00:00', 'Gruppenspiel', 'F'),
 --
 (2, 'A', 'ALB', 'SUI', '11.6.', '15:00:00', 'Gruppenspiel', 'F'),
@@ -24,9 +15,7 @@ INSERT INTO `emtipp2016`.`emtipp2016_matches` (`matchnr`, `group`, `team1`, `tea
 --
 (11, 'F', 'AUT', 'HUN', '14.6.', '18:00:00', 'Gruppenspiel', 'F'),
 (12, 'F', 'POR', 'ISL', '14.6.', '21:00:00', 'Gruppenspiel', 'F'),
--- --------------------------------------------------------
--- SPIELTAG 2 GRUPPENSPIEL
--- --------------------------------------------------------
+--
 (13, 'B', 'RUS', 'SVK', '15.6.', '15:00:00', 'Gruppenspiel', 'F'),
 (14, 'A', 'ROM', 'SUI', '15.6.', '18:00:00', 'Gruppenspiel', 'F'),
 (15, 'A', 'FRA', 'ALB', '15.6.', '21:00:00', 'Gruppenspiel', 'F'),
@@ -42,9 +31,7 @@ INSERT INTO `emtipp2016`.`emtipp2016_matches` (`matchnr`, `group`, `team1`, `tea
 (22, 'E', 'BEL', 'IRL', '18.6.', '15:00:00', 'Gruppenspiel', 'F'),
 (23, 'F', 'ISL', 'HUN', '18.6.', '18:00:00', 'Gruppenspiel', 'F'),
 (24, 'F', 'POR', 'AUT', '18.6.', '21:00:00', 'Gruppenspiel', 'F'),
--- --------------------------------------------------------
--- SPIELTAG 3 GRUPPENSPIEL
--- --------------------------------------------------------
+--
 (25, 'A', 'SUI', 'FRA', '19.6.', '21:00:00', 'Gruppenspiel', 'F'),
 (26, 'A', 'ROM', 'ALB', '19.6.', '21:00:00', 'Gruppenspiel', 'F'),
 --
@@ -59,22 +46,8 @@ INSERT INTO `emtipp2016`.`emtipp2016_matches` (`matchnr`, `group`, `team1`, `tea
 (33, 'F', 'ISL', 'AUT', '22.6.', '18:00:00', 'Gruppenspiel', 'F'),
 (34, 'F', 'HUN', 'POR', '22.6.', '18:00:00', 'Gruppenspiel', 'F'),
 (35, 'E', 'SWE', 'BEL', '22.6.', '21:00:00', 'Gruppenspiel', 'F'),
-(36, 'E', 'ITA', 'IRL', '22.6.', '21:00:00', 'Gruppenspiel', 'F');
+(36, 'E', 'ITA', 'IRL', '22.6.', '21:00:00', 'Gruppenspiel', 'F'),
 --
--- (37, 'C', 'JPN', 'COL', '24.6.', '22:00:00', 'Gruppenspiel', 'F'),
--- (38, 'C', 'GRE', 'CIV', '24.6.', '22:00:00', 'Gruppenspiel', 'F'),
--- (39, 'D', 'ITA', 'URU', '24.6.', '18:00:00', 'Gruppenspiel', 'F'),
--- (40, 'D', 'CRC', 'ENG', '24.6.', '18:00:00', 'Gruppenspiel', 'F'),
--- (41, 'E', 'HON', 'SUI', '25.6.', '22:00:00', 'Gruppenspiel', 'F'),
--- (42, 'E', 'ECU', 'FRA', '25.6.', '22:00:00', 'Gruppenspiel', 'F'),
--- (43, 'F', 'NGA', 'ARG', '25.6.', '18:00:00', 'Gruppenspiel', 'F'),
--- (44, 'F', 'BIH', 'IRN', '25.6.', '18:00:00', 'Gruppenspiel', 'F'),
--- (45, 'G', 'USA', 'GER', '26.6.', '18:00:00', 'Gruppenspiel', 'F'),
--- (46, 'G', 'POR', 'GHA', '26.6.', '18:00:00', 'Gruppenspiel', 'F'),
--- (47, 'H', 'KOR', 'BEL', '26.6.', '22:00:00', 'Gruppenspiel', 'F'),
--- (48, 'H', 'ALG', 'RUS', '26.6.', '22:00:00', 'Gruppenspiel', 'F');
-
-INSERT INTO `emtipp2016`.`emtipp2016_matches` (`matchnr`, `group`, `team1`, `team2`, `matchdate`, `matchtime`, `matchtype`, `evaluationDone`) VALUES
 (37, '', '', '', '25.6.', '15:00:00', 'Achtelfinale', 'F'),
 (38, '', '', '', '25.6.', '18:00:00', 'Achtelfinale', 'F'),
 (39, '', '', '', '25.6.', '21:00:00', 'Achtelfinale', 'F'),

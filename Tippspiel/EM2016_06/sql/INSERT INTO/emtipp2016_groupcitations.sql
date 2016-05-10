@@ -1,0 +1,16 @@
+INSERT INTO `emtipp2016_groupcitations` (`group`, `citation`, `author`) VALUES
+('Viertelfinale', 'Sie sollen nicht glauben, dass sie Brasilianer sind, nur weil sie aus Brasilien kommen.\r\n', 'Paul Breitner'),
+('C', 'Das da vorn, was aussieht wie eine Klobürste, ist Valderrama.\r\n', 'Bela Rethy'),
+('D', 'England ist so voller Euphorie nach dem Sieg gegen uns, demnächst glauben die auch noch, sie könnten kochen.\r\n', 'Waldemar Hartmann (nach dem 5:1-Sieg Englands in Deutschland)'),
+-- ('G', 'Die Ghanaer erkennen Sie an den gelben Stutzen.', 'Marcel Reif  (beim Länderspiel Deutschland-Ghana)'),
+-- ('Platz3', 'Golden Goal ist scheiße. Man weiß nie, ob man sich noch ein Bier holen soll.', 'Günther Jauch'),
+('Halbfinale', 'Ich hätte nichts gegen ein Endspiel Deutschland gegen Brasilien!\r\n', 'Uwe Seeler'),
+('Stockerl', 'Der Sieger des Endspiels wird Weltmeister.\r\n', 'Franz Beckenbauer'),
+('Achtelfinale', 'Und wie sieht''s in Brasilien aus, dem Mutterland des Fußballs?\r\n', 'Wolf-Dieter Poschmann'),
+('F', 'Der ist noch nicht hier. Der Flug nach Kapstadt war ein Nichtraucherflug. Da konnte er nicht.\r\n', 'Berti Vogts über die verspätete Ankunft von Mario Basler zum Länderspiel in Südafrika, 1997'),
+('E', 'Jetzt wechselt Jamaika den Torhüter aus!\r\n', 'Gerd Rubenbauer (der FIFA-Beauftragte zeigte eine Minute Nachspielzeit an)'),
+('A', 'Mir ist es egal, ob es ein Brasilianer, Pole, Kroate, Norddeutscher oder Süddeutscher ist. Die Leistung entscheidet, nicht irgendeine Blutgruppe.\r\n', 'Christoph Daum'),
+('Tor', 'Ja, Statistiken. Aber welche Statistik stimmt schon? Nach der Statistik ist jeder vierte Mensch ein Chinese, aber hier spielt gar kein Chinese mit.\r\n', 'Werner Hansch'),
+-- ('H', 'Ich habe zu meiner Mannschaft gesagt: Stürmen. Sie haben wohl Türmen verstanden.', 'Aleksander Ristic'),
+('B', 'Hup, Holland, Hup - hat den Vorteil, dass man es auch bei Schluckauf weitersingen kann.\r\n', 'Gerhard Delling'),
+('Finale', 'Wenn die Deutschen bei einer WM gut spielen, dann werden sie Weltmeister, wenn sie schlecht spielen, dann kommen sie ins Finale.\r\n', 'Michel Platini');

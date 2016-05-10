@@ -1,10 +1,4 @@
--- --------------------------------------------------------
-
---
--- Daten fuer Tabelle `emtipp2016_teams`
---
-
-INSERT INTO `emtipp2016`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES
+INSERT INTO `usr_web133_1`.`emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES
 ('Frankreich', 'FRA', 'flagge_frankreich.jpg', 'A'),
 ('Schweiz', 'SUI', 'flagge_schweiz.jpg', 'A'),
 ('Rumänien', 'ROM', 'flagge_rumaenien.jpg', 'A'),
