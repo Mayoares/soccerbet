@@ -53,11 +53,11 @@ function run($adminuserId){
 	$log=new adminlogger();
 	$log->info("run(".$adminuserId.")");
 
-	printDescription();
+	printDescription($adminuserId);
 	printUserList();
 }
 	
-function printDescription(){
+function printDescription($adminuserId){
 	
 	?>
 	<!DOCTYPE html>
