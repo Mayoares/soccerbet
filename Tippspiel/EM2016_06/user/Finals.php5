@@ -359,7 +359,7 @@ function saveMatch($matchnr, $userId, $team1, $team2, $dbutil){
 		else
 		{
 			if($goalsTeam1Str<0 || $goalsTeam2Str<0){
-				return "Toranzahl unter 0"; 
+				return "<p class=\"info\">Toranzahl unter 0</p>"; 
 			} else {
 				insertUpdateFinalMatchTipp($userName, $matchnr, $teamShort1, $teamShort2, $goalsTeam1, $goalsTeam2, $winner);
 				return "";
@@ -447,7 +447,7 @@ function removeFinalMatchInTipps($userName, $matchnr){
 		$log->error($sqlerror);
 		echo "<br><font color='#EE0000'> Ung&uuml;ltiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>";
 	}
-	echo "<br> Tipp f&uuml;r Spiel <b>$matchnr</b> gel&ouml;scht";
+	echo "<br><p class=\"info\"> Tipp f&uuml;r Spiel <b>$matchnr</b> gel&ouml;scht</p>";
 }
 
 function updateInMatches($matchnr, $teamShort1, $teamShort2){

@@ -289,7 +289,7 @@ function saveRanks($userName, $userId, $group, $dbutil){
 	}
 	else
 	{	
-		echo "<font color=\"red\">Platzierungen wurden <b> NICHT </b> gespeichert :(.</font>";
+		echo "<p class=\"info\">Platzierungen wurden <b> NICHT </b> gespeichert :(</p>";
 		echo "<br>";
 	}
 }
@@ -339,7 +339,7 @@ function areTeamsDifferent($team1,$team2,$rank1,$rank2)
 {
 	if($team1==$team2)
 	{
-		echo "<font color=\"red\">Platzierungen m&uuml;ssen eindeutig sein. <b>$team1</b> wurden Platz <b>$rank1</b> und <b>$rank2</b> zugeordnet.</font>";
+		echo "<p class=\"info\">Platzierungen m&uuml;ssen eindeutig sein. <b>$team1</b> wurden Platz <b>$rank1</b> und <b>$rank2</b> zugeordnet.</p>";
 		echo "<br>";
 		return false;
 	}	

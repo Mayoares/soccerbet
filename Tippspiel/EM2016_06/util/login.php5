@@ -10,12 +10,12 @@ if(!isset($_POST["login"]))
 }
 else if(empty($_POST["username"]))
 {
-	echo "<br>Username fehlt. Bitte Eingabe korrigieren.";
+	echo "<br><p class=\"info\">Username fehlt. Bitte Eingabe korrigieren.</p>";
 	promptLogin("");
 }
 else if(empty($_POST["password"]))
 {
-	echo "<br>Passwort fehlt. Bitte Eingabe korrigieren.";
+	echo "<br><p class=\"info\">Passwort fehlt. Bitte Eingabe korrigieren.</p>";
 	promptLogin($_POST["username"]);
 }
 else
@@ -41,7 +41,7 @@ else
 		// Passwort ueberpruefen
 		if($_POST["password"] != $password)
 		{
-			echo "<br>Falsches Passwort. Bitte Eingabe korrigieren.";
+			echo "<br><p class=\"info\">Falsches Passwort. Bitte Eingabe korrigieren.</p>";
 			$postPW=$_POST["password"];
 // 			$mylog = new logger;
 // 			$mylog->error("Post-Passwort=$postPW, DB-Passwort=$password");
