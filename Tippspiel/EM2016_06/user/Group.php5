@@ -56,14 +56,14 @@ echo "</form>";
 
 echo "<br> <br> ";
 
-//$saveMatchErrorText="";
+$saveMatchErrorText="";
 // find last clicked save button and save the entered result
-//for($i=0;$i<100;$i++){
-//	if(isset($_POST["saveMatch-$i"])){
-//		$saveMatchErrorText = saveMatch($i, $userName, $dbutil);
-//		$matchnrPost=$i;
-//	}
-//}
+for($i=0;$i<100;$i++){
+	if(isset($_POST["saveMatch-$i"])){
+		$saveMatchErrorText = saveMatch($i, $userName, $dbutil);
+		$matchnrPost=$i;
+	}
+}
 
 if(isset($_POST["saveMatches"])){
 	// echo "save matches";
@@ -112,13 +112,17 @@ while($array=mysql_fetch_array($sqlResult)){
 			<td> <b>$teamName2</b></td>  
 	<td> <input type=\"Text\" size=\"2\" name=\"$matchnr-GoalsTeam1\" value=\"$tippGoalsTeam1\"></td><td> : </td>
 	<td> <input type=\"Text\" size=\"2\" name=\"$matchnr-GoalsTeam2\" value=\"$tippGoalsTeam2\"></td> ";
-	//echo "<td><input type='submit' name='saveMatch-$matchnr' value='Speichern' class='button'/></td>";
+	//if User=real
+	if($userName=='real')
+	{
+		echo "<td><input type='submit' name='saveMatch-$matchnr' value='Speichern' class='button'/></td>";
+	}
 	if($matchnrPost==$matchnr)
 	{
 		if(strlen($saveMatchErrorText)>0){
 			echo "<td>$saveMatchErrorText <font color=\"#C81B00\"> --> <b>nicht</b> gespeichert! <font></td>";
 		} else {
-			echo "<td> gespeichert! </td>";
+			echo "<td><font color=\"green\"> gespeichert! </font></td>";
 		}
 	}
 	echo "</tr>";

@@ -177,7 +177,7 @@ if(isset($_POST["resetEvaluationDone"]))
 	<h2>Korrektur</h2>
 	<?php
 	echo "<p><form method=\"POST\" action=\"overviewAdmin.php5?userId=$userId\">Spiel Nr.: ";
-	echo "<input type=\"Text\" size=\"1\" name=\"resetMatchNr\" value=\"\"> <input type=\"submit\" name=\"resetEvaluationDone\" value=\"Auswertung r&uuml;ckg&auml;ngig machen\">";
+	echo "<input type=\"Text\" size=\"2\" name=\"resetMatchNr\" value=\"\"> <input type=\"submit\" name=\"resetEvaluationDone\" value=\"Auswertung r&uuml;ckg&auml;ngig machen\">";
 	echo "</form></p>";
 	?>
 </div>

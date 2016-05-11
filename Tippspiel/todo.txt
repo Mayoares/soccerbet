@@ -44,6 +44,7 @@ Fehler/Aenderungen im Skript:
 [x]		Hinweis Spam Anleitung
 [x]		Warnhinweis Gruppenplatzierung gesondert speichern
 [x]		Warnhinweis falsche Eingabe rot hinterlegt
+[x]		Spielauswertung Gruppenphase, Ergebniseingabe 1 Spiel -> Rest auf 0:0
 
 ----------------------------------------------------------------------------------------
 Nice to have:
