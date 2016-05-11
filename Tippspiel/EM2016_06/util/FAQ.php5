@@ -39,8 +39,8 @@ session_start();
 	<hr>
 	<p>Antwort:</p>
 	<p>Wir empfehlen folgende Vorgehensweise:</p>
-	<p>1. Spielplan (PDF) ausdrucken</p>
-	<p>2. Tipps auf ausgedruckten Spielplan notieren (Hinweis: Die 4 Gruppenbesten nach der Tabelle in der Anleitung ausw&auml;hlen)</p>
+	<p>1. <a href="../pdf/Spielplan_EM_2016.pdf">Spielplan</a> ausdrucken</p>
+	<p>2. Tipps auf ausgedruckten Spielplan notieren <br>(Hinweis: Die vier Gruppenbesten nach der Tabelle in der Anleitung ausw&auml;hlen)</p>
 	<p>3. Tipps online eingeben</p>
 	<p>4. Tipps kontrollieren</p>
 	<p>5. FERTIG!</p>

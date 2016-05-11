@@ -41,7 +41,7 @@ function printUserInfo($userName){
 	<p>Viel Erfolg beim Tippen w&uuml;nschen Werke, Mayoar und Robl!
 	<br>
 	<br>
-	<a href='../pdf/Spielplan_EM_2016.pdf'>Download Spielplan als PDF</a>
+	<a href='../pdf/Spielplan_EM_2016.pdf'>Download Spielplan (PDF)</a>
 	<br>
 	<br>
 	<?php

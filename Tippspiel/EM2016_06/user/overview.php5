@@ -46,7 +46,7 @@ if($userName != "test")
 
 echo "<br>";
 echo "<br>";
-echo "<FONT SIZE=5><b>Tippen:</b></FONT>";
+echo "<FONT SIZE=5><b>Tipps abgeben:</b></FONT>";
 echo "<br>";
 echo "<br><a href='Group.php5?userId=$userId&group=A' target='Daten'>Gruppe A</a>";
 echo "<br>";
