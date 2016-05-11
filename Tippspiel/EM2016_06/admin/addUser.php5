@@ -202,7 +202,7 @@ function promptAddUser($adminuserId)
 
 <center>
 
-<img src="../pics/EM 2016 Tippspiel Logo.png" class="image" width="300" alt="Logo_EM_2016">
+<img src="../pics/EM 2016 Tippspiel Logo.PNG" class="image" width="300" alt="Logo_EM_2016">
 
 <div class="block">
 	<?php 

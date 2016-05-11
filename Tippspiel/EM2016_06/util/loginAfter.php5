@@ -6,7 +6,7 @@
 <body>
 <center>
 <h1>Werke's Tippspiel zur Europameisterschaft 2016 in Frankreich</h1>
-<p><img src="../pics/EM 2016 Tippspiel Logo.png" class="image" width="400" alt="Logo_EM_2016">
+<p><img src="../pics/EM 2016 Tippspiel Logo.PNG" class="image" width="400" alt="Logo_EM_2016">
 <h2>
 <a href='../anybody/showUserRanks.php5'>Punktestand</a>
 </h2>
