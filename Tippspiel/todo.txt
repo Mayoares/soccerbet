@@ -40,7 +40,7 @@ Fehler/Aenderungen im Skript:
 [x]		Testlauf
 [ ]		Vor Tippspielstart -> Upload aller Dateien unter Windows (Umlaute)
 [ ]		Erklaerung Gruppenphase 3. Platz in Anleitung und Eingabemaske
-[ ]		FAQ einfügen
+[x]		FAQ einfügen
 [ ]		Hinweis Spam Anleitung
 [x]		Warnhinweis Gruppenplatzierung gesondert speichern
 
