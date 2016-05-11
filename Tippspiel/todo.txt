@@ -39,9 +39,9 @@ Fehler/Aenderungen im Skript:
 [x]		Fehlende UserID in http://mayoar.rivido.de/EM2016_06/admin/overviewAdmin.php5?userId=.php5
 [x]		Testlauf
 [ ]		Vor Tippspielstart -> Upload aller Dateien unter Windows (Umlaute)
-[ ]		Erklaerung Gruppenphase 3. Platz in Anleitung und Eingabemaske
+[x]		Erklaerung Gruppenphase 3. Platz in Anleitung und Eingabemaske
 [x]		FAQ einfügen
-[ ]		Hinweis Spam Anleitung
+[x]		Hinweis Spam Anleitung
 [x]		Warnhinweis Gruppenplatzierung gesondert speichern
 
 ----------------------------------------------------------------------------------------
