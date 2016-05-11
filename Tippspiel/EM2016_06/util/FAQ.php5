@@ -47,7 +47,7 @@ session_start();
 </div>
 
 <div class="block">
-	<h2>Wie kann ich meine Tipps am besten ausdrucken? (Saubere Darstellung)</h2>
+	<h2>Wie kann ich meine Tipps am besten ausdrucken? <br>(Saubere Darstellung)</h2>
 	<hr>
 	<p>Antwort:</p>
 	<p>Wir empfehlen folgende Vorgehensweise:</p>
@@ -56,6 +56,13 @@ session_start();
 	<p>3. 'Frame in neuem Tab &ouml;ffnen'</p>
 	<p>4. Es &ouml;ffnet sich ein neuer Tab im Browser.</p>
 	<p>5. Der Tipp kann jetzt ausgedruckt werden (Ohne Navigation).</p>
+</div>
+
+<div class="block">
+	<h2>Welche Gruppendritten kommen ins Achtelfinale? <br>Wie werden diese zugeordnet?</h2>
+	<hr>
+	<p>Antwort:</p>
+	<p>Siehe dazu in der <a href="../pdf/Werkes Tippspiel EM 2016 - Anleitung.pdf">Anleitung</a> zum Tippspiel die Tabelle mit der Rangliste und Zuordnung auf Seite 3.</p>
 </div>
 
 </center>
