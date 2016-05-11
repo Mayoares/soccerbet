@@ -94,7 +94,7 @@ function printTotalScore($userName){
 	include_once("../util/UserScores.php5");
 	$userScores = new UserScores();
 	$totalscore=$userScores->getScoreSumUser($userName);
-	echo "<h3> Gesamt: <font color=\"red\">$totalscore</font> Punkte</h3>";
+	echo "<h3> Gesamt: <font color=\"#C81B00\">$totalscore</font> Punkte</h3>";
 }
 
 function printGroup($group, $userName){
@@ -243,11 +243,11 @@ function printScore($score){
 
 	if($score != null)
 	{
-		echo "<td>&nbsp; &nbsp; <font color=\"red\"><b> $score </b></td>";
+		echo "<td>&nbsp; &nbsp; <font color=\"#C81B00\"><b> $score </b></td>";
 	}	
 	else
 	{
-		echo "<td>&nbsp; &nbsp; <font color=\"red\"><b> 0 </b></td>";
+		echo "<td>&nbsp; &nbsp; <font color=\"#C81B00\"><b> 0 </b></td>";
 	}
 }
 

@@ -15,7 +15,7 @@ echo "<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css'
 echo "<title>Werke's Tippspiel - Gruppe $group tippen</title>";
 echo "</head>";
 echo "<body>";
-echo "<p class=\"info\">Hinweis zur Tippabgabe:</br><u><b>Platzierungen</b></u> und <u><b>Gruppenspiele</b></u> m&uuml;ssen <u><b>separat</b></u> gespeichert werden.</p>";
+echo "<p class=\"info\">Hinweis zur Tippabgabe:</br><u><b>Platzierungen</b></u> und <u><b>Gruppenspiele</b></u> m&uuml;ssen <u><b>separat</b></u> gespeichert werden!</p>";
 echo "<h2>Gruppe $group</h2>";
 
 $citation->printCitation($group);
@@ -116,7 +116,7 @@ while($array=mysql_fetch_array($sqlResult)){
 	if($matchnrPost==$matchnr)
 	{
 		if(strlen($saveMatchErrorText)>0){
-			echo "<td>$saveMatchErrorText <font color=\"red\"> --> <b>nicht</b> gespeichert! <font></td>";
+			echo "<td>$saveMatchErrorText <font color=\"#C81B00\"> --> <b>nicht</b> gespeichert! <font></td>";
 		} else {
 			echo "<td> gespeichert! </td>";
 		}
@@ -339,7 +339,7 @@ function areTeamsDifferent($team1,$team2,$rank1,$rank2)
 {
 	if($team1==$team2)
 	{
-		echo "<p class=\"info\">Platzierungen m&uuml;ssen eindeutig sein. <b>$team1</b> wurden Platz <b>$rank1</b> und <b>$rank2</b> zugeordnet.</p>";
+		echo "<p class=\"info\">Platzierungen m&uuml;ssen eindeutig sein. <b>$team1</b> wurden Platz <b>$rank1</b> und <b>$rank2</b> zugeordnet!</p>";
 		echo "<br>";
 		return false;
 	}	

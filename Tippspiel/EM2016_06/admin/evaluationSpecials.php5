@@ -49,7 +49,7 @@ while($arrayUser=mysql_fetch_array($ergebnisUser)){
   echo "<td>Platz                          <b>$RankUser</b> </td>";
   echo "<td>Tipp:                          <b>$Team    </b> </td>";
   echo "<td>korrekt: <font color=\"green\"><b>$TeamReal</b> </td>";
-  echo "<td>Punkte:  <font color=\"red\">  <b>$Score   </b> </td>";
+  echo "<td>Punkte:  <font color=\"#C81B00\">  <b>$Score   </b> </td>";
   echo "</tr>";
   $sqlUpdate="UPDATE $table_championtipps SET score='$Score' WHERE user='$User' AND rank='$RankUser'";
   $log=new adminlogger();	

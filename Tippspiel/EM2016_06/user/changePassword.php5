@@ -27,7 +27,7 @@ else
 	{ 
 		if(empty($_POST["passwordNew1"]) or empty($_POST["passwordNew2"]))
 		{
-			echo "<br>Bitte neues Passwort eingeben.";
+			echo "<br><p class=\"info\">Bitte neues Passwort eingeben!</p>";
 			promptChangePassword($userId);
 		}
 		else
@@ -43,7 +43,7 @@ else
 		}
 		else
 		{
-			echo "<br>Eingegebene neue Passw&ouml;rter waren unterschiedlich. Bitte Eingabe wiederholen.";
+			echo "<br><p class=\"info\">Eingegebene neue Passw&ouml;rter waren unterschiedlich! Bitte Eingabe wiederholen!</p>";
 			promptChangePassword($userId);
 		}
 	}
@@ -55,20 +55,20 @@ function promptChangePassword($userid)
 	echo "<form method='POST' action='changePassword.php5?userId=$userid'>";
 	echo "<table>";
 	echo "<tr>";
-	echo "<td>altes Passwort      :	</td><td><input type='password' name='passwordOld' value='$password' disabled='true'></td>";
+	echo "<td>altes Passwort      	:	</td><td><input type='password' name='passwordOld' value='$password' disabled='true'></td>";
 	echo "</tr>";
 	echo "<tr>";
-	echo "<td>neues Passwort      :	</td><td><input type='password' name='passwordNew1' value=''><td>";
+	echo "<td>neues Passwort      	:	</td><td><input type='password' name='passwordNew1' value=''></td>";
 	echo "</tr>";
 	echo "<tr>";
-	echo "<td>neues Passwort(Wdh) :	</td><td><input type='password' name='passwordNew2' value=''><td>";
+	echo "<td>neues Passwort (Wdh.) :	</td><td><input type='password' name='passwordNew2' value=''></td>";
 	echo "</tr>";
+// 	echo "<tr>";
+// 	echo "</tr>";
+// 	echo "<tr>";
+// 	echo "</tr>";
 	echo "<tr>";
-	echo "</tr>";
-	echo "<tr>";
-	echo "</tr>";
-	echo "<tr>";
-	echo "<td><input type='submit' name='changePassword' value='Passwort &auml;ndern'> &nbsp</td>";
+	echo "<td><input type='submit' name='changePassword' value='Passwort &auml;ndern'> &nbsp</td><td></td>";
 	echo "</tr>";
 	}
 
@@ -84,7 +84,7 @@ function changePasswordInDB($userid, $passwordnew)
 	if($result==1)
 	{
 		$log->info("Passwort ge&auml;ndert f&uuml;r User=$username mit UserId=$userid");
-		echo "<br>Passwort ge&auml;ndert.";
+		echo "<br><font color=\"green\">Passwort ge&auml;ndert!</font>";
 		echo "<br>";
 	}
 	else

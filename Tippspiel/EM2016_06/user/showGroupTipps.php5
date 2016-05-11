@@ -73,7 +73,7 @@ function printGroupRanks($group, $userName){
 		$log->info($sql);
 		$sqlResult=mysql_query($sql);
 		$array=mysql_fetch_array($sqlResult);
-		$teamName=$array["name"]; if(!isset($teamName)){$teamName = "<font color=\"red\"><b> FEHLT! </b></font>";}
+		$teamName=$array["name"]; if(!isset($teamName)){$teamName = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
 		if(mysql_error()!=0)
 		{
 			$log->error($sqluser);
@@ -116,8 +116,8 @@ function printGroupMatches($group, $userName){
 		$teamName1=getTeamName($array["team1"]);
 		$teamName2=getTeamName($array["team2"]);
 		
-		$tippGoalsTeam1=getGoals1($userName, $matchnr); if(!isset($tippGoalsTeam1)){$tippGoalsTeam1 = "<font color=\"red\"><b> X </b></font>";}
-		$tippGoalsTeam2=getGoals2($userName, $matchnr); if(!isset($tippGoalsTeam2)){$tippGoalsTeam2 = "<font color=\"red\"><b> X </b></font>";}
+		$tippGoalsTeam1=getGoals1($userName, $matchnr); if(!isset($tippGoalsTeam1)){$tippGoalsTeam1 = "<font color=\"#C81B00\"><b> X </b></font>";}
+		$tippGoalsTeam2=getGoals2($userName, $matchnr); if(!isset($tippGoalsTeam2)){$tippGoalsTeam2 = "<font color=\"#C81B00\"><b> X </b></font>";}
 		echo "<tr>";
 		echo "<td>Spiel $matchnr &nbsp;&nbsp;</td> " .
 				"<td width=100>  $teamName1 </td> <td>-</td> <td width=100> $teamName2&nbsp;&nbsp;&nbsp;</td>" .

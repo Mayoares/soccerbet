@@ -75,10 +75,10 @@ function printFinal($userName, $matchtype){
 			$array=mysql_fetch_array($sqlResult);
 			$teamShort1 = $array["teamX"];
 			$teamShort2 = $array["teamY"];
-			$goalsX = $array["goalsX"]; if(!isset($goalsX)){$goalsX = "<font color=\"red\"><b> X </b></font>";}
-			$goalsY = $array["goalsY"]; if(!isset($goalsY)){$goalsY = "<font color=\"red\"><b> X </b></font>";}
-			$team1=getTeamName($teamShort1); if(!isset($team1)){$team1 = "<font color=\"red\"><b> FEHLT! </b></font>";}
-			$team2=getTeamName($teamShort2); if(!isset($team2)){$team2 = "<font color=\"red\"><b> FEHLT! </b></font>";}
+			$goalsX = $array["goalsX"]; if(!isset($goalsX)){$goalsX = "<font color=\"#C81B00\"><b> X </b></font>";}
+			$goalsY = $array["goalsY"]; if(!isset($goalsY)){$goalsY = "<font color=\"#C81B00\"><b> X </b></font>";}
+			$team1=getTeamName($teamShort1); if(!isset($team1)){$team1 = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
+			$team2=getTeamName($teamShort2); if(!isset($team2)){$team2 = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
 			
 			echo "<tr> <td>Spiel $matchnr &nbsp; &nbsp; &nbsp;</td><td width=100><b> $team1 </b></td><td>-</td><td width=100><b> $team2</b></td>  	<td><b>$goalsX : $goalsY</b></td></tr>";
 		}
@@ -93,9 +93,9 @@ function printChampions($userName){
 	echo "<h2>Spezial-Tipps</h2>";
 	echo "<br>";
 	
-	$champion=getTippedTeamRostrum($userName, 1);  if(!isset($champion)){$champion = "<font color=\"red\"><b> FEHLT! </b></font>";}
-	$vice=getTippedTeamRostrum($userName, 2); if(!isset($vice)){$vice = "<font color=\"red\"><b> FEHLT! </b></font>";}
-	$third=getTippedTeamRostrum($userName, 3); if(!isset($third)){$third = "<font color=\"red\"><b> FEHLT! </b></font>";}
+	$champion=getTippedTeamRostrum($userName, 1);  if(!isset($champion)){$champion = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
+	$vice=getTippedTeamRostrum($userName, 2); if(!isset($vice)){$vice = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
+	$third=getTippedTeamRostrum($userName, 3); if(!isset($third)){$third = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
 	//echo "<table style='font-size:14px'>";
 	echo "<table>";
 	echo "<tr><td>Europameister &nbsp; &nbsp; &nbsp;</td><td><b>$champion</b></td></tr>";
@@ -106,9 +106,9 @@ function printChampions($userName){
 
 function printTopscorer($username){
 	
-	$topscorer=getTippedTopScorer($username); if(strlen($topscorer)==0){$topscorer = "<font color=\"red\"><b> FEHLT! </b></font>";}
+	$topscorer=getTippedTopScorer($username); if(strlen($topscorer)==0){$topscorer = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
 	$tippedTeamShort=getTippedTopScorerTeam($username);
-	$topScorerTeam=getTeamName($tippedTeamShort); if(strlen($topScorerTeam)==0){$topScorerTeam = "<font color=\"red\"><b> FEHLT! </b></font>";}
+	$topScorerTeam=getTeamName($tippedTeamShort); if(strlen($topScorerTeam)==0){$topScorerTeam = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
 	
 	//echo "<table style='font-size:18px'>";
 	echo "<table>";

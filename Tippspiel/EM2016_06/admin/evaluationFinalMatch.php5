@@ -174,7 +174,7 @@ function evaluateFinalMatch($matchnr, $dbutil){
 			echo "<b>$user</b> hat diese Paarung nicht getippt.";
 			$score = 0;
 		}
-		echo " ==> <font color=\"red\"><b> $score </b></font> Punkte.";
+		echo " ==> <font color=\"#C81B00\"><b> $score </b></font> Punkte.";
 		updateScoreInDB($user, $userMatchnr, $score);
 		echo "<br>";
 	} // end while1

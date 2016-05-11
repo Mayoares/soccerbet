@@ -46,7 +46,7 @@ if(isset($_POST["resetEvaluationDone"]))
 
 <img src="../pics/EM 2016 Tippspiel Logo.PNG" class="image" width="300" alt="Logo_EM_2016">
 
-<h1><font color="red">Adminbereich</font></h1>
+<h1><font color="#C81B00">Adminbereich</font></h1>
 
 <?php 
 	echo "<form method=\"POST\" action=\"../util/login.php5\">";
@@ -57,25 +57,10 @@ if(isset($_POST["resetEvaluationDone"]))
 <br>
 
 <div class="block">
-	<h1><font color="#ffffff">Newsletter upload</font></h1>
-	<hr>
-	<?php 
-	echo "<p><form enctype=\"multipart/form-data\" action=\"./UploadAndSendNewsletter.php5?userId=$userId\" method=\"POST\">";
-	echo "<input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"1000000\" />"; // value in Bytes --> 10^6 = 1MB
-	echo "Folgende Datei hochladen: <input name=\"uploadedfile\" type=\"file\" /> &nbsp";
-	echo "<input type=\"submit\" name='uploadNews' value=\"Newsletter hochladen und verschicken\" />";
-	echo "</form></p>";
-	?>
-</div>
-
-<div class="block">
 	<h1><font color="#ffffff">User administrieren</font></h1>
 	<hr>
 	<?php 
-	echo "<p><a href='../anybody/showUserList.php5?userId=$userId'>User Liste ansehen</a></p>";
-//  	echo "<p><a href='../anybody/showUserRanks.php5?userId=$userId'>User Rangliste ansehen</a></p>";
-	
- 	echo "<hr>";
+	echo "<hr>";
 	
 	echo "<p><form method=\"POST\" action=\"addUser.php5?userId=$userId\">";
 	echo "<input type='submit' name='addUser' value='User anlegen'>";
@@ -103,9 +88,25 @@ if(isset($_POST["resetEvaluationDone"]))
 	echo "<input type=\"Text\" size=\"30\" name=\"email\" value=\"\">";
 	echo "<input type='submit' name='sendTestMail' value='Send Test-e-Mail'>";
 	echo "</form></p>";
+	
+	echo "<hr>";
+	
+	echo "<p><a href='../anybody/showUserList.php5?userId=$userId'>User Liste ansehen</a></p>";
+	//  	echo "<p><a href='../anybody/showUserRanks.php5?userId=$userId'>User Rangliste ansehen</a></p>";
 	?>
 </div>
 
+<div class="block">
+	<h1><font color="#ffffff">Newsletter upload</font></h1>
+	<hr>
+	<?php 
+	echo "<p><form enctype=\"multipart/form-data\" action=\"./UploadAndSendNewsletter.php5?userId=$userId\" method=\"POST\">";
+	echo "<input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"1000000\" />"; // value in Bytes --> 10^6 = 1MB
+	echo "Folgende Datei hochladen: <input name=\"uploadedfile\" type=\"file\" /> &nbsp";
+	echo "<input type=\"submit\" name='uploadNews' value=\"Newsletter hochladen und verschicken\" />";
+	echo "</form></p>";
+	?>
+</div>
 
 <!-- <div class="block"> -->
 <!-- 	<h1>Tipps ansehen</h1> -->

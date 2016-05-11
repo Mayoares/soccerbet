@@ -39,10 +39,10 @@ session_start();
 	<hr>
 	<p>Antwort:</p>
 	<p>Wir empfehlen folgende Vorgehensweise:</p>
-	<p>1. <a href="../pdf/Spielplan_EM_2016.pdf">Spielplan</a> ausdrucken</p>
-	<p>2. Tipps auf ausgedruckten Spielplan notieren <br>(Hinweis: Die vier Gruppenbesten nach der Tabelle in der Anleitung ausw&auml;hlen)</p>
-	<p>3. Tipps online eingeben</p>
-	<p>4. Tipps kontrollieren</p>
+	<p>1. <a href="../pdf/Spielplan_EM_2016.pdf">Spielplan</a> ausdrucken.</p>
+	<p>2. Tipps auf ausgedruckten Spielplan notieren <br>(Hinweis: Die vier Gruppenbesten nach der Tabelle in der Anleitung ausw&auml;hlen).</p>
+	<p>3. Tipps online am PC oder Laptop eingeben.</p>
+	<p>4. Tipps kontrollieren.</p>
 	<p>5. FERTIG!</p>
 </div>
 
@@ -53,7 +53,7 @@ session_start();
 	<p>Wir empfehlen folgende Vorgehensweise:</p>
 	<p>1. W&auml;hlen Sie die jeweilige Gruppe, die Endrunde oder die Spezial-Tipps in der Eingabemaske aus.</p> 
 	<p>2. Rechtsklick im jeweiligen Bereich (Achtung: nicht im Navigationsbereich klicken).</p>
-	<p>3. 'Frame in neuem Tab &ouml;ffnen'</p>
+	<p>3. Klick auf 'Frame in neuem Tab &ouml;ffnen'.</p>
 	<p>4. Es &ouml;ffnet sich ein neuer Tab im Browser.</p>
 	<p>5. Der Tipp kann jetzt ausgedruckt werden (Ohne Navigation).</p>
 </div>
