@@ -1,16 +1,15 @@
 INSERT INTO `emtipp2016_groupcitations` (`group`, `citation`, `author`) VALUES
-('Viertelfinale', 'Sie sollen nicht glauben, dass sie Brasilianer sind, nur weil sie aus Brasilien kommen.\r\n', 'Paul Breitner'),
-('C', 'Das da vorn, was aussieht wie eine Klobürste, ist Valderrama.\r\n', 'Bela Rethy'),
-('D', 'England ist so voller Euphorie nach dem Sieg gegen uns, demnächst glauben die auch noch, sie könnten kochen.\r\n', 'Waldemar Hartmann (nach dem 5:1-Sieg Englands in Deutschland)'),
--- ('G', 'Die Ghanaer erkennen Sie an den gelben Stutzen.', 'Marcel Reif  (beim Länderspiel Deutschland-Ghana)'),
--- ('Platz3', 'Golden Goal ist scheiße. Man weiß nie, ob man sich noch ein Bier holen soll.', 'Günther Jauch'),
-('Halbfinale', 'Ich hätte nichts gegen ein Endspiel Deutschland gegen Brasilien!\r\n', 'Uwe Seeler'),
-('Stockerl', 'Der Sieger des Endspiels wird Weltmeister.\r\n', 'Franz Beckenbauer'),
-('Achtelfinale', 'Und wie sieht''s in Brasilien aus, dem Mutterland des Fußballs?\r\n', 'Wolf-Dieter Poschmann'),
-('F', 'Der ist noch nicht hier. Der Flug nach Kapstadt war ein Nichtraucherflug. Da konnte er nicht.\r\n', 'Berti Vogts über die verspätete Ankunft von Mario Basler zum Länderspiel in Südafrika, 1997'),
-('E', 'Jetzt wechselt Jamaika den Torhüter aus!\r\n', 'Gerd Rubenbauer (der FIFA-Beauftragte zeigte eine Minute Nachspielzeit an)'),
 ('A', 'Mir ist es egal, ob es ein Brasilianer, Pole, Kroate, Norddeutscher oder Süddeutscher ist. Die Leistung entscheidet, nicht irgendeine Blutgruppe.\r\n', 'Christoph Daum'),
+('B', 'Wir müssen gewinnen, alles andere ist primär.\r\n', 'Hans Krankl'),
+('C', 'Wir müssen jetzt die Köpfe hochkrempeln – und die Ärmel auch.\r\n', 'Lukas Podolski'),
+('D', 'Der Rasen sieht alt und gebraucht an, irgendwie erinnert er mich an die Kleider der Kelly Family.\r\n', 'Beni Thurnheer, Schweizer Sportreporter'),
+('E', 'Die Schweden sind keine Holländer, das hat man ganz klar gesehen!\r\n', 'Franz Beckenbauer'),
+('F', 'Langsam habe ich das Gefühl, dass ich mit meinem linken Fuß mehr anfangen kann, als nur Bier zu holen.\r\n', 'Thomas Müller'),
+--
 ('Tor', 'Ja, Statistiken. Aber welche Statistik stimmt schon? Nach der Statistik ist jeder vierte Mensch ein Chinese, aber hier spielt gar kein Chinese mit.\r\n', 'Werner Hansch'),
--- ('H', 'Ich habe zu meiner Mannschaft gesagt: Stürmen. Sie haben wohl Türmen verstanden.', 'Aleksander Ristic'),
-('B', 'Hup, Holland, Hup - hat den Vorteil, dass man es auch bei Schluckauf weitersingen kann.\r\n', 'Gerhard Delling'),
-('Finale', 'Wenn die Deutschen bei einer WM gut spielen, dann werden sie Weltmeister, wenn sie schlecht spielen, dann kommen sie ins Finale.\r\n', 'Michel Platini');
+('Stockerl', 'Ich hatte vom Feeling her ein gutes Gefühl.\r\n', 'Andi Möller'),
+--
+('Achtelfinale', 'Brasilianer waren sie noch nie, die Griechen (Der ORF-Kommentator beim Spiel Griechenland-Russland bei der EM 2008) \r\n', 'Thomas König'),
+('Viertelfinale', 'Wir sehen uns auf der Piste wieder (nach dem 0:1 gegen Deutschland bei der EM 2008) \r\n', 'Österreichischer Fan'),
+('Halbfinale', 'Jetzt fährt Boris Becker schon im Bus mit, bald bringen die Spieler ihre Tanten mit (über die Mitfahrer im Bus der deutschen Nationalmannschaft bei der EM 2000)\r\n', 'Eduard Geyer'),
+('Finale', 'Eng (auf die Frage, wie es war, als Bundeskanzler Kohl nach dem EM-Sieg 1996 in die Kabine kam)\r\n', 'Mehmet Scholl');
