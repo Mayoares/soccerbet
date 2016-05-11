@@ -108,8 +108,8 @@ while($array=mysql_fetch_array($sqlResult)){
 			"<td><b>$teamName1</b> </td> <td>-</td> 
 			<td><p><img src=\"../pics/$picname2\" alt=\"Flagge-$teamName2\"></p></td>
 			<td> <b>$teamName2</b></td>  
-	<td> <input type=\"Text\" size=\"1\" name=\"$matchnr-GoalsTeam1\" value=\"$tippGoalsTeam1\"></td><td> : </td>
-	<td> <input type=\"Text\" size=\"1\" name=\"$matchnr-GoalsTeam2\" value=\"$tippGoalsTeam2\"></td> ";
+	<td> <input type=\"Text\" size=\"2\" name=\"$matchnr-GoalsTeam1\" value=\"$tippGoalsTeam1\"></td><td> : </td>
+	<td> <input type=\"Text\" size=\"2\" name=\"$matchnr-GoalsTeam2\" value=\"$tippGoalsTeam2\"></td> ";
 	//echo "<td><input type='submit' name='saveMatch-$matchnr' value='Speichern' class='button'/></td>";
 	if($matchnrPost==$matchnr)
 	{

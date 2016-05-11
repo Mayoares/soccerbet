@@ -1,20 +1,22 @@
-Stand: 09.05.2016
+Stand: 11.05.2016
 Letzte Aenderung: Robl
 
 ----------------------------------------------------------------------------------------
 Offene Fragen:
 ----------------------------------------------------------------------------------------
 
-[ ]		ist es notwendig die Tippuebersicht (Tipps im Detail) auch im Adminbereich darzustellen?
+[x]		ist es notwendig die Tippuebersicht (Tipps im Detail) auch im Adminbereich darzustellen?
 		(bei klick auf 'zurueck' springt man in den Bereich 'Punktestand' (ausserhalb Adminbereich)
+		--> nein!
+[ ]		beim Wechsel von Startseite auf z.B. Punktestand minimale Verschiebung (beachte Logo) warum?
 
 ----------------------------------------------------------------------------------------
 Fehlende Informationen von Werke:
 ----------------------------------------------------------------------------------------
 
-[ ]		Zitate
-[ ]		Spendeninformationen auf Homepage?
-[ ]		Zusaetzliche Informationen zum 3. Platz in der Gruppenphase in Anleitung?
+[x]		Zitate
+[x]		Spendeninformationen auf Homepage? -> gibt noch keine Informationen
+[x]		Zusaetzliche Informationen zum 3. Platz in der Gruppenphase in Anleitung?
 
 ----------------------------------------------------------------------------------------
 Fehler/Aenderungen im Skript:
@@ -33,11 +35,14 @@ Fehler/Aenderungen im Skript:
 [x]		e-Mail mit initialem Passwort mit Umlautefehler (erwartete Ausgabe: ä ö ü wirkliche Ausgabe: �  �  �)
 [x]		e-mail-Adresse von Moose entfernen (Moose will nicht mehr als Organisator in Erscheinung treten)
 [x]		Wem kommen die Spenden zugute? -> Reischacher Sozialfond
-[ ]		beim Wechsel von Startseite auf z.B. Punktestand minimale Verschiebung (beachte Logo) warum?
-[ ]		Spieldaten der UEFA stimmen nicht mit dem Spielplan (PDF, Welt) ueberein
-[ ]		Fehlende UserID in http://mayoar.rivido.de/EM2016_06/admin/overviewAdmin.php5?userId=.php5
-[ ]		Testlauf
+[x]		Spieldaten der UEFA stimmen nicht mit dem Spielplan (PDF, Welt) ueberein
+[x]		Fehlende UserID in http://mayoar.rivido.de/EM2016_06/admin/overviewAdmin.php5?userId=.php5
+[x]		Testlauf
 [ ]		Vor Tippspielstart -> Upload aller Dateien unter Windows (Umlaute)
+[ ]		Erklaerung Gruppenphase 3. Platz in Anleitung und Eingabemaske
+[ ]		FAQ einfügen
+[ ]		Hinweis Spam Anleitung
+[ ]		Warnhinweis Gruppenplatzierung gesondert speichern
 
 ----------------------------------------------------------------------------------------
 Nice to have:

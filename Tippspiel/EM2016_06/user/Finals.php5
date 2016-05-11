@@ -97,8 +97,8 @@ function run($userId, $finaltype, $matchnrPost, $dbutil, $saveMatchErrorText){
 		allTeamsAsOption($sqlTeams2, $tippedTeam2, "Team2");
 		echo "</td>";
 		echo "<td width='100' align='center'>
-		<input type=\"Text\" size=\"1\" name=\"$matchnr-GoalsTeam1\" value=\"$tippedGoals1\"><b> :</b>
-		<input type=\"Text\" size=\"1\" name=\"$matchnr-GoalsTeam2\" value=\"$tippedGoals2\">";
+		<input type=\"Text\" size=\"2\" name=\"$matchnr-GoalsTeam1\" value=\"$tippedGoals1\"><b> :</b>
+		<input type=\"Text\" size=\"2\" name=\"$matchnr-GoalsTeam2\" value=\"$tippedGoals2\">";
 		echo "</td>";
 		echo "<td><input type='submit' name='saveMatch-$matchnr' value='Speichern'></td>";
 		echo "</form>";

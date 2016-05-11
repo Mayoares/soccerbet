@@ -38,6 +38,7 @@ echo "<br>";
 
 echo "<br><a href='./userInfo.php5?userId=$userId' target='Daten'>Home</a>";
 echo "<br>";
+echo "<br>";
 if($userName != "test")
 {
 	echo "<a href='./changePassword.php5?userId=$userId' target='Daten'>Passwort &auml;ndern</a>";
@@ -48,13 +49,20 @@ echo "<br>";
 echo "<FONT SIZE=5><b>Tippen:</b></FONT>";
 echo "<br>";
 echo "<br><a href='Group.php5?userId=$userId&group=A' target='Daten'>Gruppe A</a>";
+echo "<br>";
 echo "<br><a href='Group.php5?userId=$userId&group=B' target='Daten'>Gruppe B</a>";
+echo "<br>";
 echo "<br><a href='Group.php5?userId=$userId&group=C' target='Daten'>Gruppe C</a>";
+echo "<br>";
 echo "<br><a href='Group.php5?userId=$userId&group=D' target='Daten'>Gruppe D</a>";
+echo "<br>";
 echo "<br><a href='Group.php5?userId=$userId&group=E' target='Daten'>Gruppe E</a>";
+echo "<br>";
 echo "<br><a href='Group.php5?userId=$userId&group=F' target='Daten'>Gruppe F</a>";
-//echo "<br><a href='Group.php5?userId=$userId&group=G' target='Daten'>Gruppe G</a>";
-//echo "<br><a href='Group.php5?userId=$userId&group=H' target='Daten'>Gruppe H</a>";
+// echo "<br>";
+// echo "<br><a href='Group.php5?userId=$userId&group=G' target='Daten'>Gruppe G</a>";
+// echo "<br>";
+// echo "<br><a href='Group.php5?userId=$userId&group=H' target='Daten'>Gruppe H</a>";
 echo "<br>";
 echo "<br><a href='Finals.php5?userId=$userId' target='Daten'>Endrunde</a>";
 echo "<br>";
