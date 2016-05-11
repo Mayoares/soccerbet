@@ -60,7 +60,6 @@ if(isset($_POST["resetEvaluationDone"]))
 	<h1><font color="#ffffff">User administrieren</font></h1>
 	<hr>
 	<?php 
-	echo "<hr>";
 	
 	echo "<p><form method=\"POST\" action=\"addUser.php5?userId=$userId\">";
 	echo "<input type='submit' name='addUser' value='User anlegen'>";
