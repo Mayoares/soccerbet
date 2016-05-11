@@ -38,7 +38,7 @@ function printUserInfo($userName){
 	echo "<h1>Hallo $firstname $lastname,</h1>";
 	?>
 	<p>herzlich Willkommen bei Werke's Tippspiel zur Europameisterschaft 2016 in Frankreich!<p>
-	<p>Viel Erfolg beim Tippen w&uuml;nschen Werke, Mayoar und Robl!
+	<p>Viel Erfolg beim Tippen w&uuml;nschen Werke, Mayoar und R&oslash;bl!
 	<br>
 	<br>
 	<a href='../pdf/Spielplan_EM_2016.pdf'>Download Spielplan (PDF)</a>
@@ -68,7 +68,7 @@ function printUserInfo($userName){
 	echo "<h3>Administrator</h3>";
 	echo "<table> <colgroup> <col width='150'> <col width='250'></colgroup>";
 	echo "<tr>";
-	echo "<td>Mail and Robl:</td><td><a href='mailto:robert.werkestippspiel@gmail.com' target='_top'>robert.werkestippspiel@gmail.com</a></td>";
+	echo "<td>Mail and R&oslash;bl:</td><td><a href='mailto:robert.werkestippspiel@gmail.com' target='_top'>robert.werkestippspiel@gmail.com</a></td>";
 	echo "</tr>";
 	//echo "<tr>";
 	//echo "<td>Andreas Grotemeyer</td><td><a href='mailto:robert.werkestippspiel@gmail.com' target='_top'>mayoar.werkestippspiel@gmail.com</a></td>";
