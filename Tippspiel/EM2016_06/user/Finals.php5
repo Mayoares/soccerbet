@@ -18,6 +18,8 @@ else
 	echo "<title>Werke's Tippspiel - Endrunde tippen</title>";
 	echo "</head>";
 	echo "<body>";
+	echo "<p class=\"info\">Hinweis zur Tippabgabe:</br><u><b>Paarungen</b></u> und <u><b>Ergebnisse</b></u> m&uuml;ssen alle <i><u><b>einzeln</b></u></i> abgespeichert werden!</p>";
+	
 	
 	$saveMatchErrorText="";
 	for($i=0;$i<100;$i++){

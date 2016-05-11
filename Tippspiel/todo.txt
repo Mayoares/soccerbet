@@ -42,7 +42,7 @@ Fehler/Aenderungen im Skript:
 [ ]		Erklaerung Gruppenphase 3. Platz in Anleitung und Eingabemaske
 [ ]		FAQ einfügen
 [ ]		Hinweis Spam Anleitung
-[ ]		Warnhinweis Gruppenplatzierung gesondert speichern
+[x]		Warnhinweis Gruppenplatzierung gesondert speichern
 
 ----------------------------------------------------------------------------------------
 Nice to have:

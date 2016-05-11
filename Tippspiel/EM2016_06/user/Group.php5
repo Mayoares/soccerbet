@@ -15,7 +15,9 @@ echo "<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css'
 echo "<title>Werke's Tippspiel - Gruppe $group tippen</title>";
 echo "</head>";
 echo "<body>";
+echo "<p class=\"info\">Hinweis zur Tippabgabe:</br><u><b>Platzierungen</b></u> und <u><b>Gruppenspiele</b></u> m&uuml;ssen <u><b>separat</b></u> gespeichert werden.</p>";
 echo "<h2>Gruppe $group</h2>";
+
 $citation->printCitation($group);
 echo "<br>";
 

@@ -46,12 +46,12 @@ function printUserInfo($userName){
 	<br>
 	<?php
 	//echo "<p class=\"info\"><font color=\"red\"><u>Hinweis</u>: Die Spielergebnistipps muessen alle <i><u><b>einzeln</b></u></i> abgespeichert werden!</font></p>";
-	echo "<p class=\"info\">Obacht!:</br>Die Paarungen und Ergebnisse in der <u><b>Endrunde</b></u> (ab dem Achtelfinale) m&uuml;ssen alle <i><u><b>einzeln</b></u></i> abgespeichert werden!
-		Das hei&szlig;t: Erst die beiden Mannschaften eines Endrundenspiels ausw&auml;hlen, das Ergebnis eingeben und abspeichern, danach die n&auml;chsten Begegnungen tippen! </p>";
+	echo "<p class=\"info\">Hinweis zur Tippabgabe in der Gruppenphase:</br><u><b>Platzierungen</b></u> und <u><b>Gruppenspiele</b></u> m&uuml;ssen <u><b>separat</b></u> gespeichert werden.</p>";
+	echo "<p class=\"info\">Hinweis zur Tippabgabe in der Endrunde:</br><u><b>Paarungen</b></u> und <u><b>Ergebnisse</b></u> m&uuml;ssen alle <i><u><b>einzeln</b></u></i> abgespeichert werden!</p>";
 	//
 	// Kontakt
 	//
-	echo "<br>";
+// 	echo "<br>";
 	echo "<h2>Kontakt</h2>";
 	//
 	echo "<h3>Organisator</h3>";
