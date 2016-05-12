@@ -68,10 +68,3 @@ INSERT INTO `usr_web133_1`.`emtipp2016_matches` (`matchnr`, `group`, `team1`, `t
 -- (, '', '', '', '', '', 'Platz3', 'F'),
 --
 (51, '', '', '', '10.7.', '21:00:00', 'Finale', 'F');
-
-
-
-
-
-
-
