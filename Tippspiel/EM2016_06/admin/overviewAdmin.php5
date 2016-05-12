@@ -56,6 +56,9 @@ if(isset($_POST["resetEvaluationDone"]))
 
 <br>
 
+<div class="section group">
+	<div class="col span_1_of_3">
+	
 <div class="block">
 	<h1><font color="#ffffff">User administrieren</font></h1>
 	<hr>
@@ -95,6 +98,9 @@ if(isset($_POST["resetEvaluationDone"]))
 	?>
 </div>
 
+	</div>
+	<div class="col span_1_of_3">
+
 <div class="block">
 	<h1><font color="#ffffff">Newsletter upload</font></h1>
 	<hr>
@@ -107,18 +113,22 @@ if(isset($_POST["resetEvaluationDone"]))
 	?>
 </div>
 
-<!-- <div class="block"> -->
-<!-- 	<h1>Tipps ansehen</h1> -->
-<!-- 	<hr> -->
+<!-- <!-- <div class="block"> -->
+<!-- <!-- 	<h1>Tipps ansehen</h1> -->
+<!-- <!-- 	<hr> -->
 	<?php 
-// 	echo "<p><a href='../anybody/showAllUsersGroupTipps.php5?userId=$userId'>Gruppenspieltipps</a></p>";
-// 	echo "<p><a href='../anybody/showAllUsersGroupRankTipps.php5?userId=$userId'>Platzierungstipps</a></p>";
-// 	echo "<p><a href='../anybody/showAllUsersFinalmatchTipps.php5?userId=$userId'>Finalspieltipps</a></p>";
-// 	echo "<p><a href='../anybody/showAllUsersSpecialTipps.php5?userId=$userId'>Spezialtipps</a></p>";
-// 	?>
-<!-- </div> -->
+// // 	echo "<p><a href='../anybody/showAllUsersGroupTipps.php5?userId=$userId'>Gruppenspieltipps</a></p>";
+// // 	echo "<p><a href='../anybody/showAllUsersGroupRankTipps.php5?userId=$userId'>Platzierungstipps</a></p>";
+// // 	echo "<p><a href='../anybody/showAllUsersFinalmatchTipps.php5?userId=$userId'>Finalspieltipps</a></p>";
+// // 	echo "<p><a href='../anybody/showAllUsersSpecialTipps.php5?userId=$userId'>Spezialtipps</a></p>";
+// // 	?>
+<!-- <!-- </div> -->
 
-<p class='info'>Bitte hier nichts klicken, bevor es wirklich soweit ist!</p>
+<!-- <p class='info'>Bitte hier nichts klicken, bevor es wirklich soweit ist!</p> -->
+
+
+	</div>
+	<div class="col span_1_of_3">
 
 <div class="block">
 	<h1><font color="#ffffff">Auswertung</font></h1>
@@ -180,6 +190,9 @@ if(isset($_POST["resetEvaluationDone"]))
 	echo "<input type=\"Text\" size=\"2\" name=\"resetMatchNr\" value=\"\"> <input type=\"submit\" name=\"resetEvaluationDone\" value=\"Auswertung r&uuml;ckg&auml;ngig machen\">";
 	echo "</form></p>";
 	?>
+</div>
+
+	</div>
 </div>
 
 <?php

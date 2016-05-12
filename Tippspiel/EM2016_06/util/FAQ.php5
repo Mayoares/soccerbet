@@ -34,7 +34,9 @@ session_start();
 <h1>FAQ - H&auml;ufig gestellte Fragen</h1>
 <br>
 
-<div class="block">
+<div class="section group">
+	<div class="col span_1_of_3">
+	<div class="block">
 	<h2>Wie gehe ich beim Tippspiel am besten vor?</h2>
 	<hr>
 	<p>Antwort:</p>
@@ -44,9 +46,10 @@ session_start();
 	<p>3. Tipps online am PC oder Laptop eingeben.</p>
 	<p>4. Tipps kontrollieren.</p>
 	<p>5. FERTIG!</p>
-</div>
-
-<div class="block">
+	</div>
+	</div>
+	<div class="col span_1_of_3">
+	<div class="block">
 	<h2>Wie kann ich meine Tipps am besten ausdrucken? <br>(Saubere Darstellung)</h2>
 	<hr>
 	<p>Antwort:</p>
@@ -56,13 +59,16 @@ session_start();
 	<p>3. Klick auf 'Frame in neuem Tab &ouml;ffnen'.</p>
 	<p>4. Es &ouml;ffnet sich ein neuer Tab im Browser.</p>
 	<p>5. Der Tipp kann jetzt ausgedruckt werden (Ohne Navigation).</p>
-</div>
-
-<div class="block">
+	</div>
+	</div>
+	<div class="col span_1_of_3">
+	<div class="block">
 	<h2>Welche Gruppendritten kommen ins Achtelfinale? <br>Wie werden diese zugeordnet?</h2>
 	<hr>
 	<p>Antwort:</p>
 	<p>Siehe dazu in der <a href="../pdf/Werkes Tippspiel EM 2016 - Anleitung.pdf">Anleitung</a> zum Tippspiel die Tabelle mit der Rangliste und Zuordnung auf Seite 3.</p>
+</div>
+	</div>
 </div>
 
 </center>
