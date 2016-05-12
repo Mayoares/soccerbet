@@ -9,6 +9,8 @@ Offene Fragen:
 		(bei klick auf 'zurueck' springt man in den Bereich 'Punktestand' (ausserhalb Adminbereich)
 		--> nein!
 [ ]		beim Wechsel von Startseite auf z.B. Punktestand minimale Verschiebung (beachte Logo) warum?
+[ ]		Was ist wenn sich einer den Login-Bereich als Lesezeichen hinzufuegt? Er kann nach Tippeingabeschluss
+		immer noch tippen! --> Ordner 'user' loeschen nach Tippeingabeschluss?
 
 ----------------------------------------------------------------------------------------
 Fehlende Informationen von Werke:
@@ -46,6 +48,7 @@ Fehler/Aenderungen im Skript:
 [x]		Warnhinweis falsche Eingabe rot hinterlegt
 [x]		Spielauswertung Gruppenphase, Ergebniseingabe 1 Spiel -> Rest auf 0:0
 [x]		Versionsnummer in Anleitung und Regelwerk
+[x]		Admin-Login
 
 ----------------------------------------------------------------------------------------
 Nice to have:
