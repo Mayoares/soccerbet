@@ -69,7 +69,7 @@ function run($userId){
 		
 	echo "<form action='Champions.php5?userId=$userId' method='POST'>";
 	echo "<table>";	
-	echo "<tr>";	
+	echo "<tr class='border_bottom'>";	
 	echo "  <td> <b>Europameister</b> </td>";
 	echo "	<td bgcolor=slategray>";
 	echo "    <select name='rank1'>";
@@ -77,7 +77,7 @@ function run($userId){
 	echo "    </select>";
 	echo "	</td>";
 	echo "</tr>";	
-	echo "<tr>";	
+	echo "<tr class='border_bottom'>";	
 	echo "	<td> <b>Zweitplatzierter</b> ";
 	echo "	<td bgcolor=slategray>";
 	echo "    <select name='rank2'>";
@@ -86,7 +86,7 @@ function run($userId){
 	echo "	</td>";
 	echo "</tr>";	
 	/*
-	echo "<tr>";	
+	echo "<tr class='border_bottom'>";
 	echo "	<td> <b>Platz 3</b> ";
 	echo "	<td bgcolor=slategray>";
 	echo "    <select name='rank3'>";
@@ -128,13 +128,13 @@ function run($userId){
 
 	echo "<form action='Champions.php5?userId=$userId' method='POST'>";
 	echo "<table>";	
-	echo "<tr>";	
+	echo "<tr class='border_bottom'>";	
 	echo "  <td> <b>Spieler</b> </td>";
 	echo "  <td> ";
 	echo "	<input type='text' name='topscorer' value='$tippTopscorer'>";
 	echo "	</td>";
 	echo "</tr>";	
-	echo "<tr>";	
+	echo "<tr class='border_bottom'>";
 	echo "  <td> <b>Team</b> </td>";
 	allTeamsAsOption($sqlTeams, $tippedTeam);
 	echo "	</td>";

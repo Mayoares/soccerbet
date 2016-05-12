@@ -76,6 +76,10 @@ td {
  	background-color: #e0e0e0;
 }
 
+tr.border_bottom td {
+  border-bottom:2pt solid #FFFFFF;
+}
+
 ol {
 	color: #0096ff;
 	list-style: none;

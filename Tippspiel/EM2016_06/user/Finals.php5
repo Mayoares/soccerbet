@@ -89,7 +89,7 @@ function run($userId, $finaltype, $matchnrPost, $dbutil, $saveMatchErrorText){
 		}*/
 		
 		echo "</tr>";
-		echo "<tr>";
+		echo "<tr class='border_bottom'>";
 		echo "<td> $date </td><td> $formattedTime </td><td> Spiel $matchnr </td> ";
 		echo "<td bgcolor=slategray><select name='$matchnr-Team1'>";
 		allTeamsAsOption($sqlTeams1, $tippedTeam1, "Team1");
