@@ -1,4 +1,4 @@
-Stand: 11.05.2016
+Stand: 12.05.2016
 Letzte Aenderung: Robl
 
 ----------------------------------------------------------------------------------------
@@ -15,7 +15,7 @@ Fehlende Informationen von Werke:
 ----------------------------------------------------------------------------------------
 
 [x]		Zitate
-[x]		Spendeninformationen auf Homepage? -> gibt noch keine Informationen
+[ ]		Spendeninformationen auf Homepage? -> gibt noch keine Informationen
 [x]		Zusaetzliche Informationen zum 3. Platz in der Gruppenphase in Anleitung?
 
 ----------------------------------------------------------------------------------------
@@ -45,6 +45,7 @@ Fehler/Aenderungen im Skript:
 [x]		Warnhinweis Gruppenplatzierung gesondert speichern
 [x]		Warnhinweis falsche Eingabe rot hinterlegt
 [x]		Spielauswertung Gruppenphase, Ergebniseingabe 1 Spiel -> Rest auf 0:0
+[x]		Versionsnummer in Anleitung und Regelwerk
 
 ----------------------------------------------------------------------------------------
 Nice to have:

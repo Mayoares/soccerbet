@@ -57,7 +57,7 @@ function printUserInfo($userName){
 	echo "<h3>Organisator</h3>";
 	echo "<table> <colgroup> <col width='150'> <col width='250'></colgroup>";
 	echo "<tr>";
-	echo "<td>Mail an Werke:</td><td><a href='mailto:atomkraftwerke@web.de' target='_top'>atomkraftwerke@web.de</a></td>";
+	echo "<td>Mail an Werke:</td><td><a href='mailto:atomkraftwerke@gmx.de' target='_top'>atomkraftwerke@gmx.de</a></td>";
 	echo "</tr>";
 // 	echo "<tr>";
 // 	echo "<td>Richard Mooshammer</td><td>???</td>";

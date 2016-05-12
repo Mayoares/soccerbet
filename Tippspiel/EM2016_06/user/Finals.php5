@@ -112,7 +112,7 @@ function run($userId, $finaltype, $matchnrPost, $dbutil, $saveMatchErrorText){
 				echo "<td> <font color=\"green\"> Ergebnis erfolgreich gespeichert :) <font> </td>";
 			}
 		}
-		echo "</tr>";	
+		echo "</tr>";
 	}
 	echo "</table>";
 	echo "<br>";
