@@ -1,4 +1,4 @@
-INSERT INTO `usr_web133_1`.`emtipp2016_matches` (`matchnr`, `group`, `team1`, `team2`, `matchdate`, `matchtime`, `matchtype`, `evaluationDone`) VALUES
+INSERT INTO `emtipp2016_matches` (`matchnr`, `group`, `team1`, `team2`, `matchdate`, `matchtime`, `matchtype`, `evaluationDone`) VALUES
 (1, 'A', 'FRA', 'ROM', '10.6.', '21:00:00', 'Gruppenspiel', 'F'),
 --
 (2, 'A', 'ALB', 'SUI', '11.6.', '15:00:00', 'Gruppenspiel', 'F'),
