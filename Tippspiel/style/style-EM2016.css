@@ -202,11 +202,31 @@ p.info {
 	width: 32.2%;
 }
 
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+/*  GO FULL WIDTH AT LESS THAN 860 PIXELS */
 
 @media only screen and (max-width: 860px) {
 	.col { margin: 1% 0 1% 0%;}
 	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+}
+
+/*  GRID OF TWO  */
+.span_2_of_2 {
+	width: 100%;
+}
+.span_1_of_2 {
+	width: 49.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 860 PIXELS */
+
+@media only screen and (max-width: 860px) {
+	.col { 
+		margin: 1% 0 1% 0%;
+	}
+}
+
+@media only screen and (max-width: 860px) {
+	.span_2_of_2, .span_1_of_2 { width: 100%; }
 }
 
 /*----------------*/

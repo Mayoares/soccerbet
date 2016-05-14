@@ -1,4 +1,4 @@
-Stand: 12.05.2016
+Stand: 14.05.2016
 Letzte Aenderung: Robl
 
 ----------------------------------------------------------------------------------------
@@ -11,6 +11,8 @@ Offene Fragen:
 [ ]		beim Wechsel von Startseite auf z.B. Punktestand minimale Verschiebung (beachte Logo) warum?
 [ ]		Was ist wenn sich einer den Login-Bereich als Lesezeichen hinzufuegt? Er kann nach Tippeingabeschluss
 		immer noch tippen! --> Ordner 'user' loeschen nach Tippeingabeschluss?
+[ ]		Was ist, wenn beim User anlegen, e-Mail falsch angegeben wurde?
+[ ]		Admin-Login notwendig?
 
 ----------------------------------------------------------------------------------------
 Fehlende Informationen von Werke:
