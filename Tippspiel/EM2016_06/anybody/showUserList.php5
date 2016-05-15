@@ -111,7 +111,7 @@ function printUserList(){
 		$lastname = mysql_result($resultUsers, $i, "lastname");
 		if($name!='admin' && $name!='real' && $name!='test')
 		{
-			$arrayUserList[] = array('username' => $name, 'firstname' => $firstname, 'lastname' => $lastname, 'score' => $scoreSum);
+			$arrayUserList[] = array('username' => $name, 'firstname' => $firstname, 'lastname' => $lastname);
 		}
 	}
 	
@@ -126,7 +126,7 @@ function printUserList(){
 	echo "<table border=\"3\" frame=\"box\">";
 	echo "<thead>";
 	echo "<tr>";
-	echo "<th>Nr</th><th>User</th><th>Vorname</th><th>Nachname</th>";
+	echo "<th>User</th><th>Vorname</th><th>Nachname</th>";
 	echo "</tr>";
 	echo "</thead>";
 	$lastScore = 1000;
@@ -139,7 +139,6 @@ function printUserList(){
 }
 function printUserRow($nr, $user, $firstname, $lastname){
 	echo "<tr>";
-	echo "<td><div align=\"center\"> $nr </div></td>";
 	echo "<td><b>$user  </b></td>";
 	echo "<td>$firstname</td>";
 	echo "<td>$lastname</td>";
