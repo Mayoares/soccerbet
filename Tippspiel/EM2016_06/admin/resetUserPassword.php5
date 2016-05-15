@@ -87,7 +87,7 @@ function resetUserPassword($resetUsername, $adminuserId)
 	}
 	else
 	{
-		$betreff = "Werke's Tippspiel - Passwort zurückgesetzt";
+		$betreff = "Werke's Tippspiel - Neues Passwort";
 		$kopf = "From: werkestippspiel\n";
 		$kopf .= "MIME-Version: 1.0\n";
 		$kopf .= "Content-Type: multipart/mixed; boundary=$id\n\n";
@@ -96,9 +96,9 @@ function resetUserPassword($resetUsername, $adminuserId)
 		$kopf .= "Content-Type: text/plain\n";
 		$kopf .= "Content-Transfer-Encoding: 8bit\n\n";
 		// Inhalt der E-Mail (Body)
-		$kopf .= "Für dich wurde ein neues Passwort generiert.";
+		$kopf .= "FÃ¼r dich wurde ein neues Passwort generiert.";
 		$kopf .= "\n\nDein neues Passwort lautet: $password";
-		$kopf .= "\n\nBitte bald einloggen und ändern.";
+		$kopf .= "\n\nBitte bald einloggen und Ã¤ndern.";
 		$kopf .= "\n\nDirektlink zum Tippspiel: http://mayoar.rivido.de";
 		$kopf .= "\n--$id";
 		// Body Ende
