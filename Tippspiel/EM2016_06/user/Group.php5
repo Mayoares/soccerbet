@@ -38,8 +38,6 @@ while($array=mysql_fetch_array($sqlResult))
 {
 	$teamName=$array["name"];
 	$table_groupranktipps=dbschema::groupranktipps;
-	$log=new logger();
-	$log->info($sqluser);
 	$tippedTeam = getTeamOnRank($userName, $group, $rankCnt, $dbutil);
 	echo "<tr class='border_bottom'>";
 	echo "<td>$rankCnt.</td>";

@@ -76,7 +76,7 @@ function printGroupRanks($group, $userName){
 		$teamName=$array["name"]; if(!isset($teamName)){$teamName = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
 		if(mysql_error()!=0)
 		{
-			$log->error($sqluser);
+			$log->error($sql);
 		}
 		echo "<tr>";
 		echo "<td> $rank. </td><td><b> $teamName </b></td><td> </td>";
