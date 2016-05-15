@@ -55,6 +55,7 @@ echo "</form>";
 echo "<br> <br> ";
 
 $saveMatchErrorText="";
+$matchnrPost=0;
 // find last clicked save button and save the entered result
 for($i=0;$i<100;$i++){
 	if(isset($_POST["saveMatch-$i"])){
@@ -114,13 +115,13 @@ while($array=mysql_fetch_array($sqlResult)){
 	if($userName=='real')
 	{
 		echo "<td><input type='submit' name='saveMatch-$matchnr' value='Speichern' class='button'/></td>";
-	}
-	if($matchnrPost==$matchnr)
-	{
-		if(strlen($saveMatchErrorText)>0){
-			echo "<td>$saveMatchErrorText <font color=\"#C81B00\"> --> <b>nicht</b> gespeichert! <font></td>";
-		} else {
-			echo "<td><font color=\"green\"> gespeichert! </font></td>";
+		if($matchnrPost==$matchnr)
+		{
+			if(strlen($saveMatchErrorText)>0){
+				echo "<td>$saveMatchErrorText <font color=\"#C81B00\"> --> <b>nicht</b> gespeichert! <font></td>";
+			} else {
+				echo "<td><font color=\"green\"> gespeichert! </font></td>";
+			}
 		}
 	}
 	echo "</tr>";
