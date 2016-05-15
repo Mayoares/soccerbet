@@ -33,7 +33,7 @@ function printUserInfo($userName){
 	<center>
 	<img src="../pics/EM 2016 Tippspiel Logo.PNG" class="image" width="300" alt="Logo_EM_2016">
 	</center>
-	<?
+	<?php
 	echo "</br>";
 	echo "<h1>Hallo $firstname $lastname,</h1>";
 	?>
