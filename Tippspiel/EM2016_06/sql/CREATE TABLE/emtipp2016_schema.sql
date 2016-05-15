@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `emtipp2016_groupcitations` (
   `group` varchar(20) COLLATE latin1_german1_ci NOT NULL,
   `citation` varchar(1000) COLLATE latin1_german1_ci NOT NULL,
   `author` varchar(100) COLLATE latin1_german1_ci NOT NULL,
-  KEY `citation` (`citation`)
+  UNIQUE KEY `group` (`group`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
 
 --
