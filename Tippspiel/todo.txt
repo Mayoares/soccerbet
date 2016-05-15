@@ -1,5 +1,11 @@
-Stand: 14.05.2016
+Stand: 15.05.2016
 Letzte Aenderung: Robl
+
+----------------------------------------------------------------------------------------
+TODO nach Eingabeschluss
+----------------------------------------------------------------------------------------
+
+[ ]		Ordner "user" löschen bzw in "user-after" umbenenen (nur auf dem Server) 
 
 ----------------------------------------------------------------------------------------
 Offene Fragen:
@@ -8,11 +14,13 @@ Offene Fragen:
 [x]		ist es notwendig die Tippuebersicht (Tipps im Detail) auch im Adminbereich darzustellen?
 		(bei klick auf 'zurueck' springt man in den Bereich 'Punktestand' (ausserhalb Adminbereich)
 		--> nein!
-[ ]		beim Wechsel von Startseite auf z.B. Punktestand minimale Verschiebung (beachte Logo) warum?
-[ ]		Was ist wenn sich einer den Login-Bereich als Lesezeichen hinzufuegt? Er kann nach Tippeingabeschluss
+[x]		Was ist wenn sich einer den Login-Bereich als Lesezeichen hinzufuegt? Er kann nach Tippeingabeschluss
 		immer noch tippen! --> Ordner 'user' loeschen nach Tippeingabeschluss?
-[ ]		Was ist, wenn beim User anlegen, e-Mail falsch angegeben wurde?
-[ ]		Admin-Login notwendig?
+		--> Ordner user in user-after umbenennen (siehe oben)
+[x]		Was ist, wenn beim User anlegen, e-Mail falsch angegeben wurde? 
+		--> User löschen --> User neu anlegen
+[x]		Admin-Login notwendig? 
+		--> kein Lesezeichen notwendig nach Eingabeschluss
 
 ----------------------------------------------------------------------------------------
 Fehlende Informationen von Werke:
@@ -59,3 +67,4 @@ Nice to have:
 [ ]		bei Eingabe der Tipps fuer Endrundenspiele: nach speichern nach oben springen aendern (store)
 [ ]		Automatische Auswertung des Torschuetzenkoenigs (nicht mehr manuell)
 [ ]		Login: Coursor bereits im Feld Benutzername
+[ ]		beim Wechsel von Startseite auf z.B. Punktestand minimale Verschiebung (beachte Logo) warum?
