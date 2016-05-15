@@ -68,3 +68,4 @@ Nice to have:
 [ ]		Automatische Auswertung des Torschuetzenkoenigs (nicht mehr manuell)
 [ ]		Login: Coursor bereits im Feld Benutzername
 [ ]		beim Wechsel von Startseite auf z.B. Punktestand minimale Verschiebung (beachte Logo) warum?
+[ ]		keine .DS_STORE files (globales .gitignore)
