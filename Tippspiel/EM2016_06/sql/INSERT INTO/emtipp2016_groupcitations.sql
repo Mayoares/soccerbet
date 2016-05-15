@@ -2,7 +2,7 @@ INSERT INTO `emtipp2016_groupcitations` (`group`, `citation`, `author`) VALUES
 ('A', 'Mir ist es egal, ob es ein Brasilianer, Pole, Kroate, Norddeutscher oder Süddeutscher ist. Die Leistung entscheidet, nicht irgendeine Blutgruppe.\r\n', 'Christoph Daum'),
 ('B', 'Wir müssen gewinnen, alles andere ist primär.\r\n', 'Hans Krankl'),
 ('C', 'Wir müssen jetzt die Köpfe hochkrempeln – und die Ärmel auch.\r\n', 'Lukas Podolski'),
-('D', 'Der Rasen sieht alt und gebraucht an, irgendwie erinnert er mich an die Kleider der Kelly Family.\r\n', 'Beni Thurnheer, Schweizer Sportreporter'),
+('D', 'Der Rasen sieht alt und gebraucht aus, irgendwie erinnert er mich an die Kleider der Kelly Family.\r\n', 'Beni Thurnheer, Schweizer Sportreporter'),
 ('E', 'Die Schweden sind keine Holländer, das hat man ganz klar gesehen!\r\n', 'Franz Beckenbauer'),
 ('F', 'Langsam habe ich das Gefühl, dass ich mit meinem linken Fuß mehr anfangen kann, als nur Bier zu holen.\r\n', 'Thomas Müller'),
 --
