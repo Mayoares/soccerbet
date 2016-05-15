@@ -6,6 +6,7 @@ TODO nach Eingabeschluss
 ----------------------------------------------------------------------------------------
 
 [ ]		Ordner "user" löschen bzw in "user-after" umbenenen (nur auf dem Server) 
+[ ]		DB sichern
 
 ----------------------------------------------------------------------------------------
 Offene Fragen:
