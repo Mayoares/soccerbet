@@ -197,20 +197,20 @@ function printUserScores(){
 		{
 			$rank="";
 		}
-		printUserScoreRow($rank, $arrayUserScore[$i]["score"], $arrayUserScore[$i]["firstname"], $arrayUserScore[$i]["lastname"]);
-		//printUserScoreRow($rank, $arrayUserScore[$i]["score"], $arrayUserScore[$i]["username"]);
+		//printUserScoreRow($rank, $arrayUserScore[$i]["score"], $arrayUserScore[$i]["firstname"], $arrayUserScore[$i]["lastname"]);
+		printUserScoreRow($rank, $arrayUserScore[$i]["score"], $arrayUserScore[$i]["username"]);
 		$lastScore = $currScore;
 	}
 	echo "</table>";
 }
 
-function printUserScoreRow($rank, $score, $fname, $lname){
+function printUserScoreRow($rank, $score, $username){
 
 	echo "<tr>";
 	//echo "<td><b>$user  </b></td>";
 	echo "<td><div align=\"center\"> $rank </div></td>";
 	echo "<td><b><div align=\"center\"> $score </div></b></td>";
-	echo "<td>$fname $lname</td>";
+	echo "<td>$username</td>";
 	echo "</tr>";
 }
 ?>
