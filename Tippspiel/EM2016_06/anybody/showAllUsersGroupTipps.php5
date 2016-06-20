@@ -110,7 +110,7 @@ function printGroupMatchesForUser($username){
 	$table_users=dbschema::users;
 	$table_tipps=dbschema::groupmatchtipps;
 	echo "<tr>";
-	echo "<td>" . getUserInfo($username) . "</td>";
+	echo "<td style='white-space:nowrap;'>" . getUserInfo($username) . "</td>";
 	$sql="SELECT * FROM $table_matches m LEFT JOIN $table_tipps gmt ON m.matchnr=gmt.matchnr AND gmt.user='$username' WHERE m.matchtype='Gruppenspiel' ";
 	$sqlResult=mysql_query($sql);
 	while($array=mysql_fetch_array($sqlResult)){
