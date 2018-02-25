@@ -1,4 +1,4 @@
-INSERT INTO `emtipp2016_teams` (`name`, `shortname`, `logofile`, `group`) VALUES
+INSERT INTO `wmtipp2018_teams` (`name`, `shortname`, `logofile`, `group`) VALUES
 ('Frankreich', 'FRA', 'flagge_frankreich.jpg', 'A'),
 ('Schweiz', 'SUI', 'flagge_schweiz.jpg', 'A'),
 ('Rumänien', 'ROM', 'flagge_rumaenien.jpg', 'A'),

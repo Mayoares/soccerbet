@@ -1,4 +1,4 @@
-INSERT INTO `emtipp2016_groupcitations` (`group`, `citation`, `author`) VALUES
+INSERT INTO `wmtipp2018_groupcitations` (`group`, `citation`, `author`) VALUES
 ('A', 'Mir ist es egal, ob es ein Brasilianer, Pole, Kroate, Norddeutscher oder Süddeutscher ist. Die Leistung entscheidet, nicht irgendeine Blutgruppe.\r\n', 'Christoph Daum'),
 ('B', 'Wir müssen gewinnen, alles andere ist primär.\r\n', 'Hans Krankl'),
 ('C', 'Wir müssen jetzt die Köpfe hochkrempeln – und die Ärmel auch.\r\n', 'Lukas Podolski'),
