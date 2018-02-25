@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `emtipp2016_championtipps` (
+CREATE TABLE IF NOT EXISTS `wmtipp2018_championtipps` (
   `user` varchar(100) NOT NULL,
   `team` varchar(3) NOT NULL,
   `rank` int(1) NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS `emtipp2016_championtipps` (
 
 --
 
-CREATE TABLE IF NOT EXISTS `emtipp2016_finalmatchtipps` (
+CREATE TABLE IF NOT EXISTS `wmtipp2018_finalmatchtipps` (
   `user` varchar(30) NOT NULL,
   `matchnr` int(2) NOT NULL,
   `teamX` varchar(3) DEFAULT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `emtipp2016_finalmatchtipps` (
 
 --
 
-CREATE TABLE IF NOT EXISTS `emtipp2016_groupcitations` (
+CREATE TABLE IF NOT EXISTS `wmtipp2018_groupcitations` (
   `group` varchar(20) COLLATE latin1_german1_ci NOT NULL,
   `citation` varchar(1000) COLLATE latin1_german1_ci NOT NULL,
   `author` varchar(100) COLLATE latin1_german1_ci NOT NULL,
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `emtipp2016_groupcitations` (
 
 --
 
-CREATE TABLE IF NOT EXISTS `emtipp2016_groupmatchtipps` (
+CREATE TABLE IF NOT EXISTS `wmtipp2018_groupmatchtipps` (
   `user` varchar(30) NOT NULL,
   `matchnr` int(2) NOT NULL,
   `goalsX` int(2) NOT NULL,
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `emtipp2016_groupmatchtipps` (
 
 --
 
-CREATE TABLE IF NOT EXISTS `emtipp2016_groupranktipps` (
+CREATE TABLE IF NOT EXISTS `wmtipp2018_groupranktipps` (
   `user` varchar(30) NOT NULL,
   `team` varchar(3) NOT NULL,
   `rank` int(11) NOT NULL,
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `emtipp2016_groupranktipps` (
 
 --
 
-CREATE TABLE IF NOT EXISTS `emtipp2016_matches` (
+CREATE TABLE IF NOT EXISTS `wmtipp2018_matches` (
   `matchnr` int(11) NOT NULL AUTO_INCREMENT,
   `group` varchar(1) NOT NULL,
   `team1` varchar(3) DEFAULT NULL,
@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `emtipp2016_matches` (
 
 --
 
-CREATE TABLE IF NOT EXISTS `emtipp2016_teams` (
+CREATE TABLE IF NOT EXISTS `wmtipp2018_teams` (
   `name` varchar(50) DEFAULT NULL,
   `shortname` varchar(3) NOT NULL,
   `logofile` varchar(200) DEFAULT NULL,
@@ -94,7 +94,7 @@ CREATE TABLE IF NOT EXISTS `emtipp2016_teams` (
 
 --
 
-CREATE TABLE IF NOT EXISTS `emtipp2016_topscorertipps` (
+CREATE TABLE IF NOT EXISTS `wmtipp2018_topscorertipps` (
   `user` varchar(100) NOT NULL,
   `topscorer` varchar(100) DEFAULT NULL,
   `team` varchar(3) NOT NULL,
@@ -105,7 +105,7 @@ CREATE TABLE IF NOT EXISTS `emtipp2016_topscorertipps` (
 
 --
 
-CREATE TABLE IF NOT EXISTS `emtipp2016_users` (
+CREATE TABLE IF NOT EXISTS `wmtipp2018_users` (
   `userid` varchar(100) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
