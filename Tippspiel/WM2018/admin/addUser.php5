@@ -192,7 +192,7 @@ function promptAddUser($adminuserId)
 <!-- Facivon 
 <link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon"> -->
 
-<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />
+<link rel='stylesheet' type='text/css' href='../../style/style-WM2018.css' />
 
 <title>Werke's Tippspiel - User anlegen</title>
 

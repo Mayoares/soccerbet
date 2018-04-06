@@ -69,7 +69,7 @@ function promptLogin($username){
             "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />
+<link rel='stylesheet' type='text/css' href='../../style/style-WM2018.css' />
 <title>Werke's Tippspiel Login </title>
 </head>
 <body>

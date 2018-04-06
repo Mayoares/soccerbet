@@ -14,7 +14,7 @@ $userName=$dbutil->getUserName($userId);
 ?>
 <html>
 <head>
-<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />
+<link rel='stylesheet' type='text/css' href='../../style/style-WM2018.css' />
 <title>Werke's Tippspiel - Navigation</title>
 </head>
 <body>
