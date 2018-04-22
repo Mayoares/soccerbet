@@ -37,11 +37,11 @@ function printUserInfo($userName){
 	echo "</br>";
 	echo "<h1>Hallo $firstname $lastname,</h1>";
 	?>
-	<p>herzlich Willkommen bei Werke's Tippspiel zur Europameisterschaft 2016 in Frankreich!<p>
+	<p>herzlich Willkommen bei Werke's Tippspiel zur Weltmeisterschaft 2018 in Russland!<p>
 	<p>Viel Erfolg beim Tippen w&uuml;nschen Werke, Mayoar und R&oslash;bl!
 	<br>
 	<br>
-	<a href='../pdf/Spielplan_EM_2016.pdf'>Download Spielplan (PDF)</a>
+	<a href='../pdf/Spielplan_WM_2018_Fifa.pdf'>Download Spielplan (PDF)</a>
 	<br>
 	<br>
 	<?php

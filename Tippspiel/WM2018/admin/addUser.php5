@@ -125,7 +125,7 @@ function addUser($username, $firstname, $lastname, $email, $adminuserId)
 		$content .= "Content-Transfer-Encoding: 8bit\n\n";
 		// Inhalt der E-Mail (Body)
 		$content .= "Lieber Tippspiel-Teilnehmer $firstname $lastname,";
-		$content .= "\n\nherzlich Willkommen bei Werke's Tippspiel zur Europameisterschaft 2016 in Frankreich.";
+		$content .= "\n\nherzlich Willkommen bei Werke's Tippspiel zur Weltmeisterschaft 2018 in Russland.";
 		$content .= "\n\nDeine Logindaten lauten:";
 		$content .= "\n\nBenutzername: $username "; 
 		$content .= "\nPasswort    : $password ";

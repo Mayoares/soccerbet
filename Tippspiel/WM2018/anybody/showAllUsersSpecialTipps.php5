@@ -58,7 +58,7 @@ function printSpecials(){
 	echo "<table border='1' rules='all'>";
 	echo "<tr>";
 	echo "<th>User</th> ";
-	echo "<th>Europameister</th> ";
+	echo "<th>Weltmeister</th> ";
 	echo "<th>Zweitplatzierter</th> ";
 //  	echo "<th>Platz 3</th> ";
 	echo "<th>Torsch&uuml;tzenk&ouml;nig</th> ";

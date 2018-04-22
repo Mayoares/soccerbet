@@ -70,7 +70,7 @@ function run($userId){
 	echo "<form action='Champions.php5?userId=$userId' method='POST'>";
 	echo "<table>";	
 	echo "<tr class='border_bottom'>";	
-	echo "  <td> <b>Europameister</b> </td>";
+	echo "  <td> <b>Weltmeister</b> </td>";
 	echo "	<td bgcolor=slategray>";
 	echo "    <select name='rank1'>";
 	allTeamsAsOptionForRank($sqlTeams, $worldChampion);

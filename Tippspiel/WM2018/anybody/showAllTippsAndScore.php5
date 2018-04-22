@@ -443,7 +443,7 @@ function printChampions($userName){
 	$vice=getTippedTeamRostrum($userName, 2);
 	$third=getTippedTeamRostrum($userName, 3);
 	echo "<table>";
-	echo "<tr><td>Europameister &nbsp; &nbsp; &nbsp;</td><td><b>$worldchampion</b></td>";
+	echo "<tr><td>Weltmeister &nbsp; &nbsp; &nbsp;</td><td><b>$worldchampion</b></td>";
 	printCorrectTeam(getCorrectChampion(1));
 	printScore(getScoreChampions(1, $userName));
 	echo "</tr>";
