@@ -262,12 +262,12 @@ function insertUpdateMatchPrediction($matchprediction)
 		}
 		else
 		{
-			$log->info("Update for User=$userName: Spiel $matchnr : $teamName1 - $teamName2  	$GoalsTeam1 : $GoalsTeam2");
+			$log->info("Update for User=$matchprediction->userName: Spiel $matchprediction->matchnr : $matchprediction->teamName1 - $matchprediction->teamName2  	$matchprediction->GoalsTeam1 : $matchprediction->GoalsTeam2");
 		}
 	}
 	else
 	{
-		$log->info("Update for User=$userName: Spiel $matchnr : $teamName1 - $teamName2  	$GoalsTeam1 : $GoalsTeam2");
+		$log->info("Update for User=$matchprediction->userName: Spiel $matchprediction->matchnr : $matchprediction->teamName1 - $matchprediction->teamName2  	$matchprediction->GoalsTeam1 : $matchprediction->GoalsTeam2");
 	}
 }
 
