@@ -1,16 +1,16 @@
 <?php
 class dbschema
 {
-	const matches = 'emtipp2016_matches';
-	const teams = 'emtipp2016_teams';
-	const users = 'emtipp2016_users';
+	const matches = 'wmtipp2018_matches';
+	const teams = 'wmtipp2018_teams';
+	const users = 'wmtipp2018_users';
 
-	const groupmatchtipps = 'emtipp2016_groupmatchtipps';
-	const groupranktipps = 'emtipp2016_groupranktipps';
-	const finalmatchtipps = 'emtipp2016_finalmatchtipps';
-	const championtipps = 'emtipp2016_championtipps';
-	const topscorertipps = 'emtipp2016_topscorertipps';
+	const groupmatchtipps = 'wmtipp2018_groupmatchtipps';
+	const groupranktipps = 'wmtipp2018_groupranktipps';
+	const finalmatchtipps = 'wmtipp2018_finalmatchtipps';
+	const championtipps = 'wmtipp2018_championtipps';
+	const topscorertipps = 'wmtipp2018_topscorertipps';
 
-	const groupcitations = 'emtipp2016_groupcitations';
+	const groupcitations = 'wmtipp2018_groupcitations';
 }
 ?>
