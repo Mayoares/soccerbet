@@ -20,7 +20,7 @@ else
 	echo "<body>";
 	echo "<p class=\"info\">Hinweis zur Tippabgabe:</br><u><b>Paarungen</b></u> und <u><b>Ergebnisse</b></u> m&uuml;ssen alle <i><u><b>einzeln</b></u></i> abgespeichert werden!</p>";
 	
-	
+	$matchnrPost=0;
 	$saveMatchErrorText="";
 	for($i=0;$i<100;$i++){
 		if(isset($_POST["saveMatch-$i"])){
@@ -126,25 +126,22 @@ function run($userId, $finaltype, $matchnrPost, $dbutil, $saveMatchErrorText){
 function printDescription($matchnr){
 	switch($matchnr)
 	{
-		case 37 : echo "<td>Achtelfinale 1</td><td></td><td>Zweiter Gruppe A</td><td> -</td><td>Zweiter Gruppe C</td><td></td><td></td>";break;
-		case 38 : echo "<td>Achtelfinale 2</td><td></td><td>Sieger Gruppe B</td><td> -</td><td>Dritter Gruppe A/C/D</td><td></td><td></td>";break;
-		case 39 : echo "<td>Achtelfinale 3</td><td></td><td>Sieger Gruppe D</td><td> -</td><td>Dritter Gruppe B/E/F</td><td></td><td></td>";break;
-		case 40 : echo "<td>Achtelfinale 4</td><td></td><td>Sieger Gruppe A</td><td> -</td><td>Dritter Gruppe C/D/E</td><td></td><td></td>";break;
-		case 41 : echo "<td>Achtelfinale 5</td><td></td><td>Sieger Gruppe C</td><td> -</td><td>Dritter Gruppe A/B/F</td><td></td><td></td>";break;
-		case 42 : echo "<td>Achtelfinale 6</td><td></td><td>Sieger Gruppe F</td><td> -</td><td>Zweiter Gruppe E</td><td></td><td></td>";break;
-		case 43 : echo "<td>Achtelfinale 7</td><td></td><td>Sieger Gruppe E</td><td> -</td><td>Zweiter Gruppe D</td><td></td><td></td>";break;
-		case 44 : echo "<td>Achtelfinale 8</td><td></td><td>Zweiter Gruppe B</td><td> -</td><td>Zweiter Gruppe F</td><td></td><td></td>";break;
-		//
-		case 45 : echo "<td>Viertelfinale 1</td><td></td><td>Sieger Achtelfinale 1</td><td> -</td><td>Sieger Achtelfinale 3</td><td></td><td></td>";break;
-		case 46 : echo "<td>Viertelfinale 2</td><td></td><td>Sieger Achtelfinale 2</td><td> -</td><td>Sieger Achtelfinale 6</td><td></td><td></td>";break;
-		case 47 : echo "<td>Viertelfinale 3</td><td></td><td>Sieger Achtelfinale 5</td><td> -</td><td>Sieger Achtelfinale 7</td><td></td><td></td>";break;
-		case 48 : echo "<td>Viertelfinale 4</td><td></td><td>Sieger Achtelfinale 4</td><td> -</td><td>Sieger Achtelfinale 8</td><td></td><td></td>";break;
-		//
-		case 49 : echo "<td>Halbfinale 1</td><td></td><td>Sieger Viertelfinale 1</td><td> -</td><td>Sieger Viertelfinale 2</td><td></td><td></td>";break;
-		case 50 : echo "<td>Halbfinale 2</td><td></td><td>Sieger Viertelfinale 3</td><td> -</td><td>Sieger Viertelfinale 4</td><td></td><td></td>";break;
-		//
-		//case 63 : echo "<td></td><td></td><td>Verlierer Halbfinale 1</td><td> -</td><td>Verlierer Spiel 62</td><td></td><td></td>";break;
-		case 51 : echo "<td></td><td></td><td>Sieger Halbfinale 1</td><td> -</td><td>Halbfinale 2</td><td></td><td></td>";break;
+		case 49 : echo "<td></td><td></td><td>Sieger Gruppe A</td><td> -</td><td>Zweiter Gruppe B</td><td></td><td></td>";break;
+		case 50 : echo "<td></td><td></td><td>Sieger Gruppe C</td><td> -</td><td>Zweiter Gruppe D</td><td></td><td></td>";break;
+		case 51 : echo "<td></td><td></td><td>Sieger Gruppe B</td><td> -</td><td>Zweiter Gruppe A</td><td></td><td></td>";break;
+		case 52 : echo "<td></td><td></td><td>Sieger Gruppe D</td><td> -</td><td>Zweiter Gruppe C</td><td></td><td></td>";break;
+		case 53 : echo "<td></td><td></td><td>Sieger Gruppe E</td><td> -</td><td>Zweiter Gruppe F</td><td></td><td></td>";break;
+		case 54 : echo "<td></td><td></td><td>Sieger Gruppe G</td><td> -</td><td>Zweiter Gruppe H</td><td></td><td></td>";break;
+		case 55 : echo "<td></td><td></td><td>Sieger Gruppe F</td><td> -</td><td>Zweiter Gruppe E</td><td></td><td></td>";break;
+		case 56 : echo "<td></td><td></td><td>Sieger Gruppe H</td><td> -</td><td>Zweiter Gruppe G</td><td></td><td></td>";break;
+		case 57 : echo "<td></td><td></td><td>Sieger Spiel 49</td><td> -</td><td>Sieger Spiel 50</td><td></td><td></td>";break;
+		case 58 : echo "<td></td><td></td><td>Sieger Spiel 53</td><td> -</td><td>Sieger Spiel 54</td><td></td><td></td>";break;
+		case 59 : echo "<td></td><td></td><td>Sieger Spiel 51</td><td> -</td><td>Sieger Spiel 52</td><td></td><td></td>";break;
+		case 60 : echo "<td></td><td></td><td>Sieger Spiel 55</td><td> -</td><td>Sieger Spiel 56</td><td></td><td></td>";break;
+		case 61 : echo "<td></td><td></td><td>Sieger Spiel 57</td><td> -</td><td>Sieger Spiel 58</td><td></td><td></td>";break;
+		case 62 : echo "<td></td><td></td><td>Sieger Spiel 59</td><td> -</td><td>Sieger Spiel 60</td><td></td><td></td>";break;
+		case 63 : echo "<td></td><td></td><td>Verlierer Spiel 61</td><td> -</td><td>Verlierer Spiel 62</td><td></td><td></td>";break;
+		case 64 : echo "<td></td><td></td><td>Sieger Spiel 61</td><td> -</td><td>Sieger Spiel 62</td><td></td><td></td>";break;
 	}
 }
 
@@ -152,47 +149,55 @@ function getTeamsOfGroup($matchnr, $named){
 	//echo "<br>getTeamsOfGroup($matchnr, $named)";
 	switch($matchnr)
 	{
-		case 37 :
+		case 49 :
 			if($named==1) {
 				return getTeams('A');
 			}
 			else
 			{
+				return getTeams('B');
+			}
+		case 50 :
+			if($named==1) {
 				return getTeams('C');
 			}
-		case 38 :
+			else
+			{
+				return getTeams('D');
+			}
+		case 51 :
 			if($named==1) {
 				return getTeams('B');
 			}
 			else
 			{
-				return getTeamsOfthreeGroups('A','C','D');
+				return getTeams('A');
 			}
-		case 39 :
+		case 52 :
 			if($named==1) {
 				return getTeams('D');
 			}
 			else
 			{
-				return getTeamsOfthreeGroups('B','E','F');
-			}
-		case 40 :
-			if($named==1) {
-				return getTeams('A');
-			}
-			else
-			{
-				return getTeamsOfthreeGroups('C','D','E');
-			}
-		case 41 :
-			if($named==1) {
 				return getTeams('C');
 			}
+		case 53 :
+			if($named==1) {
+				return getTeams('E');
+			}
 			else
 			{
-				return getTeamsOfthreeGroups('A','B','F');
+				return getTeams('F');
 			}
-		case 42 :
+		case 54 :
+			if($named==1) {
+				return getTeams('G');
+			}
+			else
+			{
+				return getTeams('H');
+			}
+		case 55 :
 			if($named==1) {
 				return getTeams('F');
 			}
@@ -200,23 +205,15 @@ function getTeamsOfGroup($matchnr, $named){
 			{
 				return getTeams('E');
 			}
-		case 43 :
+		case 56 :
 			if($named==1) {
-				return getTeams('E');
+				return getTeams('H');
 			}
 			else
 			{
-				return getTeams('D');
+				return getTeams('G');
 			}
-		case 44 :
-			if($named==1) {
-				return getTeams('B');
-			}
-			else
-			{
-				return getTeams('F');
-			}
-		/*case 45 : 
+		case 57 :
 			if($named==1) {
 				return getTeamsOfGroups('A','B');
 			}
@@ -224,7 +221,7 @@ function getTeamsOfGroup($matchnr, $named){
 			{
 				return getTeamsOfGroups('C','D');
 			}
-		case 46 : 
+		case 58 :
 			if($named==1) { // Winner 53
 				return getTeamsOfGroups('E','F');
 			}
@@ -232,7 +229,7 @@ function getTeamsOfGroup($matchnr, $named){
 			{	// Winner 54
 				return getTeamsOfGroups('G','H');
 			}
-		case 47 : 
+		case 59 :
 			if($named==1) { // Winner 51
 				return getTeamsOfGroups('A','B');
 			}
@@ -240,14 +237,14 @@ function getTeamsOfGroup($matchnr, $named){
 			{	// Winner 52
 				return getTeamsOfGroups('C','D');
 			}
-		case 48 : 
+		case 60 :
 			if($named==1) { // Winner 55
 				return getTeamsOfGroups('E','F');
 			}
 			else
 			{	// Winner 56
 				return getTeamsOfGroups('G','H');
-			}*/
+			}
 	}
 }
 
