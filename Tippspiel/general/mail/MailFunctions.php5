@@ -34,7 +34,7 @@ function sendUserLogin($firstname, $lastname, $email, $username, $password){
 	$message .= "\n\nBenutzername: $username "; 
 	$message .= "\nPasswort    : $password ";
 	$message .= "\n\nDas Passwort wurde automatisch generiert und sollte nach dem ersten Login ge&auml;ndert werden."; 
-	$message .= "\n\nDirektlink zum Tippspiel: http://mayoar.rivido.de/EM2016/util/login.php5";
+	$message .= "\n\nDirektlink zum Tippspiel: http://mayoar.rivido.de/WM2018/util/login.php5";
 	// Body Ende
 	$mailSent = sendMail($email, $subject, $message);
 	

@@ -35,7 +35,7 @@ session_start();
 <br>
 
 <div class="section group">
-	<div class="col span_1_of_3">
+	<div class="col span_1_of_2">
 	<div class="block">
 	<h2>Wie gehe ich beim Tippspiel am besten vor?</h2>
 	<hr>
@@ -48,7 +48,7 @@ session_start();
 	<p>5. FERTIG!</p>
 	</div>
 	</div>
-	<div class="col span_1_of_3">
+	<div class="col span_1_of_2">
 	<div class="block">
 	<h2>Wie kann ich meine Tipps am besten ausdrucken? <br>(Saubere Darstellung)</h2>
 	<hr>
@@ -61,13 +61,13 @@ session_start();
 	<p>5. Der Tipp kann jetzt ausgedruckt werden (Ohne Navigation).</p>
 	</div>
 	</div>
-	<div class="col span_1_of_3">
-	<div class="block">
-	<h2>Welche Gruppendritten kommen ins Achtelfinale? <br>Wie werden diese zugeordnet?</h2>
-	<hr>
-	<p>Antwort:</p>
-	<p>Siehe dazu in der <a href="../pdf/Werkes Tippspiel EM 2016 - Anleitung.pdf">Anleitung</a> zum Tippspiel die Tabelle mit der Rangliste und Zuordnung auf Seite 3.</p>
-</div>
+<!-- 	<div class="col span_1_of_3"> -->
+<!-- 	<div class="block"> -->
+<!-- 	<h2>Welche Gruppendritten kommen ins Achtelfinale? <br>Wie werden diese zugeordnet?</h2> -->
+<!-- 	<hr> -->
+<!-- 	<p>Antwort:</p> -->
+<!-- 	<p>Siehe dazu in der <a href="../pdf/Werkes Tippspiel EM 2016 - Anleitung.pdf">Anleitung</a> zum Tippspiel die Tabelle mit der Rangliste und Zuordnung auf Seite 3.</p> -->
+<!-- </div> -->
 	</div>
 </div>
 
