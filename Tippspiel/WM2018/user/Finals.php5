@@ -43,10 +43,10 @@ else
 	$citation->printCitation("Halbfinale");
 	echo "<br>";
 	run($userId, "Halbfinale", $matchnrPost, $dbutil, $saveMatchErrorText);
-	//echo "<h2>Spiel um Platz 3</h2>";
-	//$citation->printCitation("Platz3");
-	//echo "<br>";
-	//run($userId, "Platz3", $matchnrPost, $dbutil, $saveMatchErrorText);
+	echo "<h2>Spiel um Platz 3</h2>";
+	$citation->printCitation("Platz3");
+	echo "<br>";
+	run($userId, "Platz3", $matchnrPost, $dbutil, $saveMatchErrorText);
 	echo "<h2>Finale</h2>";
 	$citation->printCitation("Finale");
 	echo "<br>";

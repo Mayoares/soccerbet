@@ -22,7 +22,7 @@ if(strlen($userName)>0)
 	printFinal($userName, 'Achtelfinale');
 	printFinal($userName, 'Viertelfinale');
 	printFinal($userName, 'Halbfinale');
-	//printFinal($userName, 'Platz3');
+	printFinal($userName, 'Platz3');
 	printFinal($userName, 'Finale');
 	
 // 	printChampions($userName);

@@ -65,13 +65,13 @@ if(strlen($userName)>0)
 	printGroup('D', $userName);
 	printGroup('E', $userName);
 	printGroup('F', $userName);
-// 	printGroup('G', $userName);
-// 	printGroup('H', $userName);
+ 	printGroup('G', $userName);
+ 	printGroup('H', $userName);
 	
 	printFinal($userName, 'Achtelfinale');
 	printFinal($userName, 'Viertelfinale');
 	printFinal($userName, 'Halbfinale');
-// 	printFinal($userName, 'Platz3');
+ 	printFinal($userName, 'Platz3');
 	printFinal($userName, 'Finale');
 	
 }	
