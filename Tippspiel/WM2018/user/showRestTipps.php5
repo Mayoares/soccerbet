@@ -1,5 +1,4 @@
 <?php
-// we must never forget to start the session
 session_start();
 $userId=$_GET["userId"];
 echo "<html>";
@@ -24,9 +23,6 @@ if(strlen($userName)>0)
 	printFinal($userName, 'Halbfinale');
 	printFinal($userName, 'Platz3');
 	printFinal($userName, 'Finale');
-	
-// 	printChampions($userName);
-// 	printTopscorer($userName);
 }
 else
 {
@@ -36,8 +32,6 @@ else
 function getTeamName($shortname) {
 	$table_teams=dbschema::teams;
 	$sql="SELECT t.name FROM $table_teams t WHERE t.shortname='$shortname'";
-	//$log=new logger();
-	//$log->info($sql);
 	$result=mysql_query($sql);
 	$array=mysql_fetch_array($result);
 	$name=$array["name"];
@@ -48,15 +42,11 @@ function printFinal($userName, $matchtype){
 	
 	echo "<br>";
 	echo "<h2>$matchtype</h2>";
-	echo "<br>";
 	
 	$table_finalmatchtipps=dbschema::finalmatchtipps;
 	$table_matches=dbschema::matches;
 	
-	
 	$sqlMatches="SELECT matchnr FROM $table_matches m WHERE matchtype = '$matchtype'";
-	$log=new logger();
-	$log->info($sqlMatches);
 	$sqlResultMatches=mysql_query($sqlMatches);
 	echo "<table>";
 	while($array=mysql_fetch_array($sqlResultMatches))
@@ -64,10 +54,14 @@ function printFinal($userName, $matchtype){
 		$matchnr=$array["matchnr"];
 		$sql="SELECT * FROM $table_finalmatchtipps ft WHERE ft.user = '$userName' AND ft.matchnr = '$matchnr'";
 		$log=new logger();
-		$log->info($sql);
 		$sqlResult=mysql_query($sql);
 		if (!$sqlResult) {
 
+			$log=new logger();
+			$log->error("Fehler bei Anzeige der Tabelle der Endrundentipps. Vorangegangene Abfragen:");
+			$log->info($sql);
+			$log->info($sqlMatches);
+			$log->error("Fehler Ende");
 			echo "<br> MIST DB error";
 		}
 		else
