@@ -11,7 +11,7 @@ include_once("../../general/log/log.php5");
 $userName=$dbutil->getUserName($userId);
 echo "<html>";
 echo "<head>";
-echo "<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />";
+echo "<link rel='stylesheet' type='text/css' href='../../style/style-current.css' />";
 echo "<title>Werke's Tippspiel - Gruppe $group tippen</title>";
 echo "</head>";
 echo "<body>";

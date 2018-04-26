@@ -78,7 +78,7 @@ function promptLogin($username){
 <!-- Facivon 
 <link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon"> -->
 
-<link rel='stylesheet' type='text/css' href='../../style/style-WM2018.css' />
+<link rel='stylesheet' type='text/css' href='../../style/style-current.css' />
 <title>Werke's Tippspiel - Login</title>
 </head>
 <body>

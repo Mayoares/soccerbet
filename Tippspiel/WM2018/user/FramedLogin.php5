@@ -16,7 +16,7 @@ if(!isset($_GET['userId']))
 }
 ?>
 <title>Werke's Tippspiel - Tippabgabe</title>
-<link rel="stylesheet" type="text/css" href="../../style/style-WM2018.css" />
+<link rel="stylesheet" type="text/css" href="../../style/style-current.css" />
 <?php
 echo "<frameset cols='280,*'>";
 echo "<frame src='./overview.php5?userId=$userId' name='Navigation'>";

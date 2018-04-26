@@ -5,7 +5,7 @@ $userId=$_GET["userId"];
 $groups=$_GET["groups"];
 echo "<html>";
 echo "<head>";
-echo "<link rel='stylesheet' type='text/css' href='../../style/style-EM2016.css' />";
+echo "<link rel='stylesheet' type='text/css' href='../../style/style-current.css' />";
 echo "<title>Werke's Tippspiel - Meine Gruppen-Tipps</title>";
 echo "</head>";
 
