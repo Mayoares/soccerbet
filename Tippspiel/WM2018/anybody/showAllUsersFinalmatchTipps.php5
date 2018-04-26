@@ -31,7 +31,7 @@ if(strlen($userId)==0)
 
 <center>
 
-<img src="../pics/EM 2016 Tippspiel Logo.PNG" class="image" width="300" alt="Logo_EM_2016">
+<img src="../pics/Tippspiel-Logo.PNG" class="image" width="300" alt="Logo">
 
 <div class="block">
 	<p><a href="../util/loginPunktestand.php5"> <h2>zur&uuml;ck</h2> </a> </p>
