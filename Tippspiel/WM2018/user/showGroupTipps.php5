@@ -23,16 +23,16 @@ if(strlen($userName)>0)
 		printGroup('A', $userName);
 		printGroup('B', $userName);
 		printGroup('C', $userName);
-		//printGroup('D', $userName);
+		printGroup('D', $userName);
 		//printGroup('E', $userName);
 		//printGroup('F', $userName);
 	}
 	else if($groups === 'Part2'){
-		printGroup('D', $userName);
+		//printGroup('D', $userName);
 		printGroup('E', $userName);
 		printGroup('F', $userName);
-		//printGroup('G', $userName);
-		//printGroup('H', $userName);
+		printGroup('G', $userName);
+		printGroup('H', $userName);
 	}
 }
 else
