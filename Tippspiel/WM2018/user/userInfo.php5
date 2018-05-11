@@ -41,7 +41,7 @@ function printUserInfo($userName){
 	<p>Viel Erfolg beim Tippen w&uuml;nschen Werke, Mayoar und R&oslash;bl!
 	<br>
 	<br>
-	<a href='../pdf/Spielplan_WM_2018_Fifa.pdf'>Download Spielplan (PDF)</a>
+	<a href='../pdf/Spielplan_WM_2018_Welt.pdf'>Download Spielplan (PDF)</a>
 	<br>
 	<br>
 	<?php
@@ -70,9 +70,9 @@ function printUserInfo($userName){
 	echo "<tr>";
 	echo "<td>Mail and R&oslash;bl:</td><td><a href='mailto:robert.werkestippspiel@gmail.com' target='_top'>robert.werkestippspiel@gmail.com</a></td>";
 	echo "</tr>";
-	//echo "<tr>";
-	//echo "<td>Andreas Grotemeyer</td><td><a href='mailto:robert.werkestippspiel@gmail.com' target='_top'>mayoar.werkestippspiel@gmail.com</a></td>";
-	//echo "</tr>";
+	echo "<tr>";
+	echo "<td>Andreas Grotemeyer</td><td><a href='mailto:mayoar.werkestippspiel@gmail.com' target='_top'>mayoar.werkestippspiel@gmail.com</a></td>";
+	echo "</tr>";
 	echo "</table>";
 }
 ?>
