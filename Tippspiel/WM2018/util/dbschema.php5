@@ -4,6 +4,8 @@ class dbschema
 	const matches = 'wmtipp2018_matches';
 	const teams = 'wmtipp2018_teams';
 	const users = 'wmtipp2018_users';
+	const users_last_em = 'emtipp2016_users';
+	const users_last_wm = 'wmtipp2014_users';
 
 	const groupmatchtipps = 'wmtipp2018_groupmatchtipps';
 	const groupranktipps = 'wmtipp2018_groupranktipps';
