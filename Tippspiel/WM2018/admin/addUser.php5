@@ -131,8 +131,8 @@ function addUser($username, $firstname, $lastname, $email, $adminuserId)
 		$content .= "Lieber Tippspiel-Teilnehmer $firstname $lastname,";
 		$content .= "\n\nherzlich Willkommen bei Werke's Tippspiel zur Weltmeisterschaft 2018 in Russland.";
 		$content .= "\n\nDeine Logindaten lauten:";
-		$content .= "\n\nBenutzername: $username "; 
-		$content .= "\nPasswort    : $password ";
+		$content .= "\n\nBenutzername:\t$username "; 
+		$content .= "\nPasswort:\t\t\t$password ";
 		$content .= "\n\nDas Passwort wurde automatisch generiert und sollte nach dem ersten Login geändert werden."; 
 		$content .= "\n\nDirektlink zum Tippspiel: http://mayoar.rivido.de";
 		$content .= "\n\nViel Erfolg beim Tippen wünschen Werke, Mayoar und Robl!";
