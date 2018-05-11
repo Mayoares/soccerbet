@@ -47,14 +47,13 @@ function run($userId){
 		
 		storeNewRank($username, $dbutil->getShortName($_POST['rank2']), 2);
 	}
-	/*
+	
 	if(isset($_POST['rank3'])){
 		
 		storeNewRank($username, $dbutil->getShortName($_POST['rank3']), 3);
 	}
-	*/	
-    //if(isset($_POST['rank1']) && isset($_POST['rank2']) && isset($_POST['rank3'])){
-    if(isset($_POST['rank1']) && isset($_POST['rank2'])){
+		
+    if(isset($_POST['rank1']) && isset($_POST['rank2']) && isset($_POST['rank3'])){
     	
 		echo "<font color=\"green\">Stockerl-Tipps erfolgreich gespeichert :)</font>";
 		echo "<br>";
@@ -85,7 +84,6 @@ function run($userId){
 	echo "    </select>";
 	echo "	</td>";
 	echo "</tr>";	
-	/*
 	echo "<tr class='border_bottom'>";
 	echo "	<td> <b>Platz 3</b> ";
 	echo "	<td bgcolor=slategray>";
@@ -94,7 +92,7 @@ function run($userId){
 	echo "    </select>";
 	echo "	</td>";
 	echo "</tr>";	
-	*/
+	
 	echo "</table>";
 		
 	echo "<br>";
