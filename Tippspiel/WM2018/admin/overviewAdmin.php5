@@ -152,8 +152,8 @@ if(isset($_POST["resetEvaluationDone"]))
 	echo"<option name=SelectedGroup >D</option>";
 	echo"<option name=SelectedGroup >E</option>";
 	echo"<option name=SelectedGroup >F</option>";
-	//echo"<option name=SelectedGroup >G</option>";
-	//echo"<option name=SelectedGroup >H</option>";
+	echo"<option name=SelectedGroup >G</option>";
+	echo"<option name=SelectedGroup >H</option>";
 	echo "</td>";
 	echo "<input type='submit' name='evaluationGroupRank' value='Auswertung Tabellenplatz Gruppenphase'>";
 	echo "</form></p>";
