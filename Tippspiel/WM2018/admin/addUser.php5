@@ -261,7 +261,7 @@ function promptAddUser($adminuserId)
 	echo "<form method='POST' action='addUser.php5?userId=$adminuserId'>";
 	echo "<table>";
 	echo "<tr>";
-	echo "<td>Auswahl frühere Teilnehmer: </td>";
+	echo "<td>Auswahl fr&uuml;here Teilnehmer: </td>";
 	echo "<td bgcolor=slategray><select name='user'>";
 	for($i=0; $i < count($arrayUserList); $i++)
 	{
@@ -271,7 +271,7 @@ function promptAddUser($adminuserId)
 		echo"<option name='knownUser' value='$user' >$user ($lastname, $firstname)</option>";
 	}
 	
-	echo "<td><input type='submit' name='addKnownUser' value='Übernehmen'></td>";
+	echo "<td><input type='submit' name='addKnownUser' value='&Uuml;bernehmen'></td>";
 	echo "<td><input type='submit' name='Cancel' value='Abbrechen'></td>";
 	echo "</tr>";
 	echo "</table>";
