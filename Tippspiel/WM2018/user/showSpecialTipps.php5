@@ -1,5 +1,5 @@
 <?php
-session_start(['read_and_close'  => true,]);
+session_start();
 echo "<html>";
 echo "<head>";
 echo "<link rel='stylesheet' type='text/css' href='../../style/style-current.css' />";
