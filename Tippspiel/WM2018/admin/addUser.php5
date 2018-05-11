@@ -54,7 +54,11 @@ function run($adminuserId){
 	(empty($_POST["firstname"])) or
 	(empty($_POST["lastname"])))
 	{
-		if(empty($_POST["username"]))
+		if(isset($_POST["addKnownUser"]))
+		{
+			promptAddUser($adminuserId);
+		}
+		else if(empty($_POST["username"]))
 		{
 // 			echo "<br>Username fehlt. Bitte Eingabe korrigieren.";
 			promptAddUser($adminuserId);
@@ -211,19 +215,83 @@ function promptAddUser($adminuserId)
 </div>
 
 	<?php
+	
+	$table_users_last_em=dbschema::users_last_em;
+	$table_users_last_wm=dbschema::users_last_wm;
+	
+	if(isset($_POST["user"])){
+		$knownUser=$_POST['user'];
+		$sql="SELECT lastname, firstname, username, email FROM $table_users_last_em where username='$knownUser' UNION SELECT lastname, firstname, username, email FROM $table_users_last_wm where username='$knownUser'";
+		$resultKnownUser=mysql_query($sql);
+		// wenn der User bei der letzten EM *und* WM mit gleichem Usernamen etc. teilgenommen hat, werden beim SELECT zwei Datensätze zurückkommen
+		// -> wir nehmen einfach den ersten (Index 0), siehe folgende vier Zeilen Code
+		// es ist aber wg UNION undefiniert, ob es sich um den Datensatz aus der letzten EM oder WM handelt 
+		$lastnameKnownUser=mysql_result($resultKnownUser, 0, "lastname");
+		$firstnameKnownUser=mysql_result($resultKnownUser, 0, "firstname");
+		$usernameKnownUser=mysql_result($resultKnownUser, 0, "username");
+		$emailKnownUser=mysql_result($resultKnownUser, 0, "email");
+	}
+	else {
+		// wenn kein User "übernommen" wurde müssen die Variablen für die untere Form vor-initialisiert werden
+		$lastnameKnownUser="";
+		$firstnameKnownUser="";
+		$usernameKnownUser="";
+		$emailKnownUser="";
+	}
+	
+	
+	echo "<form method='POST' action='addUser.php5?userId=$adminuserId'>";
+	echo "<table>";
+	
+	$sql="SELECT lastname, firstname, username FROM $table_users_last_em UNION SELECT lastname, firstname, username FROM $table_users_last_wm ORDER BY username";
+	$resultUsers=mysql_query($sql);
+	$numUsers=mysql_num_rows($resultUsers);
+
+	for ($i=0; $i<$numUsers; $i++)
+	{
+		$name = mysql_result($resultUsers, $i, "username");
+		$firstname = mysql_result($resultUsers, $i, "firstname");
+		$lastname = mysql_result($resultUsers, $i, "lastname");
+		if($name!='admin' && $name!='real' && $name!='test')
+		{
+			$arrayUserList[] = array('username' => $name, 'firstname' => $firstname, 'lastname' => $lastname);
+		}
+	}
+	
 	echo "<form method='POST' action='addUser.php5?userId=$adminuserId'>";
 	echo "<table>";
 	echo "<tr>";
-	echo "<td>User-Name:</td><td>	<input type='text' name='username' value='' size=30></td>";
+	echo "<td>Auswahl frühere Teilnehmer: </td>";
+	echo "<td bgcolor=slategray><select name='user'>";
+	for($i=0; $i < count($arrayUserList); $i++)
+	{
+		$user = $arrayUserList[$i]["username"];
+		$firstname = $arrayUserList[$i]["firstname"];
+		$lastname = $arrayUserList[$i]["lastname"];
+		echo"<option name='knownUser' value='$user' >$user ($lastname, $firstname)</option>";
+	}
+	
+	echo "<td><input type='submit' name='addKnownUser' value='Übernehmen'></td>";
+	echo "<td><input type='submit' name='Cancel' value='Abbrechen'></td>";
+	echo "</tr>";
+	echo "</table>";
+	
+	echo "<br>";
+	echo "<br>";
+	
+	echo "<form method='POST' action='addUser.php5?userId=$adminuserId'>";
+	echo "<table>";
+	echo "<tr>";
+	echo "<td>User-Name:</td><td>	<input type='text' name='username' value='$usernameKnownUser' size=30></td>";
 	echo "</tr>";
 	echo "<tr>";
-	echo "<td>Vorname :</td><td>	<input type='text' name='firstname' value='' size=30></td>";
+	echo "<td>Vorname :</td><td>	<input type='text' name='firstname' value='$firstnameKnownUser' size=30></td>";
 	echo "</tr>";
 	echo "<tr>";
-	echo "<td>Nachname :</td><td>	<input type='text' name='lastname' value='' size=30></td>";
+	echo "<td>Nachname :</td><td>	<input type='text' name='lastname' value='$lastnameKnownUser' size=30></td>";
 	echo "</tr>";
 	echo "<tr>";
-	echo "<td>e-Mail :</td><td>	<input type='text' name='email' value='' size=30></td>";
+	echo "<td>e-Mail :</td><td>	<input type='text' name='email' value='$emailKnownUser' size=30></td>";
 	echo "</tr>";
 	echo "<tr>";
 	echo "</tr>";
