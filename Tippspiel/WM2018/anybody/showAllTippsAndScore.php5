@@ -460,14 +460,13 @@ function printChampions($userName){
 
 function printTopscorer($username){
 	
+	$dbutil=new dbutil();
 	// tipped values
 	$topscorer=getTippedTopScorer($username);
-	$tippedTeamShort=getTippedTopScorerTeam($username);
-	$topScorerTeam=getTeamName($tippedTeamShort);
+	$topScorerTeam=$dbutil->getTippedTopScorerTeam($username);
 	// real values
 	$TopscorerReal=getCorrectTopscorer();
-	$realTeamShort=getTippedTopScorerTeam("real");
-	$realTeam=getTeamName($realTeamShort);
+	$realTeam=$dbutil->getTippedTopScorerTeam("real");
 	
 	echo "<br>";
 	echo "<table>";
@@ -496,15 +495,6 @@ function getTippedTopScorer($username){
 	$sqlResultArray=mysql_fetch_array($sqlQueryResult);
 	$topscorer=$sqlResultArray["topscorer"];
 	return $topscorer;
-}
-
-function getTippedTopScorerTeam($username){
-	
-	$table_topscorertipps=dbschema::topscorertipps;
-	$sqlQueryResult=mysql_query("SELECT * FROM $table_topscorertipps WHERE user='$username'");
-	$sqlResultArray=mysql_fetch_array($sqlQueryResult);
-	$teamShort=$sqlResultArray["team"];
-	return $teamShort;
 }
 
 function printEvaluationFinalParticipants($user, $matchtype, $silent)

@@ -81,9 +81,9 @@ function printSpecialsForUser($username){
 	$vice=getTippedTeamRostrum($username, 2);
 	$third=getTippedTeamRostrum($username, 3);
 	
+	$dbutil=new dbutil();
 	$tippTopscorer=getTippedTopScorer($username);
-	$tippedTeamShort=getTippedTopScorerTeam($username);
-	$tippedTeam=getTeamName($tippedTeamShort);
+	$tippedTeam=$dbutil->getTippedTopScorerTeam($username);
 	echo "<tr>";
 	echo "<td>" . getUserInfo($username) . "</td>";
 	echo "<td>" . $worldChampion . "</td>";
@@ -129,12 +129,4 @@ function getTippedTopScorer($username){
 	return $topscorer;
 }
 
-function getTippedTopScorerTeam($username){
-	
-	$table_topscorertipps=dbschema::topscorertipps;
-	$sqlQueryResult=mysql_query("SELECT * FROM $table_topscorertipps WHERE user='$username'");
-	$sqlResultArray=mysql_fetch_array($sqlQueryResult);
-	$teamShort=$sqlResultArray["team"];
-	return $teamShort;
-}
 ?>

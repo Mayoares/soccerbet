@@ -34,6 +34,16 @@ class dbutil
 		$picname=$array["logofile"];
 		return $picname;
 	}
+	
+	function getTippedTopScorerTeam($username){
+		$table_teams=dbschema::teams;
+		$table_topscorertipps=dbschema::topscorertipps;
+		$sqlQueryResult=mysql_query("SELECT * FROM $table_topscorertipps top, $table_teams teams WHERE user='$username' AND top.team=teams.shortname");
+		$sqlResultArray=mysql_fetch_array($sqlQueryResult);
+		$teamName=$sqlResultArray["name"];
+		return $teamName;
+	}
+	
 }
 $dbutil=new dbutil();
 ?>

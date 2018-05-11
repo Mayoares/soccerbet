@@ -87,9 +87,9 @@ function printChampions($userName){
 function printTopscorer($username){
 	
 	$topscorer=getTippedTopScorer($username); if(strlen($topscorer)==0){$topscorer = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
-	$tippedTeamShort=getTippedTopScorerTeam($username);
 	$dbutil=new dbutil();
-	$topScorerTeam=$dbutil->getTeamName($tippedTeamShort); if(strlen($topScorerTeam)==0){$topScorerTeam = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
+	$topScorerTeam=$dbutil->getTippedTopScorerTeam($username);
+	if(strlen($topScorerTeam)==0){$topScorerTeam = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
 	
 	//echo "<table style='font-size:18px'>";
 	echo "<table>";
@@ -115,12 +115,4 @@ function getTippedTopScorer($username){
 	return $topscorer;
 }
 
-function getTippedTopScorerTeam($username){
-	
-	$table_topscorertipps=dbschema::topscorertipps;
-	$sqlQueryResult=mysql_query("SELECT * FROM $table_topscorertipps WHERE user='$username'");
-	$sqlResultArray=mysql_fetch_array($sqlQueryResult);
-	$teamShort=$sqlResultArray["team"];
-	return $teamShort;
-}
 ?>
