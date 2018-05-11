@@ -120,7 +120,7 @@ function addUser($username, $firstname, $lastname, $email, $adminuserId)
 		
 		$id = md5(uniqid(time()));
 		$betreff = "Werke's Tippspiel - Login-Info";
-		$content = "From: werkestippspiel\n";
+		$content = "From: tippspiel@mayoar.rivido.de\n";
 		$content .= "MIME-Version: 1.0\n";
 		$content .= "Content-Type: multipart/mixed; boundary=$id\n\n";
 		$content .= "This is a multi-part message in MIME format\n";
@@ -139,13 +139,14 @@ function addUser($username, $firstname, $lastname, $email, $adminuserId)
 		$content .= "\n--$id";
 		// Body Ende
 		mail($email, $betreff, "", $content); // E-Mail versenden
-		$printOut = "eMail mit initialem Passwort f&uuml;r $firstname $lastname (Benutzername:$username) an '$email' gesendet.";
+		$printOut = "eMail mit initialem Passwort f&uuml;r $firstname $lastname (Benutzername:$username) wird an '$email' gesendet.";
 		echo $printOut;
 		$log->info("Sent email with initial password for $firstname $lastname (Benutzername:$username) to '$email'");
 		
 // 		$adminEMail = "andreas.grotemeyer@gmail.com";
-		$adminEMail = "robert.werkestippspiel@gmail.com";
-		$adminContent = "From: werkestippspiel\n";
+// 		$adminEMail = "robert.werkestippspiel@gmail.com";
+		$adminEMail = "mayoar.werkestippspiel@gmail.com";
+		$adminContent = "From: tippspiel@mayoar.rivido.de\n";
 		$adminContent .= "MIME-Version: 1.0\n";
 		$adminContent .= "Content-Type: multipart/mixed; boundary=$id\n\n";
 		$adminContent .= "This is a multi-part message in MIME format\n";
