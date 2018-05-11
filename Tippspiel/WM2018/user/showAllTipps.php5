@@ -16,13 +16,13 @@ if(strlen($userId)>0)
 	    //echo "<frameset cols=\"38%,38%,24%\">";
 		echo "	<frame src='./showGroupTipps.php5?userId=$userId&groups=Part1' name='Gruppen A-D'>";
 		echo "	<frame src='./showGroupTipps.php5?userId=$userId&groups=Part2' name='Gruppen E-H'>";
-	    // echo "	<frame src='./showRestTipps.php5?userId=$userId' name='Rest'>";
+	    // echo "	<frame src='./showFinalsTipps.php5?userId=$userId' name='Rest'>";
 		echo "</frameset>";
 	}
 	else if($framepart=="finals")
 	{
 		echo "<frameset cols=\"100%\">";
-		echo "	<frame src='./showRestTipps.php5?userId=$userId' name='Enrunde'>";
+		echo "	<frame src='./showFinalsTipps.php5?userId=$userId' name='Enrunde'>";
 	}
 	else if($framepart=="specials")
 	{
