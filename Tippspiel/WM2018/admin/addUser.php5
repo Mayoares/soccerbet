@@ -263,12 +263,15 @@ function promptAddUser($adminuserId)
 	echo "<tr>";
 	echo "<td>Auswahl fr&uuml;here Teilnehmer: </td>";
 	echo "<td bgcolor=slategray><select name='user'>";
+	if(isset($_POST["user"])){
+		echo "<option name='knownUser' value='$user' selected>$usernameKnownUser ($lastnameKnownUser, $firstnameKnownUser)</option>";
+	}
 	for($i=0; $i < count($arrayUserList); $i++)
 	{
 		$user = $arrayUserList[$i]["username"];
 		$firstname = $arrayUserList[$i]["firstname"];
 		$lastname = $arrayUserList[$i]["lastname"];
-		echo"<option name='knownUser' value='$user' >$user ($lastname, $firstname)</option>";
+		echo "<option name='knownUser' value='$user' >$user ($lastname, $firstname)</option>";
 	}
 	
 	echo "<td><input type='submit' name='addKnownUser' value='&Uuml;bernehmen'></td>";
