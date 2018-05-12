@@ -1,4 +1,4 @@
-<?php
+ <?php
 session_start();
 $userId=$_GET["userId"];
 if(strlen($userId)==0)
@@ -43,6 +43,7 @@ if(strlen($userId)==0)
 include_once("../../connection/dbaccess.php5");
 include_once("../../general/log/log.php5");
 include_once("../util/dbschema.php5");
+include_once("../util/dbutil.php5");
 
 $log=new viewlogger();
 $log->info("clicked showAllUsersSpecialTipps.php5");
@@ -60,7 +61,7 @@ function printSpecials(){
 	echo "<th>User</th> ";
 	echo "<th>Weltmeister</th> ";
 	echo "<th>Zweitplatzierter</th> ";
-//  	echo "<th>Platz 3</th> ";
+  	echo "<th>Platz 3</th> ";
 	echo "<th>Torsch&uuml;tzenk&ouml;nig</th> ";
 	echo "</tr>";
 	
@@ -88,7 +89,7 @@ function printSpecialsForUser($username){
 	echo "<td>" . getUserInfo($username) . "</td>";
 	echo "<td>" . $worldChampion . "</td>";
 	echo "<td>" . $vice . "</td>";
-// 	echo "<td>" . $third . "</td>";
+ 	echo "<td>" . $third . "</td>";
 	echo "<td>" . $tippTopscorer . "($tippedTeam)" . "</td>";
 	echo "</tr>";
 }
