@@ -2,7 +2,6 @@
 // we must never forget to start the session
 session_start();
 $adminuserId=$_GET["adminuserId"];
-$userId=$_GET["userId"];
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
             "http://www.w3.org/TR/html4/loose.dtd">
@@ -89,10 +88,10 @@ function getScore($rank){
 	{
 		return 10;
 	}
-// 	else if($rank==3)
-// 	{
-// 		return 8;
-// 	}
+	else if($rank==3)
+	{
+		return 8;
+	}
 }
 
 //Datenbankconnection schliessen
