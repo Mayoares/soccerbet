@@ -5,6 +5,7 @@ include_once("../../connection/dbaccess.php5");
 include_once("../util/dbschema.php5");
 include_once("../../general/log/log.php5");
 include_once("../util/dbutil.php5");
+include_once("scoredefinitions.php5");
 
 $adminuserId=$_GET["adminuserId"];
 if(strlen($adminuserId)==0)
@@ -210,47 +211,47 @@ function calcScore($user, $matchtype, $winnerCorrect, $resultCorrect)
 	{
 		if($resultCorrect)
 		{
-			return 4;
+			return scoredefinitions::FINALMATCH_WINNER_EIGHTH + scoredefinitions::MATCH_RESULT_EXACTLY;
 		}
 		else if($winnerCorrect)
 		{
-			return 2;
+			return scoredefinitions::FINALMATCH_WINNER_EIGHTH;
 		}
 	}
 	if ($matchtype=='Viertelfinale')
 	{
 		if($resultCorrect)
 		{
-			return 5;
+			return scoredefinitions::FINALMATCH_WINNER_QUARTER + scoredefinitions::MATCH_RESULT_EXACTLY;
 		}
 		else if($winnerCorrect)
 		{
-			return 3;
+			return scoredefinitions::FINALMATCH_WINNER_QUARTER;
 		}
 	}
 	if ($matchtype=='Halbfinale')
 	{
 		if($resultCorrect)
 		{
-			return 6;
+			return scoredefinitions::FINALMATCH_WINNER_HALF + scoredefinitions::MATCH_RESULT_EXACTLY;
 		}
 		else if($winnerCorrect)
 		{
-			return 4;
+			return scoredefinitions::FINALMATCH_WINNER_HALF;
 		}
 	}
 	if ($matchtype=='Platz3')
 	{
 		if($resultCorrect)
 		{
-			return 3;
+			return scoredefinitions::MATCH_RESULT_EXACTLY_FINAL;
 		}
 	}
 	if ($matchtype=='Finale')
 	{
 		if($resultCorrect)
 		{
-			return 8;
+			return scoredefinitions::MATCH_RESULT_EXACTLY_FINAL;
 		}
 	}
 }

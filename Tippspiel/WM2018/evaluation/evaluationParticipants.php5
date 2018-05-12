@@ -16,6 +16,7 @@ include_once("../../connection/dbaccess.php5");
 include_once("../util/calc.php5");
 include_once("../util/dbutil.php5");
 include_once("../util/dbschema.php5");
+include_once("scoredefinitions.php5");
 //$userName=$dbutil->getUserName($userId);
 
 
@@ -155,23 +156,23 @@ function getScore($matchtype)
 {
 		if($matchtype=='Achtelfinale')	
 		{
-			return 2;
+			return scoredefinitions::FINALMATCH_PARTICIPANT_EIGHTH;;
 		}
 		else if($matchtype=='Viertelfinale')	
 		{
-			return 3;
+			return scoredefinitions::FINALMATCH_PARTICIPANT_QUARTER;;
 		}
 		else if($matchtype=='Halbfinale')	
 		{
-			return 4;
+			return scoredefinitions::FINALMATCH_PARTICIPANT_HALF;
 		}
 		else if($matchtype=='Platz3')	
 		{
-			return 5;
+			return scoredefinitions::FINALMATCH_PARTICIPANT;
 		}
 		else if($matchtype=='Finale')	
 		{
-			return 5;
+			return scoredefinitions::FINALMATCH_PARTICIPANT;
 		}
 }
 

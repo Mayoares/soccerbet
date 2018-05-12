@@ -22,6 +22,7 @@ include_once("../../connection/dbaccess.php5");
 include_once("../util/dbschema.php5");
 include_once("../../general/log/log.php5");
 include_once("../util/dbutil.php5");
+include_once("scoredefinitions.php5");
 
 $adminuserId=$_GET["adminuserId"];
 
@@ -94,7 +95,7 @@ while($arrayUser=mysql_fetch_array($ergebnisUser)){
   $Score=-1;
   if($RankUser==$RankReal)
   {
-	  $Score=2;
+	  $Score=scoredefinitions::GROUPRANK_CORRECT;
 	  $scoreSum=$scoreSum+$Score;
   }
   else 

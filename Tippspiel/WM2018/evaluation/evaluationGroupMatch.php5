@@ -4,6 +4,7 @@
 include_once("../../connection/dbaccess.php5");
 include_once("../util/dbschema.php5");
 include_once("../../general/log/log.php5");
+include_once("scoredefinitions.php5");
 
 $adminuserId=$_GET["adminuserId"];
 
@@ -145,11 +146,11 @@ function getEvaluationGroup($GoalsTeam1User, $GoalsTeam2User, $WinnerUser, $Goal
 	$Score=0;
 	if($GoalsTeam1User==$GoalsTeam1Real && $GoalsTeam2User==$GoalsTeam2Real)
 	{
-		$Score=4;
+		$Score=scoredefinitions::GROUPMATCH_WINNER_CORRECT + scoredefinitions::MATCH_RESULT_EXACTLY;
 	}
 	else if($WinnerUser==$WinnerReal)
 	{
-		$Score=2;
+		$Score=scoredefinitions::GROUPMATCH_WINNER_CORRECT;
 	}
 	return $Score;
 }

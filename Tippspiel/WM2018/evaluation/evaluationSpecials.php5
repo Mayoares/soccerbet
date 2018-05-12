@@ -20,6 +20,8 @@ $adminuserId=$_GET["adminuserId"];
 include_once("../../connection/dbaccess.php5");
 include_once("../util/dbschema.php5");
 include_once("../../general/log/log.php5");
+include_once("scoredefinitions.php5");
+
 $table_championtipps=dbschema::championtipps;
 $sqluser="SELECT c.user, c.team, c.rank AS ranktipp FROM $table_championtipps c WHERE NOT c.user='real' ORDER BY c.user,c.rank";
 $ergebnisUser=mysql_query($sqluser);
@@ -80,17 +82,18 @@ function getRealTeam($rank){
 }
 
 function getScore($rank){
+	
 	if($rank==1)
 	{
-		return 15;
+		return scoredefinitions::CHAMPIONSHIP_RANK_1;
 	}
 	else if($rank==2)
 	{
-		return 10;
+		return scoredefinitions::CHAMPIONSHIP_RANK_2;
 	}
 	else if($rank==3)
 	{
-		return 8;
+		return scoredefinitions::CHAMPIONSHIP_RANK_3;
 	}
 }
 
