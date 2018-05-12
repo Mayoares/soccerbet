@@ -2,7 +2,7 @@
 // we must never forget to start the session
 session_start();
 $adminuserId=$_GET["adminuserId"];
-$userName=$_POST["SelectedUsername"];
+//$userName=$_POST["SelectedUsername"];
 include_once("../../general/log/log.php5");
 echo "<html>";
 echo "<head>";
@@ -19,14 +19,14 @@ include_once("../util/dbschema.php5");
 //$userName=$dbutil->getUserName($userId);
 
 
-if(strlen($userName)>0)
-{
-	echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zur&uuml;ck zur &Uuml;bersicht</a>";
-	echo "<br>";
-	echo "<br><b>$userName</b><br>";
-	calcScore($userName, false);
-}
-else
+// if(strlen($userName)>0)
+// {
+// 	echo "<a href='../admin/overviewAdmin.php5?userId=$adminuserId'>zur&uuml;ck zur &Uuml;bersicht</a>";
+// 	echo "<br>";
+// 	echo "<br><b>$userName</b><br>";
+// 	calcScore($userName, false);
+// }
+// else
 {
 	$allUsers=getAllUsers();
 	while($array=mysql_fetch_array($allUsers))
@@ -39,7 +39,7 @@ else
 }
 mysql_close();
 echo "<br>";
-echo "<a href='./overviewAdmin.php5?userId=$adminuserId'>zur&uuml;ck zur &Uuml;bersicht</a>";
+echo "<a href='../admin/overviewAdmin.php5?userId=$adminuserId'>zur&uuml;ck zur &Uuml;bersicht</a>";
 
 function getAllUsers()
 {

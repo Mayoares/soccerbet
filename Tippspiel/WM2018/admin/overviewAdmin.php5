@@ -135,7 +135,7 @@ if(isset($_POST["resetEvaluationDone"]))
 	<hr>
 	<h2>Gruppenphase</h2>
 	<?php 
-	echo "<p><form method=\"POST\" action=\"evaluationGroupMatch.php5?adminuserId=$userId\">";
+	echo "<p><form method=\"POST\" action=\"../evaluation/evaluationGroupMatch.php5?adminuserId=$userId\">";
 	echo "Gruppen-Spiel Nr.: ";
 	echo "<td bgcolor=slategray><select name='SelectedMatchnr'>";
 	allGroupMatchesAsOption("SelectedMatchnr", $dbutil);
@@ -143,7 +143,7 @@ if(isset($_POST["resetEvaluationDone"]))
 	echo "<input type='submit' name='evaluationGroupMatch' value='Auswertung Ergebnis Gruppenspiel'>";
 	echo "</form></p>";
 	
-	echo "<p><form method=\"POST\" action=\"evaluationGroupRank.php5?adminuserId=$userId\">";
+	echo "<p><form method=\"POST\" action=\"../evaluation/evaluationGroupRank.php5?adminuserId=$userId\">";
 	echo "Gruppe ";
 	echo "<td bgcolor=slategray><select name='SelectedGroup'>";
 	echo"<option name=SelectedGroup >A</option>";
@@ -162,11 +162,11 @@ if(isset($_POST["resetEvaluationDone"]))
 	<h2>Endrunden-Tipps</h2>
 	<?php
 	
-	echo "<p><form method=\"POST\" action=\"evaluationParticipants.php5?adminuserId=$userId\">";
+	echo "<p><form method=\"POST\" action=\"../evaluation/evaluationParticipants.php5?adminuserId=$userId\">";
 	echo "<input type=\"submit\" name=\"eval3\" value=\"Auswertung Teilnehmer Endrunde\">";
 	echo "</form></p>";
 	
-	echo "<p><form method=\"POST\" action=\"evaluationFinalMatch.php5?adminuserId=$userId\">";
+	echo "<p><form method=\"POST\" action=\"../evaluation/evaluationFinalMatch.php5?adminuserId=$userId\">";
 	echo "Endrunden-Spiel Nr.: ";
 	echo "<td bgcolor=slategray><select name='SelectedMatchnr'>";
 	allFinalMatchesAsOption("SelectedMatchnr", $dbutil);
@@ -178,7 +178,7 @@ if(isset($_POST["resetEvaluationDone"]))
 	<h2>Spezial-Tipps</h2>
 	<?php
 	
-	echo "<p><form method=\"POST\" action=\"evaluationSpecials.php5?adminuserId=$userId\">";
+	echo "<p><form method=\"POST\" action=\"../evaluation/evaluationSpecials.php5?adminuserId=$userId\">";
 	echo "<input type=\"submit\" name=\"eval\" value=\"Auswertung Spezial-Tipps\">";
 	echo "</form></p>";
 	echo "<p>Torsch&uuml;tzenk&ouml;nig (Eingabe manuell in Datenbank)</p>";
