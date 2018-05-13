@@ -65,7 +65,7 @@ function printUserInfo($userName){
 	echo "</table>";
 	//
 	echo "<br>";
-	echo "<h3>Administrator</h3>";
+	echo "<h3>Administratoren</h3>";
 	echo "<table> <colgroup> <col width='150'> <col width='250'></colgroup>";
 	echo "<tr>";
 	echo "<td>Mail and Mayoar</td><td><a href='mailto:mayoar.werkestippspiel@gmail.com' target='_top'>mayoar.werkestippspiel@gmail.com</a></td>";
