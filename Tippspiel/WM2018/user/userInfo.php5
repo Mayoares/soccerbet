@@ -68,10 +68,10 @@ function printUserInfo($userName){
 	echo "<h3>Administrator</h3>";
 	echo "<table> <colgroup> <col width='150'> <col width='250'></colgroup>";
 	echo "<tr>";
-	echo "<td>Mail and R&oslash;bl:</td><td><a href='mailto:robert.werkestippspiel@gmail.com' target='_top'>robert.werkestippspiel@gmail.com</a></td>";
+	echo "<td>Mail and Mayoar</td><td><a href='mailto:mayoar.werkestippspiel@gmail.com' target='_top'>mayoar.werkestippspiel@gmail.com</a></td>";
 	echo "</tr>";
 	echo "<tr>";
-	echo "<td>Andreas Grotemeyer</td><td><a href='mailto:mayoar.werkestippspiel@gmail.com' target='_top'>mayoar.werkestippspiel@gmail.com</a></td>";
+	echo "<td>Mail and R&oslash;bl:</td><td><a href='mailto:robert.werkestippspiel@gmail.com' target='_top'>robert.werkestippspiel@gmail.com</a></td>";
 	echo "</tr>";
 	echo "</table>";
 }
