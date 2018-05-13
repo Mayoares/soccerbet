@@ -42,7 +42,7 @@ session_start();
 	<p>Antwort:</p>
 	<p>Wir empfehlen folgende Vorgehensweise:</p>
 	<p>1. <a href="../pdf/Spielplan_WM_2018_Welt.pdf">Spielplan</a> ausdrucken.</p>
-	<p>2. Tipps auf ausgedruckten Spielplan notieren <br>(Hinweis: Die vier Gruppenbesten nach der Tabelle in der Anleitung ausw&auml;hlen).</p>
+	<p>2. Tipps auf ausgedruckten Spielplan notieren.</p>
 	<p>3. Tipps online am PC oder Laptop eingeben.</p>
 	<p>4. Tipps kontrollieren.</p>
 	<p>5. FERTIG!</p>
