@@ -91,11 +91,11 @@ function run($userId, $finaltype, $matchnrPost, $dbutil, $saveMatchErrorText){
 		echo "</tr>";
 		echo "<tr class='border_bottom'>";
 		echo "<td> $date </td><td> $formattedTime </td><td> Spiel $matchnr </td> ";
-		echo "<td bgcolor=slategray><select name='$matchnr-Team1'>";
+		echo "<td bgcolor=slategray><select  name='$matchnr-Team1' id='finalcombo' style='width: 150px !important'>";
 		allTeamsAsOption($sqlTeams1, $tippedTeam1, "Team1");
 		echo "</td>";
 		echo "<td> - </td>";
-		echo "<td bgcolor=slategray><select name='$matchnr-Team2'>";
+		echo "<td bgcolor=slategray><select name='$matchnr-Team2' id='finalcombo' style='width: 150px !important'>";
 		allTeamsAsOption($sqlTeams2, $tippedTeam2, "Team2");
 		echo "</td>";
 		echo "<td width='100' align='center'>

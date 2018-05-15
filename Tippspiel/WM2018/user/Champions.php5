@@ -71,7 +71,7 @@ function run($userId){
 	echo "<tr class='border_bottom'>";	
 	echo "  <td> <b>Weltmeister</b> </td>";
 	echo "	<td bgcolor=slategray>";
-	echo "    <select name='rank1'>";
+	echo "    <select name='rank1' style='width: 150px !important'>";
 	allTeamsAsOptionForRank($sqlTeams, $worldChampion);
 	echo "    </select>";
 	echo "	</td>";
@@ -79,7 +79,7 @@ function run($userId){
 	echo "<tr class='border_bottom'>";	
 	echo "	<td> <b>Zweitplatzierter</b> ";
 	echo "	<td bgcolor=slategray>";
-	echo "    <select name='rank2'>";
+	echo "    <select name='rank2' style='width: 150px !important'>";
 	allTeamsAsOptionForRank($sqlTeams, $vice);
 	echo "    </select>";
 	echo "	</td>";
@@ -87,7 +87,7 @@ function run($userId){
 	echo "<tr class='border_bottom'>";
 	echo "	<td> <b>Platz 3</b> ";
 	echo "	<td bgcolor=slategray>";
-	echo "    <select name='rank3'>";
+	echo "    <select name='rank3' style='width: 150px !important'>";
 	allTeamsAsOptionForRank($sqlTeams, $third);
 	echo "    </select>";
 	echo "	</td>";
@@ -129,7 +129,7 @@ function run($userId){
 	echo "<tr class='border_bottom'>";	
 	echo "  <td> <b>Spieler</b> </td>";
 	echo "  <td> ";
-	echo "	<input type='text' name='topscorer' value='$tippTopscorer'>";
+	echo "	<input type='text' name='topscorer' value='$tippTopscorer' style='width: 150px !important'>";
 	echo "	</td>";
 	echo "</tr>";	
 	echo "<tr class='border_bottom'>";
@@ -227,7 +227,7 @@ function allTeamsAsOption($sqlTeams, $tippedTeam) {
 		echo "keine passenden Datens&auml;tze gefunden";
 	else
 	{
-		echo "<td bgcolor=slategray><select name='team'>";
+		echo "<td bgcolor=slategray><select name='team' style='width: 150px !important'>";
 		for ($i=0; $i<$numTeams; $i++)
 		{
 			$name = mysql_result($sqlTeams, $i, "name");
