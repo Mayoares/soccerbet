@@ -106,9 +106,9 @@ while($array=mysql_fetch_array($sqlResult)){
 	echo "<form action='Group.php5?userId=$userId&matchnr=$matchnr&group=$group' method='POST'>";
 	echo "<td> $date </td> <td> $formattedTime </td> <td>Spiel $matchnr &nbsp;&nbsp;</td> " .
 			"<td><p><img src=\"../pics/$picname1\" alt=\"Flagge-$teamName1\"></p></td>" .
-			"<td><b>$teamName1</b> </td> <td>-</td> 
+			"<td style='width: 120px !important'><b>$teamName1</b> </td> <td>-</td> 
 			<td><p><img src=\"../pics/$picname2\" alt=\"Flagge-$teamName2\"></p></td>
-			<td> <b>$teamName2</b></td>  
+			<td style='width: 120px !important'> <b>$teamName2</b></td>  
 	<td> <input type=\"Text\" size=\"2\" name=\"$matchnr-GoalsTeam1\" value=\"$tippGoalsTeam1\"></td><td> : </td>
 	<td> <input type=\"Text\" size=\"2\" name=\"$matchnr-GoalsTeam2\" value=\"$tippGoalsTeam2\"></td>";
 	//if User=real
