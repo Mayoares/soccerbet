@@ -14,4 +14,5 @@ INSERT INTO `wmtipp2018_groupcitations` (`group`, `citation`, `author`) VALUES
 ('Achtelfinale', 'Sie sollen nicht glauben, das sie Brasilianer sind, nur weil sie aus Brasilien kommen!\r\n', 'Franz Breitner'),
 ('Viertelfinale', 'Wir sehen uns auf der Piste wieder (nach dem 0:1 gegen Deutschland bei der EM 2008)\r\n', 'Österreichischer Fan'),
 ('Halbfinale', 'Jetzt fährt Boris Becker schon im Bus mit, bald bringen die Spieler ihre Tanten mit (über die Mitfahrer im Bus der deutschen Nationalmannschaft bei der EM 2000)\r\n', 'Eduard Geyer'),
+('Platz3', 'Jede Seite hat zwei Medaillen!', 'Mario Basler')
 ('Finale', 'Eng (auf die Frage, wie es war, als Bundeskanzler Kohl nach dem EM-Sieg 1996 in die Kabine kam)\r\n', 'Mehmet Scholl');
