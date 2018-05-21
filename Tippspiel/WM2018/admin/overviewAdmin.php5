@@ -102,6 +102,15 @@ if(isset($_POST["resetEvaluationDone"]))
 	<div class="col span_1_of_3">
 
 <div class="block">
+
+	<h1><font color="#ffffff">Einladung an fr&uuml;here Teilnehmer</font></h1>
+	<hr>
+	<?php 
+	echo "<form method=\"POST\" action=\"sendInvitationToFormerUsers.php5?userId=$userId\">";
+ 	echo "<input type=\"submit\" name=\"ok\" value=\"Abschicken\">";
+	echo "</form>";
+	?>
+
 	<h1><font color="#ffffff">Newsletter upload</font></h1>
 	<hr>
 	<?php 
