@@ -95,6 +95,7 @@ function run($adminuserId){
 		mail($email, $betreff, $content, $header); // E-Mail versenden
 		$printOut = "Einladung zum Tippspiel wird an $firstname $lastname (Benutzername:$username, email:'$email') gesendet.";
 		echo $printOut;
+		echo "<br>";
 		$log->info("Sent invitation for $firstname $lastname (Benutzername:$username) to '$email'");
 		
 		$sql="UPDATE `$table_users_last_wm` SET `invitationSent` = '1' WHERE `$table_users_last_wm`.`username` = '$username'";
