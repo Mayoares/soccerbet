@@ -154,9 +154,6 @@ function getGoals2($userName, $matchnr){
 function getTeams($group){
 	$table_teams=dbschema::teams;
 	$sqlQuery="SELECT t.name FROM $table_teams t WHERE t.group='$group'";
-	include_once '../../general/log/log.php5';
-	$log=new logger();
-	$log->info($sqlQuery);
 	$sqlQueryResult=mysql_query($sqlQuery);
 	return $sqlQueryResult;
 }
@@ -191,9 +188,6 @@ function getTeamOnRank($username, $group, $rank, $dbutil){
 	$table_groupranktipps=dbschema::groupranktipps;
 	$table_teams=dbschema::teams;
 	$sqlQuery="SELECT t.name FROM $table_teams t,$table_groupranktipps rt WHERE rt.user='$username' AND t.shortname = rt.team AND t.group='$group' AND rt.rank='$rank'";
-	include_once '../../general/log/log.php5';
-	$log=new logger();
-	$log->info($sqlQuery);
 	$sqlQueryResult=mysql_query($sqlQuery);
 	$array=mysql_fetch_array($sqlQueryResult);
 	$teamName=$array["name"];
@@ -201,13 +195,10 @@ function getTeamOnRank($username, $group, $rank, $dbutil){
 }
 
 function saveMatch($matchnr, $userName, $dbutil){
-	include_once("../../general/log/log.php5");
-	$log=new logger();
 	include_once("../util/calc.php5");
 	include_once("../util/dbschema.php5");
 	$table_matches=dbschema::matches;
 	$sql="SELECT * FROM $table_matches m WHERE m.matchnr='$matchnr'";
-	$log->info($sql);
 	$sqlResult=mysql_query($sql);
 	while($array=mysql_fetch_array($sqlResult)){
 
@@ -229,7 +220,6 @@ function saveMatch($matchnr, $userName, $dbutil){
 			// echo "create match pred ($userName, $matchnr, $teamName1, $teamName2, $GoalsTeam1, $GoalsTeam2, $winner, $goaldiff)";
 			$matchpred = new MatchPrediction($userName, $matchnr, $teamName1, $teamName2, $GoalsTeam1, $GoalsTeam2, $winner, $goaldiff);
 			insertUpdateMatchPrediction($matchpred);
-			//insertUpdateMatchTipp($userName, $matchnr, $teamName1, $teamName2, $GoalsTeam1, $GoalsTeam2, $winner);
 			return "";
 		}
 	}
@@ -241,18 +231,18 @@ function insertUpdateMatchPrediction($matchprediction)
 	$table_groupmatchtipps=dbschema::groupmatchtipps;
 	// columns: user 	matchnr 	goalsX 	goalsY 	winner 	goaldiff 	score
 	$sqlinsert="INSERT INTO $table_groupmatchtipps VALUES ('$matchprediction->userName', '$matchprediction->matchnr', '$matchprediction->GoalsTeam1', '$matchprediction->GoalsTeam2', '$matchprediction->winner', '$matchprediction->goaldiff', NULL)";
-	$log->info($sqlinsert);
 	$sqlInsertResult=mysql_query($sqlinsert);
-	if (!$sqlInsertResult) {
-		$log->error(mysql_error());
-		//		$sqlerror=mysql_error();
+	if ($sqlInsertResult) {
+		$log->info($sqlinsert);
+		$log->info("Eintrag fuer User=$matchprediction->userName: Spiel $matchprediction->matchnr : $matchprediction->teamName1 - $matchprediction->teamName2  	$matchprediction->GoalsTeam1 : $matchprediction->GoalsTeam2");
+	} else {
 		//		echo "<br><font color='#EE0000'> Ung&uuml;ltige Abfrage: <b>$sqlinsert</b> <br>Error:$sqlerror</font>"; 
 		$sqlupdateMatch="UPDATE $table_groupmatchtipps SET " .
-			"goalsX = '$matchprediction->GoalsTeam1', " .
-			"goalsY = '$matchprediction->GoalsTeam2', " .
-			"winner = '$matchprediction->winner', " .
+			"goalsX='$matchprediction->GoalsTeam1', " .
+			"goalsY='$matchprediction->GoalsTeam2', " .
+			"winner='$matchprediction->winner', " .
 			"goaldiff=$matchprediction->goaldiff " .
-			"WHERE `$table_groupmatchtipps`.`user` =  '$matchprediction->userName' AND `$table_groupmatchtipps`.`matchnr` =$matchprediction->matchnr";
+			"WHERE `$table_groupmatchtipps`.`user`='$matchprediction->userName' AND `$table_groupmatchtipps`.`matchnr`=$matchprediction->matchnr";
 		$log->info($sqlupdateMatch);
 		$sqlupdateMatchResult=mysql_query($sqlupdateMatch);
 		if (!$sqlupdateMatchResult) {
@@ -262,17 +252,12 @@ function insertUpdateMatchPrediction($matchprediction)
 		}
 		else
 		{
-			$log->info("Update for User=$matchprediction->userName: Spiel $matchprediction->matchnr : $matchprediction->teamName1 - $matchprediction->teamName2  	$matchprediction->GoalsTeam1 : $matchprediction->GoalsTeam2");
+			$log->info("Update fuer User=$matchprediction->userName: Spiel $matchprediction->matchnr : $matchprediction->teamName1 - $matchprediction->teamName2  	$matchprediction->GoalsTeam1 : $matchprediction->GoalsTeam2");
 		}
-	}
-	else
-	{
-		$log->info("Update for User=$matchprediction->userName: Spiel $matchprediction->matchnr : $matchprediction->teamName1 - $matchprediction->teamName2  	$matchprediction->GoalsTeam1 : $matchprediction->GoalsTeam2");
 	}
 }
 
 function saveRanks($userName, $userId, $group, $dbutil){
-	//$log=new logger();	
 	
 	$teamName1=$_POST["Rank-1"];
 	$teamName2=$_POST["Rank-2"];
@@ -298,18 +283,23 @@ function saveRanks($userName, $userId, $group, $dbutil){
 }
 
 function insertUpdateRankTipp($username, $teamName, $teamShort, $rank){
+	$log=new logger();	
 	$table_groupranktipps=dbschema::groupranktipps;
 	$sqlinsertRank="INSERT INTO $table_groupranktipps " .
 		"(`user` , `team` , `rank` , `score`) " .
 		"VALUES ('$username', '$teamShort', '$rank', NULL)";
 	$resultInsert=mysql_query($sqlinsertRank);
-	if($resultInsert!=1)
+	if($resultInsert==1)
 	{
+		$log->info($sqlinsertRank);
+	} else {
 		$sqlupdateRank="UPDATE $table_groupranktipps r SET rank = '$rank' WHERE r.user = '$username' AND r.team = '$teamShort'";
+		$log->info($sqlupdateRank);
 		$result=mysql_query($sqlupdateRank);
 		if($result!=1)
 		{
 			echo "<br><font color='#EE0000'>Update des Tipps [<b>$teamShort</b> landet auf Platz <b>$rank</b>] fehlgeschlagen.</font>";
+			$log->error("Update Rank fehlgeschlagen:" + mysql_error());
 		}
 	}
 }
