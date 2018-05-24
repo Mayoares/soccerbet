@@ -285,22 +285,18 @@ function saveRanks($userName, $userId, $group, $dbutil){
 function insertUpdateRankTipp($username, $teamName, $teamShort, $rank){
 	$log=new logger();	
 	$table_groupranktipps=dbschema::groupranktipps;
-	$sqlinsertRank="INSERT INTO $table_groupranktipps " .
+	$sqlInsertUpdateRank="INSERT INTO $table_groupranktipps " .
 		"(`user` , `team` , `rank` , `score`) " .
-		"VALUES ('$username', '$teamShort', '$rank', NULL)";
-	$resultInsert=mysql_query($sqlinsertRank);
+		"VALUES ('$username', '$teamShort', '$rank', NULL) . 
+		ON DUPLICATE KEY UPDATE rank=VALUES(rank)";
+	$resultInsert=mysql_query($sqlInsertUpdateRank);
 	if($resultInsert==1)
 	{
-		$log->info($sqlinsertRank);
+		$log->info($sqlInsertUpdateRank);
 	} else {
-		$sqlupdateRank="UPDATE $table_groupranktipps r SET rank = '$rank' WHERE r.user = '$username' AND r.team = '$teamShort'";
-		$log->info($sqlupdateRank);
-		$result=mysql_query($sqlupdateRank);
-		if($result!=1)
-		{
-			echo "<br><font color='#EE0000'>Update des Tipps [<b>$teamShort</b> landet auf Platz <b>$rank</b>] fehlgeschlagen.</font>";
-			$log->error("Update Rank fehlgeschlagen:" + mysql_error());
-		}
+		echo "<br><font color='#EE0000'>Update des Tipps [<b>$teamShort</b> landet auf Platz <b>$rank</b>] fehlgeschlagen.</font>";
+		$log->error("Update Rank fehlgeschlagen:" + mysql_error());
+		
 	}
 }
 
