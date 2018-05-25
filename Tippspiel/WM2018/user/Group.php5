@@ -286,14 +286,11 @@ function insertUpdateRankTipp($username, $teamName, $teamShort, $rank){
 	$log=new logger();	
 	$table_groupranktipps=dbschema::groupranktipps;
 	$sqlInsertUpdateRank="INSERT INTO $table_groupranktipps " .
-		"(`user` , `team` , `rank` , `score`) " .
-		"VALUES ('$username', '$teamShort', '$rank', NULL) . 
-		ON DUPLICATE KEY UPDATE rank=VALUES(rank)";
+		"(`user`,`team`,`rank`,`score`) VALUES ('$username', '$teamShort', '$rank', NULL) ON DUPLICATE KEY UPDATE rank=VALUES(rank)";
+	$log->info($sqlInsertUpdateRank);
 	$resultInsert=mysql_query($sqlInsertUpdateRank);
-	if($resultInsert==1)
+	if($resultInsert=!1)
 	{
-		$log->info($sqlInsertUpdateRank);
-	} else {
 		echo "<br><font color='#EE0000'>Update des Tipps [<b>$teamShort</b> landet auf Platz <b>$rank</b>] fehlgeschlagen.</font>";
 		$log->error("Update Rank fehlgeschlagen:" + mysql_error());
 		
