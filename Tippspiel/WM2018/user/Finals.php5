@@ -149,102 +149,21 @@ function getTeamsOfGroup($matchnr, $named){
 	//echo "<br>getTeamsOfGroup($matchnr, $named)";
 	switch($matchnr)
 	{
-		case 49 :
-			if($named==1) {
-				return getTeams('A');
-			}
-			else
-			{
-				return getTeams('B');
-			}
-		case 50 :
-			if($named==1) {
-				return getTeams('C');
-			}
-			else
-			{
-				return getTeams('D');
-			}
-		case 51 :
-			if($named==1) {
-				return getTeams('B');
-			}
-			else
-			{
-				return getTeams('A');
-			}
-		case 52 :
-			if($named==1) {
-				return getTeams('D');
-			}
-			else
-			{
-				return getTeams('C');
-			}
-		case 53 :
-			if($named==1) {
-				return getTeams('E');
-			}
-			else
-			{
-				return getTeams('F');
-			}
-		case 54 :
-			if($named==1) {
-				return getTeams('G');
-			}
-			else
-			{
-				return getTeams('H');
-			}
-		case 55 :
-			if($named==1) {
-				return getTeams('F');
-			}
-			else
-			{
-				return getTeams('E');
-			}
-		case 56 :
-			if($named==1) {
-				return getTeams('H');
-			}
-			else
-			{
-				return getTeams('G');
-			}
-		case 57 :
-			if($named==1) {
-				return getTeamsOfGroups('A','B');
-			}
-			else
-			{
-				return getTeamsOfGroups('C','D');
-			}
-		case 58 :
-			if($named==1) { // Winner 53
-				return getTeamsOfGroups('E','F');
-			}
-			else
-			{	// Winner 54
-				return getTeamsOfGroups('G','H');
-			}
-		case 59 :
-			if($named==1) { // Winner 51
-				return getTeamsOfGroups('A','B');
-			}
-			else
-			{	// Winner 52
-				return getTeamsOfGroups('C','D');
-			}
-		case 60 :
-			if($named==1) { // Winner 55
-				return getTeamsOfGroups('E','F');
-			}
-			else
-			{	// Winner 56
-				return getTeamsOfGroups('G','H');
-			}
+		// Achtelfinale
+		case 49 : return ($named==1) ? getTeams('A') : getTeams('B');
+		case 50 : return ($named==1) ? getTeams('C') : getTeams('D');
+		case 51 : return ($named==1) ? getTeams('B') : getTeams('A');
+		case 52 : return ($named==1) ? getTeams('D') : getTeams('C');
+		case 53 : return ($named==1) ? getTeams('E') : getTeams('F');
+		case 54 : return ($named==1) ? getTeams('G') : getTeams('H');
+		case 55 : return ($named==1) ? getTeams('F') : getTeams('E');
+		case 56 : return ($named==1) ? getTeams('H') : getTeams('G');
+		
+		// Viertelfinale
+		case 57 : return ($named==1) ? getTeamsOfGroups('A','B') : getTeamsOfGroups('C','D');
+		case 58 : return ($named==1) ? getTeamsOfGroups('E','F') : getTeamsOfGroups('G','H');
+		case 59 : return ($named==1) ? getTeamsOfGroups('A','B') : getTeamsOfGroups('C','D');
+		case 60 : return ($named==1) ? getTeamsOfGroups('E','F') : getTeamsOfGroups('G','H');
 	}
 }
 
@@ -326,28 +245,13 @@ function saveMatch($matchnr, $userId, $team1, $team2, $dbutil){
 	
 	while($array=mysql_fetch_array($sqlResultFinals))
 	{
-		//$matchnr=$array["matchnr"];
-		
 		$teamShort1=$dbutil->getShortName($team1);
 		$teamShort2=$dbutil->getShortName($team2);
 		$goalsTeam1Str=$_POST["$matchnr-GoalsTeam1"];
-		if(strlen($goalsTeam1Str)==0)
-		{
-			$goalsTeam1 = "NULL";
-		}
-		else
-		{
-			$goalsTeam1 = "'" . $goalsTeam1Str . "'";
-		}
+		$goalsTeam1 = ((strlen($goalsTeam1Str)==0) ? "NULL" : $goalsTeam1Str);
 		$goalsTeam2Str=$_POST["$matchnr-GoalsTeam2"];
-		if(strlen($goalsTeam2Str)==0)
-		{
-			$goalsTeam2 = "NULL";
-		}
-		else
-		{
-			$goalsTeam2 = "'" . $goalsTeam2Str . "'";
-		}
+		$goalsTeam2 = ((strlen($goalsTeam2Str)==0) ? "NULL" : $goalsTeam2Str);
+		//echo "goalsTeam1=$goalsTeam1, goalsTeam2=$goalsTeam2";
 		$winner=$calc->calcWinner($goalsTeam1,$goalsTeam2);
 		if($team1=="---" && $team2=="---")
 		{
@@ -358,8 +262,7 @@ function saveMatch($matchnr, $userId, $team1, $team2, $dbutil){
 			if($goalsTeam1Str<0 || $goalsTeam2Str<0){
 				return "<p class=\"info\">Toranzahl unter 0!</p>"; 
 			} else {
-				insertUpdateFinalMatchTipp($userName, $matchnr, $teamShort1, $teamShort2, $goalsTeam1, $goalsTeam2, $winner);
-				return "";
+				return insertUpdateFinalMatchTipp($userName, $matchnr, $teamShort1, $teamShort2, $goalsTeam1, $goalsTeam2, $winner);
 			}
 		}
 		//echo "<br> $date $time Spiel $matchnr : $team1 - $team2  &nbsp; &nbsp; <b>$goalsTeam1 : $goalsTeam2</b> winner=$winner";
@@ -368,59 +271,37 @@ function saveMatch($matchnr, $userId, $team1, $team2, $dbutil){
 
 function insertUpdateFinalMatchTipp($userName, $matchnr, $teamShort1, $teamShort2, $GoalsTeam1, $GoalsTeam2, $winner){
 
-	//echo "insertUpdateFinalMatchTipp($userName $matchnr $teamShort1 $teamShort2 $GoalsTeam1:$GoalsTeam2)<br>";
-	insertUpdateInTipps($userName, $matchnr, $teamShort1, $teamShort2, $GoalsTeam1, $GoalsTeam2, $winner);
 	// only for user "real"
 	if($userName==='real')
 	{
 		updateInMatches($matchnr, "'$teamShort1'", "'$teamShort2'");
-	}
+	} 
+	
+	//echo "insertUpdateFinalMatchTipp($userName $matchnr $teamShort1 $teamShort2 $GoalsTeam1:$GoalsTeam2)<br>";
+	return insertUpdateInTipps($userName, $matchnr, $teamShort1, $teamShort2, $GoalsTeam1, $GoalsTeam2, $winner);
+	
 }
 
 function insertUpdateInTipps($userName, $matchnr, $teamShort1, $teamShort2, $GoalsTeam1, $GoalsTeam2, $winner){
 	$table_finalmatchtipps=dbschema::finalmatchtipps;
 	$goaldiff=$GoalsTeam1-$GoalsTeam2;
-	if($teamShort1=='')
-	{
-		$teamShort1String = "NULL";
-	}
-	else
-	{
-		$teamShort1String = "'$teamShort1'";
-	}
-	if($teamShort2=='')
-	{
-		$teamShort2String = "NULL";
-	}
-	else
-	{
-		$teamShort2String = "'$teamShort2'";
-	}
+	//echo "$goaldiff=$GoalsTeam1-$GoalsTeam2";
+	$teamShort1String = ($teamShort1=='') ? "NULL" : "'$teamShort1'";
+	$teamShort2String = ($teamShort2=='') ? "NULL" : "'$teamShort2'";
 	
-	$sqlinsert="INSERT INTO $table_finalmatchtipps (user,matchnr,teamX,teamY,goalsX,goalsY,winner,goaldiff,score)" .
-			"VALUES ('$userName', '$matchnr', $teamShort1String, $teamShort2String, $GoalsTeam1, $GoalsTeam2, '$winner', '$goaldiff', NULL)";
+	$sqlInsertUpdate="INSERT INTO $table_finalmatchtipps (user,matchnr,teamX,teamY,goalsX,goalsY,winner,goaldiff,score) " .
+			"VALUES ('$userName', '$matchnr', $teamShort1String, $teamShort2String, $GoalsTeam1, $GoalsTeam2, '$winner', '$goaldiff', NULL) " .
+			"ON DUPLICATE KEY UPDATE teamX=VALUES(teamX),teamY=VALUES(teamY),goalsX=VALUES(goalsX),goalsY=VALUES(goalsY),winner=VALUES(winner),goaldiff=VALUES(goaldiff),score=VALUES(score)";
 	$log=new logger();	
-	$log->info($sqlinsert);
-	$sqlInsertResult=mysql_query($sqlinsert);
-	if (!$sqlInsertResult) {
-		//$log->error(mysql_error());
-		$sqlerrorInsert=mysql_error();
-		$sqlupdateMatch="UPDATE $table_finalmatchtipps SET " .
-			"teamX = $teamShort1String, " .
-			"teamY = $teamShort2String, " .
-			"goalsX = $GoalsTeam1, " .
-			"goalsY = $GoalsTeam2, " .
-			"winner = '$winner', " .
-			"goaldiff=$goaldiff " .
-			"WHERE $table_finalmatchtipps.user =  '$userName' AND $table_finalmatchtipps.matchnr =$matchnr";
-		$log->info($sqlupdateMatch);
-		$sqlupdateMatchResult=mysql_query($sqlupdateMatch);
-		if (!$sqlupdateMatchResult) {
-			$sqlerror=mysql_error();
-			$log->error($sqlerror);
-			echo "<br><font color='#EE0000'> Ung&uuml;ltiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>";
-		    echo "<br><font color='#EE0000'> vorher: <b>$sqlinsert</b> <br>Error:$sqlerrorInsert</font>";
-		}
+	$log->info($sqlInsertUpdate);
+	$sqlInsertUpdateResult=mysql_query($sqlInsertUpdate);
+	if (!$sqlInsertUpdateResult) {
+		$mysqlInsertUpdateError=mysql_error();
+		$log->error("SQL-Error: " . $mysqlInsertUpdateError);
+		return "<p class=\"info\">Datenbank-Problem beim Speichern des Endrundentipps</p>";
+	} else {
+		$log->info("Endrundentipp eingetragen: ('$userName', matchnr=$matchnr, $teamShort1String, $teamShort2String, $GoalsTeam1, $GoalsTeam2, winner=$winner, Tordifferenz=$goaldiff, score=NULL) ");
+		return "";
 	}
 }
 
@@ -458,11 +339,10 @@ function updateInMatches($matchnr, $teamShort1, $teamShort2){
 	$log->info($sqlupdateMatch);
 	$sqlupdateMatchResult=mysql_query($sqlupdateMatch);
 	if ($sqlupdateMatchResult!=1) {
-		echo "<br>sqlupdateMatchResult:$sqlupdateMatchResult";
 		$sqlerror=mysql_error();
-		$log->error($sqlerror);
-		echo "<br><font color='#EE0000'> Ung&uuml;ltiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>";
-	}
+		$log->error("SQL-Error: " . $sqlerror);
+		echo "<p class=\"info\"> Ung&uuml;ltiger Request: <b>$sqlupdateMatch</b> Error:$sqlerror</p>";
+	} 
 }
 
 function clearInMatches($matchnr){
