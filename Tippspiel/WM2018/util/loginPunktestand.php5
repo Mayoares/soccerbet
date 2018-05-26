@@ -37,13 +37,13 @@ session_start();
 <div class="block">
 	<h1><font color="#ffffff">Tipps im Detail</font></h1>
 	<hr>
-	<p><h2><a href='../anybody/showAllUsersGroupTipps.php5?userId=$userId'>Gruppenspiel-Tipps</a></h2>/p>
+	<p><h2><a href='../anybody/showAllUsersGroupTipps.php5?userId=$userId'>Gruppenspiel-Tipps</a></h2></p>
 	<br>
-	<p><h2><a href='../anybody/showAllUsersGroupRankTipps.php5?userId=$userId'>Platzierungs-Tipps</a></h2>/p>
+	<p><h2><a href='../anybody/showAllUsersGroupRankTipps.php5?userId=$userId'>Platzierungs-Tipps</a></h2></p>
 	<br>
-	<p><h2><a href='../anybody/showAllUsersFinalmatchTipps.php5?userId=$userId'>Endrunden-Tipps</a></h2>/p>
+	<p><h2><a href='../anybody/showAllUsersFinalmatchTipps.php5?userId=$userId'>Endrunden-Tipps</a></h2></p>
 	<br>
-	<p><h2><a href='../anybody/showAllUsersSpecialTipps.php5?userId=$userId'>Spezial-Tipps</a></p></h2>/p>
+	<p><h2><a href='../anybody/showAllUsersSpecialTipps.php5?userId=$userId'>Spezial-Tipps</a></p></h2></p>
 	<p><form method="POST" action="../anybody/showAllTippsAndScore.php5"></p>
 	
 	<p>Alle Tipps von
