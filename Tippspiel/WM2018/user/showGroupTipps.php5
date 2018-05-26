@@ -17,8 +17,12 @@ include_once("../util/dbutil.php5");
 include_once("../util/dbschema.php5");
 $userName=$dbutil->getUserName($userId);
 
+
 if(strlen($userName)>0)
 {
+	$log=new logger();
+	$log->info("User=".$userName." kontrolliert seine Gruppentipps (".$groups.").");
+	
 	if($groups === 'Part1'){
 		printGroup('A', $userName);
 		printGroup('B', $userName);
@@ -65,12 +69,11 @@ function printGroupRanks($group, $userName){
 	echo "</tr>";
 	echo "</thead>";
 	echo "<tbody>";
-	$log=new logger();	
+	
 	for($rank=1; $rank<=4; $rank++)
 	{
 		$sql="SELECT t.name, t.group FROM $table_groupranktipps r, $table_teams t " .
 		"WHERE r.team = t.shortname AND r.user = '$userName' AND t.group='$group' AND r.rank='$rank'";
-		$log->info($sql);
 		$sqlResult=mysql_query($sql);
 		$array=mysql_fetch_array($sqlResult);
 		$teamName=$array["name"]; if(!isset($teamName)){$teamName = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}

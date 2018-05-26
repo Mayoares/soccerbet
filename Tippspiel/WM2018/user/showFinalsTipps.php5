@@ -15,9 +15,11 @@ include_once("../util/dbutil.php5");
 include_once("../util/dbschema.php5");
 $userName=$dbutil->getUserName($userId);
 
-
 if(strlen($userName)>0)
 {
+	$log=new logger();
+	$log->info("User=".$userName." kontrolliert seine Endrundentipps.");
+	
 	printFinal($userName, 'Achtelfinale');
 	printFinal($userName, 'Viertelfinale');
 	printFinal($userName, 'Halbfinale');
