@@ -31,23 +31,23 @@ else
 			$matchnrPost=$i;
 		}
 	}
-	echo "<h2>Achtelfinale</h2>";
+	echo "<h2 id='Achtelfinale'>Achtelfinale</h2>";
 	$citation->printCitation("Achtelfinale");
 	echo "<br>";
 	run($userId, "Achtelfinale", $matchnrPost, $dbutil, $saveMatchErrorText);
-	echo "<h2>Viertelfinale</h2>";
+	echo "<h2 id='Viertelfinale'>Viertelfinale</h2>";
 	$citation->printCitation("Viertelfinale");
 	echo "<br>";
 	run($userId, "Viertelfinale", $matchnrPost, $dbutil, $saveMatchErrorText);
-	echo "<h2>Halbfinale</h2>";
+	echo "<h2 id='Halbfinale'>Halbfinale</h2>";
 	$citation->printCitation("Halbfinale");
 	echo "<br>";
 	run($userId, "Halbfinale", $matchnrPost, $dbutil, $saveMatchErrorText);
-	echo "<h2>Spiel um Platz 3</h2>";
+	echo "<h2 id='Platz3'>Spiel um Platz 3</h2>";
 	$citation->printCitation("Platz3");
 	echo "<br>";
 	run($userId, "Platz3", $matchnrPost, $dbutil, $saveMatchErrorText);
-	echo "<h2>Finale</h2>";
+	echo "<h2 id='Finale'>Finale</h2>";
 	$citation->printCitation("Finale");
 	echo "<br>";
 	run($userId, "Finale", $matchnrPost, $dbutil, $saveMatchErrorText);
@@ -75,7 +75,7 @@ function run($userId, $finaltype, $matchnrPost, $dbutil, $saveMatchErrorText){
 		$tippedGoals1=getTippedGoals($username, $matchnr, "goalsX");
 		$tippedGoals2=getTippedGoals($username, $matchnr, "goalsY");
 		echo "<tr>";
-		echo "<form action='Finals.php5?userId=$userId&matchnr=$matchnr' method='POST'>";
+   		echo "<form action='Finals.php5?userId=$userId&matchnr=$matchnr#$finaltype' method='POST'>";
 		echo "<td></td>";
 		printDescription($matchnr);
 		// only possible teams
