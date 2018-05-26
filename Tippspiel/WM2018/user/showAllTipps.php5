@@ -22,7 +22,7 @@ if(strlen($userId)>0)
 	else if($framepart=="finals")
 	{
 		echo "<frameset cols=\"100%\">";
-		echo "	<frame src='./showFinalsTipps.php5?userId=$userId' name='Enrunde'>";
+		echo "	<frame src='./showFinalsTipps.php5?userId=$userId' name='Endrunde'>";
 	}
 	else if($framepart=="specials")
 	{
