@@ -38,22 +38,23 @@ function run($userId){
 	echo "<br>";
 	
 	$username=$dbutil->getUserName($userId);
-	if(isset($_POST['rank1'])){
+	$storageSuccess=true;
+	if($storageSuccess && isset($_POST['rank1'])){
 		
-		storeNewRank($username, $dbutil->getShortName($_POST['rank1']), 1);
+		$storageSuccess = storeNewRank($username, $dbutil->getShortName($_POST['rank1']), 1);
 	}
 	
-	if(isset($_POST['rank2'])){
+	if($storageSuccess && isset($_POST['rank2'])){
 		
-		storeNewRank($username, $dbutil->getShortName($_POST['rank2']), 2);
+		$storageSuccess = storeNewRank($username, $dbutil->getShortName($_POST['rank2']), 2);
 	}
 	
-	if(isset($_POST['rank3'])){
+	if($storageSuccess && isset($_POST['rank3'])){
 		
-		storeNewRank($username, $dbutil->getShortName($_POST['rank3']), 3);
+		$storageSuccess = storeNewRank($username, $dbutil->getShortName($_POST['rank3']), 3);
 	}
 		
-    if(isset($_POST['rank1']) && isset($_POST['rank2']) && isset($_POST['rank3'])){
+	if($storageSuccess){
     	
 		echo "<font color=\"green\">Stockerl-Tipps erfolgreich gespeichert :)</font>";
 		echo "<br>";
@@ -149,30 +150,19 @@ function storeNewRank($user, $team, $rank){
 	
 	//echo "<br>$user, $team, $rank";
 	$table_championtipps=dbschema::championtipps;
-	$sqlinsert="INSERT INTO $table_championtipps (user,team,rank)" .
-			"VALUES ('$user', '$team', '$rank')";
+	$sqlInsertUpdate="INSERT INTO $table_championtipps (user,team,rank) VALUES ('$user', '$team', '$rank') ON DUPLICATE KEY UPDATE team=VALUES(team)";
 	$log=new logger();	
-	$log->info($sqlinsert);
-	$sqlInsertResult=mysql_query($sqlinsert);
-	if (!$sqlInsertResult) {
-		$log->error(mysql_error());
-		$sqlupdateRank="UPDATE $table_championtipps SET " .
-			"team = '$team' " .
-			"WHERE $table_championtipps.user = '$user' AND $table_championtipps.rank =$rank";
-		$log->info($sqlupdateRank);
-		$sqlupdateMatchResult=mysql_query($sqlupdateRank);
-		if (!$sqlupdateMatchResult) {
-			$sqlerror=mysql_error();
-			$log->error($sqlerror);
-		}
-		else
-		{
-			$log->info("Updated championtipp ($user,$team,$rank)");
-		}
+	$log->info($sqlInsertUpdate);
+	$sqlInsertUpdateResult=mysql_query($sqlInsertUpdate);
+	if (!$sqlInsertUpdateResult) {
+		$log->error("SQL error: " . mysql_error());
+		echo "<p class=\"info\">Rang " . $rank . " konnte nicht gespeichert werden.</p>"; 
+		return false;
 	}
 	else
 	{
-		$log->info("Inserted championtipp ($user,$team,$rank)");
+		$log->info("Inserted/Updated champion prediction ($user,$team,$rank)");
+		return true;
 	}
 }
 
@@ -252,34 +242,18 @@ function updateTopScorerTipp($username, $topscorer, $shortTeamName){
 	
 	include_once("../../general/log/log.php5");
 	$log=new logger();	
-	$log->info($username . ", ". $topscorer . ", ". $shortTeamName);
 	$table_topscorertipps=dbschema::topscorertipps;
-	$sqlinsert="INSERT INTO $table_topscorertipps (user,topscorer,team,score)" .
-			"VALUES ('$username', '$topscorer', '$shortTeamName', '0')";
-	$log->info($sqlinsert);
-	$sqlInsertResult=mysql_query($sqlinsert);
-	if (!$sqlInsertResult) {
-		$log->error(mysql_error());
-		$sqlupdateScorerTipp="UPDATE $table_topscorertipps SET " .
-			"topscorer = '$topscorer', " .
-			"team = '$shortTeamName', " .
-			"score = '0' " .
-			"WHERE user = '$username'";
-		$log->info($sqlupdateScorerTipp);
-		$sqlupdateMatchResult=mysql_query($sqlupdateScorerTipp);
-		if (!$sqlupdateMatchResult) {
-			$sqlerror=mysql_error();
-			$log->error($sqlerror);
-			echo "<br><font color='#EE0000'> Ung&uuml;ltiger Request: <b>$sqlupdateMatch</b> <br>Error:$sqlerror</font>"; 
-			return false;
-		}
-		else
-		{
-			return true;
-		}
+	$sqlInsertUpdate="INSERT INTO $table_topscorertipps (user,topscorer,team,score) VALUES ('$username', '$topscorer', '$shortTeamName', '0') ON DUPLICATE KEY UPDATE topscorer=VALUES(topscorer),team=VALUES(team),score=VALUES(score)";
+	$log->info($sqlInsertUpdate);
+	$sqlInsertUpdateResult=mysql_query($sqlInsertUpdate);
+	if (!$sqlInsertUpdateResult) {
+	$log->error("SQL error: " . mysql_error());
+		echo "<p class=\"info\">Torsch&uumltzenk&oumlnig konnte NICHT gespeichert werden.</p>"; 
+		return false;
 	}
 	else
 	{
+		$log->info("Inserted/Updated topscorer prediction ('$username', '$topscorer', '$shortTeamName')");
 		return true;
 	}
 }
