@@ -49,7 +49,7 @@ class dbutil
 	    $sqlQueryResult=mysql_query($sqlQuery);
 	    $sqlResultArray=mysql_fetch_array($sqlQueryResult);
 	    $teamShort=$sqlResultArray["team"];
-	    return SELF::getTeamName($teamShort);
+	    return self::getTeamName($teamShort);
 	}
 	
 	function getTopScorerPrediction($username){
