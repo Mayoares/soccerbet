@@ -66,20 +66,20 @@ function allUsersAsOption($optionName) {
 	include_once("../../general/log/log.php5");
 	include_once("../util/dbschema.php5");
 	$log=new logger();	
-	$log->info("Viewed login page");
+	$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), "Viewed login page");
 	$table_users=dbschema::users;
 	$sqlUsers="SELECT * FROM $table_users ORDER BY username";
-	//$log->info($sqlUsers);
+	//$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), $sqlUsers);
 	$sqlUsersResult=mysql_query($sqlUsers);
 	$numUsers=mysql_num_rows($sqlUsersResult);
 	if ($numUsers==0)
 	{
-		$log->info("keine passenden Datens&auml;tze gefunden");
+		$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), "keine passenden Datens&auml;tze gefunden");
 		echo "keine passenden Datens&auml;tze gefunden";
 	}
 	else
 	{
-		//$log->info("Anzahl User=". $numUsers);
+		//$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), "Anzahl User=". $numUsers);
 		for ($i=0; $i<$numUsers; $i++)
 		{
 			$name = mysql_result($sqlUsersResult, $i, "username");

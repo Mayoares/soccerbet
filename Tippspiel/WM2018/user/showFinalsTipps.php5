@@ -18,7 +18,7 @@ $userName=$dbutil->getUserName($userId);
 if(strlen($userName)>0)
 {
 	$log=new logger();
-	$log->info("User=".$userName." kontrolliert seine Endrundentipps.");
+	$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), "User=".$userName." kontrolliert seine Endrundentipps.");
 	
 	printFinal($userName, 'Achtelfinale');
 	printFinal($userName, 'Viertelfinale');
@@ -61,8 +61,8 @@ function printFinal($userName, $matchtype){
 
 			$log=new logger();
 			$log->error("Fehler bei Anzeige der Tabelle der Endrundentipps. Vorangegangene Abfragen:");
-			$log->info($sql);
-			$log->info($sqlMatches);
+			$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), $sql);
+			$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), $sqlMatches);
 			$log->error("Fehler Ende");
 			echo "<br> MIST DB error";
 		}
@@ -81,4 +81,9 @@ function printFinal($userName, $matchtype){
 	}
 	echo "</table>";
 }
+
+
+mysql_close();
+$log=new logger();
+$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), "Verbindung zur MySQL-DB geschlossen.");
 ?>

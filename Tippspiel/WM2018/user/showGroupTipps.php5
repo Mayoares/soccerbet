@@ -21,7 +21,7 @@ $userName=$dbutil->getUserName($userId);
 if(strlen($userName)>0)
 {
 	$log=new logger();
-	$log->info("User=".$userName." kontrolliert seine Gruppentipps (".$groups.").");
+	$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), "User=".$userName." kontrolliert seine Gruppentipps (".$groups.").");
 	
 	if($groups === 'Part1'){
 		printGroup('A', $userName);
@@ -156,4 +156,9 @@ function getTeamName($shortname) {
 	$name=$array["name"];
 	return $name;
 }
+
+
+mysql_close();
+$log=new logger();
+$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), "Verbindung zur MySQL-DB geschlossen.");
 ?>

@@ -133,8 +133,9 @@ echo "</form>";
 echo "</body>";
 echo "</html>";
 
-//Datenbankconnection schliessen
 mysql_close();
+$log=new logger();
+$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), "Verbindung zur MySQL-DB geschlossen.");
 
 function getGoals1($userName, $matchnr){
 	$table_groupmatchtipps=dbschema::groupmatchtipps;
@@ -233,8 +234,8 @@ function insertUpdateMatchPrediction($matchprediction)
 	$sqlinsert="INSERT INTO $table_groupmatchtipps VALUES ('$matchprediction->userName', '$matchprediction->matchnr', '$matchprediction->GoalsTeam1', '$matchprediction->GoalsTeam2', '$matchprediction->winner', '$matchprediction->goaldiff', NULL)";
 	$sqlInsertResult=mysql_query($sqlinsert);
 	if ($sqlInsertResult) {
-		$log->info($sqlinsert);
-		$log->info("Eintrag fuer User=$matchprediction->userName: Spiel $matchprediction->matchnr : $matchprediction->teamName1 - $matchprediction->teamName2  	$matchprediction->GoalsTeam1 : $matchprediction->GoalsTeam2");
+		$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), $sqlinsert);
+		$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), "Eintrag fuer User=$matchprediction->userName: Spiel $matchprediction->matchnr : $matchprediction->teamName1 - $matchprediction->teamName2  	$matchprediction->GoalsTeam1 : $matchprediction->GoalsTeam2");
 	} else {
 		//		echo "<br><font color='#EE0000'> Ung&uuml;ltige Abfrage: <b>$sqlinsert</b> <br>Error:$sqlerror</font>"; 
 		$sqlupdateMatch="UPDATE $table_groupmatchtipps SET " .
@@ -243,7 +244,7 @@ function insertUpdateMatchPrediction($matchprediction)
 			"winner='$matchprediction->winner', " .
 			"goaldiff=$matchprediction->goaldiff " .
 			"WHERE `$table_groupmatchtipps`.`user`='$matchprediction->userName' AND `$table_groupmatchtipps`.`matchnr`=$matchprediction->matchnr";
-		$log->info($sqlupdateMatch);
+		$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), $sqlupdateMatch);
 		$sqlupdateMatchResult=mysql_query($sqlupdateMatch);
 		if (!$sqlupdateMatchResult) {
 			$sqlerror=mysql_error();
@@ -252,7 +253,7 @@ function insertUpdateMatchPrediction($matchprediction)
 		}
 		else
 		{
-			$log->info("Update fuer User=$matchprediction->userName: Spiel $matchprediction->matchnr : $matchprediction->teamName1 - $matchprediction->teamName2  	$matchprediction->GoalsTeam1 : $matchprediction->GoalsTeam2");
+			$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), "Update fuer User=$matchprediction->userName: Spiel $matchprediction->matchnr : $matchprediction->teamName1 - $matchprediction->teamName2  	$matchprediction->GoalsTeam1 : $matchprediction->GoalsTeam2");
 		}
 	}
 }
@@ -287,7 +288,7 @@ function insertUpdateRankTipp($username, $teamName, $teamShort, $rank){
 	$table_groupranktipps=dbschema::groupranktipps;
 	$sqlInsertUpdateRank="INSERT INTO $table_groupranktipps " .
 		"(`user`,`team`,`rank`,`score`) VALUES ('$username', '$teamShort', '$rank', NULL) ON DUPLICATE KEY UPDATE rank=VALUES(rank)";
-	$log->info($sqlInsertUpdateRank);
+	$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), $sqlInsertUpdateRank);
 	$resultInsert=mysql_query($sqlInsertUpdateRank);
 	if($resultInsert=!1)
 	{

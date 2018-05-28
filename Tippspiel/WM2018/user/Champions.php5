@@ -144,6 +144,10 @@ function run($userId){
 	echo "</form>";
 	echo "</body>";
 	echo "</html>";
+	
+	mysql_close();
+	$log=new logger();
+	$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), "Verbindung zur MySQL-DB geschlossen.");
 }
 
 function storeNewRank($user, $team, $rank){
@@ -152,7 +156,7 @@ function storeNewRank($user, $team, $rank){
 	$table_championtipps=dbschema::championtipps;
 	$sqlInsertUpdate="INSERT INTO $table_championtipps (user,team,rank) VALUES ('$user', '$team', '$rank') ON DUPLICATE KEY UPDATE team=VALUES(team)";
 	$log=new logger();	
-	$log->info($sqlInsertUpdate);
+	$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), $sqlInsertUpdate);
 	$sqlInsertUpdateResult=mysql_query($sqlInsertUpdate);
 	if (!$sqlInsertUpdateResult) {
 		$log->error("SQL error: " . mysql_error());
@@ -161,7 +165,7 @@ function storeNewRank($user, $team, $rank){
 	}
 	else
 	{
-		$log->info("Inserted/Updated champion prediction ($user,$team,$rank)");
+		$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), "Inserted/Updated champion prediction ($user,$team,$rank)");
 		return true;
 	}
 }
@@ -244,7 +248,7 @@ function updateTopScorerTipp($username, $topscorer, $shortTeamName){
 	$log=new logger();	
 	$table_topscorertipps=dbschema::topscorertipps;
 	$sqlInsertUpdate="INSERT INTO $table_topscorertipps (user,topscorer,team,score) VALUES ('$username', '$topscorer', '$shortTeamName', '0') ON DUPLICATE KEY UPDATE topscorer=VALUES(topscorer),team=VALUES(team),score=VALUES(score)";
-	$log->info($sqlInsertUpdate);
+	$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), $sqlInsertUpdate);
 	$sqlInsertUpdateResult=mysql_query($sqlInsertUpdate);
 	if (!$sqlInsertUpdateResult) {
 	$log->error("SQL error: " . mysql_error());
@@ -253,7 +257,7 @@ function updateTopScorerTipp($username, $topscorer, $shortTeamName){
 	}
 	else
 	{
-		$log->info("Inserted/Updated topscorer prediction ('$username', '$topscorer', '$shortTeamName')");
+		$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), "Inserted/Updated topscorer prediction ('$username', '$topscorer', '$shortTeamName')");
 		return true;
 	}
 }

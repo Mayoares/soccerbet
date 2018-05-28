@@ -47,6 +47,10 @@ else
 			promptChangePassword($userId);
 		}
 	}
+	
+	mysql_close();
+	$log=new logger();
+	$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), "Verbindung zur MySQL-DB geschlossen.");
 }
 
 function promptChangePassword($userid)
@@ -83,7 +87,7 @@ function changePasswordInDB($userid, $passwordnew)
 	$result=mysql_query($sqlupdatePassword);
 	if($result==1)
 	{
-		$log->info("Passwort ge&auml;ndert f&uuml;r User=$username mit UserId=$userid");
+		$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), "Passwort ge&auml;ndert f&uuml;r User=$username mit UserId=$userid");
 		echo "<br><font color=\"green\">Passwort ge&auml;ndert!</font>";
 		echo "<br>";
 	}

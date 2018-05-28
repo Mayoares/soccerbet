@@ -22,6 +22,10 @@ $userName=$dbutil->getUserName($userId);
 
 <?php
 printUserInfo($userName);
+
+//DB-Verbindung schliessen
+mysql_close();
+
 function printUserInfo($userName){
 	$tableusers=dbschema::users;
 	$sql="SELECT * from $tableusers WHERE username='$userName'";
@@ -76,3 +80,6 @@ function printUserInfo($userName){
 	echo "</table>";
 }
 ?>
+
+</body>
+</html>

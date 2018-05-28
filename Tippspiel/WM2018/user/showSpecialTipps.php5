@@ -19,7 +19,7 @@ $userName=$dbutil->getUserName($userId);
 if(strlen($userName)>0)
 {
 	$log=new logger();
-	$log->info("User=".$userName." kontrolliert seine Spezialtipps.");
+	$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), "User=".$userName." kontrolliert seine Spezialtipps.");
 	
 	printChampions($userName);
 	printTopscorer($userName);
@@ -49,8 +49,8 @@ function printFinal($userName, $matchtype){
 		if (!$sqlResult) {
 
 			$log->error("Fehler bei Anzeige der Tabelle der Endrundentipps. Vorangegangene Abfragen:");
-			$log->info($sql);
-			$log->info($sqlMatches);
+			$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), $sql);
+			$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), $sqlMatches);
 			$log->error("Fehler Ende");
 			echo "<br> MIST DB error";
 		}
@@ -118,4 +118,8 @@ function getTippedTopScorer($username){
 	return $topscorer;
 }
 
+
+mysql_close();
+$log=new logger();
+$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), "Verbindung zur MySQL-DB geschlossen.");
 ?>

@@ -1,6 +1,7 @@
 <?php
 // we must never forget to start the session
 session_start();
+include_once("../../general/log/log.php5");
 if(!isset($_GET['userId']))
 {
 	header("Location: ../util/login.php5");
@@ -121,6 +122,7 @@ function run($userId, $finaltype, $matchnrPost, $dbutil, $saveMatchErrorText){
 
 	echo "</body>";
 	echo "</html>";
+
 }
 
 function printDescription($matchnr){
@@ -293,14 +295,14 @@ function insertUpdateInTipps($userName, $matchnr, $teamShort1, $teamShort2, $Goa
 			"VALUES ('$userName', '$matchnr', $teamShort1String, $teamShort2String, $GoalsTeam1, $GoalsTeam2, '$winner', '$goaldiff', NULL) " .
 			"ON DUPLICATE KEY UPDATE teamX=VALUES(teamX),teamY=VALUES(teamY),goalsX=VALUES(goalsX),goalsY=VALUES(goalsY),winner=VALUES(winner),goaldiff=VALUES(goaldiff),score=VALUES(score)";
 	$log=new logger();	
-	$log->info($sqlInsertUpdate);
+	$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), $sqlInsertUpdate);
 	$sqlInsertUpdateResult=mysql_query($sqlInsertUpdate);
 	if (!$sqlInsertUpdateResult) {
 		$mysqlInsertUpdateError=mysql_error();
 		$log->error("SQL-Error: " . $mysqlInsertUpdateError);
 		return "<p class=\"info\">Datenbank-Problem beim Speichern des Endrundentipps</p>";
 	} else {
-		$log->info("Endrundentipp eingetragen: ('$userName', matchnr=$matchnr, $teamShort1String, $teamShort2String, $GoalsTeam1, $GoalsTeam2, winner=$winner, Tordifferenz=$goaldiff, score=NULL) ");
+		$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), "Endrundentipp eingetragen: ('$userName', matchnr=$matchnr, $teamShort1String, $teamShort2String, $GoalsTeam1, $GoalsTeam2, winner=$winner, Tordifferenz=$goaldiff, score=NULL) ");
 		return "";
 	}
 }
@@ -318,7 +320,7 @@ function removeFinalMatchInTipps($userName, $matchnr){
 	$table_finalmatchtipps=dbschema::finalmatchtipps;
 	$sqlremove="DELETE FROM $table_finalmatchtipps WHERE user = '$userName' AND matchnr = $matchnr";
 	$log=new logger();	
-	$log->info($sqlremove);
+	$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), $sqlremove);
 	$sqlRemoveResult=mysql_query($sqlremove);
 	if ($sqlInsertResult=!1) {
 		$sqlerror=mysql_error();
@@ -336,7 +338,7 @@ function updateInMatches($matchnr, $teamShort1, $teamShort2){
 			"team2 = $teamShort2 " .
 			"WHERE $table_matches.matchnr=$matchnr";
 	$log=new logger();
-	$log->info($sqlupdateMatch);
+	$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), $sqlupdateMatch);
 	$sqlupdateMatchResult=mysql_query($sqlupdateMatch);
 	if ($sqlupdateMatchResult!=1) {
 		$sqlerror=mysql_error();
@@ -350,4 +352,8 @@ function clearInMatches($matchnr){
 	updateInMatches($matchnr, "NULL", "NULL");
 }
 
+
+mysql_close();
+$log=new logger();
+$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), "Verbindung zur MySQL-DB geschlossen.");
 ?>
