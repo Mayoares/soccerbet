@@ -1,13 +1,3 @@
- <?php
-session_start();
-$userId=$_GET["userId"];
-if(strlen($userId)==0)
-{
-	header("Location: ../util/login.php5");
-	exit;
-}
-?>
-
 <html>
 
 <head>
@@ -78,9 +68,11 @@ function printSpecials(){
 }
 
 function printSpecialsForUser($username){
-	$worldChampion=getTippedTeamRostrum($username, 1);
-	$vice=getTippedTeamRostrum($username, 2);
-	$third=getTippedTeamRostrum($username, 3);
+    include_once("../shared/SelectFunctions.php5");
+    $Select=new Select();
+    $worldChampion=$Select->getRostrumPrediction($username, 1);
+    $vice=$Select->getRostrumPrediction($username, 2);
+    $third=$Select->getRostrumPrediction($username, 3);
 	
 	$dbutil=new dbutil();
 	$tippTopscorer=getTippedTopScorer($username);
@@ -102,16 +94,6 @@ function getUserInfo($username){
 	$firstname=$array["firstname"];
 	$lastname=$array["lastname"];
 	return "$firstname $lastname";
-}
-
-function getTippedTeamRostrum($username, $rank){
-	$table_championtipps=dbschema::championtipps;
-	$sqlQuery="SELECT * FROM $table_championtipps WHERE user='$username' AND rank=$rank";
-//	echo "<br>$sqlQuery";
-	$sqlQueryResult=mysql_query($sqlQuery);
-	$sqlResultArray=mysql_fetch_array($sqlQueryResult);
-	$teamShort=$sqlResultArray["team"];
-	return getTeamName($teamShort);
 }
 
 function getTeamName($shortname) {

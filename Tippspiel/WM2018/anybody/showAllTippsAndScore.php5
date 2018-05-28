@@ -439,9 +439,10 @@ function getScoreTopscorer($userName){
 
 function printChampions($userName){
 	
-	$worldchampion=getTippedTeamRostrum($userName, 1);
-	$vice=getTippedTeamRostrum($userName, 2);
-	$third=getTippedTeamRostrum($userName, 3);
+    include_once("../shared/SelectFunctions.php5");
+    $worldchampion=$Select->getRostrumPrediction($userName, 1);
+    $vice=$Select->getRostrumPrediction($userName, 2);
+    $third=$Select->getRostrumPrediction($userName, 3);
 	echo "<table>";
 	echo "<tr><td>Weltmeister &nbsp; &nbsp; &nbsp;</td><td><b>$worldchampion</b></td>";
 	printCorrectTeam(getCorrectChampion(1));
@@ -451,10 +452,10 @@ function printChampions($userName){
 	printCorrectTeam(getCorrectChampion(2));
 	printScore(getScoreChampions(2, $userName));
 	echo "</tr>";
-// 	echo "<tr><td>Drittplatzierter &nbsp; &nbsp; &nbsp;</td><td><b>$third</b></td>";
-// 	printCorrectTeam(getCorrectChampion(3));
-// 	printScore(getScoreChampions(3, $userName));
-// 	echo "</tr>";
+	echo "<tr><td>Drittplatzierter &nbsp; &nbsp; &nbsp;</td><td><b>$third</b></td>";
+	printCorrectTeam(getCorrectChampion(3));
+	printScore(getScoreChampions(3, $userName));
+	echo "</tr>";
 	echo "</table>";
 }
 
@@ -478,15 +479,6 @@ function printTopscorer($username){
 	echo "</tr>";
 	echo "</table>";
 	echo "<br>";
-}
-
-function getTippedTeamRostrum($username, $rank){
-	$table_championtipps=dbschema::championtipps;
-	$sqlQuery="SELECT * FROM $table_championtipps WHERE user='$username' AND rank=$rank";
-	$sqlQueryResult=mysql_query($sqlQuery);
-	$sqlResultArray=mysql_fetch_array($sqlQueryResult);
-	$teamShort=$sqlResultArray["team"];
-	return getTeamName($teamShort);
 }
 
 function getTippedTopScorer($username){

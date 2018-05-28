@@ -76,9 +76,10 @@ function printChampions($userName){
 	echo "<h2>Spezial-Tipps</h2>";
 	echo "<br>";
 	
-	$champion=getTippedTeamRostrum($userName, 1);  if(!isset($champion)){$champion = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
-	$vice=getTippedTeamRostrum($userName, 2); if(!isset($vice)){$vice = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
-	$third=getTippedTeamRostrum($userName, 3); if(!isset($third)){$third = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
+	include_once("../shared/SelectFunctions.php5");
+	$champion=$Select->getRostrumPrediction($userName, 1);  if(!isset($champion)){$champion = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
+	$vice=$Select->getRostrumPrediction($userName, 2); if(!isset($vice)){$vice = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
+	$third=$Select->getRostrumPrediction($userName, 3); if(!isset($third)){$third = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
 	//echo "<table style='font-size:14px'>";
 	echo "<table>";
 	echo "<tr><td>Weltmeister &nbsp; &nbsp; &nbsp;</td><td><b>$champion</b></td></tr>";
@@ -98,16 +99,6 @@ function printTopscorer($username){
 	echo "<table>";
 	echo "<tr><td>Torsch&uuml;tzenk&ouml;nig &nbsp; &nbsp; &nbsp;</td><td><b>$topscorer</b></td> &nbsp; <td>($topScorerTeam)</td> </tr>";
 	echo "</table>";
-}
-
-function getTippedTeamRostrum($username, $rank){
-	$table_championtipps=dbschema::championtipps;
-	$sqlQuery="SELECT * FROM $table_championtipps WHERE user='$username' AND rank=$rank";
-	$sqlQueryResult=mysql_query($sqlQuery);
-	$sqlResultArray=mysql_fetch_array($sqlQueryResult);
-	$teamShort=$sqlResultArray["team"];
-	$dbutil=new dbutil();
-	return $dbutil->getTeamName($teamShort);
 }
 
 function getTippedTopScorer($username){

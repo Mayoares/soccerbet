@@ -63,9 +63,10 @@ function run($userId){
 	$table_teams=dbschema::teams;
 	$sqlTeams=mysql_query("SELECT * FROM $table_teams ORDER BY name");
 	
-	$worldChampion=getTippedTeamRostrum($username, 1, $dbutil);
-	$vice=getTippedTeamRostrum($username, 2, $dbutil);
-	$third=getTippedTeamRostrum($username, 3, $dbutil);
+	include_once("../shared/SelectFunctions.php5");
+	$worldChampion=$Select->getRostrumPrediction($username, 1, $dbutil);
+	$vice=$Select->getRostrumPrediction($username, 2, $dbutil);
+	$third=$Select->getRostrumPrediction($username, 3, $dbutil);
 		
 	echo "<form action='Champions.php5?userId=$userId' method='POST'>";
 	echo "<table>";	
@@ -169,17 +170,6 @@ function storeNewRank($user, $team, $rank){
 		return true;
 	}
 }
-
-function getTippedTeamRostrum($username, $rank, $dbutil){
-	$table_championtipps=dbschema::championtipps;
-	$sqlQuery="SELECT * FROM $table_championtipps WHERE user='$username' AND rank=$rank";
-//	echo "<br>$sqlQuery";
-	$sqlQueryResult=mysql_query($sqlQuery);
-	$sqlResultArray=mysql_fetch_array($sqlQueryResult);
-	$teamShort=$sqlResultArray["team"];
-	return $dbutil->getTeamName($teamShort);
-}
-
 
 
 function getTippedTopScorer($username){
