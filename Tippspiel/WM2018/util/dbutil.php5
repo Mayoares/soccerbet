@@ -69,6 +69,21 @@ class dbutil
 		return $teamName;
 	}
 	
+	function getGoals1($userName, $matchnr){
+	    $table_groupmatchtipps=dbschema::groupmatchtipps;
+	    $result=mysql_query("SELECT goalsX FROM $table_groupmatchtipps WHERE user = '$userName' AND matchnr = $matchnr;");
+	    $array=mysql_fetch_array($result);
+	    $goals=$array["goalsX"];
+	    return $goals;
+	}
+	function getGoals2($userName, $matchnr){
+	    $table_groupmatchtipps=dbschema::groupmatchtipps;
+	    $result=mysql_query("SELECT goalsY FROM $table_groupmatchtipps WHERE user = '$userName' AND matchnr = $matchnr;");
+	    $array=mysql_fetch_array($result);
+	    $goals=$array["goalsY"];
+	    return $goals;
+	}
+	
 }
 $dbutil=new dbutil();
 ?>

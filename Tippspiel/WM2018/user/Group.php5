@@ -96,8 +96,8 @@ while($array=mysql_fetch_array($sqlResult)){
 	$teamName1=$dbutil->getTeamName($array["team1"]);
 	$teamName2=$dbutil->getTeamName($array["team2"]);
 
-	$tippGoalsTeam1=getGoals1($userName, $matchnr);
-	$tippGoalsTeam2=getGoals2($userName, $matchnr);
+	$tippGoalsTeam1=$dbutil->getGoals1($userName, $matchnr);
+	$tippGoalsTeam2=$dbutil->getGoals2($userName, $matchnr);
 	
 	$picname1=$dbutil->getPicName($teamName1);
 	$picname2=$dbutil->getPicName($teamName2);
@@ -136,21 +136,6 @@ echo "</html>";
 mysql_close();
 $log=new logger();
 $log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), "Verbindung zur MySQL-DB geschlossen.");
-
-function getGoals1($userName, $matchnr){
-	$table_groupmatchtipps=dbschema::groupmatchtipps;
-	$result=mysql_query("SELECT goalsX FROM $table_groupmatchtipps WHERE user = '$userName' AND matchnr = $matchnr;");
-	$array=mysql_fetch_array($result);
-	$goals=$array["goalsX"];
-	return $goals;
-}
-function getGoals2($userName, $matchnr){
-	$table_groupmatchtipps=dbschema::groupmatchtipps;
-	$result=mysql_query("SELECT goalsY FROM $table_groupmatchtipps WHERE user = '$userName' AND matchnr = $matchnr;");
-	$array=mysql_fetch_array($result);
-	$goals=$array["goalsY"];
-	return $goals;
-}
 
 function allTeamsAsOption($sqlTeams, $tippedTeam, $optionName) {
 	$numTeams=mysql_num_rows($sqlTeams);

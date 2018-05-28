@@ -262,34 +262,18 @@ function printGroupMatches($group, $userName){
 		$teamName1=$dbutil->getTeamName($array["team1"]);
 		$teamName2=$dbutil->getTeamName($array["team2"]);
 		
-		$tippGoalsTeam1=getGoals1($userName, $matchnr);
-		$tippGoalsTeam2=getGoals2($userName, $matchnr);
+		$tippGoalsTeam1=$dbutil->getGoals1($userName, $matchnr);
+		$tippGoalsTeam2=$dbutil->getGoals2($userName, $matchnr);
 		echo "<tr>";
 		echo "<td>Spiel $matchnr &nbsp;&nbsp;</td> " .
 				"<td width=100>  $teamName1 </td> <td>-</td> <td width=100> $teamName2&nbsp;&nbsp;&nbsp;</td>" .
 				"<td> <b>$tippGoalsTeam1</b></td><td> : </td><td> <b>$tippGoalsTeam2</b></td>";
-		printCorrectGroupMatchResult(getGoals1('real', $matchnr), getGoals2('real', $matchnr));
+		printCorrectGroupMatchResult($dbutil->getGoals1('real', $matchnr), $dbutil->getGoals2('real', $matchnr));
 		$score = getScoreGroupMatch($userName, $matchnr);
 		printScore($score);
 		echo "</tr>";
 	}
 	echo "</table>";
-}
-
-
-function getGoals1($userName, $matchnr){
-	$table_groupmatchtipps=dbschema::groupmatchtipps;
-	$result=mysql_query("SELECT goalsX FROM $table_groupmatchtipps WHERE user = '$userName' AND matchnr = $matchnr;");
-	$array=mysql_fetch_array($result);
-	$goals=$array["goalsX"];
-	return $goals;
-}
-function getGoals2($userName, $matchnr){
-	$table_groupmatchtipps=dbschema::groupmatchtipps;
-	$result=mysql_query("SELECT goalsY FROM $table_groupmatchtipps WHERE user = '$userName' AND matchnr = $matchnr;");
-	$array=mysql_fetch_array($result);
-	$goals=$array["goalsY"];
-	return $goals;
 }
 
 function printFinal($userName, $matchtype){
