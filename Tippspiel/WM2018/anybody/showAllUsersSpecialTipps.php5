@@ -95,12 +95,4 @@ function getUserInfo($username){
 	return "$firstname $lastname";
 }
 
-function getTeamName($shortname) {
-	$table_teams=dbschema::teams;
-	$result=mysql_query("SELECT t.name FROM $table_teams t WHERE t.shortname='$shortname'");
-	$array=mysql_fetch_array($result);
-	$name=$array["name"];
-	return $name;
-}
-
 ?>

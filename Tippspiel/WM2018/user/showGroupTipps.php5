@@ -114,10 +114,9 @@ function printGroupMatches($group, $userName){
 		$time=$array["matchtime"]; 
 		$matchnr=$array["matchnr"];
 		
-		//		$teamName1=$dbutil->getTeamName($array["team1"]);
-		//		$teamName2=$dbutil->getTeamName($array["team2"]);
-		$teamName1=getTeamName($array["team1"]);
-		$teamName2=getTeamName($array["team2"]);
+		$dbutil = new dbutil();
+		$teamName1=$dbutil->getTeamName($array["team1"]);
+		$teamName2=$dbutil->getTeamName($array["team2"]);
 		
 		$tippGoalsTeam1=getGoals1($userName, $matchnr); if(!isset($tippGoalsTeam1)){$tippGoalsTeam1 = "<font color=\"#C81B00\"><b> X </b></font>";}
 		$tippGoalsTeam2=getGoals2($userName, $matchnr); if(!isset($tippGoalsTeam2)){$tippGoalsTeam2 = "<font color=\"#C81B00\"><b> X </b></font>";}
@@ -144,17 +143,6 @@ function getGoals2($userName, $matchnr){
 	$array=mysql_fetch_array($result);
 	$goals=$array["goalsY"];
 	return $goals;
-}
-
-function getTeamName($shortname) {
-	$table_teams=dbschema::teams;
-	$sql="SELECT t.name FROM $table_teams t WHERE t.shortname='$shortname'";
-	//$log=new logger();
-	//$log->info($sql);
-	$result=mysql_query($sql);
-	$array=mysql_fetch_array($result);
-	$name=$array["name"];
-	return $name;
 }
 
 

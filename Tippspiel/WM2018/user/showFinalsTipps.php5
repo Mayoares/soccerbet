@@ -31,15 +31,6 @@ else
 	echo "<br> kein User gesetzt";
 }
 
-function getTeamName($shortname) {
-	$table_teams=dbschema::teams;
-	$sql="SELECT t.name FROM $table_teams t WHERE t.shortname='$shortname'";
-	$result=mysql_query($sql);
-	$array=mysql_fetch_array($result);
-	$name=$array["name"];
-	return $name;
-}
-
 function printFinal($userName, $matchtype){
 	
 	echo "<br>";
@@ -73,8 +64,9 @@ function printFinal($userName, $matchtype){
 			$teamShort2 = $array["teamY"];
 			$goalsX = $array["goalsX"]; if(!isset($goalsX)){$goalsX = "<font color=\"#C81B00\"><b> X </b></font>";}
 			$goalsY = $array["goalsY"]; if(!isset($goalsY)){$goalsY = "<font color=\"#C81B00\"><b> X </b></font>";}
-			$team1=getTeamName($teamShort1); if(!isset($team1)){$team1 = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
-			$team2=getTeamName($teamShort2); if(!isset($team2)){$team2 = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
+			$dbutil = new dbutil();
+			$team1=$dbutil->getTeamName($teamShort1); if(!isset($team1)){$team1 = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
+			$team2=$dbutil->getTeamName($teamShort2); if(!isset($team2)){$team2 = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
 			
 			echo "<tr> <td>Spiel $matchnr &nbsp; &nbsp; &nbsp;</td><td width=100><b> $team1 </b></td><td>-</td><td width=100><b> $team2</b></td>  	<td><b>$goalsX : $goalsY</b></td></tr>";
 		}

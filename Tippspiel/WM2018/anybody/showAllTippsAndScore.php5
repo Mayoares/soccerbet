@@ -258,10 +258,9 @@ function printGroupMatches($group, $userName){
 		$time=$array["matchtime"]; 
 		$matchnr=$array["matchnr"];
 		
-		//		$teamName1=$dbutil->getTeamName($array["team1"]);
-		//		$teamName2=$dbutil->getTeamName($array["team2"]);
-		$teamName1=getTeamName($array["team1"]);
-		$teamName2=getTeamName($array["team2"]);
+		$dbutil = new dbutil();
+		$teamName1=$dbutil->getTeamName($array["team1"]);
+		$teamName2=$dbutil->getTeamName($array["team2"]);
 		
 		$tippGoalsTeam1=getGoals1($userName, $matchnr);
 		$tippGoalsTeam2=getGoals2($userName, $matchnr);
@@ -291,17 +290,6 @@ function getGoals2($userName, $matchnr){
 	$array=mysql_fetch_array($result);
 	$goals=$array["goalsY"];
 	return $goals;
-}
-
-function getTeamName($shortname) {
-	$table_teams=dbschema::teams;
-	$sql="SELECT t.name FROM $table_teams t WHERE t.shortname='$shortname'";
-	//$log=new viewlogger();
-	//$log->info($sql);
-	$result=mysql_query($sql);
-	$array=mysql_fetch_array($result);
-	$name=$array["name"];
-	return $name;
 }
 
 function printFinal($userName, $matchtype){
@@ -341,6 +329,7 @@ function printFinalMatches($userName, $matchtype){
 	}
 	else
 	{
+	    $dbutil = new dbutil();
 		echo "<table>";
 		echo "<th colspan='4' align='left'><u>Spiele:</u></th>";
 		echo "<tbody>";
@@ -349,16 +338,16 @@ function printFinalMatches($userName, $matchtype){
 			$arrayReal=mysql_fetch_array($sqlResultReal);
 			$teamShort1Real = $arrayReal["teamX"];
 			$teamShort2Real = $arrayReal["teamY"];
-			$team1Real=getTeamName($teamShort1Real);
-			$team2Real=getTeamName($teamShort2Real);
+			$team1Real=$dbutil->getTeamName($teamShort1Real);
+			$team2Real=$dbutil->getTeamName($teamShort2Real);
 			$goalsXReal = $arrayReal["goalsX"];
 			$goalsYReal = $arrayReal["goalsY"];
 			
 			$matchnr=$array["matchnr"];
 			$teamShort1 = $array["teamX"];
 			$teamShort2 = $array["teamY"];
-			$team1=getTeamName($teamShort1);
-			$team2=getTeamName($teamShort2);
+			$team1=$dbutil->getTeamName($teamShort1);
+			$team2=$dbutil->getTeamName($teamShort2);
 			$goalsX = $array["goalsX"];
 			$goalsY = $array["goalsY"];
 			echo "<font color=\"#32cd32\">";
@@ -521,6 +510,7 @@ function userHasIncluded($user, $matchtype, $team) {
 
 function checkTeamsIncluded($user, $column, $realTeams, $matches, $matchtype, $silent)
 {
+    $dbutil = new dbutil();
 	$userScore=0;
 	while($matchesArray=mysql_fetch_array($matches))
 	{
@@ -536,7 +526,7 @@ function checkTeamsIncluded($user, $column, $realTeams, $matches, $matchtype, $s
 			{
 				if(!$silent)
 				{
-					printCorrectTeamParticipant(getTeamName($team));
+				    printCorrectTeamParticipant($dbutil->getTeamName($team));
 					echo "<td>?</td>";
 					printScore("-");
 				}
@@ -547,7 +537,7 @@ function checkTeamsIncluded($user, $column, $realTeams, $matches, $matchtype, $s
 				$userScore = $userScore+$addScore;
 				if(!$silent)
 				{
-					printCorrectTeamParticipant(getTeamName($team));
+				    printCorrectTeamParticipant($dbutil->getTeamName($team));
 					echo "<td>JA</td>";
 					printScore($addScore);
 				}
@@ -556,7 +546,7 @@ function checkTeamsIncluded($user, $column, $realTeams, $matches, $matchtype, $s
 			{
 				if(!$silent)
 				{
-					printCorrectTeamParticipant(getTeamName($team));
+				    printCorrectTeamParticipant($dbutil->getTeamName($team));
 					echo "<td>nein</td>";
 					printScore("0");
 				}
