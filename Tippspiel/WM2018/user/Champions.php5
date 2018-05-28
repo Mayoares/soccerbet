@@ -63,10 +63,9 @@ function run($userId){
 	$table_teams=dbschema::teams;
 	$sqlTeams=mysql_query("SELECT * FROM $table_teams ORDER BY name");
 	
-	include_once("../shared/SelectFunctions.php5");
-	$worldChampion=$Select->getRostrumPrediction($username, 1, $dbutil);
-	$vice=$Select->getRostrumPrediction($username, 2, $dbutil);
-	$third=$Select->getRostrumPrediction($username, 3, $dbutil);
+	$worldChampion=$dbutil->getRostrumPrediction($username, 1, $dbutil);
+	$vice=$dbutil->getRostrumPrediction($username, 2, $dbutil);
+	$third=$dbutil->getRostrumPrediction($username, 3, $dbutil);
 		
 	echo "<form action='Champions.php5?userId=$userId' method='POST'>";
 	echo "<table>";	
@@ -122,7 +121,7 @@ function run($userId){
 	
 	$tippTopscorer=getTippedTopScorer($username);
 	$dbutil=new dbutil();
-	$tippedTeam=$dbutil->getTippedTopScorerTeam($username);
+	$tippedTeam=$dbutil->getTopScorerTeamPrediction($username);
 	$table_teams=dbschema::teams;
 	$sqlTeams=mysql_query("SELECT * FROM $table_teams ORDER BY name");
 

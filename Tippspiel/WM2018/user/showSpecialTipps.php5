@@ -76,10 +76,10 @@ function printChampions($userName){
 	echo "<h2>Spezial-Tipps</h2>";
 	echo "<br>";
 	
-	include_once("../shared/SelectFunctions.php5");
-	$champion=$Select->getRostrumPrediction($userName, 1);  if(!isset($champion)){$champion = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
-	$vice=$Select->getRostrumPrediction($userName, 2); if(!isset($vice)){$vice = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
-	$third=$Select->getRostrumPrediction($userName, 3); if(!isset($third)){$third = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
+	$dbutil=new dbutil();
+	$champion=$dbutil->getRostrumPrediction($userName, 1);  if(!isset($champion)){$champion = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
+	$vice=$dbutil->getRostrumPrediction($userName, 2); if(!isset($vice)){$vice = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
+	$third=$dbutil->getRostrumPrediction($userName, 3); if(!isset($third)){$third = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
 	//echo "<table style='font-size:14px'>";
 	echo "<table>";
 	echo "<tr><td>Weltmeister &nbsp; &nbsp; &nbsp;</td><td><b>$champion</b></td></tr>";
@@ -90,23 +90,15 @@ function printChampions($userName){
 
 function printTopscorer($username){
 	
-	$topscorer=getTippedTopScorer($username); if(strlen($topscorer)==0){$topscorer = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
 	$dbutil=new dbutil();
-	$topScorerTeam=$dbutil->getTippedTopScorerTeam($username);
+	$topscorer=$dbutil->getTopScorerPrediction($username); if(strlen($topscorer)==0){$topscorer = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
+	$topScorerTeam=$dbutil->getTopScorerTeamPrediction($username);
 	if(strlen($topScorerTeam)==0){$topScorerTeam = "<font color=\"#C81B00\"><b> FEHLT! </b></font>";}
 	
 	//echo "<table style='font-size:18px'>";
 	echo "<table>";
 	echo "<tr><td>Torsch&uuml;tzenk&ouml;nig &nbsp; &nbsp; &nbsp;</td><td><b>$topscorer</b></td> &nbsp; <td>($topScorerTeam)</td> </tr>";
 	echo "</table>";
-}
-
-function getTippedTopScorer($username){
-	$table_topscorertipps=dbschema::topscorertipps;
-	$sqlQueryResult=mysql_query("SELECT * FROM $table_topscorertipps WHERE user='$username'");
-	$sqlResultArray=mysql_fetch_array($sqlQueryResult);
-	$topscorer=$sqlResultArray["topscorer"];
-	return $topscorer;
 }
 
 

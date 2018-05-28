@@ -35,7 +35,25 @@ class dbutil
 		return $picname;
 	}
 	
-	function getTippedTopScorerTeam($username){
+	function getRostrumPrediction($username, $rank)
+	{
+	    $table_championtipps=dbschema::championtipps;
+	    $sqlQuery="SELECT * FROM $table_championtipps WHERE user='$username' AND rank=$rank";
+	    $sqlQueryResult=mysql_query($sqlQuery);
+	    $sqlResultArray=mysql_fetch_array($sqlQueryResult);
+	    $teamShort=$sqlResultArray["team"];
+	    return SELF::getTeamName($teamShort);
+	}
+	
+	function getTopScorerPrediction($username){
+	    $table_topscorertipps=dbschema::topscorertipps;
+	    $sqlQueryResult=mysql_query("SELECT * FROM $table_topscorertipps WHERE user='$username'");
+	    $sqlResultArray=mysql_fetch_array($sqlQueryResult);
+	    $topscorer=$sqlResultArray["topscorer"];
+	    return $topscorer;
+	}
+	
+	function getTopScorerTeamPrediction($username){
 		$table_teams=dbschema::teams;
 		$table_topscorertipps=dbschema::topscorertipps;
 		$sqlQueryResult=mysql_query("SELECT * FROM $table_topscorertipps top, $table_teams teams WHERE user='$username' AND top.team=teams.shortname");

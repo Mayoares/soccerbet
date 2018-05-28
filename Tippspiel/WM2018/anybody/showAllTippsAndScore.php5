@@ -439,10 +439,9 @@ function getScoreTopscorer($userName){
 
 function printChampions($userName){
 	
-    include_once("../shared/SelectFunctions.php5");
-    $worldchampion=$Select->getRostrumPrediction($userName, 1);
-    $vice=$Select->getRostrumPrediction($userName, 2);
-    $third=$Select->getRostrumPrediction($userName, 3);
+    $worldchampion=$dbutil->getRostrumPrediction($userName, 1);
+    $vice=$dbutil->getRostrumPrediction($userName, 2);
+    $third=$dbutil->getRostrumPrediction($userName, 3);
 	echo "<table>";
 	echo "<tr><td>Weltmeister &nbsp; &nbsp; &nbsp;</td><td><b>$worldchampion</b></td>";
 	printCorrectTeam(getCorrectChampion(1));
@@ -464,10 +463,10 @@ function printTopscorer($username){
 	$dbutil=new dbutil();
 	// tipped values
 	$topscorer=getTippedTopScorer($username);
-	$topScorerTeam=$dbutil->getTippedTopScorerTeam($username);
+	$topScorerTeam=$dbutil->getTopScorerTeamPrediction($username);
 	// real values
 	$TopscorerReal=getCorrectTopscorer();
-	$realTeam=$dbutil->getTippedTopScorerTeam("real");
+	$realTeam=$dbutil->getTopScorerTeamPrediction("real");
 	
 	echo "<br>";
 	echo "<table>";

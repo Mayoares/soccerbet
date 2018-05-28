@@ -68,15 +68,14 @@ function printSpecials(){
 }
 
 function printSpecialsForUser($username){
-    include_once("../shared/SelectFunctions.php5");
-    $Select=new Select();
-    $worldChampion=$Select->getRostrumPrediction($username, 1);
-    $vice=$Select->getRostrumPrediction($username, 2);
-    $third=$Select->getRostrumPrediction($username, 3);
+    
+    $dbutil=new dbutil();
+    $worldChampion=$dbutil->getRostrumPrediction($username, 1);
+    $vice=$dbutil->getRostrumPrediction($username, 2);
+    $third=$dbutil->getRostrumPrediction($username, 3);
 	
-	$dbutil=new dbutil();
 	$tippTopscorer=getTippedTopScorer($username);
-	$tippedTeam=$dbutil->getTippedTopScorerTeam($username);
+	$tippedTeam=$dbutil->getTopScorerTeamPrediction($username);
 	echo "<tr>";
 	echo "<td>" . getUserInfo($username) . "</td>";
 	echo "<td>" . $worldChampion . "</td>";
