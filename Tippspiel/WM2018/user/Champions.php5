@@ -24,7 +24,6 @@ else
 
 function run($userId){
 	
-	// Verbindung zur Datenbank aufbauen
 	include_once("../../connection/dbaccess.php5");
 	include_once("../util/dbutil.php5");
 	include_once("../util/dbschema.php5");
@@ -38,18 +37,18 @@ function run($userId){
 	echo "<br>";
 	
 	$username=$dbutil->getUserName($userId);
-	$storageSuccess=true;
-	if($storageSuccess && isset($_POST['rank1'])){
+	$storageSuccess=false;
+	if(isset($_POST['rank1'])){
 		
 		$storageSuccess = storeNewRank($username, $dbutil->getShortName($_POST['rank1']), 1);
 	}
 	
-	if($storageSuccess && isset($_POST['rank2'])){
+	if(isset($_POST['rank2'])){
 		
 		$storageSuccess = storeNewRank($username, $dbutil->getShortName($_POST['rank2']), 2);
 	}
 	
-	if($storageSuccess && isset($_POST['rank3'])){
+	if(isset($_POST['rank3'])){
 		
 		$storageSuccess = storeNewRank($username, $dbutil->getShortName($_POST['rank3']), 3);
 	}
@@ -165,7 +164,7 @@ function storeNewRank($user, $team, $rank){
 	}
 	else
 	{
-		$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), "Inserted/Updated champion prediction ($user,$team,$rank)");
+		$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), "Stockerl-Tipp eingetragen: ($user,$team,$rank)");
 		return true;
 	}
 }
