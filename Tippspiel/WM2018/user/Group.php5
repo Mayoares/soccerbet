@@ -30,7 +30,7 @@ if(isset($_POST["saveRanks"])){
 $table_teams=dbschema::teams;
 $sql="SELECT * FROM $table_teams m WHERE m.group='$group'";
 $sqlResult=mysql_query($sql);
-$sqlTeams = getTeams($group);
+$sqlTeams = $dbutil->getTeams($group);
 echo "<form action='Group.php5?userId=$userId&group=$group' method='POST'>";
 echo "<table>";
 $rankCnt = 1;
@@ -150,13 +150,6 @@ function getGoals2($userName, $matchnr){
 	$array=mysql_fetch_array($result);
 	$goals=$array["goalsY"];
 	return $goals;
-}
-
-function getTeams($group){
-	$table_teams=dbschema::teams;
-	$sqlQuery="SELECT t.name FROM $table_teams t WHERE t.group='$group'";
-	$sqlQueryResult=mysql_query($sqlQuery);
-	return $sqlQueryResult;
 }
 
 function allTeamsAsOption($sqlTeams, $tippedTeam, $optionName) {

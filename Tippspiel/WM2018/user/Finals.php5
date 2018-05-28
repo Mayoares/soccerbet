@@ -149,17 +149,19 @@ function printDescription($matchnr){
 
 function getTeamsOfGroup($matchnr, $named){
 	//echo "<br>getTeamsOfGroup($matchnr, $named)";
+    $dbutil = new dbutil();
+    
 	switch($matchnr)
 	{
 		// Achtelfinale
-		case 49 : return ($named==1) ? getTeams('A') : getTeams('B');
-		case 50 : return ($named==1) ? getTeams('C') : getTeams('D');
-		case 51 : return ($named==1) ? getTeams('B') : getTeams('A');
-		case 52 : return ($named==1) ? getTeams('D') : getTeams('C');
-		case 53 : return ($named==1) ? getTeams('E') : getTeams('F');
-		case 54 : return ($named==1) ? getTeams('G') : getTeams('H');
-		case 55 : return ($named==1) ? getTeams('F') : getTeams('E');
-		case 56 : return ($named==1) ? getTeams('H') : getTeams('G');
+	    case 49 : return ($named==1) ? $dbutil->getTeams('A') : $dbutil->getTeams('B');
+		case 50 : return ($named==1) ? $dbutil->getTeams('C') : $dbutil->getTeams('D');
+		case 51 : return ($named==1) ? $dbutil->getTeams('B') : $dbutil->getTeams('A');
+		case 52 : return ($named==1) ? $dbutil->getTeams('D') : $dbutil->getTeams('C');
+		case 53 : return ($named==1) ? $dbutil->getTeams('E') : $dbutil->getTeams('F');
+		case 54 : return ($named==1) ? $dbutil->getTeams('G') : $dbutil->getTeams('H');
+		case 55 : return ($named==1) ? $dbutil->getTeams('F') : $dbutil->getTeams('E');
+		case 56 : return ($named==1) ? $dbutil->getTeams('H') : $dbutil->getTeams('G');
 		
 		// Viertelfinale
 		case 57 : return ($named==1) ? getTeamsOfGroups('A','B') : getTeamsOfGroups('C','D');
@@ -202,13 +204,6 @@ function getTippedTeam($username, $matchnr, $dbColumnTeam, $dbutil){
 	$sqlResultArray=mysql_fetch_array($sqlQueryResult);
 	$teamShort=$sqlResultArray[$dbColumnTeam];
 	return $dbutil->getTeamName($teamShort);
-}
-
-function getTeams($group){
-	$table_teams=dbschema::teams;
-	$sqlQuery="SELECT t.name FROM $table_teams t WHERE t.group='$group'";
-	$sqlQueryResult=mysql_query($sqlQuery);
-	return $sqlQueryResult;
 }
 
 function getTeamsOfGroups($group1, $group2){

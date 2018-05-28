@@ -3,6 +3,13 @@ include_once("../../connection/dbaccess.php5");
 include_once("../util/dbschema.php5");
 class dbutil
 {
+    function getTeams($group){
+        $table_teams=dbschema::teams;
+        $sqlQuery="SELECT t.name FROM $table_teams t WHERE t.group='$group'";
+        $sqlQueryResult=mysql_query($sqlQuery);
+        return $sqlQueryResult;
+    }
+    
 	function getUserName($userid){
 		$table_users=dbschema::users;
 		$result=mysql_query("SELECT username FROM $table_users WHERE userid = '$userid'");
