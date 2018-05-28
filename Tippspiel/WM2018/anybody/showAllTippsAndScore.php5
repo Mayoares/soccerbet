@@ -228,17 +228,6 @@ function getCorrectChampion($rank){
 	return $name;
 }
 
-function getCorrectTopscorer(){
-	$table_topscorertipps=dbschema::topscorertipps;
-	$sql="SELECT t.topscorer FROM $table_topscorertipps t WHERE t.user = 'real'";
-	//$log=new viewlogger();	
-	//$log->info($sql);
-	$sqlResult=mysql_query($sql);
-	$sqlArray=mysql_fetch_array($sqlResult);
-	$name=$sqlArray["topscorer"];
-	return $name;
-}
-
 function printScore($score){
 
 	if($score != null)
@@ -439,6 +428,7 @@ function getScoreTopscorer($userName){
 
 function printChampions($userName){
 	
+	$dbutil=new dbutil();
     $worldchampion=$dbutil->getRostrumPrediction($userName, 1);
     $vice=$dbutil->getRostrumPrediction($userName, 2);
     $third=$dbutil->getRostrumPrediction($userName, 3);
@@ -461,11 +451,11 @@ function printChampions($userName){
 function printTopscorer($username){
 	
 	$dbutil=new dbutil();
-	// tipped values
-	$topscorer=getTippedTopScorer($username);
+	// predicted values
+	$topscorer=$dbutil->getTopScorerPrediction($username);
 	$topScorerTeam=$dbutil->getTopScorerTeamPrediction($username);
 	// real values
-	$TopscorerReal=getCorrectTopscorer();
+	$TopscorerReal=$dbutil->getTopScorerPrediction("real");
 	$realTeam=$dbutil->getTopScorerTeamPrediction("real");
 	
 	echo "<br>";
@@ -478,14 +468,6 @@ function printTopscorer($username){
 	echo "</tr>";
 	echo "</table>";
 	echo "<br>";
-}
-
-function getTippedTopScorer($username){
-	$table_topscorertipps=dbschema::topscorertipps;
-	$sqlQueryResult=mysql_query("SELECT * FROM $table_topscorertipps WHERE user='$username'");
-	$sqlResultArray=mysql_fetch_array($sqlQueryResult);
-	$topscorer=$sqlResultArray["topscorer"];
-	return $topscorer;
 }
 
 function printEvaluationFinalParticipants($user, $matchtype, $silent)

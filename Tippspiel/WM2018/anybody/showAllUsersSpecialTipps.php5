@@ -74,7 +74,7 @@ function printSpecialsForUser($username){
     $vice=$dbutil->getRostrumPrediction($username, 2);
     $third=$dbutil->getRostrumPrediction($username, 3);
 	
-	$tippTopscorer=getTippedTopScorer($username);
+    $tippTopscorer=$dbutil->getTopScorerPrediction($username);
 	$tippedTeam=$dbutil->getTopScorerTeamPrediction($username);
 	echo "<tr>";
 	echo "<td>" . getUserInfo($username) . "</td>";
@@ -101,14 +101,6 @@ function getTeamName($shortname) {
 	$array=mysql_fetch_array($result);
 	$name=$array["name"];
 	return $name;
-}
-
-function getTippedTopScorer($username){
-	$table_topscorertipps=dbschema::topscorertipps;
-	$sqlQueryResult=mysql_query("SELECT * FROM $table_topscorertipps WHERE user='$username'");
-	$sqlResultArray=mysql_fetch_array($sqlQueryResult);
-	$topscorer=$sqlResultArray["topscorer"];
-	return $topscorer;
 }
 
 ?>

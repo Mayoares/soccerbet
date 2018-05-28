@@ -119,8 +119,8 @@ function run($userId){
 		}
 	}
 	
-	$tippTopscorer=getTippedTopScorer($username);
 	$dbutil=new dbutil();
+	$tippTopscorer=$dbutil->getTopScorerPrediction($username);
 	$tippedTeam=$dbutil->getTopScorerTeamPrediction($username);
 	$table_teams=dbschema::teams;
 	$sqlTeams=mysql_query("SELECT * FROM $table_teams ORDER BY name");
@@ -170,14 +170,6 @@ function storeNewRank($user, $team, $rank){
 	}
 }
 
-
-function getTippedTopScorer($username){
-	$table_topscorertipps=dbschema::topscorertipps;
-	$sqlQueryResult=mysql_query("SELECT * FROM $table_topscorertipps WHERE user='$username'");
-	$sqlResultArray=mysql_fetch_array($sqlQueryResult);
-	$topscorer=$sqlResultArray["topscorer"];
-	return $topscorer;
-}
 
 function allTeamsAsOptionForRank($sqlTeams, $tippedTeam) {
 	$numTeams=mysql_num_rows($sqlTeams);
