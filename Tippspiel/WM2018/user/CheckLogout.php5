@@ -3,6 +3,7 @@ session_start();
 $userId=$_GET["userId"];
 include_once("../../connection/dbaccess.php5");
 include_once("../util/dbschema.php5");
+include_once("../../general/log/log.php5");
 if(isset($_POST["Cancel"]))
 {
 	$target="./overview.php5?userId=$userId";
@@ -15,6 +16,9 @@ else if(isset($_POST["logout"]))
 }
 else 
 {
+	$log=new logger();
+	$log->infoCall(basename($_SERVER["SCRIPT_FILENAME"]), "Logout-Ansicht: User=$userId.");
+	
 	echo "<html>";
 	echo "<head>";
 	echo "<link rel='stylesheet' type='text/css' href='../../style/style-current.css' />";
@@ -47,6 +51,6 @@ function getPassword($userid){
 
 <script type="text/javascript">
 function FrameAendern () {
-  parent.location.href = "../util/login.php5";
+	parent.location.href = "../util/login.php5";
 }
 </script>
