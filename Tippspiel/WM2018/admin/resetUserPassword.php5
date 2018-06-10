@@ -88,7 +88,7 @@ function resetUserPassword($resetUsername, $adminuserId)
 	else
 	{
 		$betreff = "Werke's Tippspiel - Neues Passwort";
-		$kopf = "From: werkestippspiel\n";
+		$kopf = "From: tippspiel@mayoar.rivido.de\n";
 		$kopf .= "MIME-Version: 1.0\n";
 		$kopf .= "Content-Type: multipart/mixed; boundary=$id\n\n";
 		$kopf .= "This is a multi-part message in MIME format\n";
