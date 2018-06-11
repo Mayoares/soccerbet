@@ -103,7 +103,7 @@ function sendFile($filename, $target_path, $empfaenger){
 	$dateiinhalt = fread(fopen($dateiname, "r"), filesize($dateiname));
 
 	// Absender Name und E-Mail Adresse
-	$header = "From: werkestippspiel\n";
+	$header = "From: tippspiel@mayoar.rivido.de\n";
 	$header .= "Content-Type: multipart/mixed; boundary=$id\n\n";
 	$header .= "This is a multi-part message in MIME format\n";
 	$header .= "--$id\n";
