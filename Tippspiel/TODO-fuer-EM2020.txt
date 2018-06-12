@@ -1,0 +1,16 @@
+Evtl. dann in Trello (o.ä.) eintragen:
+
+* Eingabe-Maske anbieten, über die sich der User selbst ein neues Passwort schicken lassen kann 
+	- da müssen aber Username und eMail-Adresse zusammenpassen
+	- manche vergessen auch ihren Benutzernamen, darum:
+* Eingabe-Maske anbieten, über die sich der User selbst seinen Usernamen nochmal schicken lassen kann (aber nicht zu oft --> SPAM-Gefahr)
+* diese eMails in einem Testlauf kontrollieren in diversen Browsern und eMail-Clients sowie bei verschiedenen eMail-Anbietern (?)
+
+* diverse Umstellungen WM --> EM 
+	- Gruppenanzahl
+	- beste Gruppendritte ?
+	- Weltmeister --> Europameister
+	- kein Spiel um Platz 3 an verschiedenen Stellen
+	- Bepunktung kontrollieren
+	- etc. etc., siehe Commit-Messages von 2018 mit Kommentar EM->WM
+	
