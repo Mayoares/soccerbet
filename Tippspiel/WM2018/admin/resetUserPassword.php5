@@ -87,6 +87,7 @@ function resetUserPassword($resetUsername, $adminuserId)
 	}
 	else
 	{
+	    $id = md5(uniqid(time()));
 		$betreff = "Werke's Tippspiel - Neues Passwort";
 		$kopf = "From: tippspiel@mayoar.rivido.de\n";
 		$kopf .= "MIME-Version: 1.0\n";
