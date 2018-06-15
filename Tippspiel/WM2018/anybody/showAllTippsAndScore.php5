@@ -74,6 +74,8 @@ if(strlen($userName)>0)
  	printFinal($userName, 'Platz3');
 	printFinal($userName, 'Finale');
 	
+	//Datenbankconnection schliessen
+	mysql_close();
 }	
 else
 {
@@ -103,6 +105,11 @@ function printGroup($group, $userName){
 	echo "<td>";
 	printGroupRanks($group, $userName);
 	echo "</td>";
+	echo "</table>";
+	
+	echo "<br>";
+	
+	echo "<table>";
 	echo "<td>";
 	printGroupMatches($group, $userName);
 	echo "</td>";
@@ -141,14 +148,6 @@ function printGroupRanks($group, $userName){
 		printCorrectTeam($correctTeam);
 		$score=$array["score"];
 		printScore($score);
-		echo "</tr>";
-		//&nbsp;&nbsp;
-	}
-	// zusaetzliche Zeilen, damit Ranktipps genauso gross in der Tabelle erscheinen wie die Matchtipps
-	for($r=0; $r<12; $r++)
-	{
-		echo "<tr>";
-		echo "<td></td>";
 		echo "</tr>";
 	}
 	echo "</tbody>";
@@ -287,6 +286,11 @@ function printFinal($userName, $matchtype){
 	echo "</tbody>";
 	echo "</table>";
 	echo "</td>";
+	echo "</table>";
+	
+	echo "<br>";
+	
+	echo "<table>";
 	echo "<td>";
 	printFinalMatches($userName, $matchtype);
 	echo "</td>";
@@ -334,6 +338,7 @@ function printFinalMatches($userName, $matchtype){
 			$team2=$dbutil->getTeamName($teamShort2);
 			$goalsX = $array["goalsX"];
 			$goalsY = $array["goalsY"];
+			//$log->info("matchnr=$matchnr:team1=$team1,team2=$team2   $goalsX : $goalsY");
 			echo "<font color=\"#32cd32\">";
 			echo "<tr>";
 			echo "<td>Spiel $matchnr &nbsp; &nbsp; &nbsp;</td>";
