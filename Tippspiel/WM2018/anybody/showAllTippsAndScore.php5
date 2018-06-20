@@ -45,6 +45,7 @@ include_once("../../general/log/log.php5");
 include_once("../util/calc.php5");
 include_once("../util/dbutil.php5");
 include_once("../util/dbschema.php5");
+include_once("../evaluation/evaluationBase.php5");
 
 if(strlen($userName)>0)
 {
@@ -500,6 +501,7 @@ function userHasIncluded($user, $matchtype, $team) {
 function checkTeamsIncluded($user, $column, $realTeams, $matches, $matchtype, $silent)
 {
     $dbutil = new dbutil();
+    $evaluationBase = new evaluationBase();
 	$userScore=0;
 	while($matchesArray=mysql_fetch_array($matches))
 	{
@@ -522,7 +524,7 @@ function checkTeamsIncluded($user, $column, $realTeams, $matches, $matchtype, $s
 			}
 			else if(userHasIncluded($user, $matchtype, $team))
 			{
-				$addScore=getScore($matchtype);
+			    $addScore=$evaluationBase->getParticipantScore($matchtype);
 				$userScore = $userScore+$addScore;
 				if(!$silent)
 				{
@@ -544,30 +546,6 @@ function checkTeamsIncluded($user, $column, $realTeams, $matches, $matchtype, $s
 		echo "</tr>";
 	}
 	return $userScore;
-}
-
-function getScore($matchtype)
-{
-	if($matchtype=='Achtelfinale')
-	{
-		return 2;
-	}
-	else if($matchtype=='Viertelfinale')
-	{
-		return 3;
-	}
-	else if($matchtype=='Halbfinale')
-	{
-		return 4;
-	}
-	else if($matchtype=='Platz3')
-	{
-		return 5;
-	}
-	else if($matchtype=='Finale')
-	{
-		return 5;
-	}
 }
 
 ?>

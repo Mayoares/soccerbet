@@ -1,64 +1,49 @@
 <?php
-// we must never forget to start the session
 session_start();
 $adminuserId=$_GET["adminuserId"];
-//$userName=$_POST["SelectedUsername"];
 include_once("../../general/log/log.php5");
+include_once("../../connection/dbaccess.php5");
+include_once("../util/calc.php5");
+include_once("../util/dbschema.php5");
+include_once("scoredefinitions.php5");
+
 echo "<html>";
 echo "<head>";
 echo "<title>Werke's Tippspiel - Auswertung Finalspielteilnahmen</title>";
 echo "</head>";
 echo "<body>";
-//echo "Alle Tipps der Finalspielteilnahmen von einem User auswerten ...<br>";
 
-// Verbindung zur Datenbank aufbauen
-include_once("../../connection/dbaccess.php5");
-include_once("../util/calc.php5");
-include_once("../util/dbutil.php5");
-include_once("../util/dbschema.php5");
-include_once("scoredefinitions.php5");
-//$userName=$dbutil->getUserName($userId);
-
-
-// if(strlen($userName)>0)
-// {
-// 	echo "<a href='../admin/overviewAdmin.php5?userId=$adminuserId'>zur&uuml;ck zur &Uuml;bersicht</a>";
-// 	echo "<br>";
-// 	echo "<br><b>$userName</b><br>";
-// 	calcScore($userName, false);
-// }
-// else
+$allUsers=getAllUsers();
+while($array=mysql_fetch_array($allUsers))
 {
-	$allUsers=getAllUsers();
-	while($array=mysql_fetch_array($allUsers))
-	{
-		$username=$array["username"];
-		echo "<br>$username";
-		calcScore($username, true);
-		echo "<br>";
-	}
+	$username=$array["username"];
+	echo "<br>$username";
+	calcScore($username, true);
+	echo "<br>";
 }
 mysql_close();
+
 echo "<br>";
 echo "<a href='../admin/overviewAdmin.php5?userId=$adminuserId'>zur&uuml;ck zur &Uuml;bersicht</a>";
+echo "</body>";
+echo "</html>";
 
 function getAllUsers()
 {
 	$table_users=dbschema::users;
-	$result = mysql_query("SELECT username FROM $table_users");
-	return $result;
+	return mysql_query("SELECT username FROM $table_users");
 }
 
 function calcScore($user, $silent)
 {
-$score=0;
-$score=$score+getEvaluation($user, 'Achtelfinale', $silent);
-$score=$score+getEvaluation($user, 'Viertelfinale', $silent);
-$score=$score+getEvaluation($user, 'Halbfinale', $silent);
-$score=$score+getEvaluation($user, 'Platz3', $silent);
-$score=$score+getEvaluation($user, 'Finale', $silent);
-echo "<br>Gesamtscore f&uuml;r Finalspielteilnahmen-Tipps von User $user : $score";
-updateScoreInDB($user, $score);
+    $score=0;
+    $score=$score+getEvaluation($user, 'Achtelfinale', $silent);
+    $score=$score+getEvaluation($user, 'Viertelfinale', $silent);
+    $score=$score+getEvaluation($user, 'Halbfinale', $silent);
+    $score=$score+getEvaluation($user, 'Platz3', $silent);
+    $score=$score+getEvaluation($user, 'Finale', $silent);
+    echo "<br>Gesamtscore f&uuml;r Finalspielteilnahmen-Tipps von User $user : $score";
+    updateScoreInDB($user, $score);
 }
 
 function updateScoreInDB($user, $score){
@@ -100,8 +85,7 @@ function getRealTeams($column, $matchtype) {
 	$table_finalmatchtipps=dbschema::finalmatchtipps;
     //$sql="SELECT $column FROM $table_matches m WHERE m.matchtype = '$matchtype'";
     $sql="SELECT f.$column FROM $table_matches m, $table_finalmatchtipps f " .
-	"WHERE m.matchtype = '$matchtype' " .
-	"AND f.matchnr = m.matchnr AND f.user = 'real'";
+	"WHERE m.matchtype = '$matchtype' AND f.matchnr = m.matchnr AND f.user = 'real'";
     //echo "<br>SQL=$sql";
     $result=mysql_query($sql);
     return $result;
@@ -128,52 +112,32 @@ function userHasIncluded($user, $matchtype, $team) {
 
 function checkTeamsIncluded($user, $column, $realTeams, $matchtype, $silent)
 {
-		$userScore=0;
-		while($teamsArray=mysql_fetch_array($realTeams))
+    include_once("evaluationBase.php5");
+	$userScore=0;
+	while($teamsArray=mysql_fetch_array($realTeams))
+	{
+		$team=$teamsArray["$column"];
+		if(userHasIncluded($user, $matchtype, $team))
 		{
-			$team=$teamsArray["$column"];
-			if(userHasIncluded($user, $matchtype, $team))
+		    $evaluationBase=new evaluationBase();
+		    $addScore=$evaluationBase->getParticipantScore($matchtype);
+			$userScore = $userScore+$addScore;
+			if(!$silent)
 			{
-				$addScore=getScore($matchtype);
-				$userScore = $userScore+$addScore;
-				if(!$silent)
-				{
-					echo "<br>User hat '$team' im '$matchtype' getippt und erh&ouml;lt '$addScore' Punkte.";
-				}
-			}
-			else
-			{
-				if(!$silent)
-				{
-					echo "<br>User hat '$team' NICHT im '$matchtype' getippt und erh&auml;lt keine Punkte.";
-				}
+				echo "<br>User hat '$team' im '$matchtype' getippt und erh&ouml;lt '$addScore' Punkte.";
 			}
 		}
-		return $userScore;
+		else
+		{
+			if(!$silent)
+			{
+				echo "<br>User hat '$team' NICHT im '$matchtype' getippt und erh&auml;lt keine Punkte.";
+			}
+		}
+	}
+	return $userScore;
 }
 
-function getScore($matchtype)
-{
-		if($matchtype=='Achtelfinale')	
-		{
-			return scoredefinitions::FINALMATCH_PARTICIPANT_EIGHTH;;
-		}
-		else if($matchtype=='Viertelfinale')	
-		{
-			return scoredefinitions::FINALMATCH_PARTICIPANT_QUARTER;;
-		}
-		else if($matchtype=='Halbfinale')	
-		{
-			return scoredefinitions::FINALMATCH_PARTICIPANT_HALF;
-		}
-		else if($matchtype=='Platz3')	
-		{
-			return scoredefinitions::FINALMATCH_PARTICIPANT;
-		}
-		else if($matchtype=='Finale')	
-		{
-			return scoredefinitions::FINALMATCH_PARTICIPANT;
-		}
-}
+
 
 ?>
