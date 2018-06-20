@@ -62,12 +62,8 @@ function printLastUpdate(){
 	$lastUpdatedMatch = $row['matchnr'];
 	if(!empty($lastUpdatedMatch)){
 		$arrayRealResult = getRealResult($lastUpdatedMatch);
-		$team1Short = $arrayRealResult['teamX'];
-		$team1=$dbutil->getTeamName($team1Short);
-		$team2Short = $arrayRealResult['teamY'];
-		$team2=$dbutil->getTeamName($team2Short);
-
-		//echo "$team1Short, $team1, $team2Short, $team2";
+		$team1=$dbutil->getTeamName($arrayRealResult['teamX']);
+		$team2=$dbutil->getTeamName($arrayRealResult['teamY']);
 		echo "Stand nach Auswertung von Spiel <b>$lastUpdatedMatch</b> ($date) <b>$team1 - $team2</b>";
 		echo "<br>";
 	}
@@ -143,7 +139,7 @@ function getEnteredFinals()
 function printUserScores(){
 	include_once("../util/UserScores.php5");
 	$tableusers=dbschema::users;
-	$sql="SELECT * FROM $tableusers ORDER BY lastname";
+	$sql="SELECT * FROM $tableusers ORDER BY username";
 	$resultUsers=mysql_query($sql);
 	$numUsers=mysql_num_rows($resultUsers);
 	//$arrayUsers=mysql_fetch_array($resultUsers);
@@ -168,12 +164,10 @@ function printUserScores(){
 		$lastn[$key]  = $row['lastname'];
 		$firstn[$key]  = $row['firstname'];
 	}
-	//array_multisort($score, SORT_DESC, $username, SORT_ASC, $arrayUserScore);
-	array_multisort($score, SORT_DESC, $lastn, SORT_ASC, $firstn, SORT_ASC, $arrayUserScore);
+	array_multisort($score, SORT_DESC, $username, SORT_ASC, $arrayUserScore);
+	//array_multisort($score, SORT_DESC, $lastn, SORT_ASC, $firstn, SORT_ASC, $arrayUserScore);
 	//sort($arrayUserScore, SORT_DESC);
 	
-// 	echo "<br>";
-// 	echo "<br>";
 	echo "<table border=\"3\" frame=\"box\">";
 	echo "<thead>";
 	echo "<tr>";
@@ -207,7 +201,6 @@ function printUserScores(){
 function printUserScoreRow($rank, $score, $username){
 
 	echo "<tr>";
-	//echo "<td><b>$user  </b></td>";
 	echo "<td><div align=\"center\"> $rank </div></td>";
 	echo "<td><b><div align=\"center\"> $score </div></b></td>";
 	echo "<td>$username</td>";
